@@ -1,0 +1,59 @@
+\newpage
+\vspace{5mm}
+\section{\QubeModel  Noise Measurement Setup}
+\subsection{introduction}
+The \QubeModel  current noise is so low that it needs a specific setup to be measured.
+The goal is to be able to measure noise spectral densities on the order of $100 pA/\sqrt{Hz}$, to do this we must use an amplification stage that does not degrade the quality of the input signal, for this purpose the following measurement setup was used.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{NOISE_MEASUREMENT_DEMO.pdf}
+\caption{Current noise measurement setup}
+\end{figure}
+
+A current of $200 mA$ is supplied to a 50 $\Omega$ resistor, and noise is AC-coupled to a voltage amplifier with gain $G=500$.
+The thermal noise of the resistor and the input noise of the amplifier stage do not substantially degrade the measurement.
+The current noise is amplified for a total transimpedance gain of 25000 given by $G \cdot R_{L}$ without appreciable alteration, so it can be easily measured with a common spectrum analyzer.
+
+\subsection{Current Noise Power Spectral Density (CNPSD) calculation}
+
+Typically the measurement taken on a spectrum analyzer is given in dBm units, to switch to $nA/\sqrt{Hz}$ representation the following relationships are used:
+\newline
+
+The noise power expressed in dBm is defined as:
+\newline
+
+$Pnoise [dBm] = 10 \cdot \log (\frac{Vnoise^2}{50 \Omega} \cdot 1000 \cdot RBW)$
+\newline
+
+$Vnoise$ is the noise level at the input of the spectrum analyzer expressed in Volts,
+$RBW$ is the resolution bandwidth of the measurement expressed in $Hz$.
+\newline
+
+The expression of $Vnoise$ is:
+\newline
+
+$Vnoise = \frac{Inoise}{10^9} \cdot G \cdot R_{L} $
+\newline
+
+$Inoise$ is the current noise expressed in $nA$, $G$ is the gain of the voltage amplifier, $R_{L}$ the value of the load resistor expressed in $\Omega$.
+\newpage
+Using these relationships, we obtain the expression of current noise spectral density expressed in $nA/\sqrt{Hz}$ as:
+\newline
+
+$Inoise [\frac{nA}{\sqrt{Hz}}] = (10^{\frac{Pnoise}{10}}  \cdot \frac{1}{RBW} \cdot \frac{50}{1000})^\frac{1}{2} \cdot \frac{1}{G \cdot R_{L}} \cdot 10^9$
+\newline
+
+$Pnoise$ is the Power noise expressed in dBm.\newline
+This relationship is used to obtain the spectral noise density plot presented in the \QubeModel  datasheet from measurements taken with the spectrum analyzer.
+
+\subsection{Final consideration}
+
+In order to obtain a good noise measurement, it is necessary for all components of the setup to be wired properly.
+Shielding and good dissipation of load resistance $R_{L}$ is recommended.
+The power supply for the entire system must be highly filtered; batteries can also be used as an alternative.
+
+
+
+

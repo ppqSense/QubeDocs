@@ -1,0 +1,68 @@
+\section{Advanced Operations - \QubeModel advanced settings}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/ADV-1_control_sw.png}
+    \caption{The Advanced tab of the \SoftwareType Software GUI}
+    \label{ADV1_SW_interface}
+\end{figure}
+
+\paragraph{} The \SoftwareType Software also has 2 tabs for advanced settings. The two tabs hold a series of controls that are less frequently useful or which give a direct control over some specific functionalities of the \QubeModel. The two advanced tabs are available in the lower half of the  \SoftwareType Software GUI.
+
+
+
+
+%-------------------------------- Adv. 1 tab --------------------------------%
+
+\subsection{Adv. 1 tab}
+\paragraph{} The first advanced tab, visible in \textbf{figure \ref{ADV1_SW_interface}}, is subdivided in five different panels, each one dedicated to a particular set of commands and controls.
+
+\paragraph{} The \textbf{Direct Communication} panel regroups all the commands that can be used to directly communicate with the \QubeModel  by textual commands instead of the interaction with the Buttons and Forms contained in the GUI.
+\newline The command that the user wants to send to the \QubeModel  must be typed into the \textbf{COMMAND} form, a complete list of the available commands with their syntax can be found in \textbf{chapter \ref{commands_table_chapter}}.
+\newline Once the command has been sent by pressing the \textbf{SEND COMMAND} button, the reply (if any) from the \QubeModel  can be read in the \textbf{READBACK} form.
+
+\paragraph{} The \textbf{CM Advanced} panel regroups some information about the CM module(s) on board of the \QubeModel , which are the one(s) deputed to the generation of the Current for the laser. Here, the temperature of the modules is shown in the \textit{CM Temp} box, while \textit{DtLoop} shows the update time of the GUI. The update can be forced by pressing the \textit{Update Panel} button.
+\newline The \textit{Power} button allows the user to switch off the power supply for all the modules except the TC, which has a separate power line. Using this command to switch off some of the module while the \QubeModel  is operating is an advanced operation and may lead to unexpected behavior, \textbf{do not use it when the laser is connected to the \QubeModel }.
+
+\paragraph{} The \textbf{TC Advanced} panel holds advanced commands for the TC module. Similarly to the \textit{CM Advanced} panel, there is a \textit{Power} button that allows the user to switch on and off the power to the TC module. As well as for the CM module, \textbf{this operation is dangerous and must be handled with care}.
+\newline \textbf{TEC Mode} switch allows the user to decide whether the TC module should act as a Temperature Controller for the laser (strongly recommended option) or as an Heater.
+\newline \textbf{TEC limit} is the maximum current that the TC module can source, in both directions, to the Peltier module mounted on the laser. User can change this value by the mean of the \textbf{CHANGE} button, which will open a dedicated window. Set the Maximum current accordingly to the one stated in the datasheet or test report of the laser that needs to be driven by the \QubeModel .
+\newline The two \textbf{TSetMAX} and \textbf{TSetMIN} values are used to set the maximum and minimum temperature that can be selected as setpoint for the Temperature Stabilization Loop operated by the TC module. As well as for the TEC current limit, those values can be changed using the respective \textbf{CHANGE} buttons.
+\newline The \textbf{ErrSumLim} parameter is the one used as a safety measure to prevent the Temperature Controller to drift away from the setpoint or to fail to stabilize the temperature for any other reason. A detailed explanation of this parameter can be found in \textbf{chapter \ref{Automatic_protection_chapter}}.
+
+\paragraph{} The \textbf{System Modules} panel shows the composition of the \QubeModel  by highlighting the LED corresponding to each module present in the \QubeModel . If there are more than one module of each kind (CMs, for example), the number of modules is also plotted in the corresponding LED.
+\newline The configuration can be changed by clicking on the \textbf{CONFIG} button, however ppqSense strongly discourage the modification of the \QubeModel  stack by the customers to avoid any damage and the warranty nullification.
+
+\paragraph{} The \textbf{System Advanced} panel holds some rarely used commands. The \textit{Fan Control} command allows the user to chose the speed of the cooling fan, ppqSense strongly recommends to leave this selector on the \textbf{Auto} position.
+\newline The two buttons on the lower part of the panel can be used to activate the Wi-fi or the LAN connection, if the \QubeModel  is provided with such options.
+\newline The two forms in the lower right part of the panel can be used to chose how often the data acquired from the \SoftwareType Software have to be saved in the log file.
+\newline Lastly, the \textbf{ProgOn} button which allows to use the \SoftwareType Software to update the firmware of the \QubeModel . This operation is \textbf{dangerous} and must never be executed when the \QubeModel  is connected to a laser. Using this command may cause incompatibility of the \QubeModel  with the \SoftwareType Software or with some of its modules, so it has to be executed only under assistance by ppqSense staff.
+
+
+
+
+%-------------------------------- Adv. 2 tab --------------------------------%
+\iffalse
+\subsection{Adv. 2 tab}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/ADV-2_control_sw.png}
+    \caption{The first Advanced tab of the \SoftwareType Software GUI}
+    \label{ADV2_SW_interface}
+\end{figure}
+
+\paragraph{} This tab holds fewer controls, being available for future development. The tab holds two panels dedicated to some advanced featurer both of the DDS sub-module and the LIA module.
+
+\paragraph{} \textbf{The Clock \& Sync.} panel holds a series of advanced controls for the DDS sub-module.
+\newline The first three buttons, \textbf{DDS}, allow the user to switch on and off the timing clocks generated by the DDS board. The first clock is the one used to serve as a time reference for the DDS circuits. If this DDS is switched off, the onboard DDS won't be able to source any signal.
+\newline The \textbf{Int. Sync} buttons switches on and off the synchronization signal internal to the \QubeModel , used by the driver to establish a shared time base between the DDS sub-module and the LIA or PDH modules. Switching off this signal will disrupt the synchronization between the DDS sub-module and the PDH/LIA modules, preventing any locking procedure to work as described in this manual.
+\newline The \textbf{Ext. Sync} button switches on and off the \textbf{SYNC OUT} signal available on the C7 connector of the LH module.
+
+\paragraph{} The \textbf{Ext. Sync. Phase} allow the user to change the phase of the external synchronization signal available on the connector C7 of the LH module, if the DDS sub-module is included in the \QubeModel  stack.
+
+\paragraph{} The \textbf{Lock-In Amplifier} panel holds some advanced commands interacting with the LIA module.
+\newline The \textbf{MIXER} button switches on and off the demodulating action of the LIA module.
+\newline The \textbf{90\degree SHIFT} enables or disables a 90 degrees shift on the demodulating signal of the Lock-In Amplifier.
+\newline The \textbf{Clock Div.} selector enables the user to set a division factor for the demodulating signal of the LIA module, ultimately reducing the actual frequency of the demodulating signal.
+\newline By changing the value of each one of those controls from the standard ones will affect the ability of the \QubeModel  to perform locking with the LIA modules.
+\fi

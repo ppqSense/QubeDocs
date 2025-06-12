@@ -1,0 +1,35 @@
+\section{Advanced Operations - Slow drift compensation} \label{Slow_loop_chapter}
+\begin{wrapfigure}{R}{0.15\textwidth}
+    \vspace{-20pt}
+    \includegraphics[width=0.12\textwidth]{images/Slow_loop_ctrl.png}
+\end{wrapfigure}
+\paragraph{} All three of the locking modules previously described are built to compensate fast drifts in the laser wavelength in order to lock it to a specific reference, depending on the locking mechanism which is being deployed. 
+\newline Nevertheless, a variety of environmental factors (such as temperature variations, mechanical vibrations and strains, optical feedbacks, etc.) may introduce slow drifts in the locking point. To maintain the lock to the reference, the PI correction loop of the locking modules is forced to follow those slow drifts in order to compensate them. If the control loop output drifts towards one of its saturation levels, the lock will be lost due to the inability of the PI loop to further correct the laser wavelength against the environmental disturbance.
+
+\paragraph{} To avoid this kind of slow drifting interference to break the lock, each locking module may automatically compensate those slow drifts by directly acting on the bias current fed to the laser or on the temperature setpoint of the laser being controlled by the onboard TC module. This correction loop can be activated and controlled with the dedicated \textbf{Slow Loop} box which is present in each one of the locking module tabs of the  \SoftwareType Software.
+
+\paragraph{} The \textit{Slow Loop Control} box includes the followings commands:
+\begin{itemize}
+    \item \textbf{Slow Loop} button: enables and disables the \textbf{Slow Loop} automatic compensation.
+    
+    \item \textbf{Actuator}: allows the user to decide whether the slow loop acts on the Bias Current or on the Temperature Setpoint of the laser.
+    
+    \item \textbf{Sign}: sets the sign of the slow loop.
+    
+    \item \textbf{SL cycle time}: sets the sampling rate (expressed in ms) for the slow loop to act.
+    
+    \item \textbf{Iset Limit}: sets the maximum variation of the bias current sourced to the laser that the slow loop can produce.
+\end{itemize}
+
+\paragraph{} Once the lock has been successfully achieved (with whichever of the locking module is being deployed on the instrument), follow these steps to activate the slow loop:
+\begin{itemize}
+    \item Chose the \textbf{operating mode} of the Loop: \textbf{Current} or \textbf{Temperature}. Note that acting on Temperature forces the Loop to have a very long response time from the laser, with the risk of triggering an oscillating behavior.
+    
+    \item If the \textbf{Slow Loop} is acting on the current of the laser, set the \textbf{maximum allowed correction current}.
+
+    \item Enable the automatic correction by pressing the \textbf{Slow Loop button}.
+    
+    \item Check the \textbf{error monitor plot} to see if the Slow Loop is working properly: the error must be drifting toward 0, otherwise the \textbf{Sign} of the Slow Loop must be reversed.
+    
+    \item Adjust the \textbf{SL cycle time} to make the compensation loop faster or slower, if needed.
+\end{itemize}

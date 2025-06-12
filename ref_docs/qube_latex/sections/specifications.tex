@@ -1,0 +1,185 @@
+\section{Electrical Specifications}%-------------------------------- Absolute maximum ratings --------------------------------%
+
+\subsection{Absolute maximum ratings}
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{7cm}
+        |>{\centering\arraybackslash}p{2.5cm}
+        |>{\centering\arraybackslash}p{1cm}
+        |>{\centering\arraybackslash}p{4cm}
+        |  }
+        \hline
+        \textbf{Parameter} & \textbf{Values} & \textbf{Unit} & \textbf{Notes} \\
+        \hline
+        Operating temperature & -20 to +40 & $\mathsf{^{\circ}C}$ & \\
+        \hline
+        Storage temperature & -20 to +70 & $\mathsf{^{\circ}C}$ & \\
+        \hline
+        Main power supply voltage ($\mathsf{PS_{LAS}}$) & \QubeUpperSupplyLimit & V & No terminal must be connected to ground\\
+        \hline
+        Modulation inputs & $\mathsf{\pm 5}$ & V & \\
+        \hline
+        \end{tabular}
+    \caption{Absolute Maximum Ratings}
+    \end{center}
+\end{table}
+
+
+
+
+%-------------------------------- Power Supply --------------------------------%
+\subsection{Power supply}
+\paragraph{}The Dual Driver operates on a single unipolar \textbf{floating} 24 V power supply that must be capable of sourcing up to 6 A. \newline
+To guarantee the noise performance of the driver, a linear power supply is the ideal choice. If a switching power supply is used, particular care must be taken to filter out the noise over the power lines.
+
+\begin{table}[!h]
+    \begin{center}
+        \begin{tabular}{| c | c | c | c |}
+            \hline    
+            \textbf{DC Input} & \textbf{minimum} & \textbf{typical} & \textbf{maximum} \\
+            \hline   
+            \hline
+            PS\_LAS & +\QubeLowerSupplyLimit V & +\QubeSupplyVoltage V & +\QubeUpperSupplyLimit V \\  
+            \hline
+        \end{tabular}
+        \caption{\label{Power_source_table} Power source voltage specifications}
+    \end{center}
+\end{table}
+
+\paragraph{} Using power supply voltages significantly different from 24 V, even if in the accepted range, may alter the calibration of the device and therefore results in reduced performances from the \QubeModel.
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  colback=black!5!white,colframe=red!75!black,colbacktitle=red!80!black,
+  title=CAUTION,fonttitle=\bfseries,
+  boxed title style={size=small,colframe=black!50!black} ]
+            Power supply used to source the Dual Driver must be \textbf{floating}. The terminals of the power supply must not be connected to Earth in any circumstance.
+\end{tcolorbox}
+
+
+
+
+%-------------------------------- Electrical Specifications --------------------------------%
+
+\subsection{Electrical Specifications}
+
+$\mathsf{PS_{LAS}\!=\!\QubeSupplyVoltage\ V_{dc}}$, Warm-up time 120 min, room temperature $\mathsf{25\ ^{\circ}C}$, unless otherwise noted.
+
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{ |p{4.5cm} |>{\centering\arraybackslash}p{1cm} |>{\centering\arraybackslash}p{1cm} |>{\centering\arraybackslash}p{1cm} |>{\centering\arraybackslash}p{2.5cm} |p{4cm} |  }
+            \hline
+            \textbf{Parameter} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Unit} & \textbf{Notes} \\
+            \hline
+            Noise spectral density & 300 & 600 & 800 & $\mathsf{pA/\sqrt{Hz}}$ & test current 200mA\\
+            \hline
+%            Integrated noise & 50  & 100 & 200 & $\mathsf{nA_{RMS}}$ & 10 Hz - 100 kHz\\
+%            \hline
+%            Integrated noise & 250  & 350 & 500 & $\mathsf{nA_{RMS}}$ & 10 Hz - 1 MHz\\
+%            \hline
+            Stability (1h)  & 4  & 5 & 6 & $\mathsf{ppm_{FS}}$ & \\
+            \hline
+            Stability (12h)  & 5  & 6 & 7 & $\mathsf{ppm_{FS}}$ & \\
+            \hline
+            Temperature coefficient& -2  & -3 & -5 & $\mathsf{ppm_{FS}/^{\circ}C}$ & \\
+            \hline
+            Output current & & & 2 & A & \\
+            \hline
+            Voltage compliance  &  & \QubeCompliance & & V & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Current Generator Specs}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{ |p{4.5cm} |>{\centering\arraybackslash}p{1cm} |>{\centering\arraybackslash}p{1cm} |>{\centering\arraybackslash}p{1cm} |>{\centering\arraybackslash}p{2.5cm} |p{4cm} |  }
+            \hline
+            \textbf{Parameter} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Unit} & \textbf{Notes} \\
+            \hline
+            Analog input voltage & 0 &  & $\mathsf{\pm5}$ & V & \\
+            \hline
+            DC offset  & 20  & 30 & 50 & $\mathsf{\micro A}$ & input shorted\\
+            \hline
+            \rowcolor{LimeGreen}\multicolumn{6}{|c|}{\textcolor{white}{Low current}} \\
+            \hline
+            Noise spect. dens. floor & 300 &  & 800 & $\mathsf{pA/\sqrt{Hz}}$ & input shorted\\
+            \hline
+            Output current& 0  &  & $\mathsf{\pm5}$ & mA & \\
+            \hline
+            Gain &   & -1 &  & mA/V & \\
+            \hline
+            Modulation BW (-3 dB)  &   & 2 &  & MHz & \\
+            \hline
+            \rowcolor{BurntOrange} \multicolumn{6}{|c|}{\textcolor{white}{High current}}\\
+            \hline
+            Noise spect. dens. floor & 700 &  & 2000 & $\mathsf{pA/\sqrt{Hz}}$ & input shorted\\
+            \hline
+            Output current& 0  &  & $\mathsf{\pm100}$ & mA & \\
+            \hline
+            Gain &   & -10 &  & mA/V & \\
+            \hline
+            Modulation BW (-3 dB)  &   & 600 &  & kHz & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Analog Current Modulators Specs}
+    \label{Analog_mod_specs}
+\end{table}
+
+
+
+
+%-------------------------------- Communication interfaces --------------------------------%
+
+\subsection{Communication interfaces}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{4cm}
+        |>{\centering\arraybackslash}p{4cm}
+        |>{\centering\arraybackslash}p{3cm}
+        |  }
+        \hline
+        \textbf{Interface} & \textbf{Mode} & \textbf{Settings} & \textbf{Notes} \\
+         \hline
+         USB & Virtual Serial Port & 115200 8N1 & \\
+         \hline
+        \end{tabular}
+    \caption{Communication Interfaces}
+    \end{center}
+\end{table}
+
+
+\paragraph{} It is possible to communicate with the Dual Driver without using any Control Software distributed by ppqSense. This option is particularly useful to integrate the \QubeModel  into a complex system which already runs with a specific firmware and has its own control software. The integration can be done by allowing the third party control software to directly communicate with the Serial Port of the \QubeModel  using the appropriate commands.
+\newline Here we provide all the technical information to establish the Serial connection.
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+                    colback=black!5!white, colframe=red!75!black, colbacktitle=red!80!black,
+                    title=CAUTION, fonttitle=\bfseries, boxed title style={size=small, 
+                    colframe=black!50!black} ]
+
+    The \SoftwareType Software provided by ppqSense provides some safety features that are useful to prevent any usage of the \QubeModel  that may harm both the driver or the laser connected to it.
+    \newline While using a third party control software, the user must be particularly cautious in order to avoid any possibly harmful condition for the \QubeModel  driver or the laser.
+    \newline Before using any third party control software, ppqSense strongly encourages the user to contact the ppqSense technical support to obaint counseling and advices from the techincal staff.
+\end{tcolorbox}
+
+
+
+
+%-------------------------------- \QubeModel  Serial Port Specifications --------------------------------%
+
+\subsubsection{\QubeModel  Serial Port Specifications}
+\paragraph{} The serial port on the host system must comply with the specifications of the \QubeModel serial port in order for it to be externally controlled. \newline
+The baud rate of the \QubeModel  Serial Port is 115200 bps, which has to be set on the third party software in order for it to work with the driver. \newline
+
+The commands are properly received by the \QubeModel if terminated with the \textbf{\textbackslash n} character.
+\newline The strings that the \QubeModel  sends back as a reply, if any for the specific command sent, are terminated with the \textbf{\textbackslash r\textbackslash n } characters. \newline
+
+A complete list of the available commands can be requested to ppqSense.
+
+\newpage

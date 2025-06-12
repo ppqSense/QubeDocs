@@ -1,0 +1,183 @@
+\section{Advanced Operations - LIA module}   \label{LIA_main_chapter}
+\paragraph{} The \textbf{LIA} (\textit{Lock-In Amplifier}) module gives the \QubeModel  the ability to perform lock of the controlled laser frequency to the first or second derivative of a molecular absorption line profile. 
+\paragraph{} The \textit{LIA} requires two signals to operate: one demodulating signal and the signal from the detector used to retrieve the absorption signal from the reference molecular sample. The demodulating signal must be synchronous with the modulating one. To obtain such synchronous signals, \textbf{the LIA module must work in pair with the DDS sub-module}, the latter being in charge of generating both the modulating and demodulating signals.
+\newline The modulation-demodulation action performed by a \QubeModel  equipped with a \textit{LIA} module allows the instrument to obtain a signal proportional to the first or second derivative of the absorption line signal retrieved by the detector. This signal can be used as an error signal to be processed by an internal \textit{Proportional-Integral (PI) Correction Loop}. Doing so, LIA module can generate a correction current which is directly fed to the laser, closing the frequency-locking loop over the reference absorption line.
+
+\paragraph{} Since each laser can only be locked to a reference at a time, in this case a molecular absorption line, the \textit{LIA} Module can not be used with other Locking Modules (\textit{PLL}, \textit{PDH}) on the same \QubeModel  system.
+
+
+
+
+%-------------------------------- Connectors --------------------------------%
+
+\subsection{Connectors} \label{LIA_connectors_chapter}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/LIA_frontalino.png}
+    \caption{Appearance of the LIA module}
+    \label{LIA_frontalino}
+\end{figure}
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{ p{0.23\linewidth}  p{0.23\linewidth}  p{0.23\linewidth}  p{0.23\linewidth} }
+    \hline
+    \hline
+    \addlinespace
+        \textbf{C16. Signal Out}
+        \newline \textit{output}
+    &   
+        {\footnotesize Requires Hi-Z load.
+        \newline DC coupled.
+        \newline \textit{Signal level}: \hspace*{\fill} -1 V – 1 V }
+    &
+         \textbf{C18. Sine Out}  
+        \newline \textit{output}
+    &   
+        {\footnotesize Requires Hi-Z load.
+        \newline DC coupled.
+        \newline \textit{Signal level}: \hspace*{\fill} -1 V – 1 V }
+    \\
+    \addlinespace
+        \textbf{C17. Signal In}
+        \newline \textit{input}
+    &
+        {\footnotesize AC coupled.
+        \newline Signal level: \hspace*{\fill} < 1 Vpp. }
+    &
+        \textbf{C19. Ramp Out}
+        \newline \textit{output}
+    &   
+        {\footnotesize Requires Hi-Z load.
+        \newline DC coupled.
+        \newline \textit{Signal level}: \hspace*{\fill} -1 V – 1 V }
+    \\
+    \addlinespace
+    \hline
+    \hline
+    \end{tabular}
+\end{table}
+
+
+
+
+%-------------------------------- The DDS sub-module operation in pair with the LIA module --------------------------------%
+
+\subsection{The DDS sub-module operation in pair with the LIA module} \label{cpt:LIA_rephasing}
+The operation of the LIA modules requires the modulating and demodulating signals to be synchronized one to the other. To achieve perfect synchronization, the use of a single timing source is required. The DDS sub-module provides such timing source, generating both the modulating signal with the DDS1 and the demodulating signal which is internally fed to the LIA module.
+
+\paragraph{} The demodulating signal frequency is fixed at 32.768 kHz, hence the modulating signal frequency is forced to operate in two possible states:
+\begin{itemize}
+    \item To retrieve the first derivative of the molecular absorption line, the modulating signal must have the same frequency as the demodulating one, hence the DDS1 frequency is fixed at 32.768 kHz.
+    
+    \item To retrieve the second derivative of the molecular absorption line, the modulating signal must have half the frequency of the demodulating signal, being 16.384 kHz.
+\end{itemize}
+In both cases, the DDS1 frequency cannot be changed by the available control in the DDS panel, which becomes inactive.
+
+\paragraph{} The reciprocal phase between the modulating and demodulating signal is another crucial factor to achieve a good lock with the LIA module. Because of that, if the LIA module is set to be active at the startup of the instrument, it performs a rephasing process in order to obtain a known initial status of the phase between the two signals. The process runs for a few seconds until the phase between the two is equal to the \textbf{DDS1 phase} saved in the ROM memory of the \QubeModel . The LIA module is ready to be used once the rephasing process is done.
+
+\paragraph{} If the LIA module is not necessary and the user wants to have full control on the DDS1 frequency, the LIA demodulating mode can be set to \textbf{OFF} (see the below chapter), to remove the frequency constraints for DDS1. The rephasing process is not performed at startup if the LIA demodulating mode is set to \textbf{OFF}.
+\newpage
+
+
+
+
+%-------------------------------- Control Software Interface --------------------------------%
+
+\subsection{Control Software Interface} \label{LIA_SW_chapter}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/LIA_control_Sw.png}
+    \caption{Control Software Interface dedicated to the LIA Module}
+    \label{LIA_SW_interface}
+\end{figure}
+
+\paragraph{} The \QubeModel  Control Software section dedicated to the \textit{LIA} module can be accessed by clicking on the LIA tab in the lower part of the GUI. Similarly to the \textit{PLL} and \textit{PDH} modules, also this control tab is subdivided into a monitor section and a control section.
+
+\paragraph{} On the center portion of the \textit{LIA} tab, the user can find the commands that control the functionality of the correction loop included into the \textit{LIA} module:
+\begin{itemize}
+    \item The \textbf{Loop mode} switch allows the user to chose if the \textit{Control Loop} should work in pure proportional mode or in proportional-integrative mode.
+    \item The \textbf{LOCK} button enables or disables the correction signal fed to the laser, effectively closing the correction loop.
+    \item The \textbf{Filter enable} button enables or disables a tunable Low-Pass filter that may be useful to smooth out the Correction Signal generated by the Loop.
+\end{itemize}
+
+\paragraph{} The \textbf{LIA Loop Settings} can be found below the functionality controls, these commands allow the user to tune the \textit{PI Correction Loop} gains:
+\begin{itemize}
+    \item \textbf{VGA GAIN} sets the Gain of the Variable Gain Amplifier (VGA) being the first stage of the \textbf{Correction Loop}. The gain is expressed in dB. The value of the Gain can be changed both by direct typing or with the up and down arrows. Accepted values range from 0 dB to 80 dB.
+    
+    \item \textbf{Prop.} sets the magnitude of the Proportional action of the \textit{Correction Loop}. This control also affects the cut-off frequency of the Integrative component of the \textit{Correction Loop}.
+    
+    \item \textbf{Integ.} sets the cut-off frequency of the Integrative component of the \textit{Correction Loop}.
+    
+    \item \textbf{Filter} sets the -3 dB frequency for the Low Pass Filter that can be activated with the \textbf{Filter Enable} button.
+\end{itemize}
+
+\paragraph{} The leftmost section of the \textit{LIA} tab holds all the controls specific for the Lock-In Amplifier, the monitor selector and the offset regulation for the correction loop:
+\begin{itemize} 
+    \item The \textbf{Digital Filter} drop-down menu allows the user to select one of the available built-in digital filters. More information about the specific behavior of each filter can be found in the dedicated chapter below.
+    
+    \item The \textbf{Demod. Freq.} switch allows the user to select in which mode the \textit{LIA} module should work. When \textbf{f} is selected, the \textit{LIA} works to lock the laser on the first derivative of the absorption line, while using the \textbf{2f} mode sets the \textit{LIA} to work on the second derivative of the absorption line. When the \textbf{OFF} button is selected, the LIA is set not to work in pair with the DDS module.
+    
+    \item The \textbf{Monitor Selector} switch allows the user to decide which signal is present on the \textbf{SIGNAL OUT} (\textit{C16}) port of the \textit{LIA} module. By selecting \textbf{LOCK}, the \textit{LIA} module will output the correction signal generated by the internal PI control loop. The \textbf{ERR} selection sets the error signal (which is the input to the PI control loop) to be on the \textbf{SIGNAL OUT} connector.
+    
+    \item The \textbf{Offset} sliding bar allows the user to set the input offset of the correction loop. The value of the offset can be changed both by acting on the sliding bar and on the form below. The admissible range for the offset ranges from -500 mV to 500 mV.
+   
+\end{itemize}
+
+\paragraph{} In the bottom left corner, user can find the \textbf{Save} button. By pressing it, the user will save all the current \textit{LIA} parameters an functional modes into the ROM memory of the \QubeModel  so that they'll be used as default the next time the \QubeModel  is switched on.
+\paragraph{} The \textbf{Demod. Signal Phase Ready} LED next to the \textbf{Save} button indicates if the rephasing process between the modulating and demodulating signals previously described is completed.
+
+
+
+
+%-------------------------------- LIA operations --------------------------------%
+
+\subsection{LIA operations}
+\paragraph{}For a proper set-up and operation of the \textit{LIA} module, follow the steps listed below:
+\begin{itemize}
+    \item If necessary, set the desired demodulating mode and wait up to a few seconds for the rephasing process to be completed. The \textbf{Phase Ready} LED will light up once the process is completed.
+    
+    \item Connect the detector to an oscilloscope and use the DDS2 to scan the laser wavelength to find the absorption line of the reference molecule with a low frequency triangular wave modulation. To easily achieve this condition, lock the external synchronization signal of the LH module to the DDS2 and use it as the trigger for the oscilloscope acquisition.
+    
+    \item Once the absorption line has been found and it is well centered in the scope screen, activate the DDS1 and set a proper modulating amplitude. The LIA module is capable of demodulating signal down to a few tens of mV, higher signals risk to saturate the internal amplifier stages. Check the signal from the detector to verify that the amplitude of the modulation is in this accepted range. Connect the signal from the detector to the SIGNAL IN connector of the LIA module.
+    
+    \item Connect the SIGNAL OUT connector to the oscilloscope in order to have a monitor signal to be used as a reference during the locking operation. The oscilloscope must have a high impedance input. Set the monitor selector to \textbf{ERR}. The first derivative of the absorption line must appear on the scope, as a consequence of the demodulating action performed by the LIA.
+
+    \item Set the \textbf{Digital Filter} that produces the best signal quality and maximizes the amplitude of the signal on the scope.
+    
+    \item By adjusting the modulating signal phase, search for the worst condition (lowest signal on the monitor). Once achieved, change the modulating frequency phase by 90\textdegree to obtain the optimum phase condition. It may be necessary to switch between the +90\textdegree and - 90\textdegree phase conditions in order to find the proper correction loop sign.
+    
+    \item Set the \textbf{correction loop} to \textbf{P} mode and close the correction loop with the \textbf{LOCK} button. Activate and tune the \textbf{Low Pass Filter} if necessary.
+
+    \item Adjust the \textbf{Prop.} and \textbf{VGA} gains to maximize the correction signal without occurring in an oscillating behavior.
+    
+    \item Set the correction loop to \textbf{PI} mode and adjust the \textbf{Integ.} time constant to achieve a good locking.
+    
+    %\item Activate the \textbf{slow drift correction loop}. Further explanations on this matter can be found in a dedicated chapter below.
+\end{itemize}
+
+
+\paragraph{} Once the lock has been successfully achieved, the \textbf{Slow Loop} functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check \textbf{chapter \ref{Slow_loop_chapter}}.
+
+
+
+
+%-------------------------------- LIA digital filter --------------------------------%
+
+\subsection{LIA digital filter}
+\paragraph{}The LIA module is equipped with a mixed signal Lock-In Amplifier which includes a set of built-in digital filters. The digital filters shows a frequency behavior which is dependent on the clock frequency used to drive the filter. In the LIA module, the clock signal used for the digital filter is generated by the DDS sub-module with a fixed frequency of:
+\[ f_{CLK} = 2^{20} = 1.048576 MHz\]
+
+The clock signal passes through a series of frequency divider before reaching the programmable digital filter, thus obtaining a frequency of:
+\[ f_{SO} = 2^{17} = 131.072 kHz\]
+
+The available filters, which can be selected by the mean of the dedicated drop-down menu, are the following ones:
+\begin{itemize}
+    \item \textbf{BP0}: Band Pass filter, centered on f\textsubscript{SO}/8 = 16.384 kHz
+    \item \textbf{BP1}: Band Pass filter, centered on f\textsubscript{SO}/4 = 32.768 kHz, Q = 8.4
+    \item \textbf{BP2}: Band Pass filter, centered on f\textsubscript{SO}/4 = 32.768 kHz, Q = 4.3
+    \item \textbf{LP1}: Low Pass filter, -3 dB at f\textsubscript{SO}/5 = 26.2144 kHz, 4\textsuperscript{th} order
+    \item \textbf{LP2}: Low Pass filter, -3 dB at f\textsubscript{SO}/8 = 16.384 kHz, 4\textsuperscript{th} order
+    \item \textbf{Notch}: centered on f\textsubscript{SO}/4 = 32.768 kHz, 1\textsuperscript{st} order
+    \item \textbf{All Pass}
+\end{itemize}

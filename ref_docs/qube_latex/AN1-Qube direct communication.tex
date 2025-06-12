@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt,english]{article}
+\input{settings/packages}
+
+
+\begin{document} 
+	\input{settings/Direct_com_initial}	
+	\input{sections/cover}
+	\newpage
+
+    \paragraph{}ppqSense distributes its QubeCL and QubeDL laser drivers as an almost plug\&play device. To make it possible to use each driver directly out of the box, ppqSense has developed a Control Software for QubeCL and QubeDL, distributed with each one of the drivers with a dedicated pendrive.
+    \newline Nevertheless, it may be possible that more complex instrumental setups need to integrate the control of the Qube inside a bigger control software responsible of the management of the whole experiment.
+
+    \paragraph{}In order to allow each user to fully integrate its Qube inside the experiment, this Application Note describes the Serial Connection of the drivers, along with some simple connection examples with different methods.
+    
+	\tableofcontents
+	\listoftables
+    \listoffigures      
+	\newpage
+    
+%----   SECTIONS    ----
+
+    \input {sections/Dir_com_introduction}
+    \newpage
+    
+	\input{sections/Direct_communication}
+    \newpage
+    
+    \input{sections/Dir_com_examples}
+    \newpage
+    
+    \begin{versionhistory}
+        \vhEntry{1.0}{2025.04.11}{LM}{First redaction.}
+        \vhEntry{1.1}{2025.05.29}{LM}{Available command tables updated.}
+        \vhEntry{1.2}{2025.06.06}{LM}{Available command tables updated.
+                                        \newline Corrected typos in the Python example code.}
+    \end{versionhistory}
+
+\end{document}

@@ -1,0 +1,26 @@
+\section{Introduction}
+
+\paragraph{} In order to control, manage and monitor the operations of QubeCL and QubeDL laser drivers, ppqSense distributes a dedicated Control Software which provides an intuitive GUI and gives the user access to all the functionalities of the QubeCL/DL drivers, connecting to them by the mean of an USB serial port. Nevertheless, the Control Software is only meant to give the user direct control over the drivers and does not allow to be integrated into a third party control software.
+
+\paragraph{} Complex experimental setups may need to integrate the control of the Qube into their own control software, in order to perform automatized operations without the constant supervision of a user. In this Application Note, we provide the technical specification to control the QubeCL and QubeDL drivers with a third-party Control Software by the means of the same USB serial port used by ppqSense Qube Control Software, along with some specific examples. This will give the user the ability to fully integrate the Qube inside their experimental setup, controlling it with their own control software regardless of the programming method chosen (both LabVIEW and text-based programming languages such as C and Python can be used to achieve control of the Qubes over the Serial Port).
+
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+                    colback=black!5!white, colframe=red!75!black, colbacktitle=red!80!black,
+                    title=CAUTION, fonttitle=\bfseries, boxed title style={size=small, 
+                    colframe=black!50!black} ]
+
+    The Control Software provided by ppqSense includes some safety features that are useful to prevent any usage of the QubeCl and QubeDL drivers that may harm both the driver itself or the laser connected to it.
+    \newline While using a third party control software, the user must be particularly cautious in order to avoid any possibly harmful condition for the driver or the laser.
+    \newline Before using any third party control software, ppqSense strongly encourages the user to contact the ppqSense technical support to obaint counseling and advices from the techincal staff.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+                    colback=black!5!white, colframe=red!75!black, colbacktitle=red!80!black,
+                    title=CAUTION, fonttitle=\bfseries, boxed title style={size=small, 
+                    colframe=black!50!black} ]
+
+    The QubeCL and QubeDL firmware does not prevent the user from sourcing current to the laser without previously activating the temperature controller, this safety measure is usually performed by the Qube Control Software provided by ppqSense.
+    \newline While operating with a third party control software, care must be taken in order to never source current to the laser while the temperature controller module (if present) is not active.
+\end{tcolorbox}

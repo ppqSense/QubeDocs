@@ -1,0 +1,4542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="main document for QubeCL laser driver manual v.5">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Qube Manual V5 - QubeCL Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/ppq.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qubecl-laser-driver-manual-v5" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="QubeCL Docs" class="md-header__button md-logo" aria-label="QubeCL Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QubeCL Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Qube Manual V5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Qube Manual V5
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="QubeCL Docs" class="md-nav__button md-logo" aria-label="QubeCL Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    QubeCL Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Qube Manual V5
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qube Manual V5
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-warranty" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Warranty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Speciﬁcations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Speciﬁcations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-communication-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Communication interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-absolute-maximum-ratings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Absolute maximum ratings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-electrical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Electrical Speciﬁcations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-typical-performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Typical performance characteristics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-safety-consideration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Safety consideration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-part-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Part List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-electrical-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Electrical power supply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-connectors-and-led-indicators-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Connectors and LED indicators functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#441-power-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 Power connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-tec-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 TEC connector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-qubecl_control-software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 QubeCL_Control software installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-basic-operation-current-and-temperature-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Basic operation: current and temperature controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Basic operation: current and temperature controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Set-up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-operating-with-the-control-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Operating with the Control Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#521-connecting-to-the-qubecl" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Connecting to the QubeCL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-qubecl_control-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 QubeCL_Control appearance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#531-temperature-control-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Temperature control operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-current-control-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Current control operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-automatic-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 Automatic protections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-advanced-operations-modulators-and-dds" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Advanced Operations - Modulators and DDS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Advanced Operations - Modulators and DDS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-the-dds-sub-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 The DDS sub-module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#611-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 Control Software interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-dds-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3 DDS operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-advanced-operations-pll-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Advanced Operations - PLL module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 Advanced Operations - PLL module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Control Software Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-pll-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 PLL Operation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-advanced-operations-pdh-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Advanced Operations - PDH module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8 Advanced Operations - PDH module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Control Software Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-pdh-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 PDH operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-advanced-operations-lia-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 Advanced Operations - LIA module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9 Advanced Operations - LIA module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-the-dds-sub-module-operation-in-pair-with-the-lia-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 The DDS sub-module operation in pair with the LIA module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Control Software Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-lia-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 LIA operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-lia-digital-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 LIA digital ﬁlter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-advanced-operations-slow-drift-compensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Advanced Operations - Slow drift compensation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-advanced-operations-qubecl-advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 Advanced Operations - QubeCL advanced settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11 Advanced Operations - QubeCL advanced settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-adv-1-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Adv. 1 tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-adv-2-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Adv. 2 tab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-interfacing-with-lasers" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 Interfacing with lasers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12 Interfacing with lasers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-laser-housing-for-qubecl" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 Laser Housing for QubeCL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1211-butterfly-packaged-laser-housing" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1.1 Butterﬂy Packaged laser Housing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1212-hhl-packaged-laser-housing" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1.2 HHL Packaged laser Housing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-laser-interface-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 Laser Interface Boards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1221-hhl-interface-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2.1 HHL Interface Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1222-nanoplus-cubic-housing-interface-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2.2 NanoPlus Cubic Housing Interface Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-high-frequency-modulation-with-bias-tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 High Frequency modulation with Bias-Tee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1231-bias-tee-usage-for-high-freuqency-laser-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3.1 Bias-Tee usage for high freuqency laser modulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1232-interface-boards-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3.2 Interface Boards Wiring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-direct-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      13 Direct Communication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13 Direct Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-qubecl-serial-port-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1 QubeCL Serial Port Speciﬁcations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-qubecl-serial-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2 QubeCL Serial Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lia-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIA Module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-customer-support-and-useful-contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Customer support and useful contacts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revision History
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-warranty" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Warranty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Speciﬁcations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Speciﬁcations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-communication-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Communication interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-absolute-maximum-ratings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Absolute maximum ratings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-electrical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Electrical Speciﬁcations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-typical-performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Typical performance characteristics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-safety-consideration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Safety consideration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-part-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Part List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-electrical-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Electrical power supply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-connectors-and-led-indicators-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Connectors and LED indicators functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#441-power-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 Power connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-tec-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 TEC connector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-qubecl_control-software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 QubeCL_Control software installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-basic-operation-current-and-temperature-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Basic operation: current and temperature controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Basic operation: current and temperature controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Set-up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-operating-with-the-control-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Operating with the Control Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#521-connecting-to-the-qubecl" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Connecting to the QubeCL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-qubecl_control-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 QubeCL_Control appearance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#531-temperature-control-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Temperature control operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-current-control-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Current control operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-automatic-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 Automatic protections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-advanced-operations-modulators-and-dds" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Advanced Operations - Modulators and DDS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Advanced Operations - Modulators and DDS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-the-dds-sub-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 The DDS sub-module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#611-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 Control Software interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-dds-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3 DDS operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-advanced-operations-pll-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Advanced Operations - PLL module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 Advanced Operations - PLL module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Control Software Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-pll-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 PLL Operation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-advanced-operations-pdh-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Advanced Operations - PDH module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8 Advanced Operations - PDH module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Control Software Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-pdh-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 PDH operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-advanced-operations-lia-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 Advanced Operations - LIA module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9 Advanced Operations - LIA module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Connectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-the-dds-sub-module-operation-in-pair-with-the-lia-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 The DDS sub-module operation in pair with the LIA module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-control-software-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Control Software Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-lia-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 LIA operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-lia-digital-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 LIA digital ﬁlter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-advanced-operations-slow-drift-compensation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Advanced Operations - Slow drift compensation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-advanced-operations-qubecl-advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 Advanced Operations - QubeCL advanced settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11 Advanced Operations - QubeCL advanced settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-adv-1-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Adv. 1 tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-adv-2-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Adv. 2 tab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-interfacing-with-lasers" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 Interfacing with lasers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12 Interfacing with lasers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-laser-housing-for-qubecl" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 Laser Housing for QubeCL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1211-butterfly-packaged-laser-housing" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1.1 Butterﬂy Packaged laser Housing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1212-hhl-packaged-laser-housing" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1.2 HHL Packaged laser Housing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-laser-interface-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 Laser Interface Boards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1221-hhl-interface-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2.1 HHL Interface Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1222-nanoplus-cubic-housing-interface-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2.2 NanoPlus Cubic Housing Interface Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-high-frequency-modulation-with-bias-tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 High Frequency modulation with Bias-Tee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1231-bias-tee-usage-for-high-freuqency-laser-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3.1 Bias-Tee usage for high freuqency laser modulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1232-interface-boards-wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3.2 Interface Boards Wiring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-direct-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      13 Direct Communication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13 Direct Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-qubecl-serial-port-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1 QubeCL Serial Port Speciﬁcations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-qubecl-serial-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2 QubeCL Serial Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lia-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIA Module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-customer-support-and-useful-contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Customer support and useful contacts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revision History
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qubecl-laser-driver-manual-v5">QubeCL Laser Driver Manual V.5</h1>
+<!-- [TOC] -->
+<!-- 
+## List of Tables
+
+1  
+Communication Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+[6](#table.caption.2) 2  
+Absolute Maximum Ratings . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+[6](#table.caption.3) 3  
+Current Generator Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+6 4  
+Analog Current Modulators Specs . . . . . . . . . . . . . . . . . . . . . . . .  
+[7](#table.caption.5) 5  
+Mixed Current Generator Specs - Digital . . . . . . . . . . . . . . . . . . . .  
+7 6  
+Mixed Current Generator Specs - Analog . . . . . . . . . . . . . . . . . . . .  
+[8](#table.caption.7) 7  
+Temperature Controller Specs . . . . . . . . . . . . . . . . . . . . . . . . . .  
+8 8  
+PLL Module Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+[8](#table.caption.9) 9  
+Pound-Drever-Hall module Specs . . . . . . . . . . . . . . . . . . . . . . . .  
+8 10 Lock-In Ampliﬁer module Specs . . . . . . . . . . . . . . . . . . . . . . . . .  
+[9](#table.caption.11) 11 Power source voltages speciﬁcations . . . . . . . . . . . . . . . . . . . . . . . 14 13 Available commands for QubeCL current generator. . . . . . . . . . . . . . . 57 14 Available commands for QubeCL temperature controller. . . . . . . . . . . . . [58](#table.14) 15 Available commands for the DDS submodule. . . . . . . . . . . . . . . . . . . 60 16 Available commands for the PLL locking module. . . . . . . . . . . . . . . . . [62](#table.16) 17 Available commands for the PDH locking module. . . . . . . . . . . . . . . . 64 18 Available commands for the LIA locking module. . . . . . . . . . . . . . . . . [66](#table.18) 19 Available commands to check the instrument status. . . . . . . . . . . . . . . 67
+
+## List of Figures
+
+1  
+Current noise spectral density comparison with low current modulator . . . . . [10](#figure.caption.12) 2  
+Current noise spectral density comparison with high current modulator . . . . 10 3  
+24h Current stability over ambient temperature . . . . . . . . . . . . . . . . . [11](#figure.caption.16) 4  
+24h Current stability over time . . . . . . . . . . . . . . . . . . . . . . . . . 11 5  
+Current temperature coeﬃcient . . . . . . . . . . . . . . . . . . . . . . . . . [12](#figure.caption.18) 6  
+QubeCL15TP front panel . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 7  
+Power connector pin diagram . . . . . . . . . . . . . . . . . . . . . . . . . . 16 8  
+TEC connector pin diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . [16](#figure.caption.31) 9  
+QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 19 10 The QubeCL\_Control software conﬁguration panel . . . . . . . . . . . . . . . [20](#figure.caption.41) 11 The QubeCL\_Control software current driver panel . . . . . . . . . . . . . . . 21 12 The QubeCL\_Control software temperature control panel . . . . . . . . . . . [22](#figure.caption.46) 13 The QubeCL\_Control software Advanced tab . . . . . . . . . . . . . . . . . . 23 14 Appearance of the LH module equipped with the DDS sub-module . . . . . . [29](#figure.caption.56) 15 The DDS control panel of the QubeCL\_Control Software . . . . . . . . . . . 30 16 Appearance of the PLL module . . . . . . . . . . . . . . . . . . . . . . . . . 32 17 Control Software Interface dedicated to the PLL Module . . . . . . . . . . . . [33](#figure.caption.66) 18 Appearance of the PDH module . . . . . . . . . . . . . . . . . . . . . . . . . 36 19 Control Software Interface dedicated to the PDH Module . . . . . . . . . . . [37](#figure.caption.77) 20 Appearance of the LIA module . . . . . . . . . . . . . . . . . . . . . . . . . 40 21 Control Software Interface dedicated to the LIA Module . . . . . . . . . . . . [42](#figure.caption.96)
+22 The ﬁrst Advanced tab of the Control Software GUI - 48  
+23 The ﬁrst Advanced tab of the Control Software GUI - 50  
+24 Bias Tee simpliﬁed electronic diagram - 52  
+25 Drawings of the NanoPlus Cubic Mount Interface Board - 55  
+26 Drawings of the HHL Interface Board - 55  
+
+--- -->
+
+<h2 id="1-warranty">1. Warranty</h2>
+<p>ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmanship defects for one year from the date of the original shipment <strong>(1-YEAR WARRANTY).</strong> This warranty is in lieu of all other guarantees expressed or implied, including any implied warranty of merchantability or ﬁtness for any particular purpose. ppqSense S.r.l. shall not be liable for any special, incidental or consequential loss. During the warranty period, ppqSense S.r.l. will repair or replace the unit or module, or issue credit, at our option, without charge. ppqSenses liability shall not in any case exceed the cost of correcting defects in the products as explained here, and this service is the sole remedy of the buyer. This warranty does not apply to defects caused by abuse, accident, modiﬁcations, Acts of God, or the use of the product for which it was not intended. ppqSense S.r.l. shall not be liable for damages resulting from the use of the product, nor shall be responsible for any failure in the performance of other items to which the purchased product is connected or the operation of any system of which the purchased product may be a part. The QubeCL System should not be used in the manner not speciﬁed by the manufacturer.</p>
+<h2 id="2-specifications">2 Speciﬁcations</h2>
+<h3 id="21-communication-interfaces">2.1 Communication interfaces</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Interface</strong></th>
+<th><strong>Mode</strong></th>
+<th><strong>Settings</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB</td>
+<td>Virtual Serial Port</td>
+<td>115200 8N1</td>
+<td></td>
+</tr>
+<tr>
+<td>WiFi</td>
+<td>Access Point/Client</td>
+<td>software conﬁgurable</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1:</strong> Communication Interfaces</p>
+<h3 id="22-absolute-maximum-ratings">2.2 Absolute maximum ratings</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Values</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating temperature</td>
+<td>-20 to +40</td>
+<td>◦ C</td>
+<td></td>
+</tr>
+<tr>
+<td>Storage temperature</td>
+<td>-20 to +70</td>
+<td>◦ C</td>
+<td></td>
+</tr>
+<tr>
+<td>Main power supply voltage (PS LAS )</td>
+<td>26</td>
+<td>V</td>
+<td>No terminal must be connected to ground</td>
+</tr>
+<tr>
+<td>TEC power supply voltage (PS TEC )</td>
+<td>24</td>
+<td>V</td>
+<td>^</td>
+</tr>
+<tr>
+<td>Modulation inputs</td>
+<td>± 10</td>
+<td>V</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 2:</strong> Absolute Maximum Ratings</p>
+<h3 id="23-electrical-specifications">2.3 Electrical Speciﬁcations</h3>
+<p>PS LAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦ C, unless otherwise noted.<br />
+√</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Noise spectral density</td>
+<td>100</td>
+<td>200</td>
+<td>500</td>
+<td>pA <em>/</em> Hz</td>
+<td>test current 200mA</td>
+</tr>
+<tr>
+<td>Integrated noise</td>
+<td>50</td>
+<td>100</td>
+<td>200</td>
+<td>nA  RMS</td>
+<td>10 Hz - 100 kHz</td>
+</tr>
+<tr>
+<td>Integrated noise</td>
+<td>250</td>
+<td>350</td>
+<td>500</td>
+<td>nA  RMS</td>
+<td>10 Hz - 1 MHz</td>
+</tr>
+<tr>
+<td>Stability (1h)</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>ppm  FS</td>
+<td></td>
+</tr>
+<tr>
+<td>Stability (12h)</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>ppm  FS</td>
+<td></td>
+</tr>
+<tr>
+<td>Temperature coeﬃcient</td>
+<td>-2</td>
+<td>-3</td>
+<td>-5</td>
+<td>ppm FS/ ◦ C</td>
+<td></td>
+</tr>
+<tr>
+<td>Voltage compliance</td>
+<td></td>
+<td>17.5</td>
+<td></td>
+<td>V</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 3:</strong> Current Generator Specs</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analog input voltage</td>
+<td>0</td>
+<td></td>
+<td>± 10</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>DC oﬀset</td>
+<td>20</td>
+<td>30</td>
+<td>50</td>
+<td>µA</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Low current</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Noise spect. dens. ﬂoor</td>
+<td>50</td>
+<td></td>
+<td>100</td>
+<td>pA <em>/</em> Hz</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Output current</td>
+<td>0</td>
+<td></td>
+<td>± 5</td>
+<td>mA</td>
+<td></td>
+</tr>
+<tr>
+<td>Gain</td>
+<td></td>
+<td>-0.5</td>
+<td></td>
+<td>mA/V</td>
+<td></td>
+</tr>
+<tr>
+<td>Modulation BW (-3 dB)</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>High current</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Noise spect. dens. ﬂoor</td>
+<td>200</td>
+<td></td>
+<td>2000</td>
+<td>pA <em>/</em> Hz</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Output current</td>
+<td>0</td>
+<td></td>
+<td>± 100</td>
+<td>mA</td>
+<td></td>
+</tr>
+<tr>
+<td>Gain</td>
+<td></td>
+<td>-10</td>
+<td></td>
+<td>mA/V</td>
+<td></td>
+</tr>
+<tr>
+<td>Modulation BW (-3 dB)</td>
+<td></td>
+<td>600</td>
+<td></td>
+<td>kHz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>√<br />
+√ <strong>Table 4:</strong> Analog Current Modulators Specs</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Waveforms</td>
+<td>Sine or Triangle</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td></td>
+</tr>
+<tr>
+<td>Freq. range</td>
+<td>10 −3</td>
+<td></td>
+<td>10 6</td>
+<td>Hz</td>
+<td></td>
+</tr>
+<tr>
+<td>Min freq. step</td>
+<td></td>
+<td>250</td>
+<td></td>
+<td>mHz</td>
+<td></td>
+</tr>
+<tr>
+<td>Amplitude control res.</td>
+<td></td>
+<td>12</td>
+<td></td>
+<td>bits</td>
+<td></td>
+</tr>
+<tr>
+<td>DC oﬀset</td>
+<td>20</td>
+<td>30</td>
+<td>50</td>
+<td>µA</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Low current</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Noise spect. dens. ﬂoor</td>
+<td>50</td>
+<td></td>
+<td>100</td>
+<td>pA <em>/</em> Hz</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Output current</td>
+<td>0</td>
+<td></td>
+<td>± 2 <em>.</em> 5</td>
+<td>mA</td>
+<td></td>
+</tr>
+<tr>
+<td>Modulation BW (-3 dB)</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>High current</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Noise spect. dens. ﬂoor</td>
+<td>200</td>
+<td></td>
+<td>2000</td>
+<td>pA <em>/</em> Hz</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Output current</td>
+<td>0</td>
+<td></td>
+<td>± 75</td>
+<td>mA</td>
+<td></td>
+</tr>
+<tr>
+<td>Modulation BW (-3 dB)</td>
+<td></td>
+<td>600</td>
+<td></td>
+<td>kHz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>√<br />
+√<br />
+<strong>Table 5:</strong> Mixed Current Generator Specs - Digital</p>
+<hr />
+<p>√<br />
+√<br />
+<strong>Table 6:</strong> Mixed Current Generator Specs - Analog<br />
+<strong>Table 7:</strong> Temperature Controller Specs<br />
+<strong>Table 8:</strong> PLL Module Specs<br />
+<strong>Table 9:</strong> Pound-Drever-Hall module Specs  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analog input voltage</td>
+<td>0</td>
+<td></td>
+<td>± 2 <em>.</em> 5</td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>DC oﬀset</td>
+<td>20</td>
+<td>30</td>
+<td>50</td>
+<td>µA</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Low current</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Noise spect. dens. ﬂoor</td>
+<td>50</td>
+<td></td>
+<td>100</td>
+<td>pA <em>/</em> Hz</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Output current</td>
+<td>0</td>
+<td></td>
+<td>± 2 <em>.</em> 5</td>
+<td>mA</td>
+<td></td>
+</tr>
+<tr>
+<td>Gain</td>
+<td></td>
+<td>-1</td>
+<td></td>
+<td>mA/V</td>
+<td></td>
+</tr>
+<tr>
+<td>Modulation BW (-3 dB)</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>High current</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Noise spect. dens. ﬂoor</td>
+<td>200</td>
+<td></td>
+<td>2000</td>
+<td>pA <em>/</em> Hz</td>
+<td>input shorted</td>
+</tr>
+<tr>
+<td>Output current</td>
+<td>0</td>
+<td></td>
+<td>± 75</td>
+<td>mA</td>
+<td></td>
+</tr>
+<tr>
+<td>Gain</td>
+<td></td>
+<td>-30</td>
+<td></td>
+<td>mA/V</td>
+<td></td>
+</tr>
+<tr>
+<td>Modulation BW (-3 dB)</td>
+<td></td>
+<td>600</td>
+<td></td>
+<td>kHz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thermistor</td>
+<td>1</td>
+<td></td>
+<td>10</td>
+<td>kΩ</td>
+<td>NTC</td>
+</tr>
+<tr>
+<td>TEC current</td>
+<td></td>
+<td></td>
+<td>± 3</td>
+<td>A</td>
+<td></td>
+</tr>
+<tr>
+<td>TEC compl. voltage</td>
+<td></td>
+<td>20</td>
+<td></td>
+<td>V</td>
+<td></td>
+</tr>
+<tr>
+<td>Temp stability</td>
+<td></td>
+<td>40</td>
+<td>400</td>
+<td>µK</td>
+<td>absolute stability in 12h</td>
+</tr>
+<tr>
+<td>Temp. coeﬃcient</td>
+<td></td>
+<td>-90</td>
+<td>-100</td>
+<td>µK <em>/</em> K</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF freq. input</td>
+<td>10</td>
+<td></td>
+<td>250</td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>LO freq. input</td>
+<td>10</td>
+<td></td>
+<td>100</td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>Input level</td>
+<td>-30</td>
+<td></td>
+<td>0</td>
+<td>dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>Input stage gain</td>
+<td>0</td>
+<td></td>
+<td>30</td>
+<td>dB</td>
+<td></td>
+</tr>
+<tr>
+<td>Lock bandwidth</td>
+<td></td>
+<td></td>
+<td>800</td>
+<td>kHz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF freq. input</td>
+<td>1</td>
+<td></td>
+<td>100</td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>LO freq. input</td>
+<td>1</td>
+<td></td>
+<td>100</td>
+<td>MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>RF Input level</td>
+<td>-30</td>
+<td></td>
+<td>0</td>
+<td>dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>LO Input level</td>
+<td></td>
+<td>5</td>
+<td></td>
+<td>dBm</td>
+<td></td>
+</tr>
+<tr>
+<td>Lock bandwidth</td>
+<td></td>
+<td></td>
+<td>800</td>
+<td>kHz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Table 10:</strong> Lock-In Ampliﬁer module Specs</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Min</strong></th>
+<th><strong>Typ</strong></th>
+<th><strong>Max</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demodulation frequency</td>
+<td></td>
+<td>32768</td>
+<td></td>
+<td>Hz</td>
+<td>ﬁxed</td>
+</tr>
+<tr>
+<td>Ramp frequency</td>
+<td>1</td>
+<td></td>
+<td>1000</td>
+<td>Hz</td>
+<td></td>
+</tr>
+<tr>
+<td>Input voltage noise</td>
+<td></td>
+<td>30</td>
+<td></td>
+<td>µV  RMS</td>
+<td></td>
+</tr>
+<tr>
+<td>Input stage gain</td>
+<td>0</td>
+<td></td>
+<td>60</td>
+<td>dB</td>
+<td></td>
+</tr>
+<tr>
+<td>Integration time</td>
+<td>1</td>
+<td></td>
+<td>10000</td>
+<td>ms</td>
+<td></td>
+</tr>
+<tr>
+<td>Lock bandwidth</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>kHz</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-typical-performance-characteristics">3 Typical performance characteristics</h2>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-1008.png" /></p>
+<p>M1 = 50nA<br />
+M2 = 440nA</p>
+<p>rms<br />
+rms</p>
+<p><strong>Figure 1:</strong> Current noise spectral density comparison with low current modulator</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0929.png" /></p>
+<p>M1 = 50nA<br />
+M2 = 2µA</p>
+<p>rms<br />
+rms</p>
+<p><strong>Figure 2:</strong> Current noise spectral density comparison with high current modulator</p>
+<hr />
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0935.jpg" /></p>
+<p><strong>Figure 3:</strong> 24h Current stability over ambient temperature</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0936.jpg" /></p>
+<p><strong>Figure 4:</strong> 24h Current stability over time  </p>
+<hr />
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0939.jpg" /></p>
+<p><strong>Figure 5:</strong> Current temperature coeﬃcient</p>
+<hr />
+<h2 id="4-introduction">4 Introduction</h2>
+<p>This manual contains information for operating the modular QubeCL system. The QubeCL is a high-performance instrument that provides low-noise and high-ratings electric current and temperature control to drive optoelectronic devices. The QubeCL is particularly suited to drive state of the art semiconductor and Quantum Cascade laser (QCL) sources. This chapter addresses pertinent safety issues and correct usage of this instrument, and deﬁnes all front panel connections and LED function indicators. Please, carefully read this chapter before using the QubeCL.</p>
+<h3 id="41-safety-consideration">4.1 Safety consideration</h3>
+<p>The QubeCL is a versatile instrument that can be used in a variety of driving current and temperature conditions. However, the QubeCL is not intended for a fail-safe operation in hazardous environments or life-threatening situations. The user assumes full responsibility for correct and safe usage of the QubeCL in accordance with any applicable laws, codes and regulations, and standard pertaining to their speciﬁc application. ppqSense S.r.l. is not liable for any consequential damage due to misapplication or failure of the QubeCL system.<br />
+The QubeCL System is compliant with the following standards:</p>
+<p>** EN 61326-1, EN 55011, EN 61000-4-2, EN61000-4-8, EN61000-4-3**</p>
+<h3 id="42-part-list">4.2 Part List</h3>
+<p>The QubeCL system is shipped in a package designed to provide excellent protection. The shipping box should be saved for future transportation or storage. Carefully unpack and inspect the following items that are contained in the shipping box.</p>
+<ul>
+<li>
+<p><strong>QubeCL driver,</strong> built with a variable number and kind of modules depending on the ordered model.</p>
+</li>
+<li>
+<p><strong>Power supply cable.</strong></p>
+</li>
+<li>
+<p><strong>TC cable,</strong> to connect the temperature controller (only included if the QubeCL mounts a Temperature Controller module).</p>
+</li>
+<li>
+<p><strong>USB cable,</strong> to connect the QubeCL driver to the controlling PC.</p>
+</li>
+<li><strong>USB drive,</strong> which contains the required software and drivers.</li>
+<li><strong>QubePS,</strong> switching power supply for the QubeCL driver, if included in the order.</li>
+</ul>
+<h3 id="43-electrical-power-supply">4.3 Electrical power supply</h3>
+<p>The QubeCL system must be powered by a unipolar <strong>ﬂoating</strong> DC power supply. If the QubePS is not included in the QubeCL kit, a dual channel power supply or two diﬀerent power supplies are necessary to independently drive the Current Generator [CM] and the Temperature Controller [TC] modules.<br />
+<strong>CM</strong> modules must be powered by a DC power supply providing <strong>24 V and at least 3 A</strong> for a versatile usage and for a full compliance to the declared performances and dynamic range.</p>
+<p><strong>TC</strong> modules must be powered by a DC power supply providing <strong>12 V and 4 A,</strong> for a versatile usage and to guarantee performances of the TC module.</p>
+<p>User must refer to **Table <a href="#table.caption.24">11**</a> for minimum, maximum and typical allowable voltages for power supply of the QubeCL. Please, note that using source voltages that diﬀer from the ones indicated as typical , even if in between the maximum and minimum values, may lead to poor calibration of the QubeCL driver or to potentially damaging heat generation.</p>
+<blockquote>
+<p>DC Input minimum typical maximum</p>
+<table>
+<thead>
+<tr>
+<th>LAS</th>
+<th>+20 V</th>
+<th>+24 V</th>
+<th>+30 V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEC</td>
+<td>+8 V</td>
+<td>+12 V</td>
+<td>+24 V</td>
+</tr>
+<tr>
+<td><strong>Table 11:</strong> Power source voltages speciﬁcations</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>CAUTION</strong>:</p>
+<p>Power supplies used to source the QubeCL drivers must be <strong>ﬂoating power supplies.</strong> The terminals of the power supply must not be connected to Earth or to one another in any circumstance.</p>
+<p>If the QubePS power supply is included in the QubeCL kit, the user has simply to connect the QubePS to the QubeCL with the dedicated cable delivered within the box. The power cord needed to connect the QubePS to the electrical outlet is not provided.</p>
+<h3 id="44-connectors-and-led-indicators-functions">4.4 Connectors and LED indicators functions</h3>
+<p>A schematic view of the front panel of the QubeCL can be seen in <strong>ﬁgure 6.</strong> The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: <strong>Connectors:</strong></p>
+<ul>
+<li>
+<p><strong>C1. Power:</strong> power supply connector of the instrument.</p>
+</li>
+<li>
+<p><strong>C2. USB:</strong> this USB port must be used to connect the QubeCL to an host computer in order to control and supervise its operations.</p>
+</li>
+<li>
+<p><strong>C3. TEMP out:</strong> used to connect the supplied TC cable for the temperature control of the driven device. It provides NTC (10 k) temperature sensor input and TEC output (2.7A maximum).</p>
+</li>
+<li>
+<p><strong>C4. CURRENT out:</strong> Output SMA connector. The driver supplies the current through this connector to the controlled laser device. A proper SMA cable must be provided by the user. The output provides a maximum current corresponding to the limits of the installed CM modules of the QubeCL (for example 1.5A for a QubeCL with one CM10 and one CM05 modules), with a maximum output voltage compliance of 17.5 V.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>C5/C6. MOD1/2 in:</strong> Input SMA connectors. May be used to source ﬁnely controlled modulating signals to the laser current, with the amplitude proportional to the applied control voltages.</li>
+</ul>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0942.png" /></p>
+<p><strong>Figure 6:</strong> QubeCL15TP front panel</p>
+<p><strong>LED indicators:</strong></p>
+<ul>
+<li>
+<p><strong>L1. CONNECT:</strong> Green. Switched on when the QubeCL driver is connected to an host PC through its USB port.</p>
+</li>
+<li>
+<p><strong>L2. CUR ON:</strong> Yellow. Switched on when the QubeCL sources current from C4 Current out connector to the controlled laser.</p>
+</li>
+<li>
+<p><strong>L3. MOD ON:</strong> Yellow. Switched on when the modulation signals are enabled.</p>
+</li>
+<li>
+<p><strong>L4. PWR ON:</strong> Green. Switched on when the QubeCL main unit is powered on.</p>
+</li>
+<li>
+<p><strong>L5. TC unlock:</strong> Red. Switched on when the temperature of the controlled device is diﬀerent with respect to the temperature set-point value.</p>
+</li>
+<li>
+<p><strong>L6. TC lock:</strong> Green. Switched on when the temperature of the controlled device is locked and equal to the temperature set-point value.</p>
+</li>
+</ul>
+<p>The list only comprehends the LEDs and connectors that are present on the majority of the QubeCL possible conﬁgurations. A detailed description of PLL module, along with other application-speciﬁc modules, can be found further below in this manual.</p>
+<hr />
+<h3 id="441-power-connector">4.4.1 Power connector</h3>
+<p>The QubeCL kit comes with a dedicated power supply cable to con- nect the QubeCL to its power supply. One of the ends of the QubeCL power cable is already equipped with a 10 poles connector compatible with the one present on the QubeCL driver (see <strong>ﬁgure</strong> 7).<br />
+If the QubePS is provided with the kit, the cable is ready to be directly plugged into the QubePS connector.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0947.png" /></p>
+<p><strong>Figure 7:</strong> Power connector pin diagram</p>
+<p>Alternatively, when the QubePS is not provided, the cable is equipped with four plugs to be connected to the power supplies.<br />
+The four plugs can be identiﬁed as the subsequent ones:</p>
+<ul>
+<li>two for CM power supply (green-labelled PS Las +, white-labelled PS Las -)</li>
+<li>two for TC power supply (red-labelled PS TEC +, yellow-labelled PS TEC -).</li>
+</ul>
+<h3 id="442-tec-connector">4.4.2 TEC connector</h3>
+<p>If the QubeCL is equipped with the TC module, but not with a laser-housing mod- ule, a proper connection with the Peltier- based stage of the laser and with the NTC temperature sensor must be established. The QubeCL kit includes a TEC cable with one of its ends already equipped with the proper connector to be plugged into the TC module.<br />
+The user must adapt the other end of the TEC cable in order to connect it to the laser. Please, refer to the wires colors represented in **ﬁgure <a href="#figure.caption.31">8**</a> to properly connect the TEC ca- ble to the laser.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0944.png" /></p>
+<p><strong>Figure 8:</strong> TEC connector pin diagram</p>
+<h2 id="45-qubecl_control-software-installation">4.5 QubeCL_Control software installation</h2>
+<p>Every QubeCL system, regardless of the speciﬁc model, can be controlled by the mean of the same Control Software, which comes in the USB key included in the QubeCL kit. The QubeCL_Control software has been developed under LabView Runtime Environment .</p>
+<p>To install the QubeCL_Control software on Windows OS, please follow these steps. All the needed softwares are provided inside the USB key that comes inside the QubeCL kit.</p>
+<hr />
+<ul>
+<li>Run the library installation application to install the following libraries and drivers:</li>
+<li>Microcontroller USB-driver (CDM21228_Setup)</li>
+<li>LabVIEW NI-VISA Utilities (NIVISA1600full)</li>
+<li>Copy the directory " /QubeCL_CONTROL:vX.X " and all its content in a directory of your choice in the computer.<br />
+More information can also be found in the readme.txt ﬁle in the main directory of the USB key.</li>
+</ul>
+<hr />
+<h2 id="5-basic-operation-current-and-temperature-controls">5 Basic operation: current and temperature controls</h2>
+<p>This chapter explains the typical set-up and operation of a QubeCL system composed by a CM module (or a stack of several of them) and a TC module. This chapter should help less experienced users to rapidly adapt the QubeCL system to drive their speciﬁc optoelectronic devices. Keep in mind that not all the possible operations of the QubeCL system with a speciﬁc controlled device can be adequately addressed in this manual: these are general guidelines for operating a QubeCL system with speciﬁc illustrative examples. Adequate parameter values must be considered by the users when controlling a speciﬁc device.<br />
+The QubeCL is built with a modular approach, with each module being in charge of performing a speciﬁc function. This chapter describes the usage of a QubeCL which includes one CM and one TC module. The functions of those modules are, respectively:</p>
+<ul>
+<li>To provide a <strong>very low-noise and high-level DC current</strong> to drive one optoelectronic device;</li>
+<li>To provide the optoelectronic device <strong>temperature stabilization</strong> at a few mK level.</li>
+</ul>
+<h3 id="51-set-up">5.1 Set-up</h3>
+<p>The typical set-up to operate with a QubeCL system is composed by the QubeCL itself, the laser device, a DC power supply and a PC for overall control.<br />
+To correctly operate with the QubeCL, the following step must be followed:</p>
+<ul>
+<li>If the QubeCL kit includes a QubePS power supply, simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.<br />
+Otherwise, if the QubePS is not included:</li>
+<li>Set the voltage values of the <strong>ﬂoating</strong> power supplies you’re using following the indication from the dedicated section of this manual <strong>(chapter 4.3);</strong></li>
+<li>Connect the QubeCL to the power supply by the mean of the provided cable<br />
+∗ Connect TEC+ and TEC- to the +/- poles of the power supply selected channel for electrical supply of the TC module, respectively.<br />
+∗ Connect LAS+ and LAS- to the +/- poles of the power supply selected channel for electrical supply of the CM module(s), respectively.</li>
+</ul>
+<blockquote>
+<p>CAUTION</p>
+</blockquote>
+<p>If not using a QubePS be sure to <strong>RESPECT THE POLARITY</strong> of the power supply cable. <strong>REVERSE</strong> voltages will damage the instrument.<br />
+In case you’re not using a dual-channel power supply, but two diﬀerent power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.</p>
+<ul>
+<li>Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system;</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system;</p>
+</li>
+<li>
+<p>Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system.<br />
+<strong>N.B.</strong> This operation is not necessary if the QubeCL includes a laser housing module;</p>
+</li>
+<li>
+<p>Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system.<br />
+<strong>N.B.</strong> This operation is not necessary if the QubeCL includes a laser housing module;</p>
+</li>
+<li>
+<p><strong>Optional:</strong> connect a signal generator(s) to the modulation inputs of the QubeCL (SMA C5-C6 connectors of the LC module).</p>
+</li>
+</ul>
+<h3 id="52-operating-with-the-control-software">5.2 Operating with the Control Software</h3>
+<p>In this section the usage of the Control Software to manage the basic operation of the QubeCL is described in detail.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0950.png" /></p>
+<p><strong>Figure 9:</strong> QubeCL control software main screen</p>
+<hr />
+<h3 id="521-connecting-to-the-qubecl">5.2.1 Connecting to the QubeCL</h3>
+<p>To use the QubeCL_Control software, locate the directory where you’ve previously placed<br />
+the QubeCL_CONTROL:vX.X folder from the USB key and launch the QubeCL_Control_vX.X.exe application.<br />
+A graphical interface as the one showed in <strong>ﬁgure <a href="#figure.caption.37">9**</a> will be displayed. While the program search<br />
+for connected QubeCLs to the computer, a progress bar will be displayed. Once the search<br />
+is done, it will be possible to select the desired QubeCL from the </strong>INSTRUMENT ADDR** drop-down menu. Once selected, launch the program by pressing the CONNECT button.</p>
+<p>If the program fails to detect any connected QubeCL, an error windows as the one shown here pops up. From there it will be possible to stop the program with the <strong>EXIT</strong> button or manually select a connected driver by the COM port to which it is connected.</p>
+<h3 id="522-qubecl_control-appearance">5.2.2 QubeCL_Control appearance</h3>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0952.jpg" /></p>
+<p>The GUI of the control software is subdivided into three main horizontal panels:</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0953.png" /></p>
+<p><strong>Figure 10:</strong> The QubeCL_Control software conﬁguration panel</p>
+<p>The <strong>Conﬁguration panel</strong> at the top <strong>(Figure 10),</strong> there can be found:</p>
+<ul>
+<li>
+<p><strong>INSTRUMENT</strong> menu: allows the selection of the QubeCL that the user wants to connect to. The connection can be established only at the start-up of the program, it is not possible to switch to another QubeCL instrument without restarting the control software.</p>
+</li>
+<li>
+<p><strong>CONNECT</strong> and <strong>DISCONNECT</strong> buttons: allow the connection and disconnection to the selected QubeCL. <strong>DISCONNECT</strong> also stops the program.</p>
+</li>
+<li>
+<p><strong>CURRENT LIMIT</strong> menu: by pressing this button, another window will be displayed, allowing the user to change the maximum limit for the current that the QubeCL can deliver to the laser.</p>
+</li>
+<li>
+<p><strong>System information</strong> menu: shows some information about the QubeCL to which the software is connected, such as ﬁrmware version, instrument model and serial number.</p>
+</li>
+<li>
+<p><strong>Power ON</strong> indicators: above the CONNECT and DISCONNECT buttons, two LEDs show the status of the power source to the CM (called MAIN) and TC modules.</p>
+</li>
+</ul>
+<hr />
+<p>The <strong>Current driver panel</strong> is the middle one <strong>(Figure 11),</strong> there can be found:</p>
+<ul>
+<li>
+<p><strong>Current setpoint:</strong> from there, the user can change the current that needs to be sourced by the QubeCL to the laser. Three diﬀerent controls allow the user to change this value:</p>
+</li>
+<li>
+<p>A numerical value expressed in mA can be directly typed into the dedicated form;</p>
+</li>
+<li>
+<p>A horizontal slider, to the left of the numerical value, can be used to set the current;</p>
+</li>
+<li>
+<p>Four buttons can be used to increment or decrement the current by ﬁxed steps. The desired amplitude for the steps can be typed in the two dedicated forms below the arrow buttons.</p>
+</li>
+<li>
+<p><strong>Iout</strong> button: enables/disables the current output of the QubeCL.<br />
+This button includes a green LED indicator. This LED is switched ON when the QubeCL is delivering current to the laser. Once the user switches oﬀ the current, the button becomes gray and the QubeCL gradually lowers the current sourced to the laser until it is completely switched oﬀ. The LED will be switched oﬀ only when the current is.</p>
+</li>
+<li>
+<p><strong>Mod En</strong> button: enables/disables all the modulation channels;</p>
+</li>
+<li>
+<p><strong>M1</strong> and <strong>M2</strong> buttons: activate/deactivate the modulation channels built on board of the QubeCL. By enabling those channels, modulating currents can be injected over the bias current;</p>
+</li>
+<li>
+<p><strong>Save</strong> button: saves the parameters currently set in this panel to the ROM memory of the QubeCL. Those values will be recalled from the memory at the next startup of the QubeCL driver;</p>
+</li>
+<li>
+<p><strong>Readings</strong> window: shows the values of the output current ( Ilas ) and voltage ( Vlas ) as well as the supply voltage ( Vcc );</p>
+</li>
+<li>
+<p><strong>Current plot:</strong> shows the temporal behaviors of the set current (orange trace) and the actual output current (purple trace). This plot won’t show any modulation signal that may be applied to the output current.</p>
+</li>
+</ul>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0973.png" /></p>
+<p><strong>Figure 11:</strong> The QubeCL_Control software current driver panel</p>
+<hr />
+<p>The <strong>Temperature control panel</strong> at the bottom <strong>(Figure 12),</strong> where the subsequent com- mands can be found:</p>
+<ul>
+<li>
+<p><strong>Temp. SetPoint:</strong> sets the desired operating temperature for the laser, expressed in °C.</p>
+</li>
+<li>
+<p><strong>Temp. Read:</strong> returns the value of the temperature measured on the laser using its NTC sensor, expressed in °C.</p>
+</li>
+<li>
+<p><strong>TStab</strong> button: turns on/oﬀ the temperature stabilization of the laser.</p>
+</li>
+<li>
+<p><strong>Loop sign +/-</strong> button: allows the user to change the sign of the temperature stabi- lization loop, eﬀectively switching its behavior from heating to cooling and vice versa.</p>
+</li>
+<li>
+<p><strong>Temperature PID parameters</strong> panel: the TEC module stabilizes the temperature of the laser by the mean of a PID correction loop. This window allows the user to change the values of the three functional parameters of the PID, both with sliders and textual inputs. Detailed instruction can be found below.</p>
+</li>
+<li>
+<p><strong>Save</strong> button: saves the setpoint, loop sign, PID gains and Tstab status on the ROM memory of the QubeCL so that they can be used as default at next switch on.<br />
+<strong>N.B.</strong> This command also saves the status of Tstab, hence if the Save button is pressed when the temperature stabilization is active, the QubeCL will automatically start to stabilize the temperature once it gets powered up. If this behavior is unwanted, Save button must be pressed when the temperature stabilization is inactive.</p>
+</li>
+<li>
+<p><strong>Temperature and TEC current</strong> plots: switching from one to another, the user can have a look over the temporal behavior of the readed and setpoint temperatures of the laser and of the current erugated by the TC module.</p>
+</li>
+</ul>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0974.png" /></p>
+<p><strong>Figure 12:</strong> The QubeCL_Control software temperature control panel</p>
+<hr />
+<h3 id="53-operation">5.3 Operation</h3>
+<p>Once the QubeCL has been correctly set-up, the eﬀective operations can begin following the steps listed below:</p>
+<ul>
+<li>
+<p>Turn on the <strong>ﬂoating</strong> power supply (or the QubePS if it is comprised in the kit) to supply the instrument.<br />
+LED L4 (green) lights on.<br />
+LED L5 (red) lights on, meaning that the laser temperature is not stabilized. If the TC parameters where saved with active temperature stabilization, the QubeCL will automatically start to stabilize the temperature. If it manages to do so, L5 switches oﬀ and L6 (green) switches ON.</p>
+</li>
+<li>
+<p>Once you connect the USB cable to the QubeCL, LED L1 (green) switches ON.</p>
+</li>
+<li>
+<p>Start the QubeCL_control program, wait until it detects the connected QubeCL(s), chose the one you want to connect to and press the blinking <strong>CONNECT</strong> button.</p>
+</li>
+<li>
+<p>The ﬁrst thing to do when starting to work with a new set-up, is to set all the safety parameters oﬀered by the QubeCL:</p>
+</li>
+<li>
+<p>In the conﬁguration panel, set the <strong>maximum current limit</strong> following the max- imum current limit indicated in your laser device datasheet and/or test report. Once set, if the user tries to set a current higher than this maximum value, the software will cap it to the maximum value.</p>
+</li>
+<li>
+<p>In the TC Advanced section of the Advanced <strong>tab(Figure 13),</strong> that can be found in the lower panel, use the <strong>TEC limit</strong> control to set the <strong>maximum current</strong> that the TC controller may source to the Peltier stage. To do so, you must press the correspondent <strong>CHANGE</strong> button.</p>
+</li>
+</ul>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0976.jpg" /></p>
+<p><strong>Figure 13:</strong> The QubeCL_Control software Advanced tab</p>
+<p>Once the safety values are set, the user may start to operate the QubeCL.<br />
+Before turning on the current driver, it is necessary to stabilize the temperature of the laser. This can be done by the QubeCL if the TC module is included in the device conﬁguration.</p>
+<hr />
+<h3 id="531-temperature-control-operation">5.3.1 Temperature control operation</h3>
+<p>This sequence of operation has to be performed only if the QubeCL houses a TC module, being in charge of temperature stabilization of the laser. All the necessary controls can be found in the <strong>Temperature Controller</strong> tab, in the lower panel of the GUI.</p>
+<ul>
+<li>
+<p>In the <strong>Temp SetPoint</strong> form, set the temperature at which the laser device has to be stabilized. QubeCL accepts value with a precision down to the second decimal place. The temperature setpoint can be changed at any time during the operations.</p>
+</li>
+<li>
+<p>Set the <strong>I</strong> and <strong>D</strong> parameters of the PID controller to 0.0 and <strong>P</strong> to a middle value.</p>
+</li>
+<li>
+<p>Press the <strong>Tstab</strong> button to activate the temperature stabilization:</p>
+</li>
+<li>
+<p>Once done, TStab button turns orange, <strong>LED L5 lights red</strong> indicating that the desired temperature has not been reached yet.</p>
+</li>
+<li>
+<p>At ﬁrst, <strong>check the temperature plot</strong> on the GUI, if the measured temperature drifts towards the desired setpoint, the sign of the loop is the correct one. Other- wise, if the measured temperature drifts away from the setpoint, it is necessary to switch the sign of the loop using the dedicated <strong>sign buttons.</strong></p>
+</li>
+<li>
+<p><strong>Increase the I gain</strong> searching for an oscillating behavior of the measured temper- ature around the setpoint. Tstab button will become green each time the measured temperature stays in a range of 20 mK around the setpoint. Similarly, LED L5 will turn oﬀ and LED L6 will turn on in this range.</p>
+</li>
+<li>
+<p><strong>Adjust P and I parameters</strong> trying to reduce the oscillating behavior as much as possible, while also reducing the time needed to the measured temperature to converge to the setpoint. At last, TStab must be constantly green, LED L5 turned oﬀ and LED L6 turned on.</p>
+</li>
+</ul>
+<p>Once the Temperature Controller parameters have been set to the optimal ones, it is possible to store them in the QubeCL ROM memory using the <strong>Save button</strong> in the Temperature Controller tab to have them as default from now on. Remember that the save button will also store the stabilization status, meaning that if the Temperature Controller were active while saving, it will automatically start to stabilize the laser once the QubeCL is switched on again.</p>
+<p>To operate the Temperature Controller at best of its performance, please keep in mind the following characteristics:</p>
+<ul>
+<li>If the heatsink of the laser is unable to dissipate enough heat, its temperature will gradually raise. If so, the Temperature Controller will have to correct an increasing temperature diﬀerence, being forced to constantly, even if slowly, increase its current output, eventually reaching the <strong>maximum value.</strong> Once reached, the Temperature Controller will be unable to further stabilize the temperature of the laser.<br />
+To avoid this behavior, it is suﬃcient to check if the current sourced by the temperature controller is not constantly drifting towards one of its maximum values. Otherwise, a better heat management would be necessary.</li>
+</ul>
+<hr />
+<ul>
+<li>The Temperature Controller includes a <strong>safety behavior</strong> in order to avoid to operate with a not stabilized laser for long time. Once the temperature stabilization is activated, the Controller constantly check the diﬀerence between the measured temperature and the setpoint. At each check, the diﬀerence is summed to the previoulsy measured ones. If the measured temperature crosses the setpoint, the sum is set back to 0.<br />
+If the sum goes over a certain threshold, the Temperature Controller <strong>raises an error,</strong> meaning that is was not capable of stabilize the laser Temperature. The threshold can be chosen with the <strong>ErrorSumLim</strong> parameter which is present in the <strong>Advanced Tab.</strong> This limit can be increased if it is too short and causes errors to be raised even when the Controller is converging toward stabilization. An higher threshold would nevertheless increase the time before an error raises when the Temperature Controller is eﬀectively failing to stabilize the laser temperature.</li>
+</ul>
+<h3 id="532-current-control-operation">5.3.2 Current control operation</h3>
+<p>Once the laser temperature is stabilized, the user can start to source current to it. The necessary controls are grouped together in the current driver panel of the GUI.</p>
+<ul>
+<li>
+<p>The desired current value can be typed into the form present in the <strong>Current Setpoint</strong> section of the panel. The value of the current setpoint can also be changed with the up and down arrows or with the slider close to the form.<br />
+The buttons and the knob in the <strong>Fine Current Tuning</strong> tab enable the user to ﬁnely control the current setpoint value.<br />
+The Output Current setpoint may be changed at any moment during the operations.</p>
+</li>
+<li>
+<p>Once the setpoint is set, the current generator can be switched on by pressing the <strong>Iout button.</strong> A click noise must be heard coming from the QubeCL, while the sourced current plotted on the GUI (purple line) gradually rises towards the setpoint (orange line).<br />
+The QubeCL constantly monitors the value of the current sourced to the laser and the value of the voltage across the laser. The two values are shown in the <strong>Readings</strong> panel along with the <strong>Power Source</strong> voltage monitor.</p>
+</li>
+<li>
+<p>If a modulation of the laser current is needed, it can be applyed by enabling the <strong>ModEn</strong> button, which in turn will give the user the ability to switch on the <strong>M1</strong> and <strong>M2</strong> buttons. In order for the modulation to be sourced to the laser, there must be a modulating signal connected to the dedicated inputs of the QubeCL or a signal generated by an onboard DDS module. This matter is examined in detail in a subsequent chapter.<br />
+The <strong>ModEn</strong> button is not active for 10 seconds starting from the current being switched on, so that the modulations can be applied only when the current to the laser is stable. Modulations will be automatically switched oﬀ when the current is.</p>
+</li>
+</ul>
+<p>The parameters for the Current Generator can be stored in the ROM memory of the QubeCL to be used as default when the QubeCL is switched on by clicking the <strong>Save button.</strong> Unlike the Temperature Controller, save button of the current control panel <strong>will not save the Current Generator status,</strong> hence the QubeCL never automatically starts to source current to the laser when it gets switched on.</p>
+<hr />
+<h3 id="533-automatic-protections">5.3.3 Automatic protections</h3>
+<p>QubeCL continuously monitors a variety of functional parameters both of the laser and of the QubeCL driver itself. The data acquired allows the QubeCL to implement a series of automatic protections to operate as safe as possible, avoiding damage to the QubeCL and, most importantly, to the laser device.<br />
+The QubeCL driver implement the following protection for the Current Generator:</p>
+<p><strong>Open-circuit protection:</strong> this safety measure con- stantly checks if the electrical connection with the laser is still present, otherwise the Current Gener- ator is immediately switched oﬀ and the QubeCL output is shorted.<br />
+If this condition is detected, a blinking warning sig- nal appears on the GUI, next to the Vlas indicator in the Readings box of the Current Generator panel.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0980.png" /></p>
+<p><strong>Compliance Limit reached:</strong> the same warning described above is raised if the QubeCL senses a voltage across the laser higher than the maximum allowed compliance voltage. Such Compliance Limit [CL] voltage depends on the nominal Source Voltage for the Current Gen- erator and can be obtained as CL = (0.77 · Vcc) - 1.</p>
+<p><strong>Low Voltage Supply protection:</strong> if the CM mod- ule supply voltage falls below 18.5 V, the QubeCL automatically switches oﬀ the current and shorts the output connector.<br />
+A blinking warning signal appears on the GUI, next to the Vcc monitor in the Readings panel.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0981.png" /></p>
+<p>The previously described errors will not be deasserted if the warning condition is not met anymore (for example, if the Supply Voltage raises again above 18.5 V). This behavior has been implemented to avoid the warning to go unnoticed in case the user were not monitoring the GUI or the QubeCL_Control program were not running when the error condition happened. Once the cause of the error condition has been eliminated, the user can reset the errors by switching on the current generator.</p>
+<hr />
+<p>The QubeCL also monitors the temperature of the laser, implementing some safety features to prevent potentially dangerous conditions:</p>
+<p><strong>TEC module communication fault:</strong> if some problem oc- curs to the communication with the TEC module (i.e. when the module is not properly powered) the Temp Read value becomes -273 °C, and a warning box appears next to it (see Figure at right). The warning disappears as soon as the com- munication with the TEC is re-established.</p>
+<p><strong>Temperature sensor fault:</strong> in case the temperature sensor is not working properly (i.e. it is not connected to the TEC module), the Temp Read value becomes -67.737 °C and the warning square box appears next to the readed value.<br />
+In case one of the above problems occur when the Temper- ature Stabilization is active, a warning box appears also next to the Temp Read line. If the QubeCL is sourcing current to the laser when a Temperature Controller fault is detected, the current source is disabled to prevent damage to the laser.</p>
+<p><strong>Temperature stabilization problem:</strong> if, for any reason, the Temperature Controller modules fails to stabilize the laser temperature (i.e. wrong PID sign, poor heat management), the QubeCL disables both Temperature Stabilization and Cur- rent output to the laser. A warning box appears next to the Temp Read line.<br />
+The threshold above which a Temperature stabilization is raised can be changed by acting the <strong>Error Sum Lim</strong> pa- rameter in the Advanced tab, as previously described.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0983.png" /></p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0984.png" /></p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0985.png" /></p>
+<hr />
+<h2 id="6-advanced-operations-modulators-and-dds">6 Advanced Operations - Modulators and DDS</h2>
+<p>Besides the basic functionality, QubeCL may perform a variety of advanced operations while driving a laser device. As well as the basic functions, the advanced ones are performed by dedicated modules.<br />
+The laser Head (LH) module is the one deputed to the connection to an external laser and, besides providing all the necessary switches and safety features, it also includes two <strong>current</strong> modulator circuits.</p>
+<p>The modulator circuits onboard of the LH are capable of directly injecting current to the laser, superimposing their output signal over the DC bias current sourced by the Current Generator. The modulating current signal generated by the modulators is proportional to the input signal that is applied to the dedicated inputs on the LH module. If we denote the modulation current with <em>Imod</em> , the input control voltage with <em>Vin</em> and the absolute value of the gain in <em>mA/V</em> with <em>G</em> , the modulation current is equal to:</p>
+<p><em>Imod</em> = −G · <em>Vin</em> .</p>
+<p>This means that a <strong>positive control voltage will subtract current</strong> from the laser bias current while a <strong>negative control voltage will add</strong> the modulating current to the DC bias. The two modulators can be activated ad the same time, in which case their output signals would arithmetically add together.<br />
+The two modulators are built in order to cover all the possible needs that may arise while driving a laser:</p>
+<ul>
+<li>
+<p><strong>Low current modulator:</strong> this modulator has a lower V/I Gain. It allows the user to modulate the bias current with signals down to tens of nA with great precision and low added noise.</p>
+</li>
+<li>
+<p><strong>High current modulator:</strong> this modulator has higher Gain, allowing to modulate the Bias current with signals up to tens of mA, allowing the user to perform large scans.</p>
+</li>
+</ul>
+<p>The gain values for the two modulators can be found in the QubeCL datasheet and in the test report that comes along with the instrument.</p>
+<blockquote>
+<p>CAUTION</p>
+</blockquote>
+<p>The high current modulator can provide currents up to tens of mA which can be added to or subtracted from the bias current of the laser.<br />
+When sourcing negative control voltages to the modulators, the modulating current is added to the bias current, in this case the total current may exceed the maximum current allowed by the laser. Therefore it is necessary to be very careful to avoid the risk of damaging the laser itself.<br />
+The maximum current value that the user can set on the QubeCL does not comprehend the modulating signal, being just referred to the sourced Bias Current. The QubeCL does not perform any safety check on the overall Output Current value resulting as the Bias Current with the superimposed modulation signals.</p>
+<hr />
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0988.png" /></p>
+<p><strong>Figure 14:</strong> Appearance of the LH module equipped with the DDS sub-module</p>
+<h3 id="61-the-dds-sub-module">6.1 The DDS sub-module</h3>
+<p>The LH module may host a smaller sub-module, namely the <strong>DDS sub-module.</strong> DDS stands for Direct Digital Synthesis, being a digitally controlled electronic circuits capable of generating analog signals with the ability of controlling some of their parameters (being Amplitude, Frequency, Phase and Waveform).<br />
+This sub-module adds two DDS circuits to the LH module, enabling the QubeCL to generate its own modulating signals without needing an external signal generator connected to the Modulation inputs. Since the DDS sub-module is housed inside the LH module, it won’t modify the physical dimensions of the QubeCL driver.<br />
+The generated signals are directly injected into the DC bias current similarly to the signals from the externally sourced modulators.<br />
+When the QubeCL also includes a <strong>PDH</strong> or <strong>LIA</strong> module, the DDS sub-module is capable of interacting with them, providing all the synchronous signals that are necessary for those two modules to perform their operations. For more information, please check the chapters dedicated to the PDH and LIA modules.</p>
+<h3 id="611-connectors">6.1.1 Connectors</h3>
+<p>The presence of the DDS sub-module adds some feature to the QubeCL and consequently some minor modiﬁcation to the LH module interconnections are present.<br />
+The three standard connectors previously described are still present, but the connector <strong>C7</strong> is added on the left side of the module, as it is shown in <strong>Figure 14.</strong> C7<strong> is an output SMA connector. The DDS module is capable of generating a </strong>5 V square- wave** synchronization signal which is sourced from the low impedance output on C7. The user may chose to synchronize this signal both to the waveform sourced by DDS1 or to the waveform sourced by DDS2.</p>
+<h3 id="612-control-software-interface">6.1.2 Control Software interface</h3>
+<p>The QubeCL _Control Software includes a section dedicated to the control of the DDS module functionalities. The section can be accessed in the lower part of the GUI by selecting the DDS tab , which is shown in <strong>Figure 15.</strong><br />
+The DDS control tab is subdivided into three panels:</p>
+<ul>
+<li>
+<p>The <strong>Sync. Channel</strong> panel includes the controls for the external synchronization signal.</p>
+</li>
+<li>
+<p>The <strong>Channel 1</strong> and <strong>Channel 2</strong> panels include all the interfaces to properly control the characteristics of the signal generated by the two DDS circuits.</p>
+</li>
+</ul>
+<hr />
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0990.png" /></p>
+<p><strong>Figure 15:</strong> The DDS control panel of the QubeCL_Control Software</p>
+<p>The <strong>Sync. Channel</strong> panel allows the user to select to which DDS the external synchroniza- tion channel must be synchronized. To do so, the GUI shows the <strong>Sync. frequency</strong> selector. Below the selector, a read-only form shows the actual frequency of the synchronization signal, which is equal to the one of the selected DDS channel.</p>
+<p>Above the Sync. Channel panel, the <strong>Save param.</strong> button allows the user to store the current parameters into the ROM memory of the QubeCL so that they can be restored at the next switch on of the driver.</p>
+<p>The <strong>Channel 1</strong> and <strong>Channel 2</strong> panels contain the same controls, replicated for the two DDS circuits:</p>
+<ul>
+<li>
+<p><strong>ENABLE:</strong> this button activates the DDS circuit, sourcing the synthesized signal to the laser. Note that the DDS circuits share the same signal paths of the external modulators, hence it is necessary to <strong>activate the modulators</strong> from the Current Control panel in order for the DDS signal to be sourced to the laser.</p>
+</li>
+<li>
+<p><strong>WAVEFORM:</strong> this control allows the user to chose the waveform of the signal synthe- sized by the DDS circuit. The available options are <strong>Sine</strong> wave and <strong>Triangular</strong> wave.</p>
+</li>
+<li>
+<p><strong>AMPLITUDE:</strong> this form allows the user to set the peak-to-peak amplitude of the modulating signal, expressed in mA. The value can also be modiﬁed by using the up and down arrows next to the form.</p>
+</li>
+<li>
+<p><strong>FREQUENCY:</strong> allows the user to set the frequency of the modulating signal.</p>
+</li>
+<li><strong>PHASE:</strong> allows the user to set the phase of the modulating signal.</li>
+</ul>
+<hr />
+<h3 id="613-dds-operations">6.1.3 DDS operations</h3>
+<p>To operate with the DDS module, follow the steps listed below:</p>
+<ul>
+<li>
+<p>Activate the Temperature Controller (if present) and the Current Generator as previously described in this manual. Wait until it is possible to interact with the Modulation Enable controls on the Current Control panel.</p>
+</li>
+<li>
+<p>Activate the overall <strong>Modulation Enable</strong> button and the enable(s) for the desired mod- ulation channel(s).</p>
+</li>
+<li>
+<p>In the DDS tab, set the desired parameters for the modulating signal (Amplitude, Fre- quency, Phase, Waveform) and activate the DDS with the <strong>ENABLE</strong> button.<br />
+Even when the DDS sub-module is present, it is still possible to modulate the laser cur- rent with the external modulators. The internally generated signal(s) and the externally applied one(s) will be added together and injected over the DC bias current.</p>
+</li>
+<li>
+<p>The parameters of the synthesized signal can be changed at any time during the oper- ation.</p>
+</li>
+<li>
+<p>If needed, the <strong>External Synchronization Signal</strong> can be used as a trigger source for an oscilloscope, to synchronize its acquisition with one of the DDS generated signals.</p>
+</li>
+<li>
+<p>Disable the DDS-generated signal by deactivating the corresponding <strong>ENABLE</strong> button when it’s not needed anymore.</p>
+</li>
+</ul>
+<p>Detailed instructions on how to use the DDS sub-module in pair with the PDH or LIA modules, if present, can be found in the respective chapters.</p>
+<hr />
+<h2 id="7-advanced-operations-pll-module">7 Advanced Operations - PLL module</h2>
+<p>The PLL module gives to the QubeCL instrument the capability of easily perform a complex task such as the <strong>phase-lock of the controlled laser frequency to a reference source.</strong> The PLL module requires two input signals: the <strong>radio-frequency</strong> ( RF ) signal generated by the beatnote between the controlled laser and the reference laser and the <strong>signal from a Local</strong> <strong>Oscillator</strong> ( LO ) used as a set-point for the RF signal.<br />
+When the PLL is activated, a current proportional to the phase error signal is processed by a <strong>Proportional-Integral</strong> ( PI ) stage and internally added to the bias current in order to close the phase-stabilization loop.<br />
+The RF and LO frequencies can be divided by an integer value by the mean of a frequency divider, in order to obtain two signal with similar frequencies at the input of the internal phase-detector. Each divider can be independently set using the Control Software , while the two divided signals can be monitored on the <strong>DIVIDER MON</strong> output ( C10 ). When the loop is activated, the <strong>PHASE mon</strong> output ( C11 ) provides a real-time replica of the phase-error signal after the PI stage.</p>
+<p>Since each laser can only be locked to a reference at a time, in this case another laser wavelength, the PLL Module can not be used with other Locking Modules ( LIA , PDH ) on the same QubeCL system.</p>
+<h3 id="71-connectors">7.1 Connectors</h3>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0993.png" /></p>
+<p><strong>Figure 16:</strong> Appearance of the PLL module</p>
+<p><strong>C8. RF in</strong><br />
+Signal level :<br />
+<strong>C10. DIVIDER</strong> Requires 50 Ω load</p>
+<blockquote>
+<p>intput</p>
+</blockquote>
+<ul>
+<li>dBm 0 dBm <strong>mon</strong><br />
+AC coupled. bandwidth : output<br />
+10 MHz 300 MHz</li>
+</ul>
+<p><strong>C9. LO in</strong><br />
+Signal level :<br />
+<strong>C11. PHASE mon</strong> Requires Hihg-Z load.</p>
+<blockquote>
+<p>intput</p>
+</blockquote>
+<ul>
+<li>dBm 0 dBm output<br />
+DC coupled. bandwidth : Range : 10 MHz 300 MHz</li>
+<li>V / 1 V</li>
+</ul>
+<h3 id="72-control-software-interface">7.2 Control Software Interface</h3>
+<p>The QubeCL Control Software has a dedicated section for the control and monitor of the PLL Module, it can be accessed by clicking on the PLL tab in the lower portion of the GUI.</p>
+<hr />
+<p>As can be seen in <strong>ﬁgure 17,</strong> the panel dedicated to the PLL module is divided into two main areas: on the rightmost part there are two panels named Phase Error Plot and Transfer Function which in turn show the actual error signal monitored by the PLL module and the transfer function implemented by the PI loop mounted on the module itself with the current parameters. The remaining part of the panel is dedicated to all the controls available for the user to control the behavior of the PLL Module.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0995.png" /></p>
+<p><strong>Figure 17:</strong> Control Software Interface dedicated to the PLL Module</p>
+<p>The controls for the PLL module are subdivided into categories based on their functionality. The <strong>Phase Detector Settings</strong> panel gives the user access to the controls for the Phase Detector:</p>
+<ul>
+<li>
+<p><strong>CPG:</strong> sets the output gain for the Phase Detector, has a range between 1 and 8. It has a proportional eﬀect on the transfer function of the module.</p>
+</li>
+<li>
+<p><strong>GPG mult:</strong> works as a multiplier for the CPG control, the total proportional gain introduced is the product of the two.</p>
+</li>
+<li>
+<p><strong>LO Divider:</strong> sets the frequency division factor (integer) for the Local Oscillator signal.</p>
+</li>
+<li>
+<p><strong>RF Divider:</strong> sets the frequency division factor (integer) for the RF input signal (e.g. the beatnote).</p>
+</li>
+<li>
+<p><strong>Sign:</strong> sets the sign of the PI correction loop.</p>
+</li>
+</ul>
+<p>The <strong>Divider Monitor</strong> panel gives the user the ability to chose what signal will be sourced to the Division Monitor Output connector (C10). When in <strong>OFF</strong> position, no signal will be available. The other two buttons allow to chose between the post-divisor <strong>Local Oscillator</strong> signal or the post-divisor <strong>RF</strong> signal, so that the user can visualize the actual frequency of the two signal once they’ve been divided.</p>
+<hr />
+<p>The <strong>Lock</strong> panel allows the user to chose the functional mode of the correction PI loop of the PLL module. There are three possible options:</p>
+<ul>
+<li>
+<p><strong>OFF:</strong> the PI loop is not working and does not add any correction signal to the laser current.</p>
+</li>
+<li>
+<p><strong>P:</strong> the loop works in Proportional mode, only the proportional gains aﬀect the output correction signal.</p>
+</li>
+<li>
+<p><strong>PI:</strong> the loop work with both Proportional and Integrative components, being fully en- abled.</p>
+</li>
+</ul>
+<p>On the central bottom part of the tab, the <strong>Phase PI settings</strong> allow the user to control the PI loop gains:</p>
+<ul>
+<li><strong>Phase Prop:</strong> sets the Proportional Gain of the PI loop.</li>
+<li><strong>Phase Int:</strong> sets both the Integrative Gain of the PI loop and the high frequency cut-oﬀ.</li>
+</ul>
+<p>The <strong>Transfer Function</strong> plot gets automatically updated each time that any of the previously mentioned control is changed, with the exception of the Division Monitor which does not aﬀect the transfer function of the PI loop. For a correct visualization of the loop, the user must input the laser Frequency tuning into the dedicated form on the plot panel.</p>
+<p>The <strong>Phase Error Plot</strong> shows the real time value of the phase error. The sampling rate is low, hence it will not be helpful with fast moving signals, but can give the user and easy way to monitor the time evolution of this signal during the locking.</p>
+<h3 id="73-pll-operation">7.3 PLL Operation</h3>
+<p>For a proper set-up and use of the PLL module, please follow the steps listed below:</p>
+<ul>
+<li>
+<p>Check that the Beatnote ( RF ) signal has a level between -30 dBm and 0 dBm and a frequency between 0 and 300 MHz. This signal must be connected to the <strong>RF IN</strong> ( C8 ) conenctor.</p>
+</li>
+<li>
+<p>Use a function generator to generate a Local Oscillator signal with a level close to 0 dBm and a frequency between 10 MHz and 100 MHz. This signal must be connected to the <strong>LO IN</strong> ( C9 ) connector.</p>
+</li>
+<li>
+<p>Set both <strong>LO divider</strong> and <strong>RF divider</strong> to 1.</p>
+</li>
+<li>
+<p>Connect the <strong>DIVIDER MON</strong> output connector ( C10 ) to an oscilloscope with a 50 Ω termination. By using the <strong>Div Mon</strong> control, switch the signals that have to be sourced on this port. The output signal must be a clean square wave with the same frequency of the selected input signal <strong>(RF</strong> or <strong>LO).</strong><br />
+If the output frequency is not properly counted, a better ﬁltering is required for the input signal, in order to obtain an higher SN ratio for the counter to properly work.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Set the values of <strong>LO divider</strong> and <strong>RF divider</strong> so that the two subdivided frequencies are as close as possible.<br />
+For example: if f<br />
+= 100 MHz and f<br />
+= 10 MHz, set LO div = 1 and RF div = 10. RF<br />
+LO</p>
+</li>
+<li>
+<p>Write the proper value for the laser Tuning Coeﬃcient in the <strong>Laser Tuning</strong> input form in the <strong>Transfer Function Plot</strong> tab. Then set the values for <strong>CPG, CPG mult, Phase Prop</strong> and <strong>Phase Int</strong> aiming to obtain a Transfer Function Plot that properly crosses the Unity Gain level to obtain stability.</p>
+</li>
+<li>
+<p>Check the <strong>Phase Error Plot</strong> to see if the Phase Detector is properly working: ﬁnely tune the bias current from the Current Control Panel in order to force a change in the beatnote frequency. Make the RF signal frequency cross the LO one to see if the <strong>Phase Error</strong> switches from positive to negative or vice versa.</p>
+</li>
+<li>
+<p>Tune the Bias Current in order to approach the desired frequency for the lock and enable the <strong>Proportional Lock</strong> loop ( P button). If the <strong>RF</strong> signal frequency sweeps away from the <strong>LO</strong> one, change the <strong>Loop Sign,</strong> otherwise the PLL is already working to lock the signal.</p>
+</li>
+<li>
+<p>Enable the <strong>PI</strong> button of the <strong>Lock</strong> panel.</p>
+</li>
+<li>
+<p>Adjust the <strong>CPG, Phase Prop</strong> and <strong>Phase Int</strong> settings in order to optimize the lock quality. More than one locking condition can be found, with diﬀerent bandwidths and gains.</p>
+</li>
+</ul>
+<p>Once the lock has been successfully achieved, the <strong>Slow Loop</strong> functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check <strong>chapter 10.</strong></p>
+<hr />
+<h2 id="8-advanced-operations-pdh-module">8 Advanced Operations - PDH module</h2>
+<p>The PDH module gives to the QubeCL instrument the capability of easily perform a com- plex task such as the lock of the controlled laser frequency to an optical cavity.<br />
+The PDH module requires two input signals: the radio-frequency <strong>(SIGNAL IN)</strong> signal gen- erated by the frequency-modulated laser beam reﬂected back from the cavity and the Local Oscillator <strong>(REF IN)</strong> signal used for demodulating RF signal. The LO is usually generated by the same function generator used for the frequency modulation, after a careful tuning of the relative phase.<br />
+When the PDH is activated, a current proportional to the error signal is processed by a Proportional-Integrative ( PI ) stage and internally added to the bias current closing the frequency- stabilization loop.</p>
+<p>Since each laser can only be locked to a reference at a time, in this case an optical cavity, the PDH Module can not be used with other Locking Modules ( LIA , PLL ) on the same QubeCL system.</p>
+<h3 id="81-connectors">8.1 Connectors</h3>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0910.png" /></p>
+<p><strong>Figure 18:</strong> Appearance of the PDH module</p>
+<p><strong>C12. Signal in</strong><br />
+Signal level :<br />
+<strong>C14. MON OUT</strong> Requires Hi-Z Ω load</p>
+<blockquote>
+<p>input</p>
+</blockquote>
+<ul>
+<li>dBm 20 dBm output<br />
+DC coupled. bandwidth : Range : 300 kHz 100 MHz</li>
+</ul>
+<p><strong>C13. REF in</strong> Signal level :</p>
+<ul>
+<li>V / 1 V</li>
+</ul>
+<blockquote>
+<p>C15. HOLD Signal level:</p>
+</blockquote>
+<p>input 7 dBm input TTL. bandwidth : Bandwidth : 300 kHz 100 MHz<br />
+10 MHz</p>
+<h3 id="82-control-software-interface">8.2 Control Software Interface</h3>
+<p>The QubeCL Control Software has a dedicated interface for the control of the PDH module, which can be accessed by clicking on the PDH tab in the lower half of the GUI.<br />
+As it can be seen in <strong>Figure 19,</strong> the PDH control tab is subdivided into two main parts, as well as the PLL tab is. On the right side, two monitor plots can be selected in the respective tabs, so that the user can have a look on the transfer function of the PI loop of the module or at the level of the correction signal produced by the PI loop itself.<br />
+On the left side, the tab includes all the necessary controls to properly use the PDH Module.</p>
+<hr />
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0911.png" /></p>
+<p><strong>Figure 19:</strong> Control Software Interface dedicated to the PDH Module</p>
+<p>On the top right corner of the PDH tab, there is the <strong>PDH Lock</strong> set of controls, which allows the user to perform various actions:</p>
+<ul>
+<li>
+<p>The ﬁrst couple of buttons, <strong>P</strong> and <strong>PI,</strong> allow the user to chose the mode of the correc- tion loop of the PDH module, switching between pure Proportional and Proportional- Integrative.</p>
+</li>
+<li>
+<p>The <strong>LOCK</strong> button allows the user to activate the correction loop by injecting the correcting current on the laser.</p>
+</li>
+<li>
+<p>The <strong>Hold</strong> button enables the HOLD input ( C15 connector).</p>
+</li>
+</ul>
+<p>When the <strong>Hold Enable</strong> button is active, the automatic correction loop of the PDH module can be put into an Hold State in which is it closed on its set-point, so that its output remains constant at the level it was when the Hold signal is asserted. To externally control the Hold function, a TTL signal must be connected to the C15 connector. A 5 V level would activate the correction loop while a 0 V level leaves it in an Hold state.</p>
+<p>Next to the PDH Lock panel, the <strong>Save</strong> button allows the user to store the current settings for the PDH module into the ROM memory of the QubeCL, so that they will be used as default the next time the driver is switched on.</p>
+<p>The <strong>PDH Mon</strong> panel contain a switch button that allows the user to chose which signal will be present on the Monitor Out ( C14 connector). The available options are <strong>ER</strong> which will show the Error signal received by the module from the PDH detector, and <strong>LM</strong> which will show the correction signal generated by the correction loop on board of the PDH module.</p>
+<p>Below the PDG Mon, there is a panel containing all the controls for the regulation of the <strong>Input Oﬀset</strong> for the Correction Loop of the PDH Module. The desired oﬀset can be directly typed into the dedicated form, otherwise the four up and down arrows can be used. Each arrow will add or remove an oﬀset value correspondent to the value written in the form below the couples of arrows.</p>
+<hr />
+<p>The <strong>PDH PID settings</strong> panel allows the user to tune the parameters of the PI Correction Loop .</p>
+<ul>
+<li>
+<p><strong>PRE AMP</strong> allows the user to set the gain of the pre-ampliﬁer of the loop. It accepts value between 2 an 11. This value is a pure gain, hence it has no unit of measurement.</p>
+</li>
+<li>
+<p><strong>PDH P1</strong> allows the user to set the overall proportional gain of the loop.</p>
+</li>
+<li>
+<p><strong>PDH P2</strong> allows the user to set the proportional gain of the loop, but also inﬂuences the position of the integratife cut-oﬀ frequency when the loop is in PI mode.</p>
+</li>
+<li>
+<p><strong>PDH I</strong> allows the user to set the cut oﬀ frequency of the integrative action of the correction loop.</p>
+</li>
+</ul>
+<p>The <strong>Slow Loop</strong> control panel is identical to the one that is present in the PLL tab, users can refer to the dedicated <strong>chapter 10.</strong></p>
+<p>The <strong>Transfer Function Plot</strong> gives a visual representation of the transfer function of the correction loop. The plot automatically updates each time the user change one of the param- eters for the loop itself. For a correct visualization of the plot, it is necessary to ﬁll the <strong>Laser Tuning</strong> form with the actual parameter of the laser being driven by the QubeCL.</p>
+<p>The <strong>PDH Lock Mon Plot</strong> shows the temporal evolution of the correction signal generated by the PI loop of the PDH module. The digital monitor used to update this plot has a low sampling frequency, hence it can’t be used to monitor high frequency signals on screen, but it gives a long history of the locking signal evolution during time.</p>
+<h3 id="83-pdh-operations">8.3 PDH operations</h3>
+<p>For a proper set-up and operation of the PDH module, follow the steps listed below:</p>
+<ul>
+<li>
+<p>Verify that the signal reﬂected from the cavity has a level between -40 dBm and 20 dBm, with a frequency between 300 kHz and 100 MHz.<br />
+Connect this signal to the <strong>SIGNAL in</strong> ( C12 ) connector.</p>
+</li>
+<li>
+<p>Use a function generator to generate a proper demodulation signal, with 7 dBm magni- tude and a frequency between 300 kHz and 100 MHz.<br />
+Connect this signal to the <strong>REF in</strong> ( C13 ) connector.</p>
+</li>
+<li>
+<p>Activate the modulation signal to the laser, monitoring the ER signal youll be able to ﬁnd the characteristic PDH signal waveform. Adjust the modulation signal phase until you ﬁnd the value that minimizes the carrier contribution to the signal, leaving only the sidebands contributions. At that point, the right phase to obtain a good lock is that value ± 90°. Try one of those two values and LOCK the loop in P mode, if only the sidebands contributions are magniﬁed try the other phase value, otherwise this is the right one.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>While locked and in P mode, change the P1 and P2 values until you ﬁnd the combination that produces the best eﬀects on the signal transmitted by the cavity. Reduce the amplitude of the ramp signal used to scan the lasers frequency searching for the one that matches the cavity while adjusting its oﬀset to keep the lasers frequency close to the resonance.</p>
+</li>
+<li>
+<p>Activate the PI mode and search for the best PI parameters combination, which guar- antees the best locking performance.</p>
+</li>
+</ul>
+<p>Once the lock has been successfully achieved, the <strong>Slow Loop</strong> functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check <strong>chapter 10.</strong></p>
+<hr />
+<h2 id="9-advanced-operations-lia-module">9 Advanced Operations - LIA module</h2>
+<p>The <strong>LIA</strong> ( Lock-In Ampliﬁer ) module gives the QubeCL the ability to perform lock of the controlled laser frequency to the ﬁrst or second derivative of a molecular absorption line proﬁle.</p>
+<p>The LIA requires two signals to operate: one demodulating signal and the signal from the detector used to retrieve the absorption signal from the reference molecular sample. The de- modulating signal must be synchronous with the modulating one. To obtain such synchronous signals, <strong>the LIA module must work in pair with the DDS sub-module,</strong> the latter being in charge of generating both the modulating and demodulating signals.<br />
+The modulation-demodulation action performed by a QubeCL equipped with a LIA module allows the instrument to obtain a signal proportional to the ﬁrst or second derivative of the absorption line signal retrieved by the detector. This signal can be used as an error signal to be processed by an internal Proportional-Integral (PI) Correction Loop . Doing so, LIA module can generate a correction current which is directly fed to the laser, closing the frequency-locking loop over the reference absorption line.</p>
+<p>Since each laser can only be locked to a reference at a time, in this case a molecular absorption line, the LIA Module can not be used with other Locking Modules ( PLL , PDH ) on the same QubeCL system.</p>
+<h3 id="91-connectors">9.1 Connectors</h3>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0915.png" /></p>
+<p><strong>Figure 20:</strong> Appearance of the LIA module</p>
+<p><strong>C16. Signal Out</strong> Requires Hi-Z load. <strong>C18. Sine Out</strong><br />
+Requires Hi-Z load. output DC coupled. output DC coupled. Signal level :</p>
+<ul>
+<li>V 1 V <strong>C17. Signal In</strong> AC coupled.</li>
+</ul>
+<p>Signal level :</p>
+<ul>
+<li>V 1 V <strong>C19. Ramp Out</strong><br />
+Requires Hi-Z load. input Signal level: output DC coupled. &lt; 1 Vpp.<br />
+Signal level :</li>
+<li>V 1 V</li>
+</ul>
+<h3 id="92-the-dds-sub-module-operation-in-pair-with-the-lia-module">9.2 The DDS sub-module operation in pair with the LIA module</h3>
+<p>The operation of the LIA modules require the modulating and demodulating signals to be synchronized one to the other. To achieve perfect synchronization, the use of a single timing</p>
+<hr />
+<p>source is required. The DDS sub-module provides such timing source, generating both the modulating signal with the DDS1 and the demodulating signal which is internally fed to the LIA module</p>
+<p>The demodulating signal frequency is ﬁxed at 32.768 kHz, hence the modulating signal frequency is forced to operate in two possible states:</p>
+<ul>
+<li>
+<p>To retrieve the ﬁrst derivative of the molecular absorption line, the modulating signal must have the same frequency as the demodulating one, hence the DDS1 frequency is ﬁxed at 32.768 kHz.</p>
+</li>
+<li>
+<p>To retrieve the second derivative of the molecular absorption line, the modulating signal must have half the frequency of the demodulating signal, being 16.384 kHz.</p>
+</li>
+</ul>
+<p>In both cases, the DDS1 frequency cannot be changed by the available control in the DDS panel, which becomes inactive.</p>
+<p>The reciprocal phase between the modulating and demodulating signal is another crucial factor to achieve a good lock with the LIA module. Because of that, if the LIA module is set to be active at the startup of the instrument, it performs a rephasing process in order to obtain a known initial status of the phase between the two signals. The process runs for a few seconds until the phase between the two is equal to the <strong>DDS1 phase</strong> saved in the ROM memory of the QubeCL. The LIA module is ready to be used once the rephasing process is done.</p>
+<p>If the LIA module is not necessary and the user wants to have full control on the DDS1 frequency, the LIA demodulating mode can be set to <strong>OFF</strong> (see the below chapter), to remove the frequency constraints for DDS1. The rephasing process too is not performed at startup if the LIA demodulating mode is set to <strong>OFF.</strong></p>
+<hr />
+<h3 id="93-control-software-interface">9.3 Control Software Interface</h3>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0918.png" /></p>
+<p><strong>Figure 21:</strong> Control Software Interface dedicated to the LIA Module</p>
+<p>The QubeCL Control Software section dedicated to the LIA module can be accessed by clicking on the LIA tab in the lower part of the GUI. Similarly to the PLL and PDH modules, also this control tab is subdivided into a monitor section and a control section.</p>
+<p>On the center portion of the LIA tab, the user can ﬁnd the commands that control the functionality of the correction loop included into the LIA module:</p>
+<ul>
+<li>
+<p>The <strong>Loop mode</strong> switch allows the user to chose if the Control Loop should work in pure proportional mode or in proportional-integrative mode.</p>
+</li>
+<li>
+<p>The <strong>Filter enable</strong> button enables or disables a tunable Low-Pass ﬁlter that may be useful to smooth out the Correction Signal generated by the Loop.</p>
+</li>
+<li>
+<p>The <strong>LOCK</strong> buttons enable or disables the correction signal fed to the laser, eﬀectively closing the correction loop.</p>
+</li>
+</ul>
+<p>Next to this section, user can ﬁnd the <strong>Save</strong> button. By pressing it, the user will save all the current LIA parameters an functional modes into the ROM memory of the QubeCL so that they’ll be used as default the next time the QubeCL is switched on.</p>
+<p>The <strong>ON</strong> button to the left of the save button allows the user to switch oﬀ the LIA operations, deactivating the demodulator.</p>
+<p>The <strong>Phase Ready</strong> LED indicates if the rephasing process between the DDS and the de- modulating signal is completed.</p>
+<hr />
+<p>The <strong>LIA Loop Settings</strong> box holds all the controls to tune the PI Correction Loop gains:</p>
+<ul>
+<li>
+<p><strong>VGA GAIN</strong> set the Gain of the Variable Gain Ampliﬁer (VGA) being the ﬁrst stage of the <strong>Correction Loop.</strong> The gain is expressed in dB. The value of the Gain can be changed both by direct typing or with the up and down arrows. Accepted values range from 0 dB to 80 dB.</p>
+</li>
+<li>
+<p><strong>Prop.</strong> sets the magnitude of the Proportional action of the Correction Loop . This control also aﬀects the cut-oﬀ frequency of the Integrative component of the Correction Loop .</p>
+</li>
+<li>
+<p><strong>Integ.</strong> sets the cut-oﬀ frequency of the Integrative component of the Correction Loop .</p>
+</li>
+<li>
+<p><strong>Filter</strong> sets the -3 dB frequency for the Low Pass Filter that can be activated with the <strong>Filter Enable</strong> button.</p>
+</li>
+</ul>
+<p>The leftmost section of the LIA tab holds all the control speciﬁc for the Lock-In Ampliﬁer and the monitor selector:</p>
+<ul>
+<li>
+<p>The <strong>Monitor Selector</strong> switch allows the user to decide which signal is present on the <strong>SIGNAL OUT</strong> ( C16 ) port of the LIA module. By selecting <strong>LOCK,</strong> the LIA module will output the correction signal generated by the internal PI control loop. The <strong>ERR</strong> selection sets the error signal (which is the input to the PI control loop) to be on the <strong>SIGNAL OUT</strong> connector.</p>
+</li>
+<li>
+<p>The <strong>Digital Filter</strong> drop-down menu allows the user to select one of the available built-in digital ﬁlters. More information about the speciﬁc behavior of each ﬁlter can be found in the dedicated chapter below.</p>
+</li>
+<li>
+<p>The <strong>Demod. Freq.</strong> switch allows the user to select in which mode the LIA module should works. When <strong>f</strong> is selected, the LIA works to lock the laser on the ﬁrst derivative of the absorption line, while using the <strong>2f</strong> mode sets the LIA to work on the second derivative of the absorption line. When the <strong>OFF</strong> button is selected, the LIA is set to not work in pair with the DDS module.</p>
+</li>
+</ul>
+<h3 id="94-lia-operations">9.4 LIA operations</h3>
+<p>For a proper set-up and operation of the LIA module, follow the steps listed below:</p>
+<ul>
+<li>
+<p>If necessary, set the desired demodulating mode and wait up to a few seconds for the rephasing process to be completed. The <strong>Phase Ready</strong> LED will light up once the process is completed.</p>
+</li>
+<li>
+<p>Connect the detector to an oscilloscope and use the DDS2 to scan the laser wavelength to ﬁnd the absorption line of the reference molecule with a low frequency triangular wave modulation. To easily achieve this condition, lock the external synchronization signal of the LH module to the DDS2 and use it as the trigger for the oscilloscope acquisition.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Once the absorption line has been found and it is well centered in the scope screen, activate the DDS1 and set a proper modulating amplitude. The LIA module is capable of demodulating signal down to a few tens of mV, higher signals risk to saturate the internal ampliﬁer stages. Check the signal from the detector to verify that the amplitude of the modulation is in this accepted range. Connect the signal from the detector to the SIGNAL IN connector of the LIA module.</p>
+</li>
+<li>
+<p>Connect the SIGNAL OUT connector to the oscilloscope in order to have a monitor signal to be used as a reference during the locking operation. The oscilloscope must have a high impedance input. Set the monitor selector to <strong>ERR.</strong> The ﬁrst derivative of the absorption line must appear on the scope, as a consequence of the demodulating action performed by the LIA.</p>
+</li>
+<li>
+<p>Set the <strong>Digital Filter</strong> that produces the best signal quality and maximizes the amplitude of the signal on the scope.</p>
+</li>
+<li>
+<p>By adjusting the modulating signal phase, search for the worst condition (lowest signal on the monitor). Once achieved, change the modulating frequency phase by 90°to obtain the optimum phase condition. It may be necessary to switch between the +90°and - 90°phase conditions in order to ﬁnd the proper correction loop sign.</p>
+</li>
+<li>
+<p>Set the <strong>correction loop</strong> to <strong>P</strong> mode and close the correction loop with the <strong>LOCK</strong> button. Activate and tune the <strong>Low Pass Filter</strong> if necessary.</p>
+</li>
+<li>
+<p>Adjust the <strong>Prop.</strong> and <strong>VGA</strong> gains to maximize the correction signal without occurring in an oscillating behavior.</p>
+</li>
+<li>
+<p>Set the correction loop to <strong>PI</strong> mode and adjust the <strong>Integ.</strong> time constant to achieve a good locking.</p>
+</li>
+</ul>
+<p>Once the lock has been successfully achieved, the <strong>Slow Loop</strong> functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check <strong>chapter 10.</strong></p>
+<h3 id="95-lia-digital-filter">9.5 LIA digital ﬁlter</h3>
+<p>The LIA module is equipped with a mixed signal Lock-In Ampliﬁer which includes a set of built-in digital ﬁlters. The digital ﬁlters shows a frequency behavior which is dependent on the clock frequency used to drive the ﬁlter. In the LIA module, the clock signal used for the digital ﬁlter is generated by the DDS sub-module with a ﬁxed frequency of:</p>
+<p><em>fCLK</em> = 2 20 = 1.048576MHz</p>
+<p>The clock signal passes through a series of frequency divider before reaching the programmable digital ﬁlter, thus obtaining a frequency of:</p>
+<p><em>fSO</em> = 2 17 = 131.072kHz</p>
+<p>The available ﬁlters, which can be selected by the mean of the dedicated drop-down menu, are the following ones:</p>
+<hr />
+<ul>
+<li>
+<p><strong>BP0:</strong> Band Pass ﬁlter, centered on f /8 = 16.384 kHz SO</p>
+</li>
+<li>
+<p><strong>BP1:</strong> Band Pass ﬁlter, centered on f /4 = 32.768 kHz, Q = 8.4 SO</p>
+</li>
+<li>
+<p><strong>BP2:</strong> Band Pass ﬁlter, centered on f /4 = 32.768 kHz, Q = 4.3 SO</p>
+</li>
+<li>
+<p><strong>LP1:</strong> Low Pass ﬁlter, -3 dB at f /5 = 26.2144 kHz, 4 th order SO</p>
+</li>
+<li>
+<p><strong>LP2:</strong> Low Pass ﬁlter, -3 dB at f /8 = 16.384 kHz, 4 th order SO</p>
+</li>
+<li>
+<p><strong>Notch:</strong> centered on f /4 = 32.768 kHz, 1 st order SO</p>
+</li>
+<li>
+<p><strong>All Pass</strong></p>
+</li>
+</ul>
+<hr />
+<h2 id="10-advanced-operations-slow-drift-compensation">10 Advanced Operations - Slow drift compensation</h2>
+<p>All three of the locking modules previously described are built to com- pensate fast drifts in the laser wavelength in order to lock it to a speciﬁc reference, depending on the locking mechanism which is being deployed. Nevertheless, a variety of environmental factors (such as temperature varia- tions, mechanical vibrations and strains, optical feedbacks, etc.) may intro- duce slow drifts in the locking point. To maintain the lock to the reference, the PI correction loop of the locking modules is forced to follow those slow drifts in order to compensate them. If the control loop output drifts towards one of its saturation levels, the lock will be lost due to the inability of the PI loop to further correct the laser wavelength against the environmental disturbance.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0923.png" /></p>
+<p>To avoid this kind of slow drifting interference to break the lock, each<br />
+locking module may automatically compensate those slow drifts by directly acting on the bias current fed to the laser or on the temperature setpoint of the laser being controlled by the onboard TC module. This correction loop can be activated and controlled with the dedicated <strong>Slow Loop</strong> box which is present in each one of the locking module tabs of the QubeCL_Control software.</p>
+<p>The Slow Loop Control box includes the followings commands:</p>
+<ul>
+<li>
+<p><strong>Slow Loop</strong> button: enables and disables the <strong>Slow Loop</strong> automatic compensation.</p>
+</li>
+<li>
+<p><strong>Actuator:</strong> allows the user to decide whether the slow loop acts on the Bias Current or on the Temperature Setpoint of the laser.</p>
+</li>
+<li>
+<p><strong>Sign:</strong> sets the sign of the slow loop.</p>
+</li>
+<li>
+<p><strong>SL cycle time:</strong> sets the sampling rate (expressed in ms) for the slow loop to act.</p>
+</li>
+<li>
+<p><strong>Iset Limit:</strong> sets the maximum variation of the bias current sourced to the laser that the slow loop can produce.</p>
+</li>
+</ul>
+<p>Once the lock has been successfully achieved (with whichever of the locking module is being deployed on the instrument), follow these steps to activate the slow loop:</p>
+<ul>
+<li>
+<p>Chose the <strong>operating mode</strong> of the Loop: <strong>Current</strong> or <strong>Temperature.</strong> Note that acting on Temperature forces the Loop to have a very long response time from the laser, with the risk of triggering an oscillating behavior.</p>
+</li>
+<li>
+<p>If the <strong>Slow Loop</strong> is acting on the current of the laser, set the <strong>maximum allowed</strong> correction current.</p>
+</li>
+<li>
+<p>Enable the automatic correction by pressing the <strong>Slow Loop button.</strong></p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Check the <strong>error monitor plot</strong> to see if the Slow Loop is working properly: the error must be drifting toward 0, otherwise the <strong>Sign</strong> of the Slow Loop must be reversed.</p>
+</li>
+<li>
+<p>Adjust the <strong>SL cycle time</strong> to make the compensation loop faster or slower, if needed.</p>
+</li>
+</ul>
+<hr />
+<h2 id="11-advanced-operations-qubecl-advanced-settings">11 Advanced Operations - QubeCL advanced settings</h2>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0956.png" /></p>
+<p><strong>Figure 22:</strong> The ﬁrst Advanced tab of the Control Software GUI</p>
+<p>The QubeCL_control Software also has 2 tabs for advanced settings. The two tabs hold a series of controls that are less frequently useful or which give a direct control over some speciﬁc functionalities of the QubeCL. The two advanced tabs are available in the lower half of the Control Software GUI.</p>
+<h3 id="111-adv-1-tab">11.1 Adv. 1 tab</h3>
+<p>The ﬁrst advanced tab, visible in <strong>ﬁgure 22,</strong> is subdivided in ﬁve diﬀerent panels, each one dedicated to a particular set of commands and controls.</p>
+<p>The <strong>Direct Communication</strong> panel regroups all the commands that can be used to directly communicate with the QubeCL by textual commands instead of the interaction with the But- tons and Forms contained in the GUI.<br />
+The command that the user wants to send to the QubeCL must be typed into the <strong>COM- MAND</strong> form, a complete list of the available commands with their syntax can be found in chapter 13.</p>
+<p>Once the command has been sent by pressing the <strong>SEND COMMAND</strong> button, the reply (if any) from the QubeCL can be read in the <strong>READBACK</strong> form.</p>
+<p>The <strong>CM Advanced</strong> panel regroups some information about the CM module(s) on board of the QubeCL, which are the one(s) deputed to the generation of the Current for the laser. Here, the temperature of the modules is shown in the CM Temp box, while DtLoop shows the update time of the GUI. The update can be forced by pressing the Update Panel button. The Power button allows the user to switch oﬀ the power supply for all the modules except the TC, which has a separate power line. Using this command to switch oﬀ some of the module while the QubeCL is operating is an advanced operation and may lead to unexpected behavior, <strong>do not use it when the laser is connected to the QubeCL.</strong></p>
+<hr />
+<p>The <strong>TC Advanced</strong> panel holds advanced commands for the TC module. Similarly to the CM Advanced panel, there is a Power button that allows the user to switch on and oﬀ the power to the TC module. As well as for the CM module, <strong>this operation is dangerous and</strong> <strong>must be handled with care.</strong> TEC Mode<strong> switch allows the user to decide whether the TC module should act as a Tem- perature Controller for the laser (strongly recommended option) or as an Heater.<br />
+</strong>TEC limit<strong> is the maximum current that the TC module can source, in both directions, to the Peltier module mounted on the laser. User can change this value by the mean of the </strong>CHANGE<strong> button, which will open a dedicated window. Set the Maximum current accord- ingly to the one stated in the datasheet or test report of the laser that needs to be driven by the QubeCL.<br />
+The two </strong>TSetMAX<strong> and </strong>TSetMIN<strong> values are used to set the maximum and minimum tem- perature that can be selected as setpoint for the Temperature Stabilization Loop operated by the TC module. As well as for the TEC current limit, those values can be changed using the respective </strong>CHANGE<strong> buttons.<br />
+The </strong>ErrSumLim<strong> parameter is the one used as a safety measure to prevent the Temperature Controller to drift away from the setpoint or to fail to stabilize the temperature for any other reason. A detailed explanation of this parameter can be found in </strong>chapter 5.3.3.**</p>
+<p>The <strong>System Modules</strong> panel shows the composition of the QubeCL by highlighting the LED corresponding to each module present in the QubeCL. If there are more than one module of each kind (CMs, for example), the number of modules is also plotted in the corresponding LED.<br />
+The conﬁguration can be changed by clicking on the <strong>CONFIG</strong> button, however ppqSense strongly discourage the modiﬁcation of the QubeCL stack by the customers to avoid any damage and the warranty nulliﬁcation.</p>
+<p>The <strong>System Advanced</strong> panel holds some rarely used commands. The Fan Control com- mand allows the user to chose the speed of the cooling fan, ppqSense strongly recommends to leave this selector on the <strong>Auto</strong> position.<br />
+The two buttons on the lower part of the panel can be used to activate the Wi-ﬁ or the LAN connection, if the QubeCL is provided with such options.<br />
+The two forms in the lower right part of the panel can be used to chose how often the data acquired from the Control Software have to be saved in the log ﬁle.<br />
+Lastly, the <strong>ProgOn</strong> button which allows to use the Control Software to update the ﬁrmware of the QubeCL. This operation is <strong>dangerous</strong> and must never be executed when the QubeCL is connected to a laser. Using this command may cause incompatibility of the QubeCL with the Control Software or with some of its modules, so it has to be executed only under assistance by ppqSense staﬀ.</p>
+<h3 id="112-adv-2-tab">11.2 Adv. 2 tab</h3>
+<p>This tab holds fewer controls, being available for future development. The tab holds two panels dedicated to some advanced featurer both of the DDS sub-module and the LIA module.</p>
+<hr />
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0958.png" /></p>
+<p><strong>Figure 23:</strong> The ﬁrst Advanced tab of the Control Software GUI</p>
+<p><strong>The Clock &amp; Sync.</strong> panel holds a series of advanced controls for the DDS sub-module. The ﬁrst three buttons, <strong>DDS,</strong> allow the user to switch on and oﬀ the timing clocks generated by the DDS board. The ﬁrst clock is the one used to serve as a time reference for the DDS circuits. If this DDS is switched oﬀ, the onboard DDS won’t be able to source any signal. The <strong>Int. Sync</strong> buttons switches on and oﬀ the synchronization signal internal to the QubeCL, used by the driver to establish a shared time base between the DDS sub-module and the LIA or PDH modules. Switching oﬀ this signal will disrupt the synchronization between the DDS sub-module and the PDH/LIA modules, preventing any locking procedure to work as described in this manual.<br />
+The <strong>Ext. Sync</strong> button switches on and oﬀ the <strong>SYNC OUT</strong> signal available on the C7 connector of the LH module.</p>
+<p>The <strong>Ext. Sync. Phase</strong> allow the user to change the phase of the external synchronization signal available on the connector C7 of the LH module, if the DDS sub-module is included in the QubeCL stack.</p>
+<p>The <strong>Lock-In Ampliﬁer</strong> panel holds some advanced commands interacting with the LIA module.<br />
+The <strong>MIXER</strong> button switches on and oﬀ the demodulating action of the LIA module.<br />
+The <strong>90°SHIFT</strong> enables or disables a 90 degrees shift on the demodulating signal of the Lock- In Ampliﬁer.<br />
+The <strong>Clock Div.</strong> selector enables the user to set a division factor for the demodulating signal of the LIA module, ultimately reducing the actual frequency of the demodulating signal.<br />
+By changing the value of each one of those controls from the standard ones will aﬀect the ability of the QubeCL to perform locking with the LIA modules.</p>
+<hr />
+<h2 id="12-interfacing-with-lasers">12 Interfacing with lasers</h2>
+<p>The basic version of the QubeCL has two modules that provides the connections to the laser: the Laser Head (LH) Module, with an SMA connector to source current to the laser, and the Temperature Controller (TC) Module, with a multipolar connector, used to sense and stabilize the temperature of the laser.<br />
+The vast majority of laser do not have an electrical connection that directly matches the output connectors of the QubeCL, hence ppqSense has developed a variety of interconnection boards and housing modules in order to make it easier for the user to connect the laser to its driver without self-assembled solutions.</p>
+<h3 id="121-laser-housing-for-qubecl">12.1 Laser Housing for QubeCL</h3>
+<p>To make the set-up even smaller, reducing space consumption, complexity and electrical noise susceptibility, it is possible to include a laser Housing Module on top of a QubeCL. Such Module provides the mechanical anchorage for the laser, acts as an heatsink and provides all the necessary electrical interconnection with the other modules composing the QubeCL device. When a laser Housing Module is present, the LH and TC modules do not have the external connection to the laser, which are no more necessary, being the laser connected to them inside the QubeCL itself.</p>
+<h3 id="1211-butterfly-packaged-laser-housing">12.1.1 Butterﬂy Packaged laser Housing</h3>
+<p>ppqSense provides various diﬀerent typologies of laser Housing Modules for butterﬂy-packaged lasers, in order to guarantee compatibility with a variety of diﬀerent pins layout and package dimensions. Modules are available both with optical-ﬁber output or with mounting holes to screw a periscope on the side of the QubeCL.<br />
+Please, contact ppqSense to verify the compatibility of our Butterﬂy Housing with the model you want to buy or to discuss the realization of a dedicated solution.</p>
+<h3 id="1212-hhl-packaged-laser-housing">12.1.2 HHL Packaged laser Housing</h3>
+<p>A variety of diﬀerent HHL housing modules are available to be mounted on a QubeCL, developed to ensure compatibility with diﬀerent manufacturer standards. The modules come with the necessary holes to mount periscopes and collimating lenses, if needed.<br />
+Please, contact ppqSense to verify the compatibility of our HHL Housing with your laser model, its power ratings and the heat dissipation requirements.</p>
+<h3 id="122-laser-interface-boards">12.2 Laser Interface Boards</h3>
+<p>The Interface Boards developed by ppqSense are useful to interface a laser with its QubeCL driver without including the laser in the driver itself. Interface Boards have two electrical connections that matches the outputs of the QubeCL driver, while also presenting a connector dedicated to match the pins of the laser.<br />
+The Interface Boards do not provide any mechanical anchorage for the laser and are only intended for its electrical connection with the QubeCL driver.</p>
+<hr />
+<h3 id="1221-hhl-interface-board">12.2.1 HHL Interface Board</h3>
+<p>The HHL interface boards is speciﬁcally designed to provide electrical interconnection with the QubeCL driver in a very small board (55 x 35 mm), while also providing some safety features for the laser.<br />
+Please, contact ppqSense staﬀ to verify the compatibility of the HHL Interface Board with your speciﬁc laser.</p>
+<h3 id="1222-nanoplus-cubic-housing-interface-board">12.2.2 NanoPlus Cubic Housing Interface Board</h3>
+<p>In order to connect the QubeCL with lasers embedded in the Cubic Mount from NanoPlus, we’ve developed an interface board which can be directly screwed to the DB9 connectors of the Cubic Mount, providing all the external connection to directly attach to the QubeCL driver.</p>
+<h3 id="123-high-frequency-modulation-with-bias-tee">12.3 High Frequency modulation with Bias-Tee</h3>
+<p>Some of the Interface Boards and Housing Modules may include an high-frequency modu- lation input to source the laser with modulating signals at higher frequency with respect to the ones allowed by the QubeCL modulators (see <strong>chapter 6, table <a href="#table.caption.5">4**</a> and </strong>table 5,<strong> and the QubeCL datasheet).<br />
+To allow such high-frequency modulation, the Interface Boards and Housing Modules use a </strong>Bias-Tee.**</p>
+<p>Bias-Tee is an electronic component used to inject high-frequency modulating signal over a DC bias signal. The component has three ports of which one is used to source a DC bias signal while the other injects the radio frequency signal, the third port is the output one, where the bias and the RF signal are superimposed. The Bias-Tee works to decouple the sources of the two input signals.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0961.png" /></p>
+<p><strong>Figure 24:</strong> Bias Tee simpliﬁed electronic diagram</p>
+<p>As it is shown in <strong>ﬁgure 24,</strong> Bias Tee can be described as a LC circuit working as a ﬁlter to decouple DC bias and RF signals on their respective ports. Because of its circuit model, Bias Tees can only couple RF signal over a certain cut-oﬀ frequency.<br />
+The Bias-Tee used inside ppqSense devices has a 500 kHz cut-oﬀ frequency, hence it can’t be used to inject modulation signal below such frequency.</p>
+<h3 id="1231-bias-tee-usage-for-high-freuqency-laser-modulation">12.3.1 Bias-Tee usage for high freuqency laser modulation</h3>
+<p>QubeCLs drivers are able to source modulating signals to the laser by themselves with a - 3 dB bandwidth of 2 MHz, without needing any external circuitry. The great advantage</p>
+<hr />
+<p>of the modulating signals of the QubeCL is that they are generated as current signals by dedicated current-drivers. The fact that the QubeCLs houses current drivers for modulating signal generation makes the process of generating a modulating signal for the laser an easy and straightforward operation, since the amplitude and frequency of the signal can be easily deﬁned by the input signal to the QubeCL or with the DDS interface on the GUI. Bias-Tee steps in if higher frequencies modulating signals are necessary.</p>
+<p>All the Housing Modules and Interface Boards equipped with a Bias-Tee have a high- frequency modulation input to which the user has to connect the modulating signal. Bias-Tee has the advantage of withstanding higher frequencies, but the disadvantage of being designed to couple voltage-signal and not current-signal as the one that should be used to properly and easily drive a laser. Given that, when sourcing a signal to the RF port of the Bias-Tee boards, care must be taken in order to properly understand how the voltage applied to the port is converted into current on the laser.</p>
+<p>In those condition, the amplitude of the modulating current not only depends on the ampli- tude of the modulating signal but also on the operating point of the laser itself (which is set by the DC bias current) and on the dynamic resistance that the laser shows at such operating point. It is possible to calculate the amplitude of the modulating current using a circuit model for the Bias-Tee analogous to the one pictured in <strong>ﬁgure 24.</strong><br />
+The circuit model for the Bias Tee includes a capacitor to isolate the RF port from the DC bias sourced on the DC port, while the inductance on the DC port isolates it from the RF signal sourced on the RF input. The aim is to determine the amplitude of the Modulating current-signal that is sourced out of the Bias-Tee RF+DC port knowing the amplitude of the voltage-signal applied to the RF port of the device.</p>
+<p>For the purpose of calculating the RF signal amplitude, the inductance on the DC port can be considered as an open circuit and hence ignored. We obtain an R-C series circuit, in which C is the capacitance of the RF port of the Bias-Tee and R is the Dynamic Resistance of the laser at the speciﬁc working condition, which depends on the DC bias current.</p>
+<p>Concerning the Capacitor C, the current that ﬂows through it can be calculated as:</p>
+<p><em>dv</em><br />
+<em>i</em> = <em>C</em><br />
+<em>dt</em><br />
+For a Square Wave signal, this formula can be used to ﬁnd out <strong>IM,</strong> which is the maximum current that can be injected through the capacitor, by using the subsequent values:</p>
+<ul>
+<li>
+<p>C is the capacitor of the Bias-Tee circuit, in case of the ppqSese Housing Modules and Interface Boards we have C = 1 <em>µ</em> F;</p>
+</li>
+<li>
+<p>The derivative of the voltage signal can be approximated with the <strong>voltage peak-to- peak amplitude</strong> of the signal divided by its <strong>rise (or fall) time.</strong></p>
+</li>
+</ul>
+<p>This calculation returns <strong>IM,</strong> the peak injected current for a laser Dynamic Resistance of 0 Ω . If the Dynamic Resistance is higher, it will reduce the amplitude of the modulating current. If</p>
+<hr />
+<p>the Dynamic Resistance is much higher than the impedance of the Capacitor it is dominant and can limit the amplitude of the modulating current to a maximum value of:</p>
+<p><em>Vpp</em><br />
+<em>imod</em> =<br />
+<em>R</em><br />
+Where V is the peak-to-peak amplitude of the modulating signal and R is the Dynamic pp<br />
+Resistance of the laser.</p>
+<p>The two conditions described above are the extreme ones:</p>
+<ul>
+<li>
+<p>In one case the Dynamic Resistance R of the laser is extremely low and the amplitude of the modulating signal is only determined by the value of the Capacitor of the Bias-Tee and by the characteristics of the modulating signal.</p>
+</li>
+<li>
+<p>In the second case, the Dynamic Resistance R is higher and predominates over the impedance of the Capacitor at a level that the impedance can be ignored, ultimately limiting the peak-to-peak value of the resulting modulating current.</p>
+</li>
+</ul>
+<p>Depending on the value of the resistance, the system can show one of these two limit behaviours or something in the middle between the two limit cases if none of the impedances dominates over the other one.</p>
+<p>For a practical approach to the use of the Bias-Tee, once the parameters of the modulating signal are set (peak-to-peak amplitude and rise/fall time), the current I<br />
+can be calculated in M<br />
+order to ﬁnd out its magnitude.<br />
+The modulating signal parameters can be consequently modiﬁed in order to lower the amplitude of I if it comes out to be too high. I is the overall maximum amplitude of the current M<br />
+M<br />
+that the bias tee can inject into the laser in any condition, since its limited by the Bias-Tee characteristics themselves.<br />
+Be careful: the fact that this is the maximum current that can be injected by the Bias-Tee does not mean that the laser can withstand it. This value is the limit for the Bias-Tee but may be higher than the maximum value allowed for the laser.<br />
+If possible, it could be helpful to obtain an estimate of the dynamic resistance of the laser, in order to have a better model for the circuit and not have to rely solely on the maximum current value obtained with the previous calculations.</p>
+<p>In any condition, starting with a low amplitude modulating signal, lower than 100 mVpp, can be helpful to avoid the risk of damaging the laser. From this starting point, the amplitude can be gradually increased trying to ﬁnd the best amplitude for the modulating signal, always being careful not to obtain a too high modulating current.<br />
+A series resistor can be added between the signal generator and the Bias-Tee RF input in order to clip the amplitude of the modulating signal, obtaining the same eﬀect that would be obtained with a high-resistance laser that has been described above.</p>
+<hr />
+<h3 id="1232-interface-boards-wiring">12.3.2 Interface Boards Wiring</h3>
+<p>All the ppqSense Interface Boards present the three port conﬁguration of the Bias-Tee, if the Bias-Tee option is included, being the DC Bias Current input, the RF Modulation Input and the RF + DC Output which is embedded into the laser connector. Moreover, since the Boards acts as a complete interface to the laser, they also have a TEC connector to allow Temperature Stabilization.<br />
+In <strong>ﬁgure <a href="#figure.caption.142">25**</a> and </strong>ﬁgure 26,** the position of the described connection into the two interface board is displayed.</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0965.png" /></p>
+<p><strong>Figure 25:</strong> Drawings of the NanoPlus Cubic Mount Interface Board</p>
+<p><img alt="" src="../assets_QubeCL_Manual_v5/img-0966.png" /></p>
+<p><strong>Figure 26:</strong> Drawings of the HHL Interface Board</p>
+<hr />
+<h2 id="13-direct-communication">13 Direct Communication</h2>
+<p>It is possible to communicate with the QubeCL without the QubeCL Control Software. This option can be useful if the user wants to integrate the QubeCL into a complex system which is managed by a control software. The integration can be done by allowing the third party control software to directly communicate with the Serial Port of the QubeCL using the appropriate commands.<br />
+Here we provide all the technical information to establish the Serial connection and a list of the available commands, along with their syntax and reply from the QubeCL.</p>
+<blockquote>
+<p>CAUTION</p>
+</blockquote>
+<p>The QubeCL Control Software provided by ppqSense provides some safety features that are useful to prevent any usage of the QubeCL that may harm both the driver or the laser connected to it.<br />
+While using a third party control software, the user must be particularly cautious in order to avoid any possibly harmful condition for the QubeCL driver or the laser. Before using any third party control software, ppqSense strongly encourages the user to contact the ppqSense technical support to obaint counseling and advices from the techincal staﬀ.</p>
+<h3 id="131-qubecl-serial-port-specifications">13.1 QubeCL Serial Port Speciﬁcations</h3>
+<p>The QubeCL Control Software communicates with the QubeCL by the mean of a Serial Connection that can also be used by a third party software to interact with the driver. The baud rate of the QubeCL Serial Port is 115200 bps, which has to be set on the third party software in order for it to work with the driver.<br />
+The connection is possible only if the QubeCL Control Program from ppqSense is not running, otherwise the Serial Port resources is kept occupied and it is not accessible from the third party software.</p>
+<h3 id="132-qubecl-serial-commands">13.2 QubeCL Serial Commands</h3>
+<p>User can ﬁnd all the available commands listed in the subsequent tables. Those commands are the ones that are available for the ﬁnal user to be integrated in a third party control software or to be used in the QubeCL Control Software to directly communicate with the driver via the dedicated form in the Advanced tab.<br />
+In order for the commands to work, they must be sent at the appropriate Baud Rate and each command must be terminated with the <strong>\n</strong> character.<br />
+The strings that the QubeCL sends back as a reply, if any for the speciﬁc command sent, are terminated with the <strong>\r\n</strong> characters.</p>
+<hr />
+<p><strong>Table 13:</strong> Available commands for QubeCL current generator.</p>
+<blockquote>
+<p>Cmd Value R/W Action</p>
+</blockquote>
+<p><strong>Output</strong> Unit Format**</p>
+<table>
+<thead>
+<tr>
+<th><strong>Output Current and Modulations</strong></th>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>&lt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the identiﬁcative code of the instrument</td>
+<td>QubeCL- ####</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>ilas:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the Output Current value readed from the QubeCL monitor.</td>
+<td>####.##</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>iset:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the Current setpoint.</td>
+<td>####.##</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Current setpoint.</td>
+<td>N.A.</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>iout:</td>
+<td>on</td>
+<td>W</td>
+<td>Switches the Current ON.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Switches the Current OFF. If the modulations were active, they’re also switched OFF.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>imax:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the Output Current Maxi- mum Limit set by the user.</td>
+<td>####.##</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Output Current Maximum Limit.</td>
+<td>####.##</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>vlas:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the measured Voltage Drop across the laser</td>
+<td>####.##</td>
+<td>V</td>
+</tr>
+<tr>
+<td>mod:</td>
+<td>on</td>
+<td>W</td>
+<td>Enables  Switch.  active 10 seconds after. the <strong>iout:on</strong> command. the overall Modulation This command becomes the use of</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Disables the overall Modulation Switch. If some of the modulations are active, they are switched oﬀ too.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>mod1:</td>
+<td>on</td>
+<td>W</td>
+<td>Enables the Modulation Channel 1.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Disables the Modulation Channel 1.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>mod2:</td>
+<td>on</td>
+<td>W</td>
+<td>Enables the Modulation Channel 2.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Disables the Modulation Channel 2.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Table 14:</strong> Available commands for QubeCL temperature controller.</p>
+<blockquote>
+<p>Cmd Value R/W Action</p>
+</blockquote>
+<p><strong>Output</strong> Unit Format**</p>
+<table>
+<thead>
+<tr>
+<th><strong>Laser Temperature Controller</strong></th>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>&lt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tlas</td>
+<td>?</td>
+<td>R</td>
+<td>Return the Temperature of the laser measured by the TC Module.</td>
+<td>####.##</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>tstab:</td>
+<td>on</td>
+<td>W</td>
+<td>Switches the Temperature Stabiliza- tion on.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Switches the Temperature Stabiliza- tion oﬀ.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>tset:</td>
+<td>?</td>
+<td>R</td>
+<td>Return the laser Temperature Set- point</td>
+<td>####.##</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the laser Temperature Setpoint</td>
+<td>N.A.</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>kp:</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Proportional Gain Coeﬃcient for the digital PID that manages the laser Temperature Stabilization.</td>
+<td>N.A.</td>
+<td>A/K</td>
+</tr>
+<tr>
+<td>ki:</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Integral Gain Coeﬃcient for the digital PID that manages the laser Temperature Stabilization.</td>
+<td>N.A.</td>
+<td>A/Ks</td>
+</tr>
+<tr>
+<td>kd:</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Derivative Gain Coeﬃcient for the digital PID that manages the laser Temperature Stabilization.</td>
+<td>N.A.</td>
+<td>As/K</td>
+</tr>
+<tr>
+<td>pid:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the Gain Values of the Digital PID that manages the laser Temper- ature Stabilization.  kp  ki  kd</td>
+<td>####.##: ####.##: ####.##</td>
+<td>A/K A/Ks As/K</td>
+</tr>
+<tr>
+<td>tecsign:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the sign of the PID that man- ages the laser Temperature Stabiliza- tion. 0: reverse, 1: direct.</td>
+<td>#</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>^</td>
+<td>dir, rev</td>
+<td>W</td>
+<td>Sets the sign of the digital PID that manages the laser Temperature Sta- bilization.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>tlimax:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the Maximum Temperature Setpoint for the Stabilization PID.</td>
+<td>####.##</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Maximum Temperature Set- point for the Stabilization PID.</td>
+<td>N.A.</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>tlimin:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the Minimum Temperature Setpoint for the Stabilization PID.</td>
+<td>####.##</td>
+<td>°C</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Minimum Temperature Set- point for the Stabilization PID.</td>
+<td>N.A.</td>
+<td>°C</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>teclim:</th>
+<th>?</th>
+<th>R</th>
+<th>Returns the Maximum Current Out- put for the TC Module.</th>
+<th>####.##</th>
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the Maximum Current Output for the TC Module.</td>
+<td>N.A.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>teslim:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the threshold for the Active Temperature Error Control.</td>
+<td>####.##</td>
+<td>°C*s</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####</td>
+<td>W</td>
+<td>Sets the threshold for the Active Tem- perature Error Control.</td>
+<td>N.A.</td>
+<td>°C*s</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Table 15:</strong> Available commands for the DDS submodule.</p>
+<!-- ### DDS Module -->
+<p>| <strong>DDS Module</strong> |&lt;|&lt;|&lt;|&lt;|&lt;|
+| <strong>Cmd</strong> | <strong>Value</strong> | <strong>R/W</strong> | <strong>Action</strong> | <strong>Output Format</strong> | <strong>Unit</strong> |<br />
+|---|---|---|---|---|---|<br />
+| dds1: | ? | R | Returns the status of the DDS on modulation channel 1.  <strong>1:</strong> DDS is active.  <strong>0:</strong> DDS is inactive. | # | Bool. |<br />
+|^| on | W | Activates the DDS on channel 1. | N.A. | N.A. |<br />
+|^| oﬀ | W | Switches oﬀ the DDS on channel 1. | N.A. | N.A. |<br />
+| dds1w: | ? | R | Returns the waveform set for DDS on channel 1.  <strong>1:</strong> Sine wave.  <strong>2:</strong> Triangular wave. | # | Int. |<br />
+|^| # | W | Sets the waveform for the DDS on channel 1. Accepted values are:  <strong>1:</strong> Sine wave.  <strong>2:</strong> Triangular wave. | N.A. | Int. |<br />
+| dds1f: | ? | R | Returns the frequency of the DDS on channel 1. | ####.## | Hz |<br />
+|^| ####.## | W | Sets the frequency for the DDS on channel 1. | N.A. | Hz |<br />
+| dds1a: | ? | R | Returns the amplitude of the DDS on channel 1. | ####.## | mA |<br />
+|^| ####.## | W | Sets the amplitude for the DDS on channel 1. | N.A. | mA |<br />
+| dds1p: | ? | R | Returns the phase of the DDS on channel 1. | ####.## | Deg. |<br />
+|^| ####.## | W | Sets the phase for the DDS on chan- nel 1. | N.A. | Deg. |<br />
+| dds2: | ? | R | Returns the status of the DDS on modulation channel 2.  <strong>1:</strong> DDS is active.  <strong>0:</strong> DDS is inactive. | # | Bool. |<br />
+|^| on | W | Activates the DDS on channel 2. | N.A. | N.A. |<br />
+|^| oﬀ | W | Switches oﬀ the DDS on channel 2. | N.A. | N.A. |<br />
+| dds2w: | ? | R | Returns the waveform set for DDS on channel 2.  <strong>1:</strong> Sine wave.  <strong>2:</strong> Triangular wave. | # | Int. |<br />
+|^| # | W | Sets the waveform for the DDS on channel 2. Accepted values are:  <strong>1:</strong> Sine wave.  <strong>2:</strong> Triangular wave. | N.A. | Int. |  </p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>dds2f:</th>
+<th>?</th>
+<th>R</th>
+<th>Returns the frequency of the DDS on channel 2.</th>
+<th>####.##</th>
+<th>Hz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the frequency for the DDS on channel 2.</td>
+<td>N.A.</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td>dds2a:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the amplitude of the DDS on channel 2.</td>
+<td>####.##</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the amplitude for the DDS on channel 2.</td>
+<td>N.A.</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>dds2p:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the phase of the DDS on channel 2.</td>
+<td>####.##</td>
+<td>Deg.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the phase for the DDS on chan- nel 2.</td>
+<td>N.A.</td>
+<td>Deg.</td>
+</tr>
+<tr>
+<td>syncf:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the frequency of the DDS channel to which the Sync. Out sig- nal is synchronized.</td>
+<td>####.##</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td>^</td>
+<td>ch1</td>
+<td>W</td>
+<td>Synchronizes the Sync. Out signal to the DDS1</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>ch2</td>
+<td>W</td>
+<td>Synchronizes the Sync. Out signal to the DDS2</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Table 16:</strong> Available commands for the PLL locking module. <strong>PLL Locking Module</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Cmd</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>R/W</strong></th>
+<th><strong>Action</strong></th>
+<th><strong>Output Format</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mux:</td>
+<td>#</td>
+<td>W</td>
+<td>Allow the user to select which signal is present on the DIVIDER MON out- put. Allowed values are:  <strong>0</strong> DIVIDER MON switched oﬀ.  <strong>2</strong> DIVIDER MON set on RF.  <strong>4</strong> DIVIDER MON set on LO.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>sig:</td>
+<td>#</td>
+<td>W</td>
+<td>Set the sign of the PLL correction loop. Accepted values are:  <strong>0:</strong> negative correction loop.  <strong>1:</strong> positive correction loop.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>pll:</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Switches oﬀ the PLL.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Switches on the PLL.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>cp:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the value of cp, which is the gain of the PLL. Must be switched ON.</td>
+<td>##</td>
+<td>HEX.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Switches ON the proportional gain of the PLL chip.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Switches OFF the proportional gain of the PLL chip.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>#</td>
+<td>W</td>
+<td>Set the proportional gain. The value can range from 1 to 8.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>ndiv:</td>
+<td>####</td>
+<td>W</td>
+<td>Sets the divisor coeﬃcient for the RF frequency input.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>rdiv:</td>
+<td>####</td>
+<td>W</td>
+<td>Sets the divisor coeﬃcient for the LO frequency input.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>pby:</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Sets the PLL correction loop in pro- portional only mode.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Sets proportional-integrative mode. the PLL correction loop in</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>tp:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the Integrative time constant of the PLL correction loop. Accepted values range from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>tz:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the Proportional gain of the PLL correction loop. Accepted val- ues range from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>hg:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the proportional gain of the PLL chip. Accepted values ranges from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>lk:</th>
+<th>oﬀ</th>
+<th>W</th>
+<th>Switches OFF the correction current injected by the PLL module into the Bias Current.</th>
+<th>N.A.</th>
+<th>N.A.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Activates the correction current in- jected by the PLL module into the Bias Current. Overall modulation must be enabled for it to work.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>lm:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the value of the PLL correc- tion loop output voltage.</td>
+<td>####.##</td>
+<td>mV</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Table 17:</strong> Available commands for the PDH locking module. <strong>PDH Locking Module</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Cmd</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>R/W</strong></th>
+<th><strong>Action</strong></th>
+<th><strong>Output Format</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pdhint:</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Sets the PDH correction loop in pro- portional only mode.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Sets the PDH correction loop in proportional-integrative mode</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>pdhhold:</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Deactivates the <strong>HOLD</strong> input of the PDH module.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Activates the <strong>HOLD</strong> inptut of the PDH module.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>pdhlock:</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Deactivates the correction current in- jected into the Bias current by the PDH module.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>on</td>
+<td>W</td>
+<td>Activates the correction current in- jected into the Bias current by the PDH module. Overall modulation en- able must be active for it to work.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>pdhrint:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the ﬁrst proportional gain of the PDH correction loop. Accepted val- ues range from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>pdhtz:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the second proportional gain of the PDH correction loop. Also aﬀect the Integrative time constant. Ac- cepted values range from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>pdhtp:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the time constant of the PDH correction loop. Accepted values range from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>pdhmon:</td>
+<td>#</td>
+<td>W</td>
+<td>Sets which signal is present on the Monitor Output of the PDH module. Accepted values are:  <strong>0:</strong> Error Signal.  <strong>1:</strong> Correction signal.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>pdhmonint:?</td>
+<td></td>
+<td>R</td>
+<td>Returns the values of the Error and Correction signals converted by the on board ADCs.</td>
+<td>####.##: ####.##</td>
+<td>mV</td>
+</tr>
+<tr>
+<td>pdhvoﬀ:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the input oﬀset of the PDH correction loop.</td>
+<td>####.##</td>
+<td>mV</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the input oﬀset of the PDH cor- rection loop. The value can range from 0 to 5000. Default is 2500.</td>
+<td>N.A.</td>
+<td>mV</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>pdhdp:</th>
+<th>?</th>
+<th>R</th>
+<th>Returns the PDH correction loop pre- ampliﬁer gain.</th>
+<th>####.##</th>
+<th>mV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the PDH coorection loop pre- ampliﬁer gain. Accepted values range from 0 to 63.</td>
+<td>N.A.</td>
+<td>mV</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Table 18:</strong> Available commands for the LIA locking module.</p>
+<h3 id="lia-module">LIA Module</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Cmd</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>R/W</strong></th>
+<th><strong>Action</strong></th>
+<th><strong>Output Format</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lkpi:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the mode of the correction loop:  <strong>0</strong> stands for <strong>P</strong> mode.  <strong>1</strong> stands for <strong>PI</strong> mode.</td>
+<td>#</td>
+<td>Bool.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>0</td>
+<td>W</td>
+<td>Sets the correction loop in P mode.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>1</td>
+<td>W</td>
+<td>Sets the correction loop in PI mode.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>lkﬂt:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the status of the Low Pass Filter of the correction loop:  <strong>0</strong> stands for inactive.  <strong>1</strong> stands for active.</td>
+<td>#</td>
+<td>Bool.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>en</td>
+<td>W</td>
+<td>Activates Low Pass Filter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>dis</td>
+<td>W</td>
+<td>Deactivates Low Pass Filter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>lkgain:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the VGA Gain.</td>
+<td>####.##</td>
+<td>dB</td>
+</tr>
+<tr>
+<td>^</td>
+<td>####.##</td>
+<td>W</td>
+<td>Sets the VGA Gain</td>
+<td>N.A.</td>
+<td>dB</td>
+</tr>
+<tr>
+<td>lktp:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the pole of the correction loop.</td>
+<td>#</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the pole of the correction loop. Accepted value ranges from 0 to 3.</td>
+<td>N.A.</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>lktz:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the proportional gain of the correction loop.</td>
+<td>#</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the proportional gain of the cor- rection loop. Accepted values ranges from 0 to 3.</td>
+<td>N.A.</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td>lktpb:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the frequency setting for the Low Pass Filter of the correction loop.</td>
+<td>#</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>#</td>
+<td>W</td>
+<td>Sets the frequency setting for the Low Pass Filter of the correction loop. Ac- cepted value ranges from 0 to 3.</td>
+<td>N.A.</td>
+<td>mA</td>
+</tr>
+<tr>
+<td>lklock:</td>
+<td>on</td>
+<td>W</td>
+<td>Activates the LIA correction loop.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>oﬀ</td>
+<td>W</td>
+<td>Deactivates the LIA correction loop.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>lkdemod:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the demodulation mode of the LIA.  <strong>0</strong> stands for <strong>f</strong> mod.  <strong>1</strong> stands for <strong>2f</strong> mode.  <strong>2</strong> stands for no deomdulation acrive.</td>
+<td>#</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>f</td>
+<td>W</td>
+<td>Sets the <strong>f</strong> demodulation mode</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>2f</td>
+<td>W</td>
+<td>Sets the <strong>2f</strong> demodulation mode</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>free</td>
+<td>W</td>
+<td>Deactivates the demodulation</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>lkmon:</th>
+<th>?</th>
+<th>R</th>
+<th>Returns the currently set for the out- put monitor of the LIA module:  <strong>0</strong> stands for correction monitor.  <strong>1</strong> stands for ERROR monitor.</th>
+<th>####.##</th>
+<th>Deg.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>err</td>
+<td>W</td>
+<td>Sets the output monitor to show the ERROR signal.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>lock</td>
+<td>W</td>
+<td>Sets the output monitor to show the correction signal.</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>lkIIR:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the digital ﬁlter currently in use:  <strong>1</strong> stands for <strong>BP0.</strong>  <strong>2</strong> stands for <strong>BP1.</strong>  <strong>3</strong> stands for <strong>BP2.</strong>  <strong>4</strong> stands for <strong>LP1.</strong>  <strong>5</strong> stands for <strong>LP2.</strong>  <strong>6</strong> stands for <strong>Notch.</strong> 7<strong> stands for </strong>All Pass.**</td>
+<td>#</td>
+<td>Int.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>BP0</td>
+<td>W</td>
+<td>Sets the BP0 ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>BP1</td>
+<td>W</td>
+<td>Sets the BP1 ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>BP2</td>
+<td>W</td>
+<td>Sets the BP2 ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>LP0</td>
+<td>W</td>
+<td>Sets the LP0LP0 ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>LP1</td>
+<td>W</td>
+<td>Sets the LP1 ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>NOTCH</td>
+<td>W</td>
+<td>Sets the NOTCH ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>ALLPASS</td>
+<td>W</td>
+<td>Sets the ALLPASS ﬁlter</td>
+<td>N.A.</td>
+<td>N.A.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 19:</strong> Available commands to check the instrument status. <strong>QubeCL Instrument Status</strong></p>
+<table>
+<thead>
+<tr>
+<th>vcc:</th>
+<th>?</th>
+<th>R</th>
+<th>Returns the Supply Voltage for the CM Module measured by the QubeCL.</th>
+<th>####.##</th>
+<th>V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tsense:</td>
+<td>?</td>
+<td>R</td>
+<td>Returns the internal Temperature of the QubeCL instrument.</td>
+<td>####.##</td>
+<td>°C</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14-customer-support-and-useful-contacts">14. Customer support and useful contacts</h2>
+<p>The ppqSense staﬀ can be reached for any problem or request concerning the QubeCL devices.<br />
+To address any malfunctions or request help while working with our QubeCL, please write an email to <strong>qube.support@ppqsense.odoo.com,</strong> our staﬀ will reply to the raised ticket as soon as possible.<br />
+To obtain quotations, support or updates concerning the purchase of our instruments, please write an email to <strong>info@ppqsense.com.</strong></p>
+<p>All the available documentation concerning both the QubeCL and all our other products can be found on our website: <strong><a href="www.ppqsense.com.">www.ppqsense.com.</a></strong></p>
+<p><strong>ppqSense s.r.l.</strong><br />
+Viale L. Ariosto 492/B 50019, Sesto Fiorentino (FI) Italy<br />
++39 055 80 23 943</p>
+<hr />
+<h2 id="revision-history">Revision History</h2>
+<p>Revision Date Author(s) Description</p>
+<p>1.0 2024.05.15 LM First redaction.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023-2025 PPQSense S.R.L.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ppqsense-s.r.l." target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", {"tabs": true}], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

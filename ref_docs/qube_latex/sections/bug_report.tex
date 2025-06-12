@@ -1,0 +1,65 @@
+In this document, we report and describe a bug that has been found to affect the QubeCL and QubeDL drivers with older firmware releases, along with some information on how to safely operate with the systems.
+\newline
+
+%\rule{\textwidth}{0.4pt}
+
+%\textbf{By setting low current values, the \QubeModel delivers the maximum current.}
+%\newline \newline
+\textbf{SEVERITY:} HIGH
+\newline \newline
+\textbf{TYPE:} FIRMWARE (version V16.0 or lower)
+\newline \newline
+\textbf{DESCRIPTION:} By setting some specific current values, dependent on the calibration of each driver but \textbf{always lower than 5 mA}, the maximum current allowed by the modules mounted on the driver is sourced, without respecting the set limit of IMAX.
+\newline \newline
+\textbf{SOLUTION:} Firmware versions higher than \textbf{16.0} already include a safety feature that, based on the current reading, places the \QubeModel in a safe state in case the current should spike above the IMAX limit. \newline
+From version \textbf{17.4.9}, the bug has been eliminated. 
+\newline \newline
+\textbf{WORKAROUND:}  To avoid any dangerous condition, it is sufficient not to set a current setpoint lower than 5 mA. Given the current rating for which the QubeCL and QubeDL drivers are optimized, such limitation will not result in a drastical loss of features. \newline
+\iffalse
+The table below lists all the QubeCL and QubeDL drivers susceptible to the bug described here due to calibration parameters and old firmware versions, nevertheless we suggest not to use current setpoints below 5 mA in any circumstance.
+\newpage
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l||l|l||l|l|}
+    \hline
+        \multicolumn{6}{c}{\textbf{List of affected Qubes}}\\ 
+        \hline
+        \textbf{SN} &  \textbf{Model}  & \textbf{SN} &  \textbf{Model}  & \textbf{SN} &  \textbf{Model}  \\ 
+        \hline  \hline
+        3 & QubeCL10-T & 54 & QubeDL02-TP-BGY & 97 & QubeCL10-TP \\ \hline
+        12 & QubeCL10-T & 55 & QubeDL02-TP-BGY & 98 & QubeCL05-TP \\ \hline
+        14 & QubeCL05-T & 56 & QubeDL02-TP-BGY & 100 & QubeCL10-T \\ \hline
+        15 & QubeCL05-T & 57 & QubeCL05-TP & 101 & QubeCL10-T \\ \hline
+        17 & QubeCL05-T-WIFI & 60 & QubeCL10-TP & 102 & QubeCL10-T \\ \hline
+        20 & QubeCL10-TP & 62 & QubeCL20-T-BH & 103 & QubeCL10-TP OEM \\ \hline
+        21 & QubeCL05-T-CG & 63 & QubeCL05-TP & 105 & QubeCL20 \\ \hline
+        22 & QubeCL05-T & 64 & LIDAR & 106 & QubeCL05-TD-B1 \\ \hline
+        23 & QubeDLe20-T & 65 & QubeCL05-T & 107 & QubeCL05-TD-B1 \\ \hline
+        26 & QubeDLe20-T & 66 & QubeCL10-T & 109 & QubeCL05-TD-B1 \\ \hline
+        28 & QubeDLe20-T & 67 & QubeCL10-T & 110 & QubeCL05-T \\ \hline
+        29 & QubeCL20 & 68 & QubeDL & 112 & QubeCL10-TD \\ \hline
+        30 & QubeCL-TP05L & 69 & QubeDL & 116 & QubeDL \\ \hline
+        31 & QubeCL-TP05L & 71 & QubeCL05-T & 117 & QubeDL16-TP-B1 \\ \hline
+        32 & QubeCL-TP05L & 72 & QubeDL & 118 & QubeDL02-TD \\ \hline
+        33 & QubeCL-TP05L & 73 & QubeCL20-TP & 121 & QubeCL10-TD \\ \hline
+        34 & QubeCL-TP05L & 74 & QubeCL10-TP & 122 & QubeDL \\ \hline
+        35 & QubeCL-TP05L & 75 & QubeCL10-TP & 123 & QubeDL \\ \hline
+        36 & QubeCL-TP05L & 76 & QubeCL15-T & 124 & QubeDL \\ \hline
+        37 & QubeCL-TP05L & 78 & QubeCL10-T & 125 & QubeDL \\ \hline
+        38 & QubeCL-TP05L & 79 & QubeCL15 & 126 & QubeDL \\ \hline
+        39 & QubeCL10-T & 80 & QubeCL05-T & 127 & QubeDL \\ \hline
+        40 & QubeCL10-T & 81 & QubeCL15-T & 128 & QubeDL \\ \hline
+        41 & QubeCL10-TP & 83 & QubeCL10-T & 130 & QubeDL \\ \hline
+        42 & QubeCL15-TP & 85 & QubeCL05-TD-B1 & 131 & QubeCL10-TP OEM \\ \hline
+        43 & QubeCL15-TP & 86 & QubeCL05-TD-B1 & 132 & QubeDL \\ \hline
+        44 & QubeCL10-0.5 & 88 & QubeCL05-T & 133 & QubeDL \\ \hline
+        45 & QubeCL25-P & 89 & QubeCL10-TP-H1 & 134 & QubeDL \\ \hline
+        46 & QubeCL20 & 90 & QubeCL15-T & 135 & QubeDL \\ \hline
+        47 & QubeCL10-TP & 91 & QubeCL05-TD & 136 & QubeDL \\ \hline
+        48 & QubeCL10-TP & 93 & QubeCL05-TP & 137 & QubeDL \\ \hline
+        51 & QubeCL10-TP & 94 & QubeCL15-T & 138 & QubeDL \\ \hline
+        52 & QubeDL02-TD-B1 & 95 & QubeCL15-TP & ~ & ~ \\ \hline
+        53 & QubeDL02-TP-BGY & 96 & QubeCL10-T & ~ & ~ \\ \hline
+    \end{tabular}
+\end{table}
+\fi

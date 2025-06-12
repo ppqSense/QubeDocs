@@ -1,0 +1,426 @@
+\newpage
+\section{ Connections }
+\paragraph{} In this chapter we describe the connectors, the functions of each pins and their position on the board. \newline
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/conn_panoramics.png}
+    \caption{Overall view of the connectors present on the Dual Driver, bottom view}
+    \label{overall_conn_view}
+\end{figure}
+
+\paragraph{} The \textbf{picture \ref{overall_conn_view}} shows all the connectors and interfaces that are present on the bottom side of the Dual Driver. \newline
+The \textbf{red squares} indicate the connectors from the host board to the Dual Driver. \newline
+The \textbf{yellow squares} indicate the jumpers that do not reach the host board and must be properly shorted to set specific parameters or enable features of the Dual Driver.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/Footprint.png}
+    \caption{Footprints of the Dual Driver highlighting the connectors to the host board, top view}
+    \label{footprint}
+\end{figure}
+
+\paragraph{} In the subsequent pages, all of the jumpers and connectors present in the Dual Driver board are listed, describing the number and functions of their pins. \newline
+Since the upper side of the Dual Driver is occupied by the aluminum heat sink, all of the connectors and jumpers are located on the bottom plane, therefore all of the subsequent images are bottom view. \newline
+Each table lists the model code of the connectors or jumpers mounted on the Dual Driver board (Male ones), and also a suggestion for which connector should be used on the Main Board (Female ones) to match the connector on the Dual Driver. \newline
+By using the suggested female connectors, there will be 20 mm gap between the host board and the dual driver, allowing enough space for the electronics. \newline
+To guarantee the physical stability of the interconnection, the Dual Driver comes with 4 M3 aluminum spacers to be screwed to the main board.
+\newpage
+
+
+
+%---------------- digital communication connector ----------------
+\subsection{Digital communication connector}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{images/COMM_conn.PNG}
+    \label{SV3}
+\end{figure}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{SV3}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-106-15-G-D\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  & ESQ-106-12-G-D\\
+        \hline
+        \hline
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            SV3-1 & Reserved & Leave unconnected \\
+        \hline
+            SV3-2 & UART TX & UART serial communication channel, TX line \\
+        \hline
+            SV3-3 & Reserved &  Leave unconnected \\
+        \hline 
+            SV3-4 & UART RX & UART serial communication channel, RX line \\
+        \hline
+            SV3-5 & VCC\_OUT & Supply voltage input, used to source the galvanically isolated interface of the DD. \newline
+            Accepts voltage between 3 V and 5.5 V \\
+        \hline
+            SV3-6 & Reserved & Leave unconnected \\
+        \hline
+            SV3-7 & GND\_OUT & Ground connection for the VCC\_OUT power supply \\
+        \hline
+            SV3-8 & FLAG 4 & GPIO, can be used as a warning or error flag \\
+        \hline
+            SV3-9 & Reserved & Leave unconnected \\
+        \hline
+            SV3-10 & FLAG 3 & GPIO, can be used as a warning or error flag \\
+        \hline
+            SV3-11 & FLAG 2 & GPIO, can be used as a warning or error flag \\
+        \hline
+            SV3-12 & FLAG 1 & GPIO, can be used as a warning or error flag \\
+        \hline
+        \end{tabular}
+    \caption{Connector used for digital interface and control of the Dual Driver.}
+    \end{center}
+\end{table}
+
+
+
+%---------------- current output ----------------
+\subsection{Output current connectors}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/LAS_OUT_conn.PNG}
+    \caption{Connectors for the output current of the two channels}
+    \label{output_conn}
+\end{figure}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{J1}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-102-15-G-D\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  & ESQ-102-12-G-D\\
+        \hline
+        \hline        
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            J1-1 & LAS-C & Laser Cathode connection, current sink \\
+        \hline
+            J1-2 & LAS-C & Laser Cathode connection, current sink \\
+        \hline
+            J1-3 & LAS-A & Laser Anode connection, can be grounded using JP3 \\
+        \hline
+            J1-4 & LAS-A & Laser Anode connection, can be grounded using JP3 \\
+        \hline
+        \end{tabular}
+    \caption{Current output, channel 1}
+    \end{center}
+\end{table}
+
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{J2}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-102-15-G-D\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  & ESQ-102-12-G-D\\
+        \hline
+        \hline   
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            J2-1 & LAS-C & Laser Cathode connection, current sink \\
+        \hline
+            J2-2 & LAS-C & Laser Cathode connection, current sink \\
+        \hline
+            J2-3 & LAS-A & Laser Anode connection, can be grounded using JP4 \\
+        \hline
+            J2-4 & LAS-A & Laser Anode connection, can be grounded using JP4 \\
+        \hline
+        \end{tabular}
+    \caption{Current output, channel 2}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{JP3}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-102-08-F-S-RA\\
+        \hline
+        \hline
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            JP3-1 & EARTH & \multirow{2}{*}{Short the jumper to ground the anode of the laser.}\\
+        \cline{1-2}
+            JP3-2 & LAS-A & \\
+        \hline
+        \end{tabular}
+    \caption{Grounding jumper, channel 1}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{JP4}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-102-08-F-S-RA\\
+        \hline
+        \hline
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            JP4-1 & EARTH & \multirow{2}{*}{Short the jumper to ground the anode of the laser.}\\
+        \cline{1-2}
+            JP4-2 & LAS-A & \\
+        \hline
+        \end{tabular}
+    \caption{Grounding jumper, channel 2}
+    \end{center}
+\end{table}
+
+
+
+%---------------- modulation inputs ----------------
+\subsection{Input modulation connectors}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/MOD_IN_conn.PNG}
+    \caption{Connectors for the input modulation signals}
+    \label{mod_conn}
+\end{figure}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{J3}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-102-15-G-D\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  & ESQ-102-12-G-D\\
+        \hline
+        \hline 
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            J3-1 & MOD-n & Modulation input, negative pole \\
+        \hline
+            J3-2 & MOD-n & Modulation input, negative pole \\
+        \hline
+            J3-3 & MOD-p & Modulation input, positive pole \\
+        \hline
+            J3-4 & MOD-p & Modulation input, positive pole \\
+        \hline
+        \end{tabular}
+    \caption{Modulation input, channel 1}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{J4}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  & TSW-102-15-G-D\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  & ESQ-102-12-G-D\\
+        \hline
+        \hline 
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            J4-1 & MOD-n & Modulation input, negative pole \\
+        \hline
+            J4-2 & MOD-n & Modulation input, negative pole \\
+        \hline
+            J4-3 & MOD-p & Modulation input, positive pole \\
+        \hline
+            J4-4 & MOD-p & Modulation input, positive pole \\
+        \hline
+        \end{tabular}
+    \caption{Modulation input, channel 2}
+    \end{center}
+\end{table}
+
+
+
+%---------------- Gain selector and interlock jumpers ----------------
+\subsection{Gain selector and interlock jumpers}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/LOCK_GAIN_conn.PNG}
+    \caption{Connectors for the selection of the gains and interlock}
+    \label{lock_gain_conn}
+\end{figure}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{SV1}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  &  61300311121\\
+        \hline
+        \hline 
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            SV1-1 & HIGH-G & Short to SV1-2 to set high gain on channel 1 modulator \\
+        \hline
+            SV1-2 & LAS-c & Laser cathode \\
+        \hline
+            SV1-3 & LOW-G & Short to SV1-2 to set low gain on channel 1 modulator \\
+        \hline
+        \end{tabular}
+    \caption{Modulator gain selector, channel 1}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{SV2}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  &  61300311121\\
+        \hline
+        \hline 
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            SV2-1 & HIGH-G & Short to SV2-2 to set high gain on channel 2 modulator \\
+        \hline
+            SV2-2 & LAS-c & Laser cathode \\
+        \hline
+            SV2-3 & LOW-G & Short to SV2-2 to set low gain on channel 2 modulator \\
+        \hline
+        \end{tabular}
+    \caption{Modulator gain selector, channel 2}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{JP11}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  &  TSW-102-15-T-S\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  &  ESW-102-12-T-S\\
+        \hline
+        \hline 
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            JP11-1 & RELE\_PWR \newline  &  \multirow{2}{9.5cm}{The two pins of JP11 must be shorted on the Main Board in order to let the Dual Driver to deliver current to its outputs. When JP11 is not shorted, the Dual Driver outputs are shorted.} \\
+        \cline{1-2}
+            JP11-2 & PS\_POS \newline & \\
+        \hline
+        \end{tabular}
+    \caption{Interlock connector, both channels}
+    \end{center}
+\end{table}
+
+
+
+%---------------- Power connector ----------------
+\subsection{Power source connector}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{images/PWR_conn.PNG}
+    \caption{Connector for the external power source}
+    \label{pwr_conn}
+\end{figure}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{
+        |p{2cm}
+        |>{\centering\arraybackslash}p{2cm}
+        |>{\centering\arraybackslash}p{10cm}
+        |  }
+        \hline
+            \multicolumn{3}{|c|}{\textbf{X8}}  \\
+        \hline
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Male}}  &  TSW-103-15-F-D\\
+        \hline
+            \multicolumn{2}{|c|}{\textbf{Female}}  &  ESW-103-12-G-D\\
+        \hline
+        \hline 
+            \textbf{Pin n.} & \textbf{Name} & \textbf{Description}\\
+        \hline
+            X8-1 & PS\_POS & Supply voltage input, +24 V \\
+        \hline
+            X8-2 & PS\_NEG & Supply voltage ground  \\
+        \hline
+            X8-3 & PS\_POS & Supply voltage input, +24 V \\
+        \hline
+            X8-4 & PS\_NEG & Supply voltage ground  \\
+        \hline
+            X8-5 & PS\_POS & Supply voltage input, +24 V  \\
+        \hline
+            X8-6 & PS\_NEG & Supply voltage ground \\
+        \hline
+        \end{tabular}
+    \caption{Power source connector}
+    \end{center}
+\end{table}

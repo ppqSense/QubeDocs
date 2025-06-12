@@ -1,0 +1,28 @@
+% Initial settings, new commands and redefinition of existing commands
+%---- Title and subtitle ----%
+% The two commands below defines the subtitle and the title of the AppNonte
+% The subtitle is defined separately, because it defines the cardinal number of the AppNote
+%   and it is also used as header in the remaining pages of the document.
+
+\newcommand{\AppNoteNumber}{ ppqSense App.Note no. XX}
+\renewcommand{\title}{ Laser locking with QubeCL and QubeDL     % title
+                        \newline \large \AppNoteNumber}
+
+%----   Other informations about the document   ----%
+\renewcommand{\author}{ppqSense Development Team}
+\renewcommand{\date}{Revision \vhCurrentVersion\ , \vhCurrentDate}
+\newcommand{\justdate}{\vhCurrentDate}
+
+% Definition of ToC title and figures and tables caption
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\tablename}{\bfseries Table}
+\renewcommand{\figurename}{\bfseries Figure}
+\renewcommand{\thefootnote}{\textcolor{grayblack}{\arabic{footnote}}}
+
+% Definition of new commands useful for this document
+\newcommand{\QubeModel} {Qube }
+
+
+\color{grayblack}	% Document text color
+
+

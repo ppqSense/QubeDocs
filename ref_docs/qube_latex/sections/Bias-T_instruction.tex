@@ -1,0 +1,36 @@
+\section{Bias-Tee description}
+Bias-Tee is an electronic component used to inject high-frequency modulating signal over a DC bias signal. The component has three ports of which one is used to source a DC bias signal while the other injects the radio frequency signal, the third port is the output where bias and RF signal are superimposed. The Bias-Tee works to decouple the sources of the two signals.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.1]{images/Bias_tee.png}
+\caption{Bias Tee simplified electronic diagram}
+\end{figure}
+
+As it is shown in Figure 1, Bias Tee can be described as a LC circuit working as a filter to decouple DC bias and RF signals on their respective ports.
+Because of its circuit model, Bias Tees can only couple RF signal over a certain cut frequency.
+\newline The Bias-Tee used inside ppqSense devices has a 500 kHz cut off frequency, hence it can't be used to inject modulation signal below such frequency.
+
+
+
+
+%-------------------------------- Bias-Tee usage for high freuqency laser modulation --------------------------------%
+
+\section{Bias-Tee usage for high freuqency laser modulation}
+\QubeModel s and QubeDLs drivers are able to source modulating signals to the Laser by themselves, provided that the signal has less than 2 MHz frequency, without any need for a Bias-Tee device. The great advantage of the modulating signals generated inside the Qube drivers is that the modulation signal is natively generated as a current signal by dedicated current-drivers. \newline
+
+\newline The fact that the Qubes house current drivers for modulating signal generation makes the process of generating a modulating signal for the laser a easy and straightforward operation, since the amplitude and frequency of the signal can be easily defined by the input signal to the Qube or with the DDS interface on the GUI.
+\newline Conversely, such modulators have limited bandwidth, hence modulating signal with frequency above a few MHz cannot be generated using such modulators. There is where Bias Tee steps in. \newline
+
+\newline If high frequency modulation is required, ppqSense provides a solution based on Bias-Tee circuit. This coupling device can be provived in various forms, being included into Laser Shield modules or delivered on a separated board to be used as an adapter between the \QubeModel /DL and the Laser.
+\newline All the modules and boards equipped with a Bias-Tee have a high-frequency modulation input to which the user has to connect his modulating signal. The modules intended to lay on top of the \QubeModel s/DLs does not have any output or other inputs, since all other signals are already delivered to the laser inside the Qube.
+\newline The adapter boards that lay outside the Qube, working as an interface, also has a connection for the DC bias current. Such input must be connected to the Current Out connector of the Qube. The output signal reaches the laser through a dedicated connector which comes in various forms, depending on the laser housin that needs to be used.
+
+\newline Bias Tees have the advantage of withstanding higher frequencies, but they have the disadvantage to be designed to couple voltage-signal and not current-signal as the one that should be used to properly and easily drive a laser.
+\newline Given that, when sourcing a signal to the RF port of the Bias-Tee boards, there is not a direct control over the current injected on the Laser.
+\newline In those condition, the amplitude of the modulating current not only depends on the amplitude of the modulating signal but also on the operating point of the Laser itself (which is set by the DC bias current) and on the dynamic resistance that the Laser shows at such operating point. \newline
+
+\newline Using a Bias-Tee coupling circuit hence requires a trial and error process in order to find which is the best modulating signal amplitude that allows the Laser to be modulated as the user needs.
+\newline This trial and error process may be dangerous, since the Bias-Tee circuit does not have all the safety measures that the Qubes have, implying that any signal sourced to such board will be directly coupled to the Laser with the risk of damaging it.
+\newline The user might want to start with a low peak-to-peak value of the modulating signal, slowly increasing it trying to find  the best signal condition.
+\newline The maximum amplitude of the signal is dependant on the DC bias current used to drive the laser and on the characteristics of the laser itself.

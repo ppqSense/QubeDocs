@@ -1,0 +1,48 @@
+site_name: QubeCL Docs
+theme:
+  name: material
+  features: 
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    # - navigation.footer
+    - toc.follow
+    - tabs: true
+  palette:
+    primary: purple
+  custom_dir: ppq_theme
+extra_css:
+  - css/ppq.css
+  - https://unpkg.com/katex@0/dist/katex.min.css #for math support
+markdown_extensions:
+  - toc
+      # toc_depth: 1
+  - md_in_html
+nav:
+  - Home: index.md
+  - Qube Manual V5: QubeCL_Manual_v5.md
+plugins:
+  # - with-pdf # enable to auto-generate PDF
+copyright: Copyright &copy; 2023-2025 PPQSense S.R.L.
+extra:
+  generator: false # removes made with material for MkDocs from project footer
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/ppqsense-s.r.l.
+
+
+# Math Support (KaTeX)
+# markdown_extensions:
+#   - pymdownx.arithmatex:
+#       generic: true
+
+# extra_javascript:
+#   - javascripts/katex.js
+#   - https://unpkg.com/katex@0/dist/katex.min.js
+#   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+# extra_css:
+#   
