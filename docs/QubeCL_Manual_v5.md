@@ -47,7 +47,7 @@ QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 
 25 Drawings of the NanoPlus Cubic Mount Interface Board - 55  
 26 Drawings of the HHL Interface Board - 55  
 
---- -->
+---  -->
 
 ## 1. Warranty
 

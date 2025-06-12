@@ -18,14 +18,53 @@ extra_css:
   - css/ppq.css
   - https://unpkg.com/katex@0/dist/katex.min.css #for math support
 markdown_extensions:
-  - toc
+  - toc:
+      permalink: true
       # toc_depth: 1
+  # Python Markdown Extensions
+  -  abbr
+  - admonition
+  - def_list
+  - footnotes
   - md_in_html
-nav:
-  - Home: index.md
-  - Qube Manual V5: QubeCL_Manual_v5.md
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - md_in_html
+  - attr_list # permits downoadable files
+  #permits mathmatical statements
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 plugins:
-  # - with-pdf # enable to auto-generate PDF
+  - search
+  - table-reader
+  - to-pdf: # enable to auto-generate PDF (currently for whole site)  
+      ordered_chapter_level: 100
+      toc_level: 6
+      author: LM
+      copyright: ppqSense S.R.L. 2025
+      cover_title: QubeCL Laser Driver Manual
+      cover_subtitle: Version 5 (2025)
+      cover_logo: img/QubeCL_Logo.png
+      output_path: downloads/QubeCL_Manual_v5.pdf
+      # enabled_if_env: ENABLED_PDF_EXPORT #uncomment to disable PDF generation during development
 copyright: Copyright &copy; 2023-2025 PPQSense S.R.L.
 extra:
   generator: false # removes made with material for MkDocs from project footer
@@ -33,16 +72,14 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/ppqsense-s.r.l.
 
+# Site Structure
+nav:
+  - Home: index.md
+  - Qube Manual V5: QubeCL_Manual_v5.md
+  - Downloads: downloads.md
 
 # Math Support (KaTeX)
-# markdown_extensions:
-#   - pymdownx.arithmatex:
-#       generic: true
-
 # extra_javascript:
 #   - javascripts/katex.js
 #   - https://unpkg.com/katex@0/dist/katex.min.js
 #   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-
-# extra_css:
-#   
