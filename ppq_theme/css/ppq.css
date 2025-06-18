@@ -9,6 +9,15 @@ body {
 	/* font-family: 'Courier New', Courier, monospace; */
 }
 
+caption span:first-child {
+    font-weight: bold;
+}
+
+caption {
+	font-style: italic;
+	opacity: 80%;
+}
+
 .title_page {
 background: linear-gradient(to bottom, rgba(255, 255, 255, .4) 25%, rgb(255, 255, 255,.9) 100%), url('img/cover.png');
 	background-size:contain;

@@ -4,6 +4,8 @@ toc_depth: 1
 ---
 # QubeCL Laser Driver Manual V.5
 
+<!-- table-of-figures -->
+
 <!-- [TOC] -->
 <!-- 
 ## List of Tables
@@ -49,25 +51,26 @@ QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 
 
 ---  -->
 
+
 ## 1. Warranty
 
 ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmanship defects for one year from the date of the original shipment **(1-YEAR WARRANTY).** This warranty is in lieu of all other guarantees expressed or implied, including any implied warranty of merchantability or ﬁtness for any particular purpose. ppqSense S.r.l. shall not be liable for any special, incidental or consequential loss. During the warranty period, ppqSense S.r.l. will repair or replace the unit or module, or issue credit, at our option, without charge. ppqSenses liability shall not in any case exceed the cost of correcting defects in the products as explained here, and this service is the sole remedy of the buyer. This warranty does not apply to defects caused by abuse, accident, modiﬁcations, Acts of God, or the use of the product for which it was not intended. ppqSense S.r.l. shall not be liable for damages resulting from the use of the product, nor shall be responsible for any failure in the performance of other items to which the purchased product is connected or the operation of any system of which the purchased product may be a part. The QubeCL System should not be used in the manner not speciﬁed by the manufacturer.
 
 ## 2 Speciﬁcations
 
+
 ### 2.1 Communication interfaces
 
-
+Table: Communication Interfaces
 
 | **Interface** | **Mode** | **Settings** | **Notes** |  
 |---|---|---|---|  
 | USB | Virtual Serial Port | 115200 8N1 ||  
-| WiFi | Access Point/Client | software conﬁgurable | Optional |  
-
-
-**Table 1:** Communication Interfaces
+| WiFi | Access Point/Client | software conﬁgurable | Optional |
 
 ### 2.2 Absolute maximum ratings
+
+Table: Absolute maximum voltage and temperature ratings
 
 | **Parameter** | **Values** | **Unit** | **Notes** |  
 |---|---|---|---|  
@@ -77,13 +80,18 @@ ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmans
 | TEC power supply voltage (PS TEC ) | 24 | V |^|  
 | Modulation inputs | ± 10 | V ||  
 
-
-**Table 2:** Absolute Maximum Ratings
-
 ### 2.3 Electrical Speciﬁcations
 
-PS LAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦ C, unless otherwise noted.  
-√
+`math p(x|y) = \frac{p(y|x)p(x)}{p(y)}`
+
+```math
+\begin{align}
+    p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
+    p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
+\end{align}
+```
+PSLAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦ C, unless otherwise noted.  
+
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  

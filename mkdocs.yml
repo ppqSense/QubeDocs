@@ -16,23 +16,36 @@ theme:
   custom_dir: ppq_theme
 extra_css:
   - css/ppq.css
-  - https://unpkg.com/katex@0/dist/katex.min.css #for math support
+# for math support
+  - https://unpkg.com/katex@0/dist/katex.min.css 
+# extra_javascript: 
+#     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 markdown_extensions:
   - toc:
       permalink: true
       # toc_depth: 1
+  # - image_captions:
+  #     numbering: true
+  #     caption_top: false
+  # - table_captions:
+  #     numbering: true
+  #     caption_top: false
+  # - caption
+# ...
   # Python Markdown Extensions
   -  abbr
   - admonition
   - def_list
   - footnotes
   - md_in_html
+  - tables
+  - markdown_katex
   - pymdownx.highlight
   - pymdownx.superfences
   - md_in_html
   - attr_list # permits downoadable files
   #permits mathmatical statements
-  - pymdownx.arithmatex:
+  - pymdownx.arithmatex: # preserves LaTeX math equations during markdown conversion for use with MathJax
       generic: true
   - pymdownx.betterem:
       smart_enable: all
@@ -52,9 +65,18 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  # - mdx_math
 plugins:
   - search
-  - table-reader
+  # - table-reader
+  - caption
+  - table-of-figures:
+      directive_identifier: 'table-of-figures'
+      figure_types:
+        - image
+        - table
+        - mermaid
+  # - with-pdf
   - to-pdf: # enable to auto-generate PDF (currently for whole site)  
       ordered_chapter_level: 100
       toc_level: 6
@@ -78,8 +100,8 @@ nav:
   - Qube Manual V5: QubeCL_Manual_v5.md
   - Downloads: downloads.md
 
-# Math Support (KaTeX)
+# Math Support (KaTeX) // test edit on https://katex.org/
 # extra_javascript:
-#   - javascripts/katex.js
+#   # - javascripts/katex.js
 #   - https://unpkg.com/katex@0/dist/katex.min.js
 #   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
