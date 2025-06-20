@@ -1,4 +1,15 @@
 site_name: QubeCL Docs
+copyright: Copyright &copy; 2014-2025 PPQSense S.R.L.
+#------------------------------------------#
+#-----------Site Structure-----------------#
+#------------------------------------------#
+nav:
+  - Home: index.md
+  - Qube Manual V5: QubeCL_Manual_v5.md
+  - Downloads: downloads.md
+#------------------------------------------#
+#---------------Layout/Design--------------#
+#------------------------------------------#
 theme:
   name: material
   features: 
@@ -14,12 +25,17 @@ theme:
   palette:
     primary: purple
   custom_dir: ppq_theme
+extra:
+  generator: false # removes made with material for MkDocs from project footer
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/ppqsense-s.r.l.
 extra_css:
   - css/ppq.css
-# for math support
-  - https://unpkg.com/katex@0/dist/katex.min.css 
-# extra_javascript: 
-#     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://unpkg.com/katex@0/dist/katex.min.css # Math Symbol Support
+#------------------------------------------#
+#----------Features/Functionality----------#
+#------------------------------------------#
 markdown_extensions:
   - toc:
       permalink: true
@@ -30,23 +46,21 @@ markdown_extensions:
   # - table_captions:
   #     numbering: true
   #     caption_top: false
-  # - caption
-# ...
-  # Python Markdown Extensions
-  -  abbr
-  - admonition
-  - def_list
-  - footnotes
-  - md_in_html
-  - tables
-  - markdown_katex
-  - pymdownx.highlight
-  - pymdownx.superfences
+  # - caption # not sure if neeeded
+  - abbr
+  - admonition # used to make notes or warning boxes
   - md_in_html
   - attr_list # permits downoadable files
-  #permits mathmatical statements
-  - pymdownx.arithmatex: # preserves LaTeX math equations during markdown conversion for use with MathJax
-      generic: true
+  - def_list
+  - footnotes
+  - tables
+  - markdown_katex:
+      no_inline_svg: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  # - pymdownx.arithmatex # preserves LaTeX math equations during markdown conversion for use with KaTeX
+      # generic: true
+      # inline_syntax: ['dollar']
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -59,25 +73,26 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  # - mdx_math
+#-------------Plugins-------------------#
 plugins:
   - search
-  # - table-reader
+  - table-reader:
+      data_path: "docs/"
   - caption
-  - table-of-figures:
+  - table-of-figures: # not yet working
       directive_identifier: 'table-of-figures'
       figure_types:
         - image
         - table
         - mermaid
-  # - with-pdf
-  - to-pdf: # enable to auto-generate PDF (currently for whole site)  
+      # caption_identifier_description_seperator: '\n'
+  # - with-pdf # not sure if needed
+  - to-pdf: # enable to auto-generate PDF download(currently for whole site)  
       ordered_chapter_level: 100
       toc_level: 6
       author: LM
@@ -87,21 +102,4 @@ plugins:
       cover_logo: img/QubeCL_Logo.png
       output_path: downloads/QubeCL_Manual_v5.pdf
       # enabled_if_env: ENABLED_PDF_EXPORT #uncomment to disable PDF generation during development
-copyright: Copyright &copy; 2023-2025 PPQSense S.R.L.
-extra:
-  generator: false # removes made with material for MkDocs from project footer
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/ppqsense-s.r.l.
 
-# Site Structure
-nav:
-  - Home: index.md
-  - Qube Manual V5: QubeCL_Manual_v5.md
-  - Downloads: downloads.md
-
-# Math Support (KaTeX) // test edit on https://katex.org/
-# extra_javascript:
-#   # - javascripts/katex.js
-#   - https://unpkg.com/katex@0/dist/katex.min.js
-#   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js

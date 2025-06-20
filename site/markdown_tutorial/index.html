@@ -1,0 +1,803 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Editing a mkdocs markdown site - QubeCL Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/figures/mermaid.css">
+    
+      <link rel="stylesheet" href="../css/ppq.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#editing-a-mkdocs-markdown-site" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="QubeCL Docs" class="md-header__button md-logo" aria-label="QubeCL Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QubeCL Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Editing a mkdocs markdown site
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../QubeCL_Manual_v5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Qube Manual V5
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../downloads/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Downloads
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="QubeCL Docs" class="md-nav__button md-logo" aria-label="QubeCL Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    QubeCL Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QubeCL_Manual_v5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qube Manual V5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#site-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Site Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Content
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing Content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createedit-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create/Edit a page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-new-page-to-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add new page to site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating the website
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown Guides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-pluginsextensionstools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful plugins/extensions/tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful plugins/extensions/tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abmonition" class="md-nav__link">
+    <span class="md-ellipsis">
+      abmonition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown_katex" class="md-nav__link">
+    <span class="md-ellipsis">
+      markdown_katex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caption" class="md-nav__link">
+    <span class="md-ellipsis">
+      caption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      to-pdf
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-features-that-may-be-added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional features that may be added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+  integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs"
+  crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      object-fit: fill;
+      padding: unset;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="editing-a-mkdocs-markdown-site">Editing a mkdocs markdown site<a class="headerlink" href="#editing-a-mkdocs-markdown-site" title="Permanent link">&para;</a></h1>
+<p>This site uses <a href="https://www.mkdocs.org/">MkDocs</a> (a static site generator optimized for project documentation). The fundamental content of the site is stored in Markdown text files - a human-readable file format with build-in styling syntax that can be edited in any text editor. Additional styling and functionality comes from CSS and Python extensions. The entire site is hosted directly on github pages and can be exported to a formatted PDF for offline viewing.</p>
+<h2 id="site-structure">Site Structure<a class="headerlink" href="#site-structure" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>.
+├── /docs
+│   ├── /assets_QubeCL_Manual_v5
+│   │   └── /tables
+|   |   └── img.png
+│   ├── index.md
+│   ├── QubeCL_Manual_v5.md   
+│   ├── downloads.md
+│   ├── /downloads
+│   ├── /img
+│   └── /javascripts
+├── /ppq_theme
+│   ├── /css
+│   │   └── /img
+|   |   └── ppq.css
+│   ├── overrides
+│   └── partials
+├── mkdocs.yml
+├── requirements.txt
+└── /site
+</code></pre></div>
+<ul>
+<li><code>/docs</code> contains all the site content (text and images)<ul>
+<li><code>/tables</code> contains csv files that are converted to tables</li>
+<li><code>imgs</code> - images referenced in markdown document</li>
+<li><code>/downloads</code> - files available for download from the site (ex. pdf of manual)</li>
+<li><code>downloads.md</code> - download list</li>
+</ul>
+</li>
+<li><code>/ppq_theme</code> contains custom styling options for the site (color/font/etc)</li>
+<li><code>mkdocs.yml</code> configuration file (set site settings and enable/modify plugins)</li>
+<li><code>requirements.txt</code> list of dependencies to install for development purposes</li>
+<li><code>/site</code> - mkdocs generated site (do not modify directly)</li>
+<li><code>.github/ci.yml</code> (not shown) configuration file for auto-deploying github site</li>
+</ul>
+<hr />
+<h2 id="editing-content">Editing Content<a class="headerlink" href="#editing-content" title="Permanent link">&para;</a></h2>
+<p>If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor (perhaps one with a markdown preview such VSCode in <a href="https://github.dev/ppqSense/QubeDocs">github online editor</a>).</p>
+<div class="admonition note">
+<p class="admonition-title">NOTE:</p>
+<p>A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting.</p>
+</div>
+<p><img alt="github online code editor with built-in markdown preview" src="../readme/githubcode.png" /></p>
+<h3 id="createedit-a-page">Create/Edit a page<a class="headerlink" href="#createedit-a-page" title="Permanent link">&para;</a></h3>
+<p>Each markdown (<code>.md</code>) file in the <code>/docs</code> directory represents a page on the website. </p>
+<h3 id="add-new-page-to-site">Add new page to site<a class="headerlink" href="#add-new-page-to-site" title="Permanent link">&para;</a></h3>
+<p>If you create a new page (ex. <code>test.md</code>) and save it in the <code>/docs</code> folder, it will be accessable via the url <code>site.io/&lt;file_name&gt;</code> but it is <em>not</em> automatically added to the site navigation bar, you first need to add it to the navigation structure in the <code>mkdocs.yml</code> file for it to be findable by users: (<code>&lt;Button_Name&gt;: &lt;file_name&gt;</code>)
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Qube Manual V5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QubeCL_Manual_v5.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Downloads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">downloads.md</span>
+</code></pre></div></p>
+<h3 id="updating-the-website">Updating the website<a class="headerlink" href="#updating-the-website" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If you are happy with your changes to the documentation and would like to update the site, all you have to do is push your changes to the main github branch in order to automatically update the live version (if you are unsure of your changes, please save them in an un-listed <code>.md</code> file or push to a new branch)</li>
+</ul>
+<p><strong>Pushing to Github</strong>
+<a href="https://github.com/git-guides">(See Git Guide for beginners)</a></p>
+<ul>
+<li>
+<p><strong>Option A: From Github editor: (Easier)</strong>
+  <img alt="alt text" src="../readme/gitcommit.png" /></p>
+</li>
+<li>
+<p><strong>Option B: From your local machine: (more accurate preview)</strong></p>
+<ol>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Setup your computer's ssh-key</a></li>
+<li>Follow best-practices with pushing and pulling to Github (via cmd terminal)</li>
+<li><code>git fetch</code> / <code>git pull</code> - make sure your local version is up to date</li>
+<li><code>git branch</code> - check you are on main branch</li>
+<li><code>git status</code> - see which files you've changed</li>
+<li><code>git add &lt;files&gt;</code> - add files</li>
+<li><code>git commit -m "description of changes"</code> - change message</li>
+<li><code>git push</code> - push changes and update site</li>
+<li><code>git status</code> / <code>git log</code> - confirm changes were saved</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved at QubeCL Manual V5, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired <code>.md</code> file along with its assets folder and PDF. By saving it under a new name, the PDF can be added to the download page as a dated version of the manual</p>
+</div>
+<hr />
+<h2 id="markdown-guides">Markdown Guides<a class="headerlink" href="#markdown-guides" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Basic Getting Started Guide to Markdown</li>
+<li>
+<p>Getting started in <a href="https://www.mkdocs.org/user-guide/writing-your-docs/">mkdocs</a> flabor of markdown</p>
+</li>
+<li>
+<p>Embedding an image</p>
+</li>
+<li>Adding a Table</li>
+<li>Referencing a Figure</li>
+<li></li>
+</ul>
+<hr />
+<h2 id="useful-pluginsextensionstools">Useful plugins/extensions/tools<a class="headerlink" href="#useful-pluginsextensionstools" title="Permanent link">&para;</a></h2>
+<h3 id="abmonition">abmonition<a class="headerlink" href="#abmonition" title="Permanent link">&para;</a></h3>
+<p>Allows the user to add colorful callouts/notes/drop-downs to the main text</p>
+<h3 id="tables">tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<p>Build a correctly-formatted table using a table generator:</p>
+<p>https://vikcch.github.io/markdown-table-generator/</p>
+<p>You can add a csv file to the <code>/docs</code> folder and have it be auto-generated by the python <code>mkdocs-table-reader-plugin</code> (less formatting control but good for large datasets that might be modified regularly)</p>
+<h3 id="markdown_katex">markdown_katex<a class="headerlink" href="#markdown_katex" title="Permanent link">&para;</a></h3>
+<p>Use latex-style math notation in your markdown like so:</p>
+<p>Inline KaTeX...</p>
+<blockquote>
+<p>\$`a<sup>2+b</sup>2=c^2`\$.</p>
+</blockquote>
+<p>...looks like this: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2+b^2=c^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
+<p>Multi-line KaTeX block...</p>
+<blockquote>
+<p>```math
+f(x) = \int_{-\infty}^\infty</p>
+<p>\hat f(\xi)\,e^{2 \pi i \xi x}</p>
+<p>\,d\xi</p>
+<p>```</p>
+</blockquote>
+<p>...looks like this:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mover accent="true"><mi>f</mi><mo>^</mo></mover><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo><mtext> </mtext><msup><mi>e</mi><mrow><mn>2</mn><mi>π</mi><mi>i</mi><mi>ξ</mi><mi>x</mi></mrow></msup><mtext> </mtext><mi>d</mi><mi>ξ</mi></mrow><annotation encoding="application/x-tex">
+f(x) = \int_{-\infty}^\infty
+\hat f(\xi)\,e^{2 \pi i \xi x}
+\,d\xi
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9579em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">πi</span><span class="mord mathnormal mtight" style="margin-right:0.04601em;">ξ</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span></span></span></p>
+<h3 id="caption">caption<a class="headerlink" href="#caption" title="Permanent link">&para;</a></h3>
+<p>Create a Caption and a tag of a table or image like so:
+<code>&lt;Table/Figure&gt;: &lt;Description&gt; {#tag}</code> 
+and leave a space between the caption line and the figure/table.</p>
+<p>Ex:</p>
+<blockquote>
+<p>\
+&lt;table-caption identifier="Table"id=pwr_specs}</p>
+<p>|DC Input |minimum |typical | maximum |
+|---|---|---|---|
+| LAS | +20 V | +24 V | +30 V | 
+| TEC | +8 V | +12 V | +24 V |<br />
+</p>
+</blockquote>
+<p>Table: Power source voltages speciﬁcations{#pwr_specs&gt;</p>
+<p>Power source voltages speciﬁcations</p>
+<p><table-caption-end></p>
+<table>
+<thead>
+<tr>
+<th>DC Input</th>
+<th>minimum</th>
+<th>typical</th>
+<th>maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LAS</td>
+<td>+20 V</td>
+<td>+24 V</td>
+<td>+30 V</td>
+</tr>
+<tr>
+<td>TEC</td>
+<td>+8 V</td>
+<td>+12 V</td>
+<td>+24 V</td>
+</tr>
+</tbody>
+</table>
+<p>or</p>
+<blockquote>
+<p>\
+<figure-caption identifier="Figure"id=front_panel></p>
+</blockquote>
+<p>QubeCL15TP front panel &gt; &gt;!<a href="../assets_QubeCL_Manual_v5/img-0942.png"></a></p>
+<p><figure-caption-end></p>
+<p><figure-caption identifier="Figure"></p>
+<p>QubeCL15TP front panel</p>
+<p><figure-caption-end></p>
+<p><img alt="" id="front_panel" src="../assets_QubeCL_Manual_v5/img-0942.png" /></p>
+<p>(Note that square brackets are blank - this allows for the figure or table number to be auto-generated when figure tag (<code>(#front_panel)</code>)) is referenced.</p>
+<p>And reference it like so:</p>
+<blockquote>
+<p>A schematic view of the front panel of the QubeCL can be seen in []&gt; (#front_panel)].</p>
+</blockquote>
+<h3 id="to-pdf">to-pdf<a class="headerlink" href="#to-pdf" title="Permanent link">&para;</a></h3>
+<p>Whenever the site is rebuilt (re-deployed to github)</p>
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<p>Local Preview and </p>
+<h3 id="additional-features-that-may-be-added">Additional features that may be added<a class="headerlink" href="#additional-features-that-may-be-added" title="Permanent link">&para;</a></h3>
+<ul>
+<li>automatic figure table generation</li>
+<li>automated versioning</li>
+<li></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2014-2025 PPQSense S.R.L.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ppqsense-s.r.l." target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", {"tabs": true}], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

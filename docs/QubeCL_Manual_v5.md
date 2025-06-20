@@ -56,17 +56,21 @@ QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 
 
 ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmanship defects for one year from the date of the original shipment **(1-YEAR WARRANTY).** This warranty is in lieu of all other guarantees expressed or implied, including any implied warranty of merchantability or ﬁtness for any particular purpose. ppqSense S.r.l. shall not be liable for any special, incidental or consequential loss. During the warranty period, ppqSense S.r.l. will repair or replace the unit or module, or issue credit, at our option, without charge. ppqSenses liability shall not in any case exceed the cost of correcting defects in the products as explained here, and this service is the sole remedy of the buyer. This warranty does not apply to defects caused by abuse, accident, modiﬁcations, Acts of God, or the use of the product for which it was not intended. ppqSense S.r.l. shall not be liable for damages resulting from the use of the product, nor shall be responsible for any failure in the performance of other items to which the purchased product is connected or the operation of any system of which the purchased product may be a part. The QubeCL System should not be used in the manner not speciﬁed by the manufacturer.
 
-## 2 Speciﬁcations
+## 2 Specifications
 
 
 ### 2.1 Communication interfaces
 
-Table: Communication Interfaces
+Table: Communication Interfaces (from CSV)
+
+{{ read_csv('assets_QubeCL_Manual_v5/tables/communication_interfaces.csv') }}
+
+<!-- Table: Communication Interfaces
 
 | **Interface** | **Mode** | **Settings** | **Notes** |  
 |---|---|---|---|  
 | USB | Virtual Serial Port | 115200 8N1 ||  
-| WiFi | Access Point/Client | software conﬁgurable | Optional |
+| WiFi | Access Point/Client | software conﬁgurable | Optional | -->
 
 ### 2.2 Absolute maximum ratings
 
@@ -74,116 +78,103 @@ Table: Absolute maximum voltage and temperature ratings
 
 | **Parameter** | **Values** | **Unit** | **Notes** |  
 |---|---|---|---|  
-| Operating temperature | -20 to +40 | ◦ C ||  
-| Storage temperature | -20 to +70 | ◦ C ||  
+| Operating temperature | -20 to +40 | &deg;C ||  
+| Storage temperature | -20 to +70 | &deg;C ||  
 | Main power supply voltage (PS LAS ) | 26 | V | No terminal must be connected to ground |  
-| TEC power supply voltage (PS TEC ) | 24 | V |^|  
+| TEC power supply voltage (PS TEC ) | 24 | V |No terminal must be connected to ground|  
 | Modulation inputs | ± 10 | V ||  
 
 ### 2.3 Electrical Speciﬁcations
 
-`math p(x|y) = \frac{p(y|x)p(x)}{p(y)}`
+$`PS_{LAS}=24V dc, PS_{TEC}= 12 V dc`$
 
-```math
-\begin{align}
-    p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
-    p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
-\end{align}
-```
-PSLAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦ C, unless otherwise noted.  
+ Warm-up time 120 min, room temperature 25 &deg;C (unless otherwise noted) 
 
+
+**Current Generator Specifications**
+
+Table: Current Generator Specifications
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
-| Noise spectral density | 100 | 200 | 500 | pA */* Hz | test current 200mA |  
-| Integrated noise | 50 | 100 | 200 | nA  RMS | 10 Hz - 100 kHz |  
-| Integrated noise | 250 | 350 | 500 | nA  RMS | 10 Hz - 1 MHz |  
-| Stability (1h) | 4 | 5 | 6 | ppm  FS ||  
-| Stability (12h) | 5 | 6 | 7 | ppm  FS ||  
-| Temperature coeﬃcient | -2 | -3 | -5 | ppm FS/ ◦ C ||  
+| Noise spectral density | 100 | 200 | 500 | pA */* √Hz | test current 200mA |  
+| Integrated noise | 50 | 100 | 200 | $`nA_{RMS}`$ | 10 Hz - 100 kHz |  
+| Integrated noise | 250 | 350 | 500 | $`nA_{RMS}`$ | 10 Hz - 1 MHz |  
+| Stability (1h) | 4 | 5 | 6 | $`ppm_{FS}`$ ||  
+| Stability (12h) | 5 | 6 | 7 | $`ppm_{FS}`$ ||  
+| Temperature coeﬃcient | -2 | -3 | -5 | $`ppm_{FS}`$ &deg; C ||  
 | Voltage compliance || 17.5 || V ||  
-
-
-**Table 3:** Current Generator Specs
-
-  
-
 
 ---
 
+**Analog Current Modulators Specs**
 
+Table: Analog Current Modulators Specs
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
 | Analog input voltage | 0 || ± 10 | V ||  
 | DC oﬀset | 20 | 30 | 50 | µA | input shorted |  
-| Low current |<|<|<|<|<|  
+| **Low Current**|
 | Noise spect. dens. ﬂoor | 50 || 100 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 5 | mA ||  
 | Gain || -0.5 || mA/V ||  
 | Modulation BW (-3 dB) || 2 || MHz ||  
-| High current |<|<|<|<|<|  
+| **High current**||||||  
 | Noise spect. dens. ﬂoor | 200 || 2000 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 100 | mA ||  
 | Gain || -10 || mA/V ||  
 | Modulation BW (-3 dB) || 600 || kHz ||  
 
+---
 
-√  
-√ **Table 4:** Analog Current Modulators Specs
+**Mixed Current Generator Specs - Digital**
+
+Table: Mixed Current Generator Specs - Digital
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
-| Waveforms | Sine or Triangle |<|<|<||  
+| Waveforms | ||||Sine or Triangle|  
 | Freq. range | 10 −3 || 10 6 | Hz ||  
 | Min freq. step || 250 || mHz ||  
 | Amplitude control res. || 12 || bits ||  
 | DC oﬀset | 20 | 30 | 50 | µA | input shorted |  
-| Low current |<|<|<|<|<|  
+| **Low current** |  
 | Noise spect. dens. ﬂoor | 50 || 100 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 2 *.* 5 | mA ||  
 | Modulation BW (-3 dB) || 2 || MHz ||  
-| High current |<|<|<|<|<|  
+| **High current** |  
 | Noise spect. dens. ﬂoor | 200 || 2000 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 75 | mA ||  
 | Modulation BW (-3 dB) || 600 || kHz ||  
 
-
-√  
-√  
-**Table 5:** Mixed Current Generator Specs - Digital
-
-  
-
-
 ---
 
- √  
-√  
-**Table 6:** Mixed Current Generator Specs - Analog  
-**Table 7:** Temperature Controller Specs  
-**Table 8:** PLL Module Specs  
-**Table 9:** Pound-Drever-Hall module Specs  
-  
+**Mixed Current Generator Specs - Analog**  
 
+Table: Mixed Current Generator Specs - Analog  
 
-| **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
+| **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
 | Analog input voltage | 0 || ± 2 *.* 5 | V ||  
 | DC oﬀset | 20 | 30 | 50 | µA | input shorted |  
-| Low current |<|<|<|<|<|  
-| Noise spect. dens. ﬂoor | 50 || 100 | pA */* Hz | input shorted |  
+| **Low current** | 
+| Noise spect. dens. ﬂoor | 50 || 100 | pA / Hz | input shorted |  
 | Output current | 0 || ± 2 *.* 5 | mA ||  
 | Gain || -1 || mA/V ||  
 | Modulation BW (-3 dB) || 2 || MHz ||  
-| High current |<|<|<|<|<|  
+| **High current** |
 | Noise spect. dens. ﬂoor | 200 || 2000 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 75 | mA ||  
 | Gain || -30 || mA/V ||  
 | Modulation BW (-3 dB) || 600 || kHz ||  
 
+---
 
-| **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
+**Temperature Controller Specs**  
+Table: Temperature Controller Specs  
+
+| **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
 | Thermistor | 1 || 10 | kΩ | NTC |  
 | TEC current ||| ± 3 | A ||  
@@ -191,6 +182,9 @@ PSLAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦
 | Temp stability || 40 | 400 | µK | absolute stability in 12h |  
 | Temp. coeﬃcient || -90 | -100 | µK */* K ||  
 
+**PLL Module Specs**
+
+Table: PLL Module Specs
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -200,8 +194,11 @@ PSLAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦
 | Input stage gain | 0 || 30 | dB ||  
 | Lock bandwidth ||| 800 | kHz ||  
 
+**Pound-Drever-Hall module Specs** 
 
-| **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
+Table: Pound-Drever-Hall module Specs  
+
+| **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
 | RF freq. input | 1 || 100 | MHz ||  
 | LO freq. input | 1 || 100 | MHz ||  
@@ -209,12 +206,13 @@ PSLAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦
 | LO Input level || 5 || dBm ||  
 | Lock bandwidth ||| 800 | kHz ||  
 
-
 ---
 
- **Table 10:** Lock-In Ampliﬁer module Specs
+ **Lock-In Ampliﬁer module Specs**
 
-| **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
+Table: Lock-In Ampliﬁer module Specs
+
+| **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
 | Demodulation frequency || 32768 || Hz | ﬁxed |  
 | Ramp frequency | 1 || 1000 | Hz ||  
@@ -223,60 +221,32 @@ PSLAS= 24 V dc , PS TEC= 12 V dc , Warm-up time 120 min, room temperature 25 ◦
 | Integration time | 1 || 10000 | ms ||  
 | Lock bandwidth ||| 1 | kHz ||  
 
-
-  
-
-
 ---
-
 
 
 ## 3 Typical performance characteristics
 
-![](assets_QubeCL_Manual_v5/img-1008.png)
+Figure: Current noise spectral density comparison with low current modulator
 
-M1 = 50nA  
-M2 = 440nA
+![](assets_QubeCL_Manual_v5/img-1008-1.png)
 
-rms  
-rms
+Figure: Current noise spectral density comparison with high current modulator
 
-**Figure 1:** Current noise spectral density comparison with low current modulator
+![](assets_QubeCL_Manual_v5/img-0929-1.png)
 
-![](assets_QubeCL_Manual_v5/img-0929.png)
+Figure: 24h Current stability over ambient temperature
 
-M1 = 50nA  
-M2 = 2µA
+![test](assets_QubeCL_Manual_v5/img-0935.jpg)
 
-rms  
-rms
-
-**Figure 2:** Current noise spectral density comparison with high current modulator
-
-  
-
-
----
-
-
-
-![](assets_QubeCL_Manual_v5/img-0935.jpg)
-
-**Figure 3:** 24h Current stability over ambient temperature
+Figure: 24h Current stability over time  
 
 ![](assets_QubeCL_Manual_v5/img-0936.jpg)
 
-**Figure 4:** 24h Current stability over time  
-  
 
-
----
-
-
+Figure: Current temperature coeﬃcient
 
 ![](assets_QubeCL_Manual_v5/img-0939.jpg)
 
-**Figure 5:** Current temperature coeﬃcient
 
 ---
 
@@ -289,7 +259,7 @@ This manual contains information for operating the modular QubeCL system. The Qu
 The QubeCL is a versatile instrument that can be used in a variety of driving current and temperature conditions. However, the QubeCL is not intended for a fail-safe operation in hazardous environments or life-threatening situations. The user assumes full responsibility for correct and safe usage of the QubeCL in accordance with any applicable laws, codes and regulations, and standard pertaining to their speciﬁc application. ppqSense S.r.l. is not liable for any consequential damage due to misapplication or failure of the QubeCL system.  
 The QubeCL System is compliant with the following standards:
 
-** EN 61326-1, EN 55011, EN 61000-4-2, EN61000-4-8, EN61000-4-3**
+**EN 61326-1, EN 55011, EN 61000-4-2, EN61000-4-8, EN61000-4-3**
 
 ### 4.2 Part List
 
@@ -305,53 +275,48 @@ The QubeCL system is shipped in a package designed to provide excellent protecti
 - **USB drive,** which contains the required software and drivers.
 - **QubePS,** switching power supply for the QubeCL driver, if included in the order.
 
-### 4.3 Electrical power supply
+### 4.3 Electrical power supply{#power_supply_section}
 
-The QubeCL system must be powered by a unipolar **ﬂoating** DC power supply. If the QubePS is not included in the QubeCL kit, a dual channel power supply or two diﬀerent power supplies are necessary to independently drive the Current Generator [CM] and the Temperature Controller [TC] modules.  
+The QubeCL system must be powered by a unipolar **ﬂoating** DC power supply. If the QubePS is not included in the QubeCL kit, a dual channel power supply or two diﬀerent power supplies are necessary to independently drive the Current Generator [CM] and the Temperature Controller [TC] modules. 
+
 **CM** modules must be powered by a DC power supply providing **24 V and at least 3 A** for a versatile usage and for a full compliance to the declared performances and dynamic range.
 
 
 **TC** modules must be powered by a DC power supply providing **12 V and 4 A,** for a versatile usage and to guarantee performances of the TC module.
 
-User must refer to **Table [11**](#table.caption.24) for minimum, maximum and typical allowable voltages for power supply of the QubeCL. Please, note that using source voltages that diﬀer from the ones indicated as typical , even if in between the maximum and minimum values, may lead to poor calibration of the QubeCL driver or to potentially damaging heat generation.
+User must refer to [](#pwr_specs) for minimum, maximum and typical allowable voltages for power supply of the QubeCL. Please, note that using source voltages that diﬀer from the ones indicated as typical , even if in between the maximum and minimum values, may lead to poor calibration of the QubeCL driver or to potentially damaging heat generation.
 
-> DC Input minimum typical maximum
+Table: Power source voltages speciﬁcations{#pwr_specs}
 
-> | LAS | +20 V | +24 V | +30 V |  
-> |---|---|---|---|  
-> | TEC | +8 V | +12 V | +24 V |  
-> **Table 11:** Power source voltages speciﬁcations
+|DC Input |minimum |typical | maximum |
+|---|---|---|---|
+| LAS | +20 V | +24 V | +30 V | 
+| TEC | +8 V | +12 V | +24 V |  
 
-**CAUTION**:
+!!! Warning "CAUTION: Floating Power Supplies Only"
 
-Power supplies used to source the QubeCL drivers must be **ﬂoating power supplies.** The terminals of the power supply must not be connected to Earth or to one another in any circumstance.
+    Power supplies used to source the QubeCL drivers must be **ﬂoating power supplies.** The terminals of the power supply must **not** be connected to Earth or to one another in any circumstance.
+  
 
 If the QubePS power supply is included in the QubeCL kit, the user has simply to connect the QubePS to the QubeCL with the dedicated cable delivered within the box. The power cord needed to connect the QubePS to the electrical outlet is not provided.
 
 ### 4.4 Connectors and LED indicators functions
 
-A schematic view of the front panel of the QubeCL can be seen in **ﬁgure 6.** The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: **Connectors:**
+A schematic view of the front panel of the QubeCL can be seen in [](#front_panel)]. The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: **Connectors:**
 
 - **C1. Power:** power supply connector of the instrument.
 
 - **C2. USB:** this USB port must be used to connect the QubeCL to an host computer in order to control and supervise its operations.
 
-- **C3. TEMP out:** used to connect the supplied TC cable for the temperature control of the driven device. It provides NTC (10 k) temperature sensor input and TEC output (2.7A maximum).
+- **C3. TEMP out:** used to connect the supplied TC cable for the temperature control of the driven device. It provides NTC (10k) temperature sensor input and TEC output (2.7A maximum).
 
 - **C4. CURRENT out:** Output SMA connector. The driver supplies the current through this connector to the controlled laser device. A proper SMA cable must be provided by the user. The output provides a maximum current corresponding to the limits of the installed CM modules of the QubeCL (for example 1.5A for a QubeCL with one CM10 and one CM05 modules), with a maximum output voltage compliance of 17.5 V.
 
-  
+- **C5/C6. MOD1 / 2 in:** Input SMA connectors. May be used to source ﬁnely controlled modulating signals to the laser current, with the amplitude proportional to the applied control voltages.
 
+Figure: QubeCL15TP front panel
 
----
-
-
-
-- **C5/C6. MOD1/2 in:** Input SMA connectors. May be used to source ﬁnely controlled modulating signals to the laser current, with the amplitude proportional to the applied control voltages.
-
-![](assets_QubeCL_Manual_v5/img-0942.png)
-
-**Figure 6:** QubeCL15TP front panel
+![](assets_QubeCL_Manual_v5/img-0942.png){#front_panel}
 
 **LED indicators:**
 
@@ -366,23 +331,19 @@ A schematic view of the front panel of the QubeCL can be seen in **ﬁgure 6.** 
 
 - **L6. TC lock:** Green. Switched on when the temperature of the controlled device is locked and equal to the temperature set-point value.
 
-The list only comprehends the LEDs and connectors that are present on the majority of the QubeCL possible conﬁgurations. A detailed description of PLL module, along with other application-speciﬁc modules, can be found further below in this manual.
-
-  
-
+The list only comprehends the LEDs and connectors that are present on the majority of the QubeCL possible conﬁgurations. A detailed description of PLL module, along with other application-speciﬁc modules, can be found further below in this manual.  
 
 ---
 
 ### 4.4.1 Power connector
 
-The QubeCL kit comes with a dedicated power supply cable to con- nect the QubeCL to its power supply. One of the ends of the QubeCL power cable is already equipped with a 10 poles connector compatible with the one present on the QubeCL driver (see **ﬁgure** 7).  
+The QubeCL kit comes with a dedicated power supply cable to con- nect the QubeCL to its power supply. One of the ends of the QubeCL power cable is already equipped with a 10 poles connector compatible with the one present on the QubeCL driver (see [](#pwr_connector)).  
 If the QubePS is provided with the kit, the cable is ready to be directly plugged into the QubePS connector.
 
+Figure: Power connector pin diagram
 
+![](assets_QubeCL_Manual_v5/img-0947.png){#pwr_connector}
 
-![](assets_QubeCL_Manual_v5/img-0947.png)
-
-**Figure 7:** Power connector pin diagram
 
 Alternatively, when the QubePS is not provided, the cable is equipped with four plugs to be connected to the power supplies.  
 The four plugs can be identiﬁed as the subsequent ones:
@@ -390,36 +351,33 @@ The four plugs can be identiﬁed as the subsequent ones:
 - two for CM power supply (green-labelled PS Las +, white-labelled PS Las -)
 - two for TC power supply (red-labelled PS TEC +, yellow-labelled PS TEC -).
 
+---
+
 ### 4.4.2 TEC connector
 
 If the QubeCL is equipped with the TC module, but not with a laser-housing mod- ule, a proper connection with the Peltier- based stage of the laser and with the NTC temperature sensor must be established. The QubeCL kit includes a TEC cable with one of its ends already equipped with the proper connector to be plugged into the TC module.  
-The user must adapt the other end of the TEC cable in order to connect it to the laser. Please, refer to the wires colors represented in **ﬁgure [8**](#figure.caption.31) to properly connect the TEC ca- ble to the laser.
+The user must adapt the other end of the TEC cable in order to connect it to the laser. Please, refer to the wires colors represented in [](#TEC_Connector) to properly connect the TEC ca- ble to the laser.
 
-![](assets_QubeCL_Manual_v5/img-0944.png)
+Figure: TEC connector pin diagram
 
-**Figure 8:** TEC connector pin diagram
-
-## 4.5 QubeCL_Control software installation
-
-Every QubeCL system, regardless of the speciﬁc model, can be controlled by the mean of the same Control Software, which comes in the USB key included in the QubeCL kit. The QubeCL\_Control software has been developed under LabView Runtime Environment .
-
-To install the QubeCL\_Control software on Windows OS, please follow these steps. All the needed softwares are provided inside the USB key that comes inside the QubeCL kit.
-
-  
-
+![](assets_QubeCL_Manual_v5/img-0944.png){#TEC_Connector}
 
 ---
 
+## 4.5 QubeCL_Control software installation
 
+Every QubeCL system, regardless of the speciﬁc model, can be controlled by the mean of the same Control Software, which comes in the USB key included in the QubeCL kit. The QubeCL_Control software has been developed under LabView Runtime Environment .
+
+To install the QubeCL_Control software on Windows OS, please follow these steps. All the needed softwares are provided inside the USB key that comes inside the QubeCL kit.
+
+### Installation Steps
 
 - Run the library installation application to install the following libraries and drivers:
-- Microcontroller USB-driver (CDM21228\_Setup)
-- LabVIEW NI-VISA Utilities (NIVISA1600full)
-- Copy the directory " /QubeCL\_CONTROL:vX.X " and all its content in a directory of your choice in the computer.  
-More information can also be found in the readme.txt ﬁle in the main directory of the USB key.
-
-  
-
+  - Microcontroller USB-driver (CDM21228_Setup)
+  - LabVIEW NI-VISA Utilities (NIVISA1600full)
+- Copy the directory " /QubeCL_CONTROL:vX.X " and all its content in a directory of your choice in the computer.  
+- 
+*More information can also be found in the readme.txt ﬁle in the main directory of the USB key.*
 
 ---
 
@@ -438,28 +396,22 @@ To correctly operate with the QubeCL, the following step must be followed:
 
 - If the QubeCL kit includes a QubePS power supply, simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.  
 Otherwise, if the QubePS is not included:
-- Set the voltage values of the **ﬂoating** power supplies you’re using following the indication from the dedicated section of this manual **(chapter 4.3);**
+- Set the voltage values of the **ﬂoating** power supplies you’re using following the indication from the [dedicated section](#power_supply_section) of this manual.
 - Connect the QubeCL to the power supply by the mean of the provided cable  
 ∗ Connect TEC+ and TEC- to the +/- poles of the power supply selected channel for electrical supply of the TC module, respectively.  
 ∗ Connect LAS+ and LAS- to the +/- poles of the power supply selected channel for electrical supply of the CM module(s), respectively.
 
-> CAUTION
+!!! Warning "RESPECT THE POLARITY"
 
-If not using a QubePS be sure to **RESPECT THE POLARITY** of the power supply cable. **REVERSE** voltages will damage the instrument.  
-In case you’re not using a dual-channel power supply, but two diﬀerent power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.
+    If not using a QubePS be sure to **RESPECT THE POLARITY** of the power supply cable. **REVERSE** voltages will damage the instrument.  
+    In case you’re not using a dual-channel power supply, but two diﬀerent power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.
 
 - Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system;
-
-  
-
-
----
-
-
 
 - Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system;
 
 - Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system.  
+
 **N.B.** This operation is not necessary if the QubeCL includes a laser housing module;
 
 - Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system.  
@@ -739,22 +691,21 @@ The two modulators are built in order to cover all the possible needs that may a
 
 The gain values for the two modulators can be found in the QubeCL datasheet and in the test report that comes along with the instrument.
 
-> CAUTION
+!!! Warning "CAUTION: Current Overload Risk"
 
-The high current modulator can provide currents up to tens of mA which can be added to or subtracted from the bias current of the laser.  
-When sourcing negative control voltages to the modulators, the modulating current is added to the bias current, in this case the total current may exceed the maximum current allowed by the laser. Therefore it is necessary to be very careful to avoid the risk of damaging the laser itself.  
+    The high current modulator can provide currents up to tens of mA which can be added to or subtracted from the bias current of the laser.  
+    When sourcing negative control voltages to the modulators, the modulating current is added to the bias current, in this case the total current may exceed the maximum current allowed by the laser. Therefore it is necessary to be very careful to avoid the risk of damaging the laser itself.  
+
 The maximum current value that the user can set on the QubeCL does not comprehend the modulating signal, being just referred to the sourced Bias Current. The QubeCL does not perform any safety check on the overall Output Current value resulting as the Bias Current with the superimposed modulation signals.
-
-  
 
 
 ---
 
 
+Figure: Appearance of the LH module equipped with the DDS sub-module
 
 ![](assets_QubeCL_Manual_v5/img-0988.png)
 
-**Figure 14:** Appearance of the LH module equipped with the DDS sub-module
 
 ### 6.1 The DDS sub-module
 

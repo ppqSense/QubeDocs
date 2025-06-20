@@ -1,0 +1,10 @@
+https://timvink.github.io/mkdocs-table-reader-plugin/#documentation-and-how-to-guides
+
+https://timvink.nl/blog/reproducible-reports-with-mkdocs/#including-tables
+
+https://katex.org/docs/supported.html
+https://github.com/mbarkhau/markdown-katex?tab=readme-ov-file
+Katex in markdown example (Math): https://gitlab.com/-/snippets/1857641
+
+https://tobiasah.github.io/mkdocs-caption/quick_start/ (referencing tables/figures)
+

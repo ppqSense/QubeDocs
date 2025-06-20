@@ -1,4 +1,4 @@
-<body class="title_page"></body>
+<!-- <body class="title_page"></body> -->
 # QubeCL Laser Driver User Manuals & Resources
 
 
@@ -13,4 +13,4 @@ ppqSense Development Team, 2024.05.15
 </p>
 
 
-![QubeCL Logo](img/QubeCL_Logo.png#midsmall)
+![](img/QubeCL_Logo.png#midsmall)

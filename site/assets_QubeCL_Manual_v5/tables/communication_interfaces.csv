@@ -1,0 +1,3 @@
+Interface,Mode,Settings,Notes
+USB,Virtual Serial Port,115200 8N1, 
+WiFi,Access Point/Client,software conﬁgurable,Optional
