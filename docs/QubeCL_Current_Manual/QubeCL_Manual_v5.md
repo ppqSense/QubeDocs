@@ -4,7 +4,7 @@ toc_depth: 1
 ---
 # QubeCL Laser Driver Manual V.5
 
-<!-- table-of-figures -->
+<!-- *table-of-figures -->
 
 <!-- [TOC] -->
 <!-- 
@@ -226,26 +226,15 @@ Table: Lock-In Ampliﬁer module Specs
 
 ## 3 Typical performance characteristics
 
-Figure: Current noise spectral density comparison with low current modulator
+![Current noise spectral density comparison with low current modulator](assets_QubeCL_Manual_v5/img-1008-1.png)
 
-![](assets_QubeCL_Manual_v5/img-1008-1.png)
+![Current noise spectral density comparison with high current modulator](assets_QubeCL_Manual_v5/img-0929-1.png)
 
-Figure: Current noise spectral density comparison with high current modulator
+![24h Current stability over ambient temperature](assets_QubeCL_Manual_v5/img-0935.jpg)
 
-![](assets_QubeCL_Manual_v5/img-0929-1.png)
+![24h Current stability over time](assets_QubeCL_Manual_v5/img-0936.jpg)
 
-Figure: 24h Current stability over ambient temperature
-
-![test](assets_QubeCL_Manual_v5/img-0935.jpg)
-
-Figure: 24h Current stability over time  
-
-![](assets_QubeCL_Manual_v5/img-0936.jpg)
-
-
-Figure: Current temperature coeﬃcient
-
-![](assets_QubeCL_Manual_v5/img-0939.jpg)
+![Current temperature coeﬃcient](assets_QubeCL_Manual_v5/img-0939.jpg)
 
 
 ---
@@ -257,6 +246,7 @@ This manual contains information for operating the modular QubeCL system. The Qu
 ### 4.1 Safety consideration
 
 The QubeCL is a versatile instrument that can be used in a variety of driving current and temperature conditions. However, the QubeCL is not intended for a fail-safe operation in hazardous environments or life-threatening situations. The user assumes full responsibility for correct and safe usage of the QubeCL in accordance with any applicable laws, codes and regulations, and standard pertaining to their speciﬁc application. ppqSense S.r.l. is not liable for any consequential damage due to misapplication or failure of the QubeCL system.  
+
 The QubeCL System is compliant with the following standards:
 
 **EN 61326-1, EN 55011, EN 61000-4-2, EN61000-4-8, EN61000-4-3**
@@ -275,7 +265,7 @@ The QubeCL system is shipped in a package designed to provide excellent protecti
 - **USB drive,** which contains the required software and drivers.
 - **QubePS,** switching power supply for the QubeCL driver, if included in the order.
 
-### 4.3 Electrical power supply{#power_supply_section}
+### 4.3 Electrical power supply
 
 The QubeCL system must be powered by a unipolar **ﬂoating** DC power supply. If the QubePS is not included in the QubeCL kit, a dual channel power supply or two diﬀerent power supplies are necessary to independently drive the Current Generator [CM] and the Temperature Controller [TC] modules. 
 
@@ -302,7 +292,7 @@ If the QubePS power supply is included in the QubeCL kit, the user has simply to
 
 ### 4.4 Connectors and LED indicators functions
 
-A schematic view of the front panel of the QubeCL can be seen in [](#front_panel)]. The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: **Connectors:**
+A schematic view of the front panel of the QubeCL can be seen in [](#front_panel). The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: **Connectors:**
 
 - **C1. Power:** power supply connector of the instrument.
 
@@ -396,7 +386,7 @@ To correctly operate with the QubeCL, the following step must be followed:
 
 - If the QubeCL kit includes a QubePS power supply, simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.  
 Otherwise, if the QubePS is not included:
-- Set the voltage values of the **ﬂoating** power supplies you’re using following the indication from the [dedicated section](#power_supply_section) of this manual.
+- Set the voltage values of the **ﬂoating** power supplies you’re using following the indication from the [dedicated section](#43-electrical-power-supply) of this manual.
 - Connect the QubeCL to the power supply by the mean of the provided cable  
 ∗ Connect TEC+ and TEC- to the +/- poles of the power supply selected channel for electrical supply of the TC module, respectively.  
 ∗ Connect LAS+ and LAS- to the +/- poles of the power supply selected channel for electrical supply of the CM module(s), respectively.

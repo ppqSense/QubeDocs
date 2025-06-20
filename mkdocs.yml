@@ -5,8 +5,9 @@ copyright: Copyright &copy; 2014-2025 PPQSense S.R.L.
 #------------------------------------------#
 nav:
   - Home: index.md
-  - Qube Manual V5: QubeCL_Manual_v5.md
+  - Qube Manual V5: QubeCL_Current_Manual/QubeCL_Manual_v5.md
   - Downloads: downloads.md
+  # - Tutorial: tutorial/tutorial.md
 #------------------------------------------#
 #---------------Layout/Design--------------#
 #------------------------------------------#
@@ -21,6 +22,7 @@ theme:
     - navigation.indexes
     # - navigation.footer
     - toc.follow
+    # - toc.integrate
     - tabs: true
   palette:
     primary: purple
@@ -80,7 +82,10 @@ markdown_extensions:
   - pymdownx.tilde
 #-------------Plugins-------------------#
 plugins:
+  - offline #this plugin allows site search to work offline, but interferes with instant loading and versioning
   - search
+  - autorefs:
+      resolve_closest: true
   - table-reader:
       data_path: "docs/"
   - caption
@@ -100,6 +105,6 @@ plugins:
       cover_title: QubeCL Laser Driver Manual
       cover_subtitle: Version 5 (2025)
       cover_logo: img/QubeCL_Logo.png
-      output_path: downloads/QubeCL_Manual_v5.pdf
+      output_path: downloads/QubeCL_Manual_Current.pdf
       # enabled_if_env: ENABLED_PDF_EXPORT #uncomment to disable PDF generation during development
 

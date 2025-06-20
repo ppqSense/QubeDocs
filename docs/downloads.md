@@ -1,3 +1,3 @@
 # Downloads
-- [Test Download](test.txt){:download="test.txt"}
-- [QubeCL Manual v.5](QubeCL_Manual_v5.pdf){:download="QubeCL_Manual_v5"}
+- [Test Download](downloads/test.txt){:download="test.txt"}
+- [QubeCL Manual Current](downloads/QubeCL_Manual_Current.pdf){:download="QubeCL_Manual_Current.pdf"}
