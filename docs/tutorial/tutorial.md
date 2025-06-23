@@ -97,21 +97,21 @@ If you are unfamiliar with git workflows, in can be frustrating and confusing at
 
 1. **Repository** (The collection of all the files and folders constituting your project)
 2. **Branch** (A version of the repository you can edit/work in)
-   1. The default branch is `main`
-   2. making a new branch *off* of `main` creates a new copy of the repository at that point.
+      1. The default branch is `main`
+      2. making a new branch *off* of `main` creates a new copy of the repository at that point.
 3. **Remote/Local** (You can **fetch** a github-hosted **remote** branch and work on it **locally**)
-   1. The local version of a remote branch is only visible on your machine or editor
-   2. the remote version is visible to anyone who has access to the project
+      1. The local version of a remote branch is only visible on your machine or editor
+      2. the remote version is visible to anyone who has access to the project
 4. **Syncing**: (**pushing** local changes to the remote branch, **pulling** remote changes down to local branch)
-   1. Any local changes you make to a branch need to be **pushed** to the remote version for other users to see your changes
-   2. If another user edits the remote version of the branch you are working on locally, you can **pull** their changes into your own version.
-   3. git will automatically try and **merge** different users changes. If you and another user modify the same part of the codebase (ex. If you and someone else try and modify the same paragraph at the same time) - git will ask you to manually select what version you would like to keep.
+      1. Any local changes you make to a branch need to be **pushed** to the remote version for other users to see your changes
+      2. If another user edits the remote version of the branch you are working on locally, you can **pull** their changes into your own version.
+      3. git will automatically try and **merge** different users changes. If you and another user modify the same part of the codebase (ex. If you and someone else try and modify the same paragraph at the same time) - git will ask you to manually select what version you would like to keep.
 5. **Pull Requests** (Requesting that your branch be merged into another branch -- usually `main`)
-   1. If you are making more than minor changes to the live website codebase, then you should make a **branch** off of `main` to work in (ex. `new-feature`).
-   2. Once you are ready to update the main site with your changes, you submit a **pull request** to pull `new-feature` branch into the `main` branch.
-   3. This will trigger a notification to the reviewer to look over your changes
-   4. If they want to change something, or add comments, they can and you will be notified
-   5. Once they approve your changes, you or they can **merge** your branch into `main ` - this will trigger an update of the website.
+      1. If you are making more than minor changes to the live website codebase, then you should make a **branch** off of `main` to work in (ex. `new-feature`).
+      2. Once you are ready to update the main site with your changes, you submit a **pull request** to pull `new-feature` branch into the `main` branch.
+      3. This will trigger a notification to the reviewer to look over your changes
+      4. If they want to change something, or add comments, they can and you will be notified
+      5.  Once they approve your changes, you or they can **merge** your branch into `main ` - this will trigger an update of the website.
 
   See the [Pushing to Github](#pushing-to-github) section for more details on how to actually perform these git operations.
 
@@ -186,21 +186,21 @@ If you are completely new to git see the
   ![Git commit from Codespace](tutorial_assets/gitcommit.png)
 
 - **Option B: From your local machine: (Advanced)**
-    1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) (see README for details)
-    2. Clone down the repository `git clone <repo>` (see README for details)
+  1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) (see README for details)
+  2. Clone down the repository `git clone <repo>` (see README for details)
 
-    3. Follow best-practices with pushing and pulling to Github (via cmd terminal)
-       1. `git fetch` / `git pull` - make sure your local version is up to date with remote
-       2. `git branch` - check what branch you are on
-       3. If necessary, switch branch with `git switch -c <new branch name>` or `git checkout <remote branch name>`
-       4. Make your desired changes on desired branch (branch = `main` if wanting to immediately update site)
-       5. `git status` - see which files you've changed
-       6. `git add <files>` - add specific files or `git add .` add all changed files
-       7. `git commit -m "description of changes"` - change message
-       8. `git push` - push changes to Github
-       9. `git status` / `git log` - confirm changes were saved
-    4. If you pushed directly to `main`, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.
-       -  When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a **pull request** and **merge** your branch into `main`
+  3. Follow best-practices with pushing and pulling to Github (via cmd terminal)
+     1. `git fetch` / `git pull` - make sure your local version is up to date with remote
+     2. `git branch` - check what branch you are on
+     3. If necessary, switch branch with `git switch -c <new branch name>` or `git checkout <remote branch name>`
+     4. Make your desired changes on desired branch (branch = `main` if wanting to immediately update site)
+     5. `git status` - see which files you've changed
+     6. `git add <files>` - add specific files or `git add .` add all changed files
+     7.  `git commit -m "description of changes"` - change message
+     8.  `git push` - push changes to Github
+     9.  `git status` / `git log` - confirm changes were saved
+  4.  If you pushed directly to `main`, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.
+         -  When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a **pull request** and **merge** your branch into `main`
 
 ### Pull Requests
   Pull requests are a useful mechanism for introducing changes for review and having a dialog around those changes. Say for example you wanted to add a whole new Manual to the website - you probably would want to go through multiple interations and receive feedback before pushing your changes to the main site. 
