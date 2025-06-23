@@ -51,19 +51,13 @@ Additional styling and functionality comes from the chosen theme [Material for M
 
 If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor (perhaps one with a markdown preview such VSCode in [github online editor](https://github.dev/ppqSense/QubeDocs)) or directly on the main github site for small changes.
 !!! note "NOTE:" 
-    A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting.
+    A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting. 
 
+![Github direct edit, preview and commit](tutorial_assets/github_direct_edit.png){#gitdirect}
 
-Figure: Github online code editor with built-in markdown preview:
+![Github direct preview](tutorial_assets/github_direct_preview.png)
 
-![github online code editor with built-in markdown preview](tutorial_assets/githubcode.png)
-
-Figure: Github direct edit, preview and commit:
-
-![](tutorial_assets/github_direct_edit.png){#gitdirect}
-
-![github direct preview](tutorial_assets/github_direct_preview.png)
-
+![Github online code editor with built-in markdown preview](tutorial_assets/githubcode.png)
 
 If you want to see a complete preview of the site before update, or if you would like to edit the styling or make additions to the plugins used in the site, please follow the intructions in the [Advanced Features](#advanced-features) section.
 
@@ -71,7 +65,7 @@ If you want to see a complete preview of the site before update, or if you would
 Each markdown (`.md`) file in the `/docs` directory represents a page on the website. 
 
 ### Add new page to site
-If you create a new page (ex. `test.md`) and save it in the `/docs` folder, it will be accessable via the url `site.io/<file_name>` but it is *not* automatically added to the site navigation bar. To add it to the site nav, you first need to add it to the navigation structure in the `mkdocs.yml` file for it to be findable by users. Give the button a name and list the file path starting in docs: (`<Button_Name>: <filepath/file_name>`)
+If you create a new page (ex. `test.md`) and save it in the `/docs` folder, it will be accessable via the url `site.io/<file_name>.html` but it is *not* automatically added to the site navigation bar. To add it to the site nav, you first need to add it to the navigation structure in the `mkdocs.yml` file for it to be findable by users. Give the button a name and list the file path starting in docs: (`<Button_Name>: <filepath/file_name>`)
 ```yaml
 nav:
   - Home: index.md
@@ -91,11 +85,16 @@ If you are working locally or in a github code environment, you will have to fol
     (if you are unsure of your changes, or if they are incomplete, please save them in an un-listed `.md` file or push to a new branch while working).      
 
 
-!!! note "Saving PDF Versions"
-    Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired `.md` file along with its assets folder and PDF. By saving it under a new name in the `/docs/downloads` folder, the PDF can be added to the download page as a dated version of the manual
+### Saving PDF Versions
+
+Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired `.md` file along with its assets folder and PDF. By saving it under a new name in the `/docs/downloads` folder, the PDF can be added to the download page as a dated version of the manual.
+
+!!! note "Disabling PDF Generation"
+    PDF generation can take up to 30 seconds each time. Disable during testing by following instructions in [to-pdf plugin](#To-pdf) section.
+    
 
 
-### Pushing to Github {#pushing-to-github}
+### Pushing to Github
 If you are completely new to git:
 [(See Git Guide for beginners)](https://github.com/git-guides)
 
@@ -205,11 +204,13 @@ Allows the user to add colorful callouts/notes/drop-downs to the main text:
 !!! note "Like This"
     Put your message here
 
-See 
+See [Admonition Plugin](https://python-markdown.github.io/extensions/admonition/) page for more examples.
 
 ### Autoref
 
-Allows you to reference headers by name without creating anchor tags ex. `[Link Description](#Autoref)` should take you to this subsection.
+Allows you to reference headers by name without creating anchor tags ex. `[Link Description](#Autoref)`.
+
+[Link Description](#Autoref) should take you to this subsection.
 
 
 ### Tables
@@ -315,11 +316,16 @@ Whenever the site is rebuilt  (`mkdocs serve` or `mkdocs build`) it is saved in 
 
 ## Advanced Features
 
+### Comprehensive Site Editing
+
 To edit the styling or functionality of the site, it is best develop on a fully functional local version (before updating the live site). 
 
 If you don't already know how to use github, follow the [readme](https://github.com/ppqSense/QubeDocs) instructions to setup your local environment. 
 
-You can also use the live editor in github  instead of on your local machine.
+!!! note "Github Codespaces"
+    You can also use the live codespace editor in github instead of your local machine for development. See the (Codespaces Quickstart guide)[https://docs.github.com/en/codespaces/quickstart] for more information.
+
+
 You can reach the live editor from your browser by changing the url of the project from `github.com/ppqSense/QubeDocs/` to `github.dev/ppqSense/QubeDocs/` and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces". From here you can follow the rest of the instructions as you would locally.
 
 ### Local Preview
@@ -332,10 +338,14 @@ While in a `Python3` virtual environment & the main project directory run:
    
 ### Local Editing Tips
 - Changes to content should be reflected automatically upon save if `mkdocs serve` is running.
-- `mkdocs build` must be re-run upon changes to styling, plugins, or structure.
+- `mkdocs build` must be re-run upon changes to styling or plugins.
 - Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:
   -  `pip freeze > requirements.txt` (do before pushing changes)
     - This is important to make sure that other editors can correctly setup their environment for testing.
+
+## Proposed Edit, Review, & Approve Workflow
+
+
 
 ### Additional features that may be added later
 - automatic "table of figures" generation
