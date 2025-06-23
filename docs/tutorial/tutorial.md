@@ -182,7 +182,7 @@ If you are completely new to git see the
   - Navigate to the **source control** tab via the git branch icon on the left
   - write a **commit** message (describing of your changes).
   - Hit enter and follow instructions to push your change to the remote branch.
-  ![alt text](tutorial_assets/gitcommit.png)
+  ![Git commit from Codespace](tutorial_assets/gitcommit.png)
 
 - **Option B: From your local machine: (Advanced)**
     1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) (see README for details)
@@ -210,20 +210,20 @@ If you are completely new to git see the
 
 **Example pull request flow:**
 
-![Create Pull Request from test branch to main](/tutorial_assets/pull_request_create.png)
+![Create Pull Request from test branch to main](tutorial_assets/pull_request_create.png)
 
 
-![Define Pull Request - set reviewers and editors](/tutorial_assets/open_pull_request.png)
+![Define Pull Request - set reviewers and editors](tutorial_assets/open_pull_request.png)
 
-![See changes in Pull Request - files and lines](/tutorial_assets/pull_request_files_changed.png)
+![See changes in Pull Request - files and lines](tutorial_assets/pull_request_files_changed.png)
 
-![Add comments to pull request - inline and overall](/tutorial_assets/pull_request_add_comments.png)
+![Add comments to pull request - inline and overall](tutorial_assets/pull_request_add_comments.png)
 
-![Finish and submit a review of a pull request](/tutorial_assets/pull_request_finish_review.png)
+![Finish and submit a review of a pull request](tutorial_assets/pull_request_finish_review.png)
 
-![Accept suggested changes to pull request](/tutorial_assets/pull_request_accept_suggestion.png)
+![Accept suggested changes to pull request](tutorial_assets/pull_request_accept_suggestion.png)
 
-![Merge pull request into main (once all comments are resplved)](/tutorial_assets/pull_request_merge.png)
+![Merge pull request into main (once all comments are resplved)](tutorial_assets/pull_request_merge.png)
   
 ---
 
