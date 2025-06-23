@@ -219,7 +219,7 @@ If you are completely new to git see the
 
 ![Add comments to pull request - inline and overall](tutorial_assets/pull_request_add_comments.png)
 
-![Finish and submit a review of a pull request](tutorial_assets/pull_request_finish_review.png)
+![Finish and submit a review of a pull request](tutorial_assets/pull_request_finish_review_changes.png)
 
 ![Accept suggested changes to pull request](tutorial_assets/pull_request_accept_suggestion.png)
 
@@ -229,7 +229,7 @@ If you are completely new to git see the
 
 ## Guide to using Markdown
 
-Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being leggible in a standard text editor.
+Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being legible in a standard text editor.
 
 ### Some useful resources:
 - Basic [Getting Started Guide](https://www.markdownguide.org/getting-started/) to Markdown
