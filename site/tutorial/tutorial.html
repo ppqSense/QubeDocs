@@ -382,22 +382,13 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#createedit-a-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create/Edit a page
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Create/Edit a page">
+    <nav class="md-nav" aria-label="Editing Content">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#add-new-page-to-site" class="md-nav__link">
+  <a href="#createedit-a-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Add new page to site
+      Create/Edit a page
     </span>
   </a>
   
@@ -411,6 +402,63 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-site-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Site Editing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprehensive Site Editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-workflow-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Workflow (with git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-editing-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Editing (setup)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-editing-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Editing (setup)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-steps-for-local-online-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Steps for Local &amp; Online Editing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Steps for Local &amp; Online Editing">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#pushing-to-github" class="md-nav__link">
@@ -429,17 +477,17 @@
         <li class="md-nav__item">
   <a href="#guide-to-using-markdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Guide to using markdown
+      Guide to using Markdown
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Guide to using markdown">
+    <nav class="md-nav" aria-label="Guide to using Markdown">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#some-useful-resources" class="md-nav__link">
+  <a href="#useful-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Some useful resources:
+      Useful resources
     </span>
   </a>
   
@@ -518,39 +566,6 @@
   <a href="#to-pdf" class="md-nav__link">
     <span class="md-ellipsis">
       To-pdf
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-preview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Local Preview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-editing-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Local Editing Tips
     </span>
   </a>
   
@@ -658,19 +673,16 @@
 </ul>
 <hr>
 <h2 id="editing-content">Editing Content<a class="headerlink" href="#editing-content" title="Permanent link">¶</a></h2>
-<p>If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor (perhaps one with a markdown preview such VSCode in <a href="https://github.dev/ppqSense/QubeDocs">github online editor</a>) or directly on the main github site for small changes.</p>
+<p>If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor or directly on the main github site for small changes (navigate to the page of interest and select the edit-pencil button).</p>
 <div class="admonition note">
 <p class="admonition-title">NOTE:</p>
-<p>A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting.</p>
+<p>A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting. </p>
 </div>
-<p><figure id="_figure-1"><img alt="github online code editor with built-in markdown preview" src="tutorial_assets/githubcode.png"><figcaption>Figure 1: Github online code editor with built-in markdown preview:</figcaption></figure></p>
-<p><figure id="_figure-2"><img alt="" id="gitdirect" src="tutorial_assets/github_direct_edit.png"><figcaption>Figure 2: Github direct edit, preview and commit:</figcaption></figure></p>
-<p><figure id="_figure-3"><img alt="github direct preview" src="tutorial_assets/github_direct_preview.png"><figcaption>Figure 3: github direct preview</figcaption></figure></p>
-<p>If you want to see a complete preview of the site before update, or if you would like to edit the styling or make additions to the plugins used in the site, please follow the intructions in the <a href="#advanced-features">Advanced Features</a> section.</p>
-<h2 id="createedit-a-page">Create/Edit a page<a class="headerlink" href="#createedit-a-page" title="Permanent link">¶</a></h2>
+<p><figure id="_figure-1"><img alt="Github direct edit, preview and commit" id="gitdirect" src="tutorial_assets/github_direct_edit.png"><figcaption>Figure 1: Github direct edit, preview and commit</figcaption></figure></p>
+<p><figure id="_figure-2"><img alt="Github direct preview" src="tutorial_assets/github_direct_preview.png"><figcaption>Figure 2: Github direct preview</figcaption></figure></p>
+<h3 id="createedit-a-page">Create/Edit a page<a class="headerlink" href="#createedit-a-page" title="Permanent link">¶</a></h3>
 <p>Each markdown (<code>.md</code>) file in the <code>/docs</code> directory represents a page on the website. </p>
-<h3 id="add-new-page-to-site">Add new page to site<a class="headerlink" href="#add-new-page-to-site" title="Permanent link">¶</a></h3>
-<p>If you create a new page (ex. <code>test.md</code>) and save it in the <code>/docs</code> folder, it will be accessable via the url <code>site.io/&lt;file_name&gt;</code> but it is <em>not</em> automatically added to the site navigation bar. To add it to the site nav, you first need to add it to the navigation structure in the <code>mkdocs.yml</code> file for it to be findable by users. Give the button a name and list the file path starting in docs: (<code>&lt;Button_Name&gt;: &lt;filepath/file_name&gt;</code>)
+<p>If you create a new page (ex. <code>test.md</code>) and save it in the <code>/docs</code> folder, it will be accessable via the url <code>site.io/&lt;file_name&gt;.html</code> but it is <em>not</em> automatically added to the site navigation bar. To add it to the site nav, you first need to add it to the navigation structure in the <code>mkdocs.yml</code> file for it to be findable by users. Give the button a name and list the file path starting in docs: (<code>&lt;Button_Name&gt;: &lt;filepath/file_name&gt;</code>)
 </p><div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Qube Manual V5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QubeCL_Current_Manual/QubeCL_Manual_v5.md</span>
@@ -682,48 +694,155 @@
 <p>If you are working locally or in a github code environment, you will have to follow a couple more steps to conform to git version control (See <a href="#pushing-to-github">pushing to github</a>)</p>
 <div class="admonition note">
 <p class="admonition-title">Saving incomplete work</p>
-<p>(if you are unsure of your changes, or if they are incomplete, please save them in an un-listed <code>.md</code> file or push to a new branch while working).      </p>
+<p>(if you are unsure of your changes, or if they are incomplete, please save them in an un-listed <code>.md</code> file or push to a new branch while working).  </p>
 </div>
+<p>If you want to see a complete preview of the site before update, or if you would like to edit the styling or make additions to the plugins used in the site, please follow the intructions in the <a href="#comprehensive-site-editing">Comprensive Site Editing</a> section, otherwise skip to the <a href="#guide-to-using-markdown">Markdown Guide</a> section to learn more about content editing.    </p>
+<h2 id="comprehensive-site-editing">Comprehensive Site Editing<a class="headerlink" href="#comprehensive-site-editing" title="Permanent link">¶</a></h2>
+<p>To edit the styling or functionality of the site (or to add multiple pages, images, or tables at once) it is best develop on a fully functional local or remote version (before updating the live site). </p>
+<h3 id="recommended-workflow-with-git">Recommended Workflow (with git)<a class="headerlink" href="#recommended-workflow-with-git" title="Permanent link">¶</a></h3>
+<p>This site is hosted on github, which is primarily a code-hosting and version-control tool. It allows for multiple people to collaborate on a project or document, but unlike a google docs or other live online editors, individuals make changes to local versions of the file(s) and those changes are periodically approved and merged into a main version of the file. This allows for controlled updating of a code base and detailed development tracking, while giving individuals the freedom to suggest changes or create new versions of the codebase at will. </p>
+<p>If you are unfamiliar with git workflows, in can be frustrating and confusing at first, but can ultimately make documenting work over time much easier. Here is a thorough <a href="https://www.atlassian.com/git/tutorials/what-is-git">git beginner tutorial</a> that may be a helpful reference.</p>
+<p><strong>Helpful Git Vocab/Concepts:</strong></p>
+<ol>
+<li><strong>Repository</strong> (The collection of all the files and folders constituting your project)</li>
+<li><strong>Branch</strong> (A version of the repository you can edit/work in)<ol>
+<li>The default branch is <code>main</code></li>
+<li>making a new branch <em>off</em> of <code>main</code> creates a new copy of the repository at that point.</li>
+</ol>
+</li>
+<li><strong>Remote/Local</strong> (You can <strong>fetch</strong> a github-hosted <strong>remote</strong> branch and work on it <strong>locally</strong>)<ol>
+<li>The local version of a remote branch is only visible on your machine or editor</li>
+<li>the remote version is visible to anyone who has access to the project</li>
+</ol>
+</li>
+<li><strong>Syncing</strong>: (<strong>pushing</strong> local changes to the remote branch, <strong>pulling</strong> remote changes down to local branch)<ol>
+<li>Any local changes you make to a branch need to be <strong>pushed</strong> to the remote version for other users to see your changes</li>
+<li>If another user edits the remote version of the branch you are working on locally, you can <strong>pull</strong> their changes into your own version.</li>
+<li>git will automatically try and <strong>merge</strong> different users changes. If you and another user modify the same part of the codebase (ex. If you and someone else try and modify the same paragraph at the same time) - git will ask you to manually select what version you would like to keep.</li>
+</ol>
+</li>
+<li><strong>Pull Requests</strong> (Requesting that your branch be merged into another branch -- usually <code>main</code>)<ol>
+<li>If you are making more than minor changes to the live website codebase, then you should make a <strong>branch</strong> off of <code>main</code> to work in (ex. <code>new-feature</code>).</li>
+<li>Once you are ready to update the main site with your changes, you submit a <strong>pull request</strong> to pull <code>new-feature</code> branch into the <code>main</code> branch.</li>
+<li>This will trigger a notification to the reviewer to look over your changes</li>
+<li>If they want to change something, or add comments, they can and you will be notified</li>
+<li>Once they approve your changes, you or they can <strong>merge</strong> your branch into <code>main</code> - this will trigger an update of the website.</li>
+</ol>
+</li>
+</ol>
+<p>See the <a href="#pushing-to-github">Pushing to Github</a> section for more details on how to actually perform these git operations.</p>
+<h3 id="online-editing-setup">Online Editing (setup)<a class="headerlink" href="#online-editing-setup" title="Permanent link">¶</a></h3>
+<p>You can use a live codespace in github instead of your local machine for development.</p>
+<p><figure id="_figure-3"><img alt="Github online code editor with built-in markdown preview" src="tutorial_assets/githubcode.png"><figcaption>Figure 3: Github online code editor with built-in markdown preview</figcaption></figure></p>
+<p>You can reach the live editor from your browser by changing the url of the project from <code>github.com/ppqSense/QubeDocs/</code> to <code>github.dev/ppqSense/QubeDocs/</code> and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces" and then a remote machine configuration. From here you can follow the rest of the instructions as you would locally (with the exception of needing to setup a python virtual environment).</p>
+<p><figure id="_figure-4"><img alt="Open Terminal in Codespaces" src="tutorial_assets/open_terminal.png"><figcaption>Figure 4: Open Terminal in Codespaces</figcaption></figure></p>
+<p><figure id="_figure-5"><img alt="Continue with Codespaces" src="tutorial_assets/continue_with_codespaces.png"><figcaption>Figure 5: Continue with Codespaces</figcaption></figure></p>
+<p><figure id="_figure-6"><img alt="Select Machine" src="tutorial_assets/select_machine.png"><figcaption>Figure 6: Select Machine</figcaption></figure></p>
+<p>This option will take about a 2 minutes to setup, if it is your first time accessing the codespace (runs automated environment setup and configuration on startup). When finished, you can check that it is working by running <code>mkdocs build</code> and then <code>mkdocs serve</code>.</p>
+<p>See the github <a href="https://docs.github.com/en/codespaces/quickstart">codespaces quickstart guide</a> for more information on how codespaces work.</p>
+<h3 id="local-editing-setup">Local Editing (setup)<a class="headerlink" href="#local-editing-setup" title="Permanent link">¶</a></h3>
+<p>If you don't already know how to use github or don't have it installed, follow the <a href="https://github.com/ppqSense/QubeDocs">readme</a> instructions to setup your local environment. </p>
+<p>First: install <code>weasyprint</code> on your system: (used for PDF generation)</p>
+<ul>
+<li>
+<p><code>sudo apt install weasyprint</code> (Ubuntu)</p>
+</li>
+<li>
+<p><a href="https://github.com/Kozea/WeasyPrint/releases">Executable download</a> (Windows)</p>
+</li>
+<li>
+<p><a href="https://doc.courtbouillon.org/weasyprint/stable/first_steps.html">All other systems</a></p>
+</li>
+</ul>
+<p>Second: While in a local <code>Python3</code> virtual environment (see <a href="https://github.com/ppqSense/QubeDocs">readme</a>) or codespace environment:</p>
+<ul>
+<li>
+<p>Navigate to the main project directory and run:</p>
+</li>
+<li>
+<p><code>pip install -r requirements.txt</code> to install all dependencies (do once)</p>
+</li>
+<li>Run <code>mkdocs build</code> to build out site structure and styling</li>
+<li>Run <code>mkdocs serve</code> to serve a live test site <ul>
+<li>Navigate to provided URL to see site</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="important-steps-for-local-online-editing">Important Steps for Local &amp; Online Editing<a class="headerlink" href="#important-steps-for-local-online-editing" title="Permanent link">¶</a></h2>
+<p>Changes to content should be reflected automatically upon save if <code>mkdocs serve</code> is running.</p>
 <div class="admonition note">
-<p class="admonition-title">Saving PDF Versions</p>
-<p>Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired <code>.md</code> file along with its assets folder and PDF. By saving it under a new name in the <code>/docs/downloads</code> folder, the PDF can be added to the download page as a dated version of the manual</p>
+<p class="admonition-title">Site changes requiring rebuild</p>
+<p><code>mkdocs build</code> must be re-run upon changes to styling or plugins.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Always update python requirements upon package install</p>
+<p>Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:</p>
+</div>
+<ul>
+<li><code>pip freeze &gt; requirements.txt</code> (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).</li>
+</ul>
+<p>Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired <code>.md</code> file along with its assets folder and PDF. By saving it under a new name in the <code>/docs/downloads</code> folder, the PDF can be added to the download page as a dated version of the manual.</p>
+<div class="admonition note">
+<p class="admonition-title">Disabling PDF Generation</p>
+<p>PDF generation can take up to 30 seconds each time. Disable during testing by following instructions in <a href="#To-pdf">to-pdf plugin</a> section.</p>
 </div>
 <h3 id="pushing-to-github">Pushing to Github<a class="headerlink" href="#pushing-to-github" title="Permanent link">¶</a></h3>
-<p>If you are completely new to git:
-<a href="https://github.com/git-guides">(See Git Guide for beginners)</a></p>
+<p>If you are completely new to git see the
+<a href="https://github.com/git-guides"> Guide for beginners</a> or the more descriptive <a href="https://www.atlassian.com/git/tutorials/what-is-git">Atlassian Guide to git</a></p>
 <ul>
-<li><strong>Option A: From Github editor: (Easier)</strong></li>
-<li>Make your changes</li>
-<li>navigate to the git branch icon on the left</li>
-<li>write a descriptive message of your changes</li>
+<li><strong>Option A: From Github Codespace: (Easier)</strong></li>
+<li>Make your changes in the codespace</li>
+<li>Navigate to the <strong>source control</strong> tab via the git branch icon on the left</li>
+<li>write a <strong>commit</strong> message (describing of your changes).</li>
 <li>
-<p>hit enter and follow instructions to push to main
-  <figure id="_figure-4"><img alt="alt text" src="tutorial_assets/gitcommit.png"><figcaption>Figure 4: alt text</figcaption></figure></p>
+<p>Hit enter and follow instructions to push your change to the remote branch.
+  <figure id="_figure-7"><img alt="Git commit from Codespace" src="tutorial_assets/gitcommit.png"><figcaption>Figure 7: Git commit from Codespace</figcaption></figure></p>
 </li>
 <li>
 <p><strong>Option B: From your local machine: (Advanced)</strong></p>
 <ol>
-<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Setup your computer's ssh-key</a></li>
-<li>Clone down the repository</li>
-<li>Follow best-practices with pushing and pulling to Github (via cmd terminal)</li>
-<li><code>git fetch</code> / <code>git pull</code> - make sure your local version is up to date</li>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Setup your computer's ssh-key</a> (see README for details)</li>
+<li>
+<p>Clone down the repository <code>git clone &lt;repo&gt;</code> (see README for details)</p>
+</li>
+<li>
+<p>Follow best-practices with pushing and pulling to Github (via cmd terminal)</p>
+<ol>
+<li><code>git fetch</code> / <code>git pull</code> - make sure your local version is up to date with remote</li>
 <li><code>git branch</code> - check what branch you are on</li>
 <li>If necessary, switch branch with <code>git switch -c &lt;new branch name&gt;</code> or <code>git checkout &lt;remote branch name&gt;</code></li>
-<li>Make your desired changes on desired branch (edit <code>main</code> if wanting to immediately update site)</li>
+<li>Make your desired changes on desired branch (branch = <code>main</code> if wanting to immediately update site)</li>
 <li><code>git status</code> - see which files you've changed</li>
-<li><code>git add &lt;files&gt;</code> - add files</li>
+<li><code>git add &lt;files&gt;</code> - add specific files or <code>git add .</code> add all changed files</li>
 <li><code>git commit -m "description of changes"</code> - change message</li>
 <li><code>git push</code> - push changes to Github</li>
 <li><code>git status</code> / <code>git log</code> - confirm changes were saved</li>
-<li>If you pushed directly to <code>main</code>, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.</li>
-<li>When ready to update the site, follow <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">Github instructions</a> to make a <code>pull request</code> and merge your branch into <code>main</code></li>
+</ol>
+</li>
+<li>If you pushed directly to <code>main</code>, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.<ul>
+<li>When ready to update the site, follow <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">Github instructions</a> to make a <strong>pull request</strong> and <strong>merge</strong> your branch into <code>main</code></li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
+<p>### Pull Requests
+  Pull requests are a useful mechanism for introducing changes for review and having a dialog around those changes. Say for example you wanted to add a whole new Manual to the website - you probably would want to go through multiple interations and receive feedback before pushing your changes to the main site. </p>
+<p>Pull requests allow you to propose a change from one branch to another, with the ability for others to comment and recommend general or line-specific changes. Specific contributers can even be required to approve changes before the main branch can be updated.</p>
+<p>Here is a general guide on <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">how pull requests</a> work on github.</p>
+<p><strong>Example pull request flow:</strong></p>
+<p><figure id="_figure-8"><img alt="Create Pull Request from test branch to main" src="tutorial_assets/pull_request_create.png"><figcaption>Figure 8: Create Pull Request from test branch to main</figcaption></figure></p>
+<p><figure id="_figure-9"><img alt="Define Pull Request - set reviewers and editors" src="tutorial_assets/open_pull_request.png"><figcaption>Figure 9: Define Pull Request - set reviewers and editors</figcaption></figure></p>
+<p><figure id="_figure-10"><img alt="See changes in Pull Request - files and lines" src="tutorial_assets/pull_request_files_changed.png"><figcaption>Figure 10: See changes in Pull Request - files and lines</figcaption></figure></p>
+<p><figure id="_figure-11"><img alt="Add comments to pull request - inline and overall" src="tutorial_assets/pull_request_add_comments.png"><figcaption>Figure 11: Add comments to pull request - inline and overall</figcaption></figure></p>
+<p><figure id="_figure-12"><img alt="Finish and submit a review of a pull request" src="tutorial_assets/pull_request_finish_review_changes.png"><figcaption>Figure 12: Finish and submit a review of a pull request</figcaption></figure></p>
+<p><figure id="_figure-13"><img alt="Accept suggested changes to pull request" src="tutorial_assets/pull_request_accept_suggestion.png"><figcaption>Figure 13: Accept suggested changes to pull request</figcaption></figure></p>
+<p><figure id="_figure-14"><img alt="Merge pull request into main (once all comments are resplved)" src="tutorial_assets/pull_request_merge.png"><figcaption>Figure 14: Merge pull request into main (once all comments are resplved)</figcaption></figure></p>
 <hr>
-<h2 id="guide-to-using-markdown">Guide to using markdown<a class="headerlink" href="#guide-to-using-markdown" title="Permanent link">¶</a></h2>
-<p>Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being leggible in a standard text editor.</p>
-<h3 id="some-useful-resources">Some useful resources:<a class="headerlink" href="#some-useful-resources" title="Permanent link">¶</a></h3>
+<h2 id="guide-to-using-markdown">Guide to using Markdown<a class="headerlink" href="#guide-to-using-markdown" title="Permanent link">¶</a></h2>
+<p>Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being legible in a standard text editor.</p>
+<h3 id="useful-resources">Useful resources<a class="headerlink" href="#useful-resources" title="Permanent link">¶</a></h3>
 <ul>
 <li>Basic <a href="https://www.markdownguide.org/getting-started/">Getting Started Guide</a> to Markdown</li>
 <li>Getting started in <a href="https://www.mkdocs.org/user-guide/writing-your-docs/">mkdocs</a> flavor of markdown (additional built-in features)</li>
@@ -800,9 +919,10 @@ Building a table in markdown is similar to LaTeX. You must draw out the columns 
 <p class="admonition-title">Like This</p>
 <p>Put your message here</p>
 </div>
-<p>See </p>
+<p>See <a href="https://python-markdown.github.io/extensions/admonition/">Admonition Plugin</a> page for more examples.</p>
 <h3 id="autoref">Autoref<a class="headerlink" href="#autoref" title="Permanent link">¶</a></h3>
-<p>Allows you to reference headers by name without creating anchor tags ex. <code>[Link Description](#Autoref)</code> should take you to this subsection.</p>
+<p>Allows you to reference headers by name without creating anchor tags ex. <code>[Link Description](#Autoref)</code>.</p>
+<p><a href="#Autoref">Link Description</a> should take you to this subsection.</p>
 <h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">¶</a></h3>
 <p>This plugin allows for the insertion of tables in a more programmatic way.</p>
 <p>You can add a csv file to the <code>/docs</code> folder and have it be auto-generated by the python <code>mkdocs-table-reader-plugin</code> (less formatting control but good for large datasets that might be modified regularly)</p>
@@ -869,12 +989,12 @@ and leave a space between the caption line and the figure/table.</p>
 <div class="highlight"><pre><span></span><code>![Figure Caption](assets_QubeCL_Manual_v5/img-0942.png){#front_panel}
 </code></pre></div>
 <p>becomes:
-<figure id="_figure-5"><img alt="Figure Caption" id="front_panel" src="../QubeCL_Current_Manual/assets_QubeCL_Manual_v5/img-0942.png"><figcaption>Figure 5: Figure Caption</figcaption></figure></p>
+<figure id="_figure-15"><img alt="Figure Caption" id="front_panel" src="../QubeCL_Current_Manual/assets_QubeCL_Manual_v5/img-0942.png"><figcaption>Figure 15: Figure Caption</figcaption></figure></p>
 <p>(Note that square brackets are blank - this allows for the figure or table number to be auto-generated when figure tag (<code>(#front_panel)</code>) is referenced.</p>
 <p>And reference it like so:
 </p><div class="highlight"><pre><span></span><code>A schematic view of the front panel of the QubeCL can be seen in [](#front_panel).
 </code></pre></div>
-<p>A schematic view of the front panel of the QubeCL can be seen in <a href="#front_panel">Figure 5</a>.</p>
+<p>A schematic view of the front panel of the QubeCL can be seen in <a href="#front_panel">Figure 15</a>.</p>
 <h3 id="to-pdf">To-pdf<a class="headerlink" href="#to-pdf" title="Permanent link">¶</a></h3>
 <p>Whenever the site is rebuilt  (<code>mkdocs serve</code> or <code>mkdocs build</code>) it is saved in a pdf format to the downloads folder. This takes a few seconds. If you are testing locally and don't want to regenerate it each time, you can suppress this feature by uncommenting the following line in the <code>mkdocs.yml</code> (remember to comment out when done editing).</p>
 <div class="highlight"><pre><span></span><code>  - to-pdf: # enable to auto-generate PDF download(currently for whole site)  
@@ -882,31 +1002,6 @@ and leave a space between the caption line and the figure/table.</p>
       enabled_if_env: ENABLED_PDF_EXPORT #uncomment this line to 
 </code></pre></div>
 <hr>
-<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">¶</a></h2>
-<p>To edit the styling or functionality of the site, it is best develop on a fully functional local version (before updating the live site). </p>
-<p>If you don't already know how to use github, follow the <a href="https://github.com/ppqSense/QubeDocs">readme</a> instructions to setup your local environment. </p>
-<p>You can also use the live editor in github  instead of on your local machine.
-You can reach the live editor from your browser by changing the url of the project from <code>github.com/ppqSense/QubeDocs/</code> to <code>github.dev/ppqSense/QubeDocs/</code> and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces". From here you can follow the rest of the instructions as you would locally.</p>
-<h3 id="local-preview">Local Preview<a class="headerlink" href="#local-preview" title="Permanent link">¶</a></h3>
-<p>While in a <code>Python3</code> virtual environment &amp; the main project directory run:</p>
-<ol>
-<li><code>pip install -r requirements.txt</code> to install all dependencies (do once)</li>
-<li>Run <code>mkdocs build</code> to build out site structure and styling</li>
-<li>Run <code>mkdocs serve</code> to serve a live test site <ul>
-<li>Navigate to provided URL to see site</li>
-</ul>
-</li>
-</ol>
-<h3 id="local-editing-tips">Local Editing Tips<a class="headerlink" href="#local-editing-tips" title="Permanent link">¶</a></h3>
-<ul>
-<li>Changes to content should be reflected automatically upon save if <code>mkdocs serve</code> is running.</li>
-<li><code>mkdocs build</code> must be re-run upon changes to styling, plugins, or structure.</li>
-<li>Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:</li>
-<li><code>pip freeze &gt; requirements.txt</code> (do before pushing changes)<ul>
-<li>This is important to make sure that other editors can correctly setup their environment for testing.</li>
-</ul>
-</li>
-</ul>
 <h3 id="additional-features-that-may-be-added-later">Additional features that may be added later<a class="headerlink" href="#additional-features-that-may-be-added-later" title="Permanent link">¶</a></h3>
 <ul>
 <li>automatic "table of figures" generation</li>

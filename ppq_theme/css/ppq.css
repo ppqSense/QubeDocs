@@ -28,6 +28,76 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, .4) 25%, rgb(255, 255
 .warning {
 	background-color: rgba(220, 20, 60, 0.459);
 }
+
+
+.md-typeset {
+    /* Modifier to float block elements */
+    .inline {
+      float: inline-start;
+      width: px2rem(434px);
+      margin-inline-end: px2rem(16px);
+      margin-top: 0;
+      margin-bottom: px2rem(16px);
+
+      /* Modifier to move to end (ltr: right, rtl: left)*/
+      &.end {
+        float: inline-end;
+        margin-inline: px2rem(16px) 0;
+      }
+
+	  &.fig {
+		width: 50%;
+	  }
+	  &.fig40 {
+		width: 40%;
+	  }
+	  &.fig30 {
+		width: 30%;
+	  }
+	  &.fig60 {
+		width: 60%;
+	  }
+	  &.fig70 {
+		width: 70%;
+	  }
+    }
+}
+
+/* Right-aligned half-width images */
+.half-width-right {
+    float: right;
+    width: 50%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .half-width-right {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+.md-typeset {
+    /* Modifier to float block elements */
+    .inline-fig {
+      float: inline-start;
+      width: auto;
+      margin-inline-end: px2rem(16px);
+      margin-top: 0;
+      margin-bottom: px2rem(16px);
+
+      /* Modifier to move to end (ltr: right, rtl: left)*/
+      &.end {
+        float: inline-end;
+        margin-inline: px2rem(16px) 0;
+      }
+    }
+}
+
+}
+
 img[src*='#left'] {
     float: left;
 }
@@ -59,14 +129,14 @@ img[src*='#midsmall'] {
 	position:absolute;
 	min-height: 40%;
 	max-height: 50%;
-	/* float: center; */
+	float: center;
 	/* margin-left: auto;*/
 	margin-left: 200px;
 	margin-right: auto;
 	top: 30%; 
-	width: fixed;
-	/* max-width: 80%;
-	min-width: 20%; */
+	/* width: fixed; */
+	max-width: 80%; 
+	min-width: 20%; 
 }
 
 /* hide on mobile */

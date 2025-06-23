@@ -255,11 +255,8 @@ The QubeCL System is compliant with the following standards:
 The QubeCL system is shipped in a package designed to provide excellent protection. The shipping box should be saved for future transportation or storage. Carefully unpack and inspect the following items that are contained in the shipping box.
 
 - **QubeCL driver,** built with a variable number and kind of modules depending on the ordered model.
-
 - **Power supply cable.**
-
 - **TC cable,** to connect the temperature controller (only included if the QubeCL mounts a Temperature Controller module).
-
 - **USB cable,** to connect the QubeCL driver to the controlling PC.
 - **USB drive,** which contains the required software and drivers.
 - **QubePS,** switching power supply for the QubeCL driver, if included in the order.
@@ -291,7 +288,9 @@ If the QubePS power supply is included in the QubeCL kit, the user has simply to
 
 ### 4.4 Connectors and LED indicators functions
 
-A schematic view of the front panel of the QubeCL can be seen in [](#front_panel). The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: **Connectors:**
+A schematic view of the front panel of the QubeCL can be seen in [](#front_panel). The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: 
+
+**Connectors:**
 
 - **C1. Power:** power supply connector of the instrument.
 
@@ -301,11 +300,9 @@ A schematic view of the front panel of the QubeCL can be seen in [](#front_panel
 
 - **C4. CURRENT out:** Output SMA connector. The driver supplies the current through this connector to the controlled laser device. A proper SMA cable must be provided by the user. The output provides a maximum current corresponding to the limits of the installed CM modules of the QubeCL (for example 1.5A for a QubeCL with one CM10 and one CM05 modules), with a maximum output voltage compliance of 17.5 V.
 
-- **C5/C6. MOD1 / 2 in:** Input SMA connectors. May be used to source ﬁnely controlled modulating signals to the laser current, with the amplitude proportional to the applied control voltages.
+- **C5/C6. MOD1/2 in:** Input SMA connectors. May be used to source ﬁnely controlled modulating signals to the laser current, with the amplitude proportional to the applied control voltages.
 
-Figure: QubeCL15TP front panel
-
-![](assets_QubeCL_Manual_v5/img-0942.png){#front_panel}
+![QubeCL15TP front panel](assets_QubeCL_Manual_v5/img-0942.png){#front_panel}
 
 **LED indicators:**
 
@@ -314,6 +311,7 @@ Figure: QubeCL15TP front panel
 - **L2. CUR ON:** Yellow. Switched on when the QubeCL sources current from C4 Current out connector to the controlled laser.
 
 - **L3. MOD ON:** Yellow. Switched on when the modulation signals are enabled.
+  
 - **L4. PWR ON:** Green. Switched on when the QubeCL main unit is powered on.
 
 - **L5. TC unlock:** Red. Switched on when the temperature of the controlled device is diﬀerent with respect to the temperature set-point value.
@@ -322,36 +320,32 @@ Figure: QubeCL15TP front panel
 
 The list only comprehends the LEDs and connectors that are present on the majority of the QubeCL possible conﬁgurations. A detailed description of PLL module, along with other application-speciﬁc modules, can be found further below in this manual.  
 
----
-
 ### 4.4.1 Power connector
 
-The QubeCL kit comes with a dedicated power supply cable to con- nect the QubeCL to its power supply. One of the ends of the QubeCL power cable is already equipped with a 10 poles connector compatible with the one present on the QubeCL driver (see [](#pwr_connector)).  
-If the QubePS is provided with the kit, the cable is ready to be directly plugged into the QubePS connector.
+The QubeCL kit comes with a dedicated power supply cable to con- nect the QubeCL to its power supply. One of the ends of the QubeCL power cable is already equipped with a 10 poles connector compatible with the one present on the QubeCL driver (see [](#pwr_connector)). If the QubePS is provided with the kit, the cable is ready to be directly plugged into the QubePS connector.
 
-Figure: Power connector pin diagram
+Figure: Power connector pin diagram{class="inline end fig"}
 
-![](assets_QubeCL_Manual_v5/img-0947.png){#pwr_connector}
+![Power connector pin diagram](assets_QubeCL_Manual_v5/img-0947.png){#pwr_connector}
 
 
 Alternatively, when the QubePS is not provided, the cable is equipped with four plugs to be connected to the power supplies.  
+
 The four plugs can be identiﬁed as the subsequent ones:
 
 - two for CM power supply (green-labelled PS Las +, white-labelled PS Las -)
 - two for TC power supply (red-labelled PS TEC +, yellow-labelled PS TEC -).
 
----
-
 ### 4.4.2 TEC connector
 
+Figure: TEC connector pin diagram{class="inline end fig40"}
+
+![TEC connector pin diagram](assets_QubeCL_Manual_v5/img-0944.png){#TEC_Connector}
+
 If the QubeCL is equipped with the TC module, but not with a laser-housing mod- ule, a proper connection with the Peltier- based stage of the laser and with the NTC temperature sensor must be established. The QubeCL kit includes a TEC cable with one of its ends already equipped with the proper connector to be plugged into the TC module.  
+
 The user must adapt the other end of the TEC cable in order to connect it to the laser. Please, refer to the wires colors represented in [](#TEC_Connector) to properly connect the TEC ca- ble to the laser.
 
-Figure: TEC connector pin diagram
-
-![](assets_QubeCL_Manual_v5/img-0944.png){#TEC_Connector}
-
----
 
 ## 4.5 QubeCL_Control software installation
 
@@ -361,11 +355,11 @@ To install the QubeCL_Control software on Windows OS, please follow these steps.
 
 ### Installation Steps
 
-- Run the library installation application to install the following libraries and drivers:
-  - Microcontroller USB-driver (CDM21228_Setup)
-  - LabVIEW NI-VISA Utilities (NIVISA1600full)
-- Copy the directory " /QubeCL_CONTROL:vX.X " and all its content in a directory of your choice in the computer.  
-- 
+1.  Run the library installation application to install the following libraries and drivers:
+      - Microcontroller USB-driver (`CDM21228_Setup`)
+      - LabVIEW NI-VISA Utilities (`NIVISA1600full`)
+2.  Copy the directory `/QubeCL_CONTROL:vX.X` and all its content in a directory of your choice in the computer.  
+
 *More information can also be found in the readme.txt ﬁle in the main directory of the USB key.*
 
 ---
@@ -373,6 +367,7 @@ To install the QubeCL_Control software on Windows OS, please follow these steps.
 ## 5 Basic operation: current and temperature controls
 
 This chapter explains the typical set-up and operation of a QubeCL system composed by a CM module (or a stack of several of them) and a TC module. This chapter should help less experienced users to rapidly adapt the QubeCL system to drive their speciﬁc optoelectronic devices. Keep in mind that not all the possible operations of the QubeCL system with a speciﬁc controlled device can be adequately addressed in this manual: these are general guidelines for operating a QubeCL system with speciﬁc illustrative examples. Adequate parameter values must be considered by the users when controlling a speciﬁc device.  
+
 The QubeCL is built with a modular approach, with each module being in charge of performing a speciﬁc function. This chapter describes the usage of a QubeCL which includes one CM and one TC module. The functions of those modules are, respectively:
 
 - To provide a **very low-noise and high-level DC current** to drive one optoelectronic device;
@@ -381,30 +376,32 @@ The QubeCL is built with a modular approach, with each module being in charge of
 ### 5.1 Set-up
 
 The typical set-up to operate with a QubeCL system is composed by the QubeCL itself, the laser device, a DC power supply and a PC for overall control.  
+
 To correctly operate with the QubeCL, the following step must be followed:
 
-- If the QubeCL kit includes a QubePS power supply, simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.  
+If the QubeCL kit includes a QubePS power supply:
+
+ - simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.
+
 Otherwise, if the QubePS is not included:
+
 - Set the voltage values of the **ﬂoating** power supplies you’re using following the indication from the [dedicated section](#43-electrical-power-supply) of this manual.
 - Connect the QubeCL to the power supply by the mean of the provided cable  
-∗ Connect TEC+ and TEC- to the +/- poles of the power supply selected channel for electrical supply of the TC module, respectively.  
-∗ Connect LAS+ and LAS- to the +/- poles of the power supply selected channel for electrical supply of the CM module(s), respectively.
+  - Connect $`TEC+`$ and $`TEC-`$ to the $`+/-`$ poles of the power supply selected channel for electrical supply of the TC module, respectively.  
+  - Connect $`LAS+`$ and $`LAS-`$ to the $`+/-`$ poles of the power supply selected channel for electrical supply of the CM module(s), respectively.
 
-!!! Warning "RESPECT THE POLARITY"
+!!! danger "CAUTION -- RESPECT THE POLARITY"
 
     If not using a QubePS be sure to **RESPECT THE POLARITY** of the power supply cable. **REVERSE** voltages will damage the instrument.  
     In case you’re not using a dual-channel power supply, but two diﬀerent power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.
 
-- Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system;
+- Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system.
 
-- Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system;
+- Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system.
 
-- Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system.  
+- Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system ***N.B.** This operation is not necessary if the QubeCL includes a laser housing module).
 
-**N.B.** This operation is not necessary if the QubeCL includes a laser housing module;
-
-- Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system.  
-**N.B.** This operation is not necessary if the QubeCL includes a laser housing module;
+- Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system (**N.B.** This operation is not necessary if the QubeCL includes a laser housing module).
 
 - **Optional:** connect a signal generator(s) to the modulation inputs of the QubeCL (SMA C5-C6 connectors of the LC module).
 
@@ -412,42 +409,34 @@ Otherwise, if the QubePS is not included:
 
 In this section the usage of the Control Software to manage the basic operation of the QubeCL is described in detail.
 
-![](assets_QubeCL_Manual_v5/img-0950.png)
-
-**Figure 9:** QubeCL control software main screen
-
-  
-
-
----
+![QubeCL control software main screen](assets_QubeCL_Manual_v5/img-0950.png){#main-screen}
 
 ### 5.2.1 Connecting to the QubeCL
 
+To use the QubeCL_Control software, locate the directory where you’ve previously placed  
+the `QubeCL_CONTROL:vX.X` folder from the USB key and launch the `QubeCL_Control_vX.X.exe` application. 
 
 
-To use the QubeCL\_Control software, locate the directory where you’ve previously placed  
-the QubeCL\_CONTROL:vX.X folder from the USB key and launch the QubeCL\_Control\_vX.X.exe application.  
-A graphical interface as the one showed in **ﬁgure [9**](#figure.caption.37) will be displayed. While the program search  
+A graphical interface as the one showed in [](#main-screen) will be displayed. While the program search  
 for connected QubeCLs to the computer, a progress bar will be displayed. Once the search  
 is done, it will be possible to select the desired QubeCL from the **INSTRUMENT ADDR** drop-down menu. Once selected, launch the program by pressing the CONNECT button.
+
+![](assets_QubeCL_Manual_v5/img-0952.jpg){class="inline end fig30"}
 
 If the program fails to detect any connected QubeCL, an error windows as the one shown here pops up. From there it will be possible to stop the program with the **EXIT** button or manually select a connected driver by the COM port to which it is connected.
 
 ### 5.2.2 QubeCL_Control appearance
 
-![](assets_QubeCL_Manual_v5/img-0952.jpg)
 
 The GUI of the control software is subdivided into three main horizontal panels:
 
-![](assets_QubeCL_Manual_v5/img-0953.png)
+![The QubeCL_Control software conﬁguration panel](assets_QubeCL_Manual_v5/img-0953.png){#config-panel}
 
-**Figure 10:** The QubeCL\_Control software conﬁguration panel
-
-The **Conﬁguration panel** at the top **(Figure 10),** there can be found:
+The **Conﬁguration panel** at the top [](#config-panel) there can be found:
 
 - **INSTRUMENT** menu: allows the selection of the QubeCL that the user wants to connect to. The connection can be established only at the start-up of the program, it is not possible to switch to another QubeCL instrument without restarting the control software.
 
-- **CONNECT** and **DISCONNECT** buttons: allow the connection and disconnection to the selected QubeCL. **DISCONNECT** also stops the program.
+- **CONNECT** and **DISCONNECT** buttons: allow the connection and disconnection to the selected QubeCL. (**DISCONNECT** also stops the program).
 
 - **CURRENT LIMIT** menu: by pressing this button, another window will be displayed, allowing the user to change the maximum limit for the current that the QubeCL can deliver to the laser.
 
@@ -455,14 +444,12 @@ The **Conﬁguration panel** at the top **(Figure 10),** there can be found:
 
 - **Power ON** indicators: above the CONNECT and DISCONNECT buttons, two LEDs show the status of the power source to the CM (called MAIN) and TC modules.
 
-  
-
-
 ---
 
+![The QubeCL_Control software current driver panel](assets_QubeCL_Manual_v5/img-0973.png){#current_panel}
 
 
-The **Current driver panel** is the middle one **(Figure 11),** there can be found:
+The **Current driver panel** is the middle one [](#current_panel) there can be found:
 
 - **Current setpoint:** from there, the user can change the current that needs to be sourced by the QubeCL to the laser. Three diﬀerent controls allow the user to change this value:
 
@@ -485,17 +472,6 @@ This button includes a green LED indicator. This LED is switched ON when the Qub
 
 - **Current plot:** shows the temporal behaviors of the set current (orange trace) and the actual output current (purple trace). This plot won’t show any modulation signal that may be applied to the output current.
 
-![](assets_QubeCL_Manual_v5/img-0973.png)
-
-**Figure 11:** The QubeCL\_Control software current driver panel
-
-  
-
-
----
-
-
-
 The **Temperature control panel** at the bottom **(Figure 12),** where the subsequent com- mands can be found:
 
 - **Temp. SetPoint:** sets the desired operating temperature for the laser, expressed in °C.
@@ -504,7 +480,7 @@ The **Temperature control panel** at the bottom **(Figure 12),** where the subse
 
 - **TStab** button: turns on/oﬀ the temperature stabilization of the laser.
 
-- **Loop sign +/-** button: allows the user to change the sign of the temperature stabi- lization loop, eﬀectively switching its behavior from heating to cooling and vice versa.
+- **Loop sign $`+/-`$** button: allows the user to change the sign of the temperature stabi- lization loop, eﬀectively switching its behavior from heating to cooling and vice versa.
 
 - **Temperature PID parameters** panel: the TEC module stabilizes the temperature of the laser by the mean of a PID correction loop. This window allows the user to change the values of the three functional parameters of the PID, both with sliders and textual inputs. Detailed instruction can be found below.
 
