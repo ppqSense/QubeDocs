@@ -210,20 +210,20 @@ If you are completely new to git see the
 
 **Example pull request flow:**
 
-![Create Pull Request from test branch to main](/docs/tutorial/tutorial_assets/pull_request_create.png)
+![Create Pull Request from test branch to main](/tutorial_assets/pull_request_create.png)
 
 
-![Define Pull Request - set reviewers and editors](/docs/tutorial/tutorial_assets/open_pull_request.png)
+![Define Pull Request - set reviewers and editors](/tutorial_assets/open_pull_request.png)
 
-![See changes in Pull Request - files and lines](/docs/tutorial/tutorial_assets/pull_request_files_changed.png)
+![See changes in Pull Request - files and lines](/tutorial_assets/pull_request_files_changed.png)
 
-![Add comments to pull request - inline and overall](/docs/tutorial/tutorial_assets/pull_request_add_comments.png)
+![Add comments to pull request - inline and overall](/tutorial_assets/pull_request_add_comments.png)
 
-![Finish and submit a review of a pull request](/docs/tutorial/tutorial_assets/pull_request_finish_review.png)
+![Finish and submit a review of a pull request](/tutorial_assets/pull_request_finish_review.png)
 
-![Accept suggested changes to pull request](/docs/tutorial/tutorial_assets/pull_request_accept_suggestion.png)
+![Accept suggested changes to pull request](/tutorial_assets/pull_request_accept_suggestion.png)
 
-![Merge pull request into main (once all comments are resplved)](/docs/tutorial/tutorial_assets/pull_request_merge.png)
+![Merge pull request into main (once all comments are resplved)](/tutorial_assets/pull_request_merge.png)
   
 ---
 
