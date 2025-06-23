@@ -124,7 +124,9 @@ You can use a live codespace in github instead of your local machine for develop
 You can reach the live editor from your browser by changing the url of the project from `github.com/ppqSense/QubeDocs/` to `github.dev/ppqSense/QubeDocs/` and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces" and then a remote machine configuration. From here you can follow the rest of the instructions as you would locally (with the exception of needing to setup a python virtual environment).
 
 ![Open Terminal in Codespaces](tutorial_assets/open_terminal.png)
+
 ![Continue with Codespaces](tutorial_assets/continue_with_codespaces.png)
+
 ![Select Machine](tutorial_assets/select_machine.png)
 
 
@@ -138,8 +140,11 @@ This option will take about a 2 minutes to setup, if it is your first time acces
 If you don't already know how to use github or don't have it installed, follow the [readme](https://github.com/ppqSense/QubeDocs) instructions to setup your local environment. 
 
 First: install `weasyprint` on your system: (used for PDF generation)
+
   - `sudo apt install weasyprint` (Ubuntu)
+  
   - [Executable download](https://github.com/Kozea/WeasyPrint/releases) (Windows)
+
   - [All other systems](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html)
 
 Second: While in a local `Python3` virtual environment (see [readme](https://github.com/ppqSense/QubeDocs)) or codespace environment:
@@ -150,7 +155,9 @@ Second: While in a local `Python3` virtual environment (see [readme](https://git
    2. Run `mkdocs build` to build out site structure and styling
    3. Run `mkdocs serve` to serve a live test site 
       - Navigate to provided URL to see site
-   
+
+---
+
 ## Important Steps for Local & Online Editing
 Changes to content should be reflected automatically upon save if `mkdocs serve` is running.
 
@@ -194,9 +201,15 @@ If you are completely new to git see the
     4. If you pushed directly to `main`, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.
        -  When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a **pull request** and **merge** your branch into `main`
 
+### Pull Requests
+  Pull requests are a useful mechanism for introducing changes for review and having a dialog around those changes. Say for example you wanted to add a whole new Manual to the website - you probably would want to go through multiple interations and receive feedback before pushing your changes to the main site. 
+
+  Pull requests [TODO](Fill out section)
 
 
-## Guide to using markdown
+---
+
+## Guide to using Markdown
 
 Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being leggible in a standard text editor.
 
