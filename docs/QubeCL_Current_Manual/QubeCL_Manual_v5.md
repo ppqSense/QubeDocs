@@ -61,7 +61,7 @@ ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmans
 
 ### 2.1 Communication interfaces
 
-Table: Communication Interfaces (from CSV)
+Table: Communication Interfaces{#com-ref}
 
 {{ read_csv('assets_QubeCL_Manual_v5/tables/communication_interfaces.csv') }}
 
@@ -88,8 +88,7 @@ Table: Absolute maximum voltage and temperature ratings
 
 $`PS_{LAS}=24V dc, PS_{TEC}= 12 V dc`$
 
- Warm-up time 120 min, room temperature 25 &deg;C (unless otherwise noted) 
-
+Warm-up time 120 min, room temperature 25 &deg;C (unless otherwise noted) 
 
 **Current Generator Specifications**
 

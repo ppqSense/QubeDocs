@@ -186,23 +186,23 @@ If you are completely new to git see the
   ![Git commit from Codespace](tutorial_assets/gitcommit.png)
 
 - **Option B: From your local machine: (Advanced)**
-  1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) (see README for details)
-  2. Clone down the repository `git clone <repo>` (see README for details)
+    1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) (see README for details)
+    2. Clone down the repository `git clone <repo>` (see README for details)
 
-  3. Follow best-practices with pushing and pulling to Github (via cmd terminal)
-     1. `git fetch` / `git pull` - make sure your local version is up to date with remote
-     2. `git branch` - check what branch you are on
-     3. If necessary, switch branch with `git switch -c <new branch name>` or `git checkout <remote branch name>`
-     4. Make your desired changes on desired branch (branch = `main` if wanting to immediately update site)
-     5. `git status` - see which files you've changed
-     6. `git add <files>` - add specific files or `git add .` add all changed files
-     7.  `git commit -m "description of changes"` - change message
-     8.  `git push` - push changes to Github
-     9.  `git status` / `git log` - confirm changes were saved
-  4.  If you pushed directly to `main`, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.
-         -  When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a **pull request** and **merge** your branch into `main`
+    3. Follow best-practices with pushing and pulling to Github (via cmd terminal)
+          1. `git fetch` / `git pull` - make sure your local version is up to date with remote
+          2. `git branch` - check what branch you are on
+          3. If necessary, switch branch with `git switch -c <new branch name>` or `git checkout <remote branch name>`
+          4. Make your desired changes on desired branch (branch = `main` if wanting to immediately update site)
+          5. `git status` - see which files you've changed
+          6. `git add <files>` - add specific files or `git add .` add all changed files
+          7.  `git commit -m "description of changes"` - change message
+          8.  `git push` - push changes to Github
+          9.  `git status` / `git log` - confirm changes were saved
+    4.  If you pushed directly to `main`, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.
+           -  When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a **pull request** and **merge** your branch into `main`
 
-### Pull Requests
+  ### Pull Requests
   Pull requests are a useful mechanism for introducing changes for review and having a dialog around those changes. Say for example you wanted to add a whole new Manual to the website - you probably would want to go through multiple interations and receive feedback before pushing your changes to the main site. 
 
   Pull requests allow you to propose a change from one branch to another, with the ability for others to comment and recommend general or line-specific changes. Specific contributers can even be required to approve changes before the main branch can be updated.
@@ -232,7 +232,7 @@ If you are completely new to git see the
 
 Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being legible in a standard text editor.
 
-### Some useful resources:
+### Useful resources
 - Basic [Getting Started Guide](https://www.markdownguide.org/getting-started/) to Markdown
 - Getting started in [mkdocs](https://www.mkdocs.org/user-guide/writing-your-docs/) flavor of markdown (additional built-in features)
 
