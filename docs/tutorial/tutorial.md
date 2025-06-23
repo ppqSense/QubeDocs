@@ -59,10 +59,9 @@ If you just want to edit or add content to the site, you do not need to install 
 ![Github direct preview](tutorial_assets/github_direct_preview.png)
 
 
-## Create/Edit a page
+### Create/Edit a page
 Each markdown (`.md`) file in the `/docs` directory represents a page on the website. 
 
-### Add new page to site
 If you create a new page (ex. `test.md`) and save it in the `/docs` folder, it will be accessable via the url `site.io/<file_name>.html` but it is *not* automatically added to the site navigation bar. To add it to the site nav, you first need to add it to the navigation structure in the `mkdocs.yml` file for it to be findable by users. Give the button a name and list the file path starting in docs: (`<Button_Name>: <filepath/file_name>`)
 ```yaml
 nav:
@@ -88,7 +87,7 @@ If you want to see a complete preview of the site before update, or if you would
 
 To edit the styling or functionality of the site (or to add multiple pages, images, or tables at once) it is best develop on a fully functional local or remote version (before updating the live site). 
 
-### Recommended Edit, Review, & Approve Workflow (git)
+### Recommended Workflow (with git)
 
 This site is hosted on github, which is primarily a code-hosting and version-control tool. It allows for multiple people to collaborate on a project or document, but unlike a google docs or other live online editors, individuals make changes to local versions of the file(s) and those changes are periodically approved and merged into a main version of the file. This allows for controlled updating of a code base and detailed development tracking, while giving individuals the freedom to suggest changes or create new versions of the codebase at will. 
 
@@ -166,7 +165,8 @@ Changes to content should be reflected automatically upon save if `mkdocs serve`
 
 !!! warning "Always update python requirements upon package install"
     Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:
-    - `pip freeze > requirements.txt` (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).
+
+   - `pip freeze > requirements.txt` (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).
 
 Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired `.md` file along with its assets folder and PDF. By saving it under a new name in the `/docs/downloads` folder, the PDF can be added to the download page as a dated version of the manual.
 
@@ -204,9 +204,27 @@ If you are completely new to git see the
 ### Pull Requests
   Pull requests are a useful mechanism for introducing changes for review and having a dialog around those changes. Say for example you wanted to add a whole new Manual to the website - you probably would want to go through multiple interations and receive feedback before pushing your changes to the main site. 
 
-  Pull requests [TODO](Fill out section)
+  Pull requests allow you to propose a change from one branch to another, with the ability for others to comment and recommend general or line-specific changes. Specific contributers can even be required to approve changes before the main branch can be updated.
+
+  Here is a general guide on [how pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) work on github.
+
+**Example pull request flow:**
+
+![Create Pull Request from test branch to main](/docs/tutorial/tutorial_assets/pull_request_create.png)
 
 
+![Define Pull Request - set reviewers and editors](/docs/tutorial/tutorial_assets/open_pull_request.png)
+
+![See changes in Pull Request - files and lines](/docs/tutorial/tutorial_assets/pull_request_files_changed.png)
+
+![Add comments to pull request - inline and overall](/docs/tutorial/tutorial_assets/pull_request_add_comments.png)
+
+![Finish and submit a review of a pull request](/docs/tutorial/tutorial_assets/pull_request_finish_review.png)
+
+![Accept suggested changes to pull request](/docs/tutorial/tutorial_assets/pull_request_accept_suggestion.png)
+
+![Merge pull request into main (once all comments are resplved)](/docs/tutorial/tutorial_assets/pull_request_merge.png)
+  
 ---
 
 ## Guide to using Markdown
