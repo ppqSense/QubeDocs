@@ -47,7 +47,7 @@ Additional styling and functionality comes from the chosen theme [Material for M
 
 ---
 
-[HERE IS A CHANGE I MADE TO DEMONSTRATE PULL REQUESTS]
+[HERE IS A CHANGE I MADE TO DEMONSTRATE PULL REQUESTS] - I am adding new content in a comment
 ## Editing Content
 
 If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor (perhaps one with a markdown preview such VSCode in [github online editor](https://github.dev/ppqSense/QubeDocs)) or directly on the main github site for small changes.
