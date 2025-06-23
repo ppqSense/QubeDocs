@@ -94,6 +94,7 @@ This site is hosted on github, which is primarily a code-hosting and version-con
 If you are unfamiliar with git workflows, in can be frustrating and confusing at first, but can ultimately make documenting work over time much easier. Here is a thorough [git beginner tutorial](https://www.atlassian.com/git/tutorials/what-is-git) that may be a helpful reference.
 
 **Helpful Git Vocab/Concepts:**
+
 1. **Repository** (The collection of all the files and folders constituting your project)
 2. **Branch** (A version of the repository you can edit/work in)
    1. The default branch is `main`
