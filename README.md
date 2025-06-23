@@ -10,7 +10,8 @@ Documentation Site for QubeCL
 1. Create a local copy of the project repository
 - Make sure that your github account is approved to access the repo and your computer has a [valid SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) associated with your github account.
 - Make sure git is installed: (run `git --version` to check)
-    - If not installed, download https://gitforwindows.org/
+    - If not installed, download https://gitforwindows.org/ (windows)
+      - or run `sudo apt install git` (Ubuntu)
     - It's fine to install with default settings (however, changing default branch name from `master` to `main` is recommended)
 - From Github repo:
     - Navigate to folder of choice and select [<>**CODE**] button and copy SSH option repo path (or https path if you do not plan to push)
@@ -20,7 +21,7 @@ Documentation Site for QubeCL
     - enter: `git clone <repo path>`
     - if you have error in the clone process, follow any suggested actions involving fetching or pulling (do not push to main branch)
     - P.S.  If you plan on making changes to the repo, please make sure to create a new branch and make edits to said branch; **do not push directly to main.**
-2. Setup your Python Virtual Environment
+1. Setup your Python Virtual Environment (**Not required for Codespace devcontainer**)
     - check to see if you have python installed with `python --version`
     - If not, install Python version 3.10+
         - Download Python for your OS: https://www.python.org/downloads/windows/
@@ -41,12 +42,12 @@ Documentation Site for QubeCL
     - Your command line should now look something like this:
     `(venv) PS C:\Users\UserName\Documents\QubeDocs>`
     - the `(venv)` lets you know you are now in the virtual environment, any python packages you install from here will be associated with this environment.
-3. Install Project requirements:
+2. Install Project requirements:
     - `cd` into Project folder `./QubeDocs`
     - run `pip install -r requirements.txt` to install all the Python packages required to run the project
-4. Build project by running `mkdocs build`
+3. Build project by running `mkdocs build`
     - Note: This will only work with virtual environment script running
-5. Preview Site by running a local instance: `mkdocs serve`
+4. Preview Site by running a local instance: `mkdocs serve`
 
 
 Notes:

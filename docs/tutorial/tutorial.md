@@ -49,7 +49,8 @@ Additional styling and functionality comes from the chosen theme [Material for M
 
 ## Editing Content
 
-If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor (perhaps one with a markdown preview such VSCode in [github online editor](https://github.dev/ppqSense/QubeDocs)) or directly on the main github site for small changes.
+If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor or directly on the main github site for small changes (navigate to the page of interest and select the edit-pencil button).
+
 !!! note "NOTE:" 
     A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting. 
 
@@ -57,9 +58,6 @@ If you just want to edit or add content to the site, you do not need to install 
 
 ![Github direct preview](tutorial_assets/github_direct_preview.png)
 
-![Github online code editor with built-in markdown preview](tutorial_assets/githubcode.png)
-
-If you want to see a complete preview of the site before update, or if you would like to edit the styling or make additions to the plugins used in the site, please follow the intructions in the [Advanced Features](#advanced-features) section.
 
 ## Create/Edit a page
 Each markdown (`.md`) file in the `/docs` directory represents a page on the website. 
@@ -82,47 +80,121 @@ If you have made changes directly to a single page at a time in github, all you 
 If you are working locally or in a github code environment, you will have to follow a couple more steps to conform to git version control (See [pushing to github](#pushing-to-github))
 
 !!! note "Saving incomplete work"
-    (if you are unsure of your changes, or if they are incomplete, please save them in an un-listed `.md` file or push to a new branch while working).      
+    (if you are unsure of your changes, or if they are incomplete, please save them in an un-listed `.md` file or push to a new branch while working).  
+
+If you want to see a complete preview of the site before update, or if you would like to edit the styling or make additions to the plugins used in the site, please follow the intructions in the [Comprensive Site Editing](#comprehensive-site-editing) section, otherwise skip to the [Markdown Guide](#guide-to-using-markdown) section to learn more about content editing.    
+
+## Comprehensive Site Editing
+
+To edit the styling or functionality of the site (or to add multiple pages, images, or tables at once) it is best develop on a fully functional local or remote version (before updating the live site). 
+
+### Recommended Edit, Review, & Approve Workflow (git)
+
+This site is hosted on github, which is primarily a code-hosting and version-control tool. It allows for multiple people to collaborate on a project or document, but unlike a google docs or other live online editors, individuals make changes to local versions of the file(s) and those changes are periodically approved and merged into a main version of the file. This allows for controlled updating of a code base and detailed development tracking, while giving individuals the freedom to suggest changes or create new versions of the codebase at will. 
+
+If you are unfamiliar with git workflows, in can be frustrating and confusing at first, but can ultimately make documenting work over time much easier. Here is a thorough [git beginner tutorial](https://www.atlassian.com/git/tutorials/what-is-git) that may be a helpful reference.
+
+**Helpful Git Vocab/Concepts:**
+1. **Repository** (The collection of all the files and folders constituting your project)
+2. **Branch** (A version of the repository you can edit/work in)
+   1. The default branch is `main`
+   2. making a new branch *off* of `main` creates a new copy of the repository at that point.
+3. **Remote/Local** (You can **fetch** a github-hosted **remote** branch and work on it **locally**)
+   1. The local version of a remote branch is only visible on your machine or editor
+   2. the remote version is visible to anyone who has access to the project
+4. **Syncing**: (**pushing** local changes to the remote branch, **pulling** remote changes down to local branch)
+   1. Any local changes you make to a branch need to be **pushed** to the remote version for other users to see your changes
+   2. If another user edits the remote version of the branch you are working on locally, you can **pull** their changes into your own version.
+   3. git will automatically try and **merge** different users changes. If you and another user modify the same part of the codebase (ex. If you and someone else try and modify the same paragraph at the same time) - git will ask you to manually select what version you would like to keep.
+5. **Pull Requests** (Requesting that your branch be merged into another branch -- usually `main`)
+   1. If you are making more than minor changes to the live website codebase, then you should make a **branch** off of `main` to work in (ex. `new-feature`).
+   2. Once you are ready to update the main site with your changes, you submit a **pull request** to pull `new-feature` branch into the `main` branch.
+   3. This will trigger a notification to the reviewer to look over your changes
+   4. If they want to change something, or add comments, they can and you will be notified
+   5. Once they approve your changes, you or they can **merge** your branch into `main ` - this will trigger an update of the website.
+
+  See the [Pushing to Github](#pushing-to-github) section for more details on how to actually perform these git operations.
+
+### Online Editing (setup)
+
+You can use a live codespace in github instead of your local machine for development.
+
+![Github online code editor with built-in markdown preview](tutorial_assets/githubcode.png)
+
+You can reach the live editor from your browser by changing the url of the project from `github.com/ppqSense/QubeDocs/` to `github.dev/ppqSense/QubeDocs/` and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces" and then a remote machine configuration. From here you can follow the rest of the instructions as you would locally (with the exception of needing to setup a python virtual environment).
+
+![Open Terminal in Codespaces](tutorial_assets/open_terminal.png)
+![Continue with Codespaces](tutorial_assets/continue_with_codespaces.png)
+![Select Machine](tutorial_assets/select_machine.png)
 
 
-### Saving PDF Versions
+This option will take about a 2 minutes to setup, if it is your first time accessing the codespace (runs automated environment setup and configuration on startup). When finished, you can check that it is working by running `mkdocs build` and then `mkdocs serve`.
+
+
+ See the github [codespaces quickstart guide](https://docs.github.com/en/codespaces/quickstart) for more information on how codespaces work.
+
+### Local Editing (setup)
+
+If you don't already know how to use github or don't have it installed, follow the [readme](https://github.com/ppqSense/QubeDocs) instructions to setup your local environment. 
+
+First: install `weasyprint` on your system: (used for PDF generation)
+  - `sudo apt install weasyprint` (Ubuntu)
+  - [Executable download](https://github.com/Kozea/WeasyPrint/releases) (Windows)
+  - [All other systems](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html)
+
+Second: While in a local `Python3` virtual environment (see [readme](https://github.com/ppqSense/QubeDocs)) or codespace environment:
+
+- Navigate to the main project directory and run:
+
+   1. `pip install -r requirements.txt` to install all dependencies (do once)
+   2. Run `mkdocs build` to build out site structure and styling
+   3. Run `mkdocs serve` to serve a live test site 
+      - Navigate to provided URL to see site
+   
+## Important Steps for Local & Online Editing
+Changes to content should be reflected automatically upon save if `mkdocs serve` is running.
+
+!!! note "Site changes requiring rebuild"
+    `mkdocs build` must be re-run upon changes to styling or plugins.
+
+!!! warning "Always update python requirements upon package install"
+    Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:
+    - `pip freeze > requirements.txt` (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).
 
 Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired `.md` file along with its assets folder and PDF. By saving it under a new name in the `/docs/downloads` folder, the PDF can be added to the download page as a dated version of the manual.
 
 !!! note "Disabling PDF Generation"
     PDF generation can take up to 30 seconds each time. Disable during testing by following instructions in [to-pdf plugin](#To-pdf) section.
-    
-
 
 ### Pushing to Github
-If you are completely new to git:
-[(See Git Guide for beginners)](https://github.com/git-guides)
+If you are completely new to git see the
+[ Guide for beginners](https://github.com/git-guides) or the more descriptive [Atlassian Guide to git](https://www.atlassian.com/git/tutorials/what-is-git)
 
-- **Option A: From Github editor: (Easier)**
-  - Make your changes
-  - navigate to the git branch icon on the left
-  - write a descriptive message of your changes
-  - hit enter and follow instructions to push to main
+- **Option A: From Github Codespace: (Easier)**
+  - Make your changes in the codespace
+  - Navigate to the **source control** tab via the git branch icon on the left
+  - write a **commit** message (describing of your changes).
+  - Hit enter and follow instructions to push your change to the remote branch.
   ![alt text](tutorial_assets/gitcommit.png)
 
 - **Option B: From your local machine: (Advanced)**
-    1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-    2. Clone down the repository
+    1. [Setup your computer's ssh-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) (see README for details)
+    2. Clone down the repository `git clone <repo>` (see README for details)
+
     3. Follow best-practices with pushing and pulling to Github (via cmd terminal)
-       1. `git fetch` / `git pull` - make sure your local version is up to date
+       1. `git fetch` / `git pull` - make sure your local version is up to date with remote
        2. `git branch` - check what branch you are on
        3. If necessary, switch branch with `git switch -c <new branch name>` or `git checkout <remote branch name>`
-       4. Make your desired changes on desired branch (edit `main` if wanting to immediately update site)
+       4. Make your desired changes on desired branch (branch = `main` if wanting to immediately update site)
        5. `git status` - see which files you've changed
-       6. `git add <files>` - add files
+       6. `git add <files>` - add specific files or `git add .` add all changed files
        7. `git commit -m "description of changes"` - change message
        8. `git push` - push changes to Github
        9. `git status` / `git log` - confirm changes were saved
     4. If you pushed directly to `main`, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.
-       1. When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a `pull request` and merge your branch into `main`
-   
+       -  When ready to update the site, follow [Github instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to make a **pull request** and **merge** your branch into `main`
 
----
+
 
 ## Guide to using markdown
 
@@ -313,39 +385,6 @@ Whenever the site is rebuilt  (`mkdocs serve` or `mkdocs build`) it is saved in 
 ```
 
 ---
-
-## Advanced Features
-
-### Comprehensive Site Editing
-
-To edit the styling or functionality of the site, it is best develop on a fully functional local version (before updating the live site). 
-
-If you don't already know how to use github, follow the [readme](https://github.com/ppqSense/QubeDocs) instructions to setup your local environment. 
-
-!!! note "Github Codespaces"
-    You can also use the live codespace editor in github instead of your local machine for development. See the (Codespaces Quickstart guide)[https://docs.github.com/en/codespaces/quickstart] for more information.
-
-
-You can reach the live editor from your browser by changing the url of the project from `github.com/ppqSense/QubeDocs/` to `github.dev/ppqSense/QubeDocs/` and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces". From here you can follow the rest of the instructions as you would locally.
-
-### Local Preview
-While in a `Python3` virtual environment & the main project directory run:
-
-   1. `pip install -r requirements.txt` to install all dependencies (do once)
-   2. Run `mkdocs build` to build out site structure and styling
-   3. Run `mkdocs serve` to serve a live test site 
-      - Navigate to provided URL to see site
-   
-### Local Editing Tips
-- Changes to content should be reflected automatically upon save if `mkdocs serve` is running.
-- `mkdocs build` must be re-run upon changes to styling or plugins.
-- Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:
-  -  `pip freeze > requirements.txt` (do before pushing changes)
-    - This is important to make sure that other editors can correctly setup their environment for testing.
-
-## Proposed Edit, Review, & Approve Workflow
-
-
 
 ### Additional features that may be added later
 - automatic "table of figures" generation
