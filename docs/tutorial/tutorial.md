@@ -47,6 +47,7 @@ Additional styling and functionality comes from the chosen theme [Material for M
 
 ---
 
+[HERE IS A CHANGE I MADE TO DEMONSTRATE PULL REQUESTS] - I am adding new content in a comment
 ## Editing Content
 
 If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor or directly on the main github site for small changes (navigate to the page of interest and select the edit-pencil button).
