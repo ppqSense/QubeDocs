@@ -24,8 +24,24 @@ theme:
     - toc.follow
     # - toc.integrate
     - tabs: true
+  # palette:
+  #   primary: purple
   palette:
-    primary: purple
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   custom_dir: ppq_theme
 extra:
   generator: false # removes made with material for MkDocs from project footer
@@ -56,6 +72,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - tables
+  - mdx_spanner
   - markdown_katex:
       no_inline_svg: true
   - pymdownx.highlight

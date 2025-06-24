@@ -4,54 +4,6 @@ toc_depth: 1
 ---
 # QubeCL Laser Driver Manual V.5
 
-<!-- *table-of-figures -->
-
-<!-- [TOC] -->
-<!-- 
-## List of Tables
-
-1  
-Communication Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-[6](#table.caption.2) 2  
-Absolute Maximum Ratings . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-[6](#table.caption.3) 3  
-Current Generator Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-6 4  
-Analog Current Modulators Specs . . . . . . . . . . . . . . . . . . . . . . . .  
-[7](#table.caption.5) 5  
-Mixed Current Generator Specs - Digital . . . . . . . . . . . . . . . . . . . .  
-7 6  
-Mixed Current Generator Specs - Analog . . . . . . . . . . . . . . . . . . . .  
-[8](#table.caption.7) 7  
-Temperature Controller Specs . . . . . . . . . . . . . . . . . . . . . . . . . .  
-8 8  
-PLL Module Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-[8](#table.caption.9) 9  
-Pound-Drever-Hall module Specs . . . . . . . . . . . . . . . . . . . . . . . .  
-8 10 Lock-In Ampliﬁer module Specs . . . . . . . . . . . . . . . . . . . . . . . . .  
-[9](#table.caption.11) 11 Power source voltages speciﬁcations . . . . . . . . . . . . . . . . . . . . . . . 14 13 Available commands for QubeCL current generator. . . . . . . . . . . . . . . 57 14 Available commands for QubeCL temperature controller. . . . . . . . . . . . . [58](#table.14) 15 Available commands for the DDS submodule. . . . . . . . . . . . . . . . . . . 60 16 Available commands for the PLL locking module. . . . . . . . . . . . . . . . . [62](#table.16) 17 Available commands for the PDH locking module. . . . . . . . . . . . . . . . 64 18 Available commands for the LIA locking module. . . . . . . . . . . . . . . . . [66](#table.18) 19 Available commands to check the instrument status. . . . . . . . . . . . . . . 67
-
-## List of Figures
-
-1  
-Current noise spectral density comparison with low current modulator . . . . . [10](#figure.caption.12) 2  
-Current noise spectral density comparison with high current modulator . . . . 10 3  
-24h Current stability over ambient temperature . . . . . . . . . . . . . . . . . [11](#figure.caption.16) 4  
-24h Current stability over time . . . . . . . . . . . . . . . . . . . . . . . . . 11 5  
-Current temperature coeﬃcient . . . . . . . . . . . . . . . . . . . . . . . . . [12](#figure.caption.18) 6  
-QubeCL15TP front panel . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 7  
-Power connector pin diagram . . . . . . . . . . . . . . . . . . . . . . . . . . 16 8  
-TEC connector pin diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . [16](#figure.caption.31) 9  
-QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 19 10 The QubeCL\_Control software conﬁguration panel . . . . . . . . . . . . . . . [20](#figure.caption.41) 11 The QubeCL\_Control software current driver panel . . . . . . . . . . . . . . . 21 12 The QubeCL\_Control software temperature control panel . . . . . . . . . . . [22](#figure.caption.46) 13 The QubeCL\_Control software Advanced tab . . . . . . . . . . . . . . . . . . 23 14 Appearance of the LH module equipped with the DDS sub-module . . . . . . [29](#figure.caption.56) 15 The DDS control panel of the QubeCL\_Control Software . . . . . . . . . . . 30 16 Appearance of the PLL module . . . . . . . . . . . . . . . . . . . . . . . . . 32 17 Control Software Interface dedicated to the PLL Module . . . . . . . . . . . . [33](#figure.caption.66) 18 Appearance of the PDH module . . . . . . . . . . . . . . . . . . . . . . . . . 36 19 Control Software Interface dedicated to the PDH Module . . . . . . . . . . . [37](#figure.caption.77) 20 Appearance of the LIA module . . . . . . . . . . . . . . . . . . . . . . . . . 40 21 Control Software Interface dedicated to the LIA Module . . . . . . . . . . . . [42](#figure.caption.96)
-22 The ﬁrst Advanced tab of the Control Software GUI - 48  
-23 The ﬁrst Advanced tab of the Control Software GUI - 50  
-24 Bias Tee simpliﬁed electronic diagram - 52  
-25 Drawings of the NanoPlus Cubic Mount Interface Board - 55  
-26 Drawings of the HHL Interface Board - 55  
-
----  -->
-
-
 ## 1. Warranty
 
 ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmanship defects for one year from the date of the original shipment **(1-YEAR WARRANTY).** This warranty is in lieu of all other guarantees expressed or implied, including any implied warranty of merchantability or ﬁtness for any particular purpose. ppqSense S.r.l. shall not be liable for any special, incidental or consequential loss. During the warranty period, ppqSense S.r.l. will repair or replace the unit or module, or issue credit, at our option, without charge. ppqSenses liability shall not in any case exceed the cost of correcting defects in the products as explained here, and this service is the sole remedy of the buyer. This warranty does not apply to defects caused by abuse, accident, modiﬁcations, Acts of God, or the use of the product for which it was not intended. ppqSense S.r.l. shall not be liable for damages resulting from the use of the product, nor shall be responsible for any failure in the performance of other items to which the purchased product is connected or the operation of any system of which the purchased product may be a part. The QubeCL System should not be used in the manner not speciﬁed by the manufacturer.
@@ -114,12 +66,12 @@ Table: Analog Current Modulators Specs
 |---|---|---|---|---|---|  
 | Analog input voltage | 0 || ± 10 | V ||  
 | DC oﬀset | 20 | 30 | 50 | µA | input shorted |  
-| **Low Current**|
+|**Low Current** | :~~: | ~~ | ~~ | ~~ | ~~ |
 | Noise spect. dens. ﬂoor | 50 || 100 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 5 | mA ||  
 | Gain || -0.5 || mA/V ||  
 | Modulation BW (-3 dB) || 2 || MHz ||  
-| **High current**||||||  
+|**High current**| :~~: | ~~ | ~~ | ~~ | ~~ |
 | Noise spect. dens. ﬂoor | 200 || 2000 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 100 | mA ||  
 | Gain || -10 || mA/V ||  
@@ -138,11 +90,11 @@ Table: Mixed Current Generator Specs - Digital
 | Min freq. step || 250 || mHz ||  
 | Amplitude control res. || 12 || bits ||  
 | DC oﬀset | 20 | 30 | 50 | µA | input shorted |  
-| **Low current** |  
+| **Low current** | :~~: | ~~ | ~~ | ~~ | ~~ | 
 | Noise spect. dens. ﬂoor | 50 || 100 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 2 *.* 5 | mA ||  
 | Modulation BW (-3 dB) || 2 || MHz ||  
-| **High current** |  
+| **High current** | :~~: | ~~ | ~~ | ~~ | ~~ |
 | Noise spect. dens. ﬂoor | 200 || 2000 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 75 | mA ||  
 | Modulation BW (-3 dB) || 600 || kHz ||  
@@ -157,12 +109,12 @@ Table: Mixed Current Generator Specs - Analog
 |---|---|---|---|---|---|  
 | Analog input voltage | 0 || ± 2 *.* 5 | V ||  
 | DC oﬀset | 20 | 30 | 50 | µA | input shorted |  
-| **Low current** | 
+| **Low current** | :~~: | ~~ | ~~ | ~~ | ~~ |
 | Noise spect. dens. ﬂoor | 50 || 100 | pA / Hz | input shorted |  
 | Output current | 0 || ± 2 *.* 5 | mA ||  
 | Gain || -1 || mA/V ||  
 | Modulation BW (-3 dB) || 2 || MHz ||  
-| **High current** |
+| **High current** | :~~: | ~~ | ~~ | ~~ | ~~ |
 | Noise spect. dens. ﬂoor | 200 || 2000 | pA */* Hz | input shorted |  
 | Output current | 0 || ± 75 | mA ||  
 | Gain || -30 || mA/V ||  
@@ -288,7 +240,7 @@ If the QubePS power supply is included in the QubeCL kit, the user has simply to
 
 ### 4.4 Connectors and LED indicators functions
 
-A schematic view of the front panel of the QubeCL can be seen in [](#front_panel). The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Tem- perature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: 
+A schematic view of the front panel of the QubeCL can be seen in [](#front_panel). The image represents a QubeCL15TL, being a QubeCL equipped with a 1.5 A current generator, Temperature Controller module and Phase-Locked Loop module. Below, a list of the connectors and LEDs present on the front panel can be found, along with their description: 
 
 **Connectors:**
 
@@ -387,19 +339,19 @@ Otherwise, if the QubePS is not included:
 
 - Set the voltage values of the **ﬂoating** power supplies you’re using following the indication from the [dedicated section](#43-electrical-power-supply) of this manual.
 - Connect the QubeCL to the power supply by the mean of the provided cable  
-  - Connect $`TEC+`$ and $`TEC-`$ to the $`+/-`$ poles of the power supply selected channel for electrical supply of the TC module, respectively.  
-  - Connect $`LAS+`$ and $`LAS-`$ to the $`+/-`$ poles of the power supply selected channel for electrical supply of the CM module(s), respectively.
+  - Connect TEC$`+`$ and TEC$`-`$ to the $`+/-`$ poles of the power supply selected channel for electrical supply of the TC module, respectively.  
+  - Connect LAS$`+`$ and LAS$`-`$ to the $`+/-`$ poles of the power supply selected channel for electrical supply of the CM module(s), respectively.
 
 !!! danger "CAUTION -- RESPECT THE POLARITY"
 
     If not using a QubePS be sure to **RESPECT THE POLARITY** of the power supply cable. **REVERSE** voltages will damage the instrument.  
-    In case you’re not using a dual-channel power supply, but two diﬀerent power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.
+    In case you’re not using a dual-channel power supply, but two different power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.
 
 - Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system.
 
 - Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system.
 
-- Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system ***N.B.** This operation is not necessary if the QubeCL includes a laser housing module).
+- Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system (**N.B.** This operation is not necessary if the QubeCL includes a laser housing module).
 
 - Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system (**N.B.** This operation is not necessary if the QubeCL includes a laser housing module).
 
@@ -414,7 +366,7 @@ In this section the usage of the Control Software to manage the basic operation 
 ### 5.2.1 Connecting to the QubeCL
 
 To use the QubeCL_Control software, locate the directory where you’ve previously placed  
-the `QubeCL_CONTROL:vX.X` folder from the USB key and launch the `QubeCL_Control_vX.X.exe` application. 
+the `/QubeCL_CONTROL:vX.X` folder from the USB key and launch the `QubeCL_Control_vX.X.exe` application. 
 
 
 A graphical interface as the one showed in [](#main-screen) will be displayed. While the program search  
@@ -432,7 +384,7 @@ The GUI of the control software is subdivided into three main horizontal panels:
 
 ![The QubeCL_Control software conﬁguration panel](assets_QubeCL_Manual_v5/img-0953.png){#config-panel}
 
-The **Conﬁguration panel** at the top [](#config-panel) there can be found:
+The **Conﬁguration panel** at the top ([](#config-panel)) there can be found:
 
 - **INSTRUMENT** menu: allows the selection of the QubeCL that the user wants to connect to. The connection can be established only at the start-up of the program, it is not possible to switch to another QubeCL instrument without restarting the control software.
 
@@ -453,11 +405,11 @@ The **Current driver panel** is the middle one [](#current_panel) there can be f
 
 - **Current setpoint:** from there, the user can change the current that needs to be sourced by the QubeCL to the laser. Three diﬀerent controls allow the user to change this value:
 
-- A numerical value expressed in mA can be directly typed into the dedicated form;
+    - A numerical value expressed in mA can be directly typed into the dedicated form;
 
-- A horizontal slider, to the left of the numerical value, can be used to set the current;
+    - A horizontal slider, to the left of the numerical value, can be used to set the current;
 
-- Four buttons can be used to increment or decrement the current by ﬁxed steps. The desired amplitude for the steps can be typed in the two dedicated forms below the arrow buttons.
+    - Four buttons can be used to increment or decrement the current by ﬁxed steps. The desired amplitude for the steps can be typed in the two dedicated forms below the arrow buttons.
 
 - **Iout** button: enables/disables the current output of the QubeCL.  
 This button includes a green LED indicator. This LED is switched ON when the QubeCL is delivering current to the laser. Once the user switches oﬀ the current, the button becomes gray and the QubeCL gradually lowers the current sourced to the laser until it is completely switched oﬀ. The LED will be switched oﬀ only when the current is.
@@ -472,7 +424,12 @@ This button includes a green LED indicator. This LED is switched ON when the Qub
 
 - **Current plot:** shows the temporal behaviors of the set current (orange trace) and the actual output current (purple trace). This plot won’t show any modulation signal that may be applied to the output current.
 
-The **Temperature control panel** at the bottom **(Figure 12),** where the subsequent com- mands can be found:
+---
+
+![The QubeCL_Control software temperature control panel](assets_QubeCL_Manual_v5/img-0974.png){#temp-panel}
+
+
+The **Temperature control panel** [](#temp-panel) where the subsequent commands can be found:
 
 - **Temp. SetPoint:** sets the desired operating temperature for the laser, expressed in °C.
 
@@ -485,22 +442,13 @@ The **Temperature control panel** at the bottom **(Figure 12),** where the subse
 - **Temperature PID parameters** panel: the TEC module stabilizes the temperature of the laser by the mean of a PID correction loop. This window allows the user to change the values of the three functional parameters of the PID, both with sliders and textual inputs. Detailed instruction can be found below.
 
 - **Save** button: saves the setpoint, loop sign, PID gains and Tstab status on the ROM memory of the QubeCL so that they can be used as default at next switch on.  
-**N.B.** This command also saves the status of Tstab, hence if the Save button is pressed when the temperature stabilization is active, the QubeCL will automatically start to stabilize the temperature once it gets powered up. If this behavior is unwanted, Save button must be pressed when the temperature stabilization is inactive.
+    - **N.B.** This command also saves the status of Tstab, hence if the Save button is pressed when the temperature stabilization is active, the QubeCL will automatically start to stabilize the temperature once it gets powered up. If this behavior is unwanted, Save button must be pressed when the temperature stabilization is inactive.
 
 - **Temperature and TEC current** plots: switching from one to another, the user can have a look over the temporal behavior of the readed and setpoint temperatures of the laser and of the current erugated by the TC module.
-
-![](assets_QubeCL_Manual_v5/img-0974.png)
-
-**Figure 12:** The QubeCL\_Control software temperature control panel
-
-  
-
 
 ---
 
 ### 5.3 Operation
-
-
 
 Once the QubeCL has been correctly set-up, the eﬀective operations can begin following the steps listed below:
 
@@ -510,44 +458,39 @@ LED L5 (red) lights on, meaning that the laser temperature is not stabilized. If
 
 - Once you connect the USB cable to the QubeCL, LED L1 (green) switches ON.
 
-- Start the QubeCL\_control program, wait until it detects the connected QubeCL(s), chose the one you want to connect to and press the blinking **CONNECT** button.
+- Start the QubeCL_control program, wait until it detects the connected QubeCL(s), chose the one you want to connect to and press the blinking **CONNECT** button.
 
 - The ﬁrst thing to do when starting to work with a new set-up, is to set all the safety parameters oﬀered by the QubeCL:
 
-- In the conﬁguration panel, set the **maximum current limit** following the max- imum current limit indicated in your laser device datasheet and/or test report. Once set, if the user tries to set a current higher than this maximum value, the software will cap it to the maximum value.
+    - In the conﬁguration panel, set the **maximum current limit** following the maximum current limit indicated in your laser device datasheet and/or test report. Once set, if the user tries to set a current higher than this maximum value, the software will cap it to the maximum value.
 
-- In the TC Advanced section of the Advanced **tab(Figure 13),** that can be found in the lower panel, use the **TEC limit** control to set the **maximum current** that the TC controller may source to the Peltier stage. To do so, you must press the correspondent **CHANGE** button.
+    - In the TC Advanced section of the Advanced tab ([](#adv-tab)), that can be found in the lower panel, use the **TEC limit** control to set the **maximum current** that the TC controller may source to the Peltier stage. To do so, you must press the correspondent **CHANGE** button.
 
-![](assets_QubeCL_Manual_v5/img-0976.jpg)
+![The QubeCL_Control software Advanced tab](assets_QubeCL_Manual_v5/img-0976.jpg){#adv-tab}
 
-**Figure 13:** The QubeCL\_Control software Advanced tab
+Once the safety values are set, the user may start to operate the QubeCL.
 
-Once the safety values are set, the user may start to operate the QubeCL.  
 Before turning on the current driver, it is necessary to stabilize the temperature of the laser. This can be done by the QubeCL if the TC module is included in the device conﬁguration.
-
-  
-
 
 ---
 
 ### 5.3.1 Temperature control operation
-
-
 
 This sequence of operation has to be performed only if the QubeCL houses a TC module, being in charge of temperature stabilization of the laser. All the necessary controls can be found in the **Temperature Controller** tab, in the lower panel of the GUI.
 
 - In the **Temp SetPoint** form, set the temperature at which the laser device has to be stabilized. QubeCL accepts value with a precision down to the second decimal place. The temperature setpoint can be changed at any time during the operations.
 
 - Set the **I** and **D** parameters of the PID controller to 0.0 and **P** to a middle value.
+
 - Press the **Tstab** button to activate the temperature stabilization:
 
 - Once done, TStab button turns orange, **LED L5 lights red** indicating that the desired temperature has not been reached yet.
 
-- At ﬁrst, **check the temperature plot** on the GUI, if the measured temperature drifts towards the desired setpoint, the sign of the loop is the correct one. Other- wise, if the measured temperature drifts away from the setpoint, it is necessary to switch the sign of the loop using the dedicated **sign buttons.**
+    - At ﬁrst, **check the temperature plot** on the GUI, if the measured temperature drifts towards the desired setpoint, the sign of the loop is the correct one. Other- wise, if the measured temperature drifts away from the setpoint, it is necessary to switch the sign of the loop using the dedicated **sign buttons.**
 
-- **Increase the I gain** searching for an oscillating behavior of the measured temper- ature around the setpoint. Tstab button will become green each time the measured temperature stays in a range of 20 mK around the setpoint. Similarly, LED L5 will turn oﬀ and LED L6 will turn on in this range.
+    - **Increase the I gain** searching for an oscillating behavior of the measured temper- ature around the setpoint. Tstab button will become green each time the measured temperature stays in a range of 20 mK around the setpoint. Similarly, LED L5 will turn oﬀ and LED L6 will turn on in this range.
 
-- **Adjust P and I parameters** trying to reduce the oscillating behavior as much as possible, while also reducing the time needed to the measured temperature to converge to the setpoint. At last, TStab must be constantly green, LED L5 turned oﬀ and LED L6 turned on.
+    - **Adjust P and I parameters** trying to reduce the oscillating behavior as much as possible, while also reducing the time needed to the measured temperature to converge to the setpoint. At last, TStab must be constantly green, LED L5 turned oﬀ and LED L6 turned on.
 
 Once the Temperature Controller parameters have been set to the optimal ones, it is possible to store them in the QubeCL ROM memory using the **Save button** in the Temperature Controller tab to have them as default from now on. Remember that the save button will also store the stabilization status, meaning that if the Temperature Controller were active while saving, it will automatically start to stabilize the laser once the QubeCL is switched on again.
 
@@ -555,13 +498,6 @@ To operate the Temperature Controller at best of its performance, please keep in
 
 - If the heatsink of the laser is unable to dissipate enough heat, its temperature will gradually raise. If so, the Temperature Controller will have to correct an increasing temperature diﬀerence, being forced to constantly, even if slowly, increase its current output, eventually reaching the **maximum value.** Once reached, the Temperature Controller will be unable to further stabilize the temperature of the laser.  
 To avoid this behavior, it is suﬃcient to check if the current sourced by the temperature controller is not constantly drifting towards one of its maximum values. Otherwise, a better heat management would be necessary.
-
-  
-
-
----
-
-
 
 - The Temperature Controller includes a **safety behavior** in order to avoid to operate with a not stabilized laser for long time. Once the temperature stabilization is activated, the Controller constantly check the diﬀerence between the measured temperature and the setpoint. At each check, the diﬀerence is summed to the previoulsy measured ones. If the measured temperature crosses the setpoint, the sum is set back to 0.  
 If the sum goes over a certain threshold, the Temperature Controller **raises an error,** meaning that is was not capable of stabilize the laser Temperature. The threshold can be chosen with the **ErrorSumLim** parameter which is present in the **Advanced Tab.** This limit can be increased if it is too short and causes errors to be raised even when the Controller is converging toward stabilization. An higher threshold would nevertheless increase the time before an error raises when the Temperature Controller is eﬀectively failing to stabilize the laser temperature.
@@ -582,57 +518,52 @@ The **ModEn** button is not active for 10 seconds starting from the current bein
 
 The parameters for the Current Generator can be stored in the ROM memory of the QubeCL to be used as default when the QubeCL is switched on by clicking the **Save button.** Unlike the Temperature Controller, save button of the current control panel **will not save the Current Generator status,** hence the QubeCL never automatically starts to source current to the laser when it gets switched on.
 
-  
-
 
 ---
 
 ### 5.3.3 Automatic protections
 
 
-
 QubeCL continuously monitors a variety of functional parameters both of the laser and of the QubeCL driver itself. The data acquired allows the QubeCL to implement a series of automatic protections to operate as safe as possible, avoiding damage to the QubeCL and, most importantly, to the laser device.  
 The QubeCL driver implement the following protection for the Current Generator:
 
-**Open-circuit protection:** this safety measure con- stantly checks if the electrical connection with the laser is still present, otherwise the Current Gener- ator is immediately switched oﬀ and the QubeCL output is shorted.  
+![](assets_QubeCL_Manual_v5/img-0980.png){class="inline end"}
+
+
+**Open-circuit protection:** this safety measure con- stantly checks if the electrical connection with the laser is still present, otherwise the Current Generator is immediately switched oﬀ and the QubeCL output is shorted.  
 If this condition is detected, a blinking warning sig- nal appears on the GUI, next to the Vlas indicator in the Readings box of the Current Generator panel.
 
-![](assets_QubeCL_Manual_v5/img-0980.png)
+![](assets_QubeCL_Manual_v5/img-0981.png){class="inline end"}
 
-**Compliance Limit reached:** the same warning described above is raised if the QubeCL senses a voltage across the laser higher than the maximum allowed compliance voltage. Such Compliance Limit [CL] voltage depends on the nominal Source Voltage for the Current Gen- erator and can be obtained as CL = (0.77 · Vcc) - 1.
 
-**Low Voltage Supply protection:** if the CM mod- ule supply voltage falls below 18.5 V, the QubeCL automatically switches oﬀ the current and shorts the output connector.  
+**Compliance Limit reached:** the same warning described above is raised if the QubeCL senses a voltage across the laser higher than the maximum allowed compliance voltage. Such Compliance Limit [CL] voltage depends on the nominal Source Voltage for the Current Generator and can be obtained as $`CL = (0.77 · Vcc) - 1`$.
+
+**Low Voltage Supply protection:** if the CM module supply voltage falls below 18.5 V, the QubeCL automatically switches oﬀ the current and shorts the output connector.  
 A blinking warning signal appears on the GUI, next to the Vcc monitor in the Readings panel.
 
-![](assets_QubeCL_Manual_v5/img-0981.png)
-
-The previously described errors will not be deasserted if the warning condition is not met anymore (for example, if the Supply Voltage raises again above 18.5 V). This behavior has been implemented to avoid the warning to go unnoticed in case the user were not monitoring the GUI or the QubeCL\_Control program were not running when the error condition happened. Once the cause of the error condition has been eliminated, the user can reset the errors by switching on the current generator.
-
-  
 
 
----
-
+!!! note 
+    The previously described errors will not be deasserted if the warning condition is not met anymore (for example, if the Supply Voltage raises again above 18.5 V). This behavior has been implemented to avoid the warning to go unnoticed in case the user were not monitoring the GUI or the QubeCL\_Control program were not running when the error condition happened. Once the cause of the error condition has been eliminated, the user can reset the errors by switching on the current generator.
 
 
 The QubeCL also monitors the temperature of the laser, implementing some safety features to prevent potentially dangerous conditions:
 
+![](assets_QubeCL_Manual_v5/img-0983.png){class="inline end"}
+
 **TEC module communication fault:** if some problem oc- curs to the communication with the TEC module (i.e. when the module is not properly powered) the Temp Read value becomes -273 °C, and a warning box appears next to it (see Figure at right). The warning disappears as soon as the com- munication with the TEC is re-established.
+
+![](assets_QubeCL_Manual_v5/img-0984.png){class="inline end"}
+
 
 **Temperature sensor fault:** in case the temperature sensor is not working properly (i.e. it is not connected to the TEC module), the Temp Read value becomes -67.737 °C and the warning square box appears next to the readed value.  
 In case one of the above problems occur when the Temper- ature Stabilization is active, a warning box appears also next to the Temp Read line. If the QubeCL is sourcing current to the laser when a Temperature Controller fault is detected, the current source is disabled to prevent damage to the laser.
 
+![](assets_QubeCL_Manual_v5/img-0985.png){class="inline end"}
+
+
 **Temperature stabilization problem:** if, for any reason, the Temperature Controller modules fails to stabilize the laser temperature (i.e. wrong PID sign, poor heat management), the QubeCL disables both Temperature Stabilization and Cur- rent output to the laser. A warning box appears next to the Temp Read line.  
-The threshold above which a Temperature stabilization is raised can be changed by acting the **Error Sum Lim** pa- rameter in the Advanced tab, as previously described.
-
-  
-
-
-![](assets_QubeCL_Manual_v5/img-0983.png)
-
-![](assets_QubeCL_Manual_v5/img-0984.png)
-
-![](assets_QubeCL_Manual_v5/img-0985.png)
+The threshold above which a Temperature stabilization is raised can be changed by acting the **Error Sum Lim** parameter in the Advanced tab, as previously described.
 
 ---
 
@@ -640,12 +571,15 @@ The threshold above which a Temperature stabilization is raised can be changed b
 
 ## 6 Advanced Operations - Modulators and DDS
 
-Besides the basic functionality, QubeCL may perform a variety of advanced operations while driving a laser device. As well as the basic functions, the advanced ones are performed by dedicated modules.  
+Besides the basic functionality, QubeCL may perform a variety of advanced operations while driving a laser device. As well as the basic functions, the advanced ones are performed by dedicated modules.
+
 The laser Head (LH) module is the one deputed to the connection to an external laser and, besides providing all the necessary switches and safety features, it also includes two **current** modulator circuits.
 
 The modulator circuits onboard of the LH are capable of directly injecting current to the laser, superimposing their output signal over the DC bias current sourced by the Current Generator. The modulating current signal generated by the modulators is proportional to the input signal that is applied to the dedicated inputs on the LH module. If we denote the modulation current with *Imod* , the input control voltage with *Vin* and the absolute value of the gain in *mA/V* with *G* , the modulation current is equal to:
 
-*Imod* = −G · *Vin* .
+```math
+Imod = −G · Vin
+```
 
 This means that a **positive control voltage will subtract current** from the laser bias current while a **negative control voltage will add** the modulating current to the DC bias. The two modulators can be activated ad the same time, in which case their output signals would arithmetically add together.  
 The two modulators are built in order to cover all the possible needs that may arise while driving a laser:
@@ -667,42 +601,38 @@ The maximum current value that the user can set on the QubeCL does not comprehen
 ---
 
 
-Figure: Appearance of the LH module equipped with the DDS sub-module
-
-![](assets_QubeCL_Manual_v5/img-0988.png)
-
-
 ### 6.1 The DDS sub-module
 
-The LH module may host a smaller sub-module, namely the **DDS sub-module.** DDS stands for Direct Digital Synthesis, being a digitally controlled electronic circuits capable of generating analog signals with the ability of controlling some of their parameters (being Amplitude, Frequency, Phase and Waveform).  
+![Appearance of the LH module equipped with the DDS sub-module](assets_QubeCL_Manual_v5/img-0988.png){#lh_with_dds}
+
+
+The LH module may host a smaller sub-module, namely the **DDS sub-module.** DDS stands for Direct Digital Synthesis, being a digitally controlled electronic circuits capable of generating analog signals with the ability of controlling some of their parameters (being Amplitude, Frequency, Phase and Waveform). 
+
+
 This sub-module adds two DDS circuits to the LH module, enabling the QubeCL to generate its own modulating signals without needing an external signal generator connected to the Modulation inputs. Since the DDS sub-module is housed inside the LH module, it won’t modify the physical dimensions of the QubeCL driver.  
 The generated signals are directly injected into the DC bias current similarly to the signals from the externally sourced modulators.  
+
+
 When the QubeCL also includes a **PDH** or **LIA** module, the DDS sub-module is capable of interacting with them, providing all the synchronous signals that are necessary for those two modules to perform their operations. For more information, please check the chapters dedicated to the PDH and LIA modules.
 
 ### 6.1.1 Connectors
 
 The presence of the DDS sub-module adds some feature to the QubeCL and consequently some minor modiﬁcation to the LH module interconnections are present.  
-The three standard connectors previously described are still present, but the connector **C7** is added on the left side of the module, as it is shown in **Figure 14.** C7** is an output SMA connector. The DDS module is capable of generating a **5 V square- wave** synchronization signal which is sourced from the low impedance output on C7. The user may chose to synchronize this signal both to the waveform sourced by DDS1 or to the waveform sourced by DDS2.
+The three standard connectors previously described are still present, but the connector **C7** is added on the left side of the module, as it is shown in [](#lh_with_dds) **C7** is an output SMA connector. The DDS module is capable of generating a **5 V square- wave** synchronization signal which is sourced from the low impedance output on C7. The user may chose to synchronize this signal both to the waveform sourced by DDS1 or to the waveform sourced by DDS2.
 
 ### 6.1.2 Control Software interface
 
-The QubeCL \_Control Software includes a section dedicated to the control of the DDS module functionalities. The section can be accessed in the lower part of the GUI by selecting the DDS tab , which is shown in **Figure 15.**  
+The QubeCL \_Control Software includes a section dedicated to the control of the DDS module functionalities. The section can be accessed in the lower part of the GUI by selecting the DDS tab , which is shown in [](#dds_panel).  
+
+![The DDS control panel of the QubeCL_Control Software](assets_QubeCL_Manual_v5/img-0990.png){#dds_panel}
+
+
 The DDS control tab is subdivided into three panels:
 
 - The **Sync. Channel** panel includes the controls for the external synchronization signal.
 
 - The **Channel 1** and **Channel 2** panels include all the interfaces to properly control the characteristics of the signal generated by the two DDS circuits.
 
-  
-
-
----
-
-
-
-![](assets_QubeCL_Manual_v5/img-0990.png)
-
-**Figure 15:** The DDS control panel of the QubeCL\_Control Software
 
 The **Sync. Channel** panel allows the user to select to which DDS the external synchroniza- tion channel must be synchronized. To do so, the GUI shows the **Sync. frequency** selector. Below the selector, a read-only form shows the actual frequency of the synchronization signal, which is equal to the one of the selected DDS channel.
 
@@ -717,16 +647,12 @@ The **Channel 1** and **Channel 2** panels contain the same controls, replicated
 - **AMPLITUDE:** this form allows the user to set the peak-to-peak amplitude of the modulating signal, expressed in mA. The value can also be modiﬁed by using the up and down arrows next to the form.
 
 - **FREQUENCY:** allows the user to set the frequency of the modulating signal.
+
 - **PHASE:** allows the user to set the phase of the modulating signal.
-
-  
-
 
 ---
 
 ### 6.1.3 DDS operations
-
-
 
 To operate with the DDS module, follow the steps listed below:
 
@@ -762,9 +688,19 @@ Since each laser can only be locked to a reference at a time, in this case anoth
 
 ### 7.1 Connectors
 
-![](assets_QubeCL_Manual_v5/img-0993.png)
+![Appearance of the PLL module](assets_QubeCL_Manual_v5/img-0993.png){#pll_module}
 
-**Figure 16:** Appearance of the PLL module
+|      Connector |   Type |   Attributes |
+|----------------|--------|--------------|
+|      C8. RF in |  Input | Signal level |
+|             -- |     -- |    Bandwidth |
+|      C9. LO in |  Input | Signal level |
+|             -- |     -- |    Bandwidth |
+|       C10. mon | Output |     Requires |
+|             -- |     -- |   AC Coupled |
+| C11. Phase mon | Output |     Requires |
+|             -- |     -- |   DC Coupled |
+|             -- |     -- |        Range |
 
 **C8. RF in**  
 Signal level :  

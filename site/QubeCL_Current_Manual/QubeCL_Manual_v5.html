@@ -68,6 +68,8 @@
   
     
     
+      
+    
     
     
     
@@ -122,7 +124,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1702,53 +1730,6 @@
     }
 </style>
 </head><body><h1 id="qubecl-laser-driver-manual-v5">QubeCL Laser Driver Manual V.5<a class="headerlink" href="#qubecl-laser-driver-manual-v5" title="Permanent link">¶</a></h1>
-<!-- *table-of-figures -->
-
-<!-- [TOC] -->
-<!-- 
-## List of Tables
-
-1  
-Communication Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-[6](#table.caption.2) 2  
-Absolute Maximum Ratings . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-[6](#table.caption.3) 3  
-Current Generator Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-6 4  
-Analog Current Modulators Specs . . . . . . . . . . . . . . . . . . . . . . . .  
-[7](#table.caption.5) 5  
-Mixed Current Generator Specs - Digital . . . . . . . . . . . . . . . . . . . .  
-7 6  
-Mixed Current Generator Specs - Analog . . . . . . . . . . . . . . . . . . . .  
-[8](#table.caption.7) 7  
-Temperature Controller Specs . . . . . . . . . . . . . . . . . . . . . . . . . .  
-8 8  
-PLL Module Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
-[8](#table.caption.9) 9  
-Pound-Drever-Hall module Specs . . . . . . . . . . . . . . . . . . . . . . . .  
-8 10 Lock-In Ampliﬁer module Specs . . . . . . . . . . . . . . . . . . . . . . . . .  
-[9](#table.caption.11) 11 Power source voltages speciﬁcations . . . . . . . . . . . . . . . . . . . . . . . 14 13 Available commands for QubeCL current generator. . . . . . . . . . . . . . . 57 14 Available commands for QubeCL temperature controller. . . . . . . . . . . . . [58](#table.14) 15 Available commands for the DDS submodule. . . . . . . . . . . . . . . . . . . 60 16 Available commands for the PLL locking module. . . . . . . . . . . . . . . . . [62](#table.16) 17 Available commands for the PDH locking module. . . . . . . . . . . . . . . . 64 18 Available commands for the LIA locking module. . . . . . . . . . . . . . . . . [66](#table.18) 19 Available commands to check the instrument status. . . . . . . . . . . . . . . 67
-
-## List of Figures
-
-1  
-Current noise spectral density comparison with low current modulator . . . . . [10](#figure.caption.12) 2  
-Current noise spectral density comparison with high current modulator . . . . 10 3  
-24h Current stability over ambient temperature . . . . . . . . . . . . . . . . . [11](#figure.caption.16) 4  
-24h Current stability over time . . . . . . . . . . . . . . . . . . . . . . . . . 11 5  
-Current temperature coeﬃcient . . . . . . . . . . . . . . . . . . . . . . . . . [12](#figure.caption.18) 6  
-QubeCL15TP front panel . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 7  
-Power connector pin diagram . . . . . . . . . . . . . . . . . . . . . . . . . . 16 8  
-TEC connector pin diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . [16](#figure.caption.31) 9  
-QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 19 10 The QubeCL\_Control software conﬁguration panel . . . . . . . . . . . . . . . [20](#figure.caption.41) 11 The QubeCL\_Control software current driver panel . . . . . . . . . . . . . . . 21 12 The QubeCL\_Control software temperature control panel . . . . . . . . . . . [22](#figure.caption.46) 13 The QubeCL\_Control software Advanced tab . . . . . . . . . . . . . . . . . . 23 14 Appearance of the LH module equipped with the DDS sub-module . . . . . . [29](#figure.caption.56) 15 The DDS control panel of the QubeCL\_Control Software . . . . . . . . . . . 30 16 Appearance of the PLL module . . . . . . . . . . . . . . . . . . . . . . . . . 32 17 Control Software Interface dedicated to the PLL Module . . . . . . . . . . . . [33](#figure.caption.66) 18 Appearance of the PDH module . . . . . . . . . . . . . . . . . . . . . . . . . 36 19 Control Software Interface dedicated to the PDH Module . . . . . . . . . . . [37](#figure.caption.77) 20 Appearance of the LIA module . . . . . . . . . . . . . . . . . . . . . . . . . 40 21 Control Software Interface dedicated to the LIA Module . . . . . . . . . . . . [42](#figure.caption.96)
-22 The ﬁrst Advanced tab of the Control Software GUI - 48  
-23 The ﬁrst Advanced tab of the Control Software GUI - 50  
-24 Bias Tee simpliﬁed electronic diagram - 52  
-25 Drawings of the NanoPlus Cubic Mount Interface Board - 55  
-26 Drawings of the HHL Interface Board - 55  
-
----  -->
-
 <h2 id="1-warranty">1. Warranty<a class="headerlink" href="#1-warranty" title="Permanent link">¶</a></h2>
 <p>ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmanship defects for one year from the date of the original shipment <strong>(1-YEAR WARRANTY).</strong> This warranty is in lieu of all other guarantees expressed or implied, including any implied warranty of merchantability or ﬁtness for any particular purpose. ppqSense S.r.l. shall not be liable for any special, incidental or consequential loss. During the warranty period, ppqSense S.r.l. will repair or replace the unit or module, or issue credit, at our option, without charge. ppqSenses liability shall not in any case exceed the cost of correcting defects in the products as explained here, and this service is the sole remedy of the buyer. This warranty does not apply to defects caused by abuse, accident, modiﬁcations, Acts of God, or the use of the product for which it was not intended. ppqSense S.r.l. shall not be liable for damages resulting from the use of the product, nor shall be responsible for any failure in the performance of other items to which the purchased product is connected or the operation of any system of which the purchased product may be a part. The QubeCL System should not be used in the manner not speciﬁed by the manufacturer.</p>
 <h2 id="2-specifications">2 Specifications<a class="headerlink" href="#2-specifications" title="Permanent link">¶</a></h2>
@@ -1937,12 +1918,7 @@ QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 
 <td>input shorted</td>
 </tr>
 <tr>
-<td><strong>Low Current</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td colspan="6" style="text-align:left;"><strong>Low Current</strong></td>
 </tr>
 <tr>
 <td>Noise spect. dens. ﬂoor</td>
@@ -2591,7 +2567,7 @@ QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 
 <li>two for TC power supply (red-labelled PS TEC +, yellow-labelled PS TEC -).</li>
 </ul>
 <h3 id="442-tec-connector">4.4.2 TEC connector<a class="headerlink" href="#442-tec-connector" title="Permanent link">¶</a></h3>
-<p><figure class="inline end" id="_figure-8"><img alt="TEC connector pin diagram" id="TEC_Connector" src="assets_QubeCL_Manual_v5/img-0944.png"><figcaption>Figure 8: TEC connector pin diagram</figcaption></figure></p>
+<p><figure class="inline end fig40" id="_figure-8"><img alt="TEC connector pin diagram" id="TEC_Connector" src="assets_QubeCL_Manual_v5/img-0944.png"><figcaption>Figure 8: TEC connector pin diagram</figcaption></figure></p>
 <p>If the QubeCL is equipped with the TC module, but not with a laser-housing mod- ule, a proper connection with the Peltier- based stage of the laser and with the NTC temperature sensor must be established. The QubeCL kit includes a TEC cable with one of its ends already equipped with the proper connector to be plugged into the TC module.  </p>
 <p>The user must adapt the other end of the TEC cable in order to connect it to the laser. Please, refer to the wires colors represented in <a href="#TEC_Connector">Figure 8</a> to properly connect the TEC ca- ble to the laser.</p>
 <h2 id="45-qubecl_control-software-installation">4.5 QubeCL_Control software installation<a class="headerlink" href="#45-qubecl_control-software-installation" title="Permanent link">¶</a></h2>
@@ -2616,37 +2592,36 @@ QubeCL control software main screen . . . . . . . . . . . . . . . . . . . . . . 
 <li>To provide the optoelectronic device <strong>temperature stabilization</strong> at a few mK level.</li>
 </ul>
 <h3 id="51-set-up">5.1 Set-up<a class="headerlink" href="#51-set-up" title="Permanent link">¶</a></h3>
-<p>The typical set-up to operate with a QubeCL system is composed by the QubeCL itself, the laser device, a DC power supply and a PC for overall control.<br>
-To correctly operate with the QubeCL, the following step must be followed:</p>
+<p>The typical set-up to operate with a QubeCL system is composed by the QubeCL itself, the laser device, a DC power supply and a PC for overall control.  </p>
+<p>To correctly operate with the QubeCL, the following step must be followed:</p>
+<p>If the QubeCL kit includes a QubePS power supply:</p>
 <ul>
-<li>If the QubeCL kit includes a QubePS power supply, simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.<br>
-Otherwise, if the QubePS is not included:</li>
-<li>Set the voltage values of the <strong>ﬂoating</strong> power supplies you’re using following the indication from the <a href="#43-electrical-power-supply">dedicated section</a> of this manual.</li>
-<li>Connect the QubeCL to the power supply by the mean of the provided cable<br>
-∗ Connect TEC+ and TEC- to the ± poles of the power supply selected channel for electrical supply of the TC module, respectively.<br>
-∗ Connect LAS+ and LAS- to the ± poles of the power supply selected channel for electrical supply of the CM module(s), respectively.</li>
+<li>simply connect the QubeCL to the QubePS with the dedicated cable available in the kit.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">RESPECT THE POLARITY</p>
+<p>Otherwise, if the QubePS is not included:</p>
+<ul>
+<li>Set the voltage values of the <strong>ﬂoating</strong> power supplies you’re using following the indication from the <a href="#43-electrical-power-supply">dedicated section</a> of this manual.</li>
+<li>Connect the QubeCL to the power supply by the mean of the provided cable  </li>
+<li>Connect TEC<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span></span></span></span> and TEC<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo></mrow><annotation encoding="application/x-tex">-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span></span></span></span> to the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mi mathvariant="normal">/</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">+/-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">+</span><span class="mord">/</span><span class="mord">−</span></span></span></span> poles of the power supply selected channel for electrical supply of the TC module, respectively.  </li>
+<li>Connect LAS<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span></span></span></span> and LAS<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo></mrow><annotation encoding="application/x-tex">-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span></span></span></span> to the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mi mathvariant="normal">/</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">+/-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">+</span><span class="mord">/</span><span class="mord">−</span></span></span></span> poles of the power supply selected channel for electrical supply of the CM module(s), respectively.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">CAUTION -- RESPECT THE POLARITY</p>
 <p>If not using a QubePS be sure to <strong>RESPECT THE POLARITY</strong> of the power supply cable. <strong>REVERSE</strong> voltages will damage the instrument.<br>
-In case you’re not using a dual-channel power supply, but two diﬀerent power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.</p>
+In case you’re not using a dual-channel power supply, but two different power supplies, please switch on the TC supply before the CM supply otherwise the QubeCL won’t boot correctly.</p>
 </div>
 <ul>
 <li>
-<p>Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system;</p>
+<p>Connect the provided power supply cable to the C1 connection of the main unit module of the QubeCL system.</p>
 </li>
 <li>
-<p>Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system;</p>
+<p>Connect the provided USB cable to the C2 connection of the main unit module of the QubeCL system.</p>
 </li>
 <li>
-<p>Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system.  </p>
+<p>Connect the provided TC cable, properly wired to the laser, to the C3 connector of the TC module of the QubeCL system (<strong>N.B.</strong> This operation is not necessary if the QubeCL includes a laser housing module).</p>
 </li>
-</ul>
-<p><strong>N.B.</strong> This operation is not necessary if the QubeCL includes a laser housing module;</p>
-<ul>
 <li>
-<p>Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system.<br>
-<strong>N.B.</strong> This operation is not necessary if the QubeCL includes a laser housing module;</p>
+<p>Connect the user provided laser device current cable to the SMA C4 connector of the LH module of the QubeCL system (<strong>N.B.</strong> This operation is not necessary if the QubeCL includes a laser housing module).</p>
 </li>
 <li>
 <p><strong>Optional:</strong> connect a signal generator(s) to the modulation inputs of the QubeCL (SMA C5-C6 connectors of the LC module).</p>
@@ -2654,28 +2629,25 @@ In case you’re not using a dual-channel power supply, but two diﬀerent power
 </ul>
 <h3 id="52-operating-with-the-control-software">5.2 Operating with the Control Software<a class="headerlink" href="#52-operating-with-the-control-software" title="Permanent link">¶</a></h3>
 <p>In this section the usage of the Control Software to manage the basic operation of the QubeCL is described in detail.</p>
-<p><img alt="" src="assets_QubeCL_Manual_v5/img-0950.png"></p>
-<p><strong>Figure 9:</strong> QubeCL control software main screen</p>
-<hr>
+<p><figure id="_figure-9"><img alt="QubeCL control software main screen" id="main-screen" src="assets_QubeCL_Manual_v5/img-0950.png"><figcaption>Figure 9: QubeCL control software main screen</figcaption></figure></p>
 <h3 id="521-connecting-to-the-qubecl">5.2.1 Connecting to the QubeCL<a class="headerlink" href="#521-connecting-to-the-qubecl" title="Permanent link">¶</a></h3>
 <p>To use the QubeCL_Control software, locate the directory where you’ve previously placed<br>
-the QubeCL_CONTROL:vX.X folder from the USB key and launch the QubeCL_Control_vX.X.exe application.<br>
-A graphical interface as the one showed in <strong>ﬁgure <a href="#figure.caption.37">9**</a> will be displayed. While the program search<br>
+the <code>/QubeCL_CONTROL:vX.X</code> folder from the USB key and launch the <code>QubeCL_Control_vX.X.exe</code> application. </p>
+<p>A graphical interface as the one showed in <a href="#main-screen">Figure 9</a> will be displayed. While the program search<br>
 for connected QubeCLs to the computer, a progress bar will be displayed. Once the search<br>
-is done, it will be possible to select the desired QubeCL from the **INSTRUMENT ADDR</strong> drop-down menu. Once selected, launch the program by pressing the CONNECT button.</p>
+is done, it will be possible to select the desired QubeCL from the <strong>INSTRUMENT ADDR</strong> drop-down menu. Once selected, launch the program by pressing the CONNECT button.</p>
+<p><img alt="" class="inline end fig30" src="assets_QubeCL_Manual_v5/img-0952.jpg"></p>
 <p>If the program fails to detect any connected QubeCL, an error windows as the one shown here pops up. From there it will be possible to stop the program with the <strong>EXIT</strong> button or manually select a connected driver by the COM port to which it is connected.</p>
 <h3 id="522-qubecl_control-appearance">5.2.2 QubeCL_Control appearance<a class="headerlink" href="#522-qubecl_control-appearance" title="Permanent link">¶</a></h3>
-<p><img alt="" src="assets_QubeCL_Manual_v5/img-0952.jpg"></p>
 <p>The GUI of the control software is subdivided into three main horizontal panels:</p>
-<p><img alt="" src="assets_QubeCL_Manual_v5/img-0953.png"></p>
-<p><strong>Figure 10:</strong> The QubeCL_Control software conﬁguration panel</p>
-<p>The <strong>Conﬁguration panel</strong> at the top <strong>(Figure 10),</strong> there can be found:</p>
+<p><figure id="_figure-10"><img alt="The QubeCL_Control software conﬁguration panel" id="config-panel" src="assets_QubeCL_Manual_v5/img-0953.png"><figcaption>Figure 10: The QubeCL_Control software conﬁguration panel</figcaption></figure></p>
+<p>The <strong>Conﬁguration panel</strong> at the top <a href="#config-panel">Figure 10</a> there can be found:</p>
 <ul>
 <li>
 <p><strong>INSTRUMENT</strong> menu: allows the selection of the QubeCL that the user wants to connect to. The connection can be established only at the start-up of the program, it is not possible to switch to another QubeCL instrument without restarting the control software.</p>
 </li>
 <li>
-<p><strong>CONNECT</strong> and <strong>DISCONNECT</strong> buttons: allow the connection and disconnection to the selected QubeCL. <strong>DISCONNECT</strong> also stops the program.</p>
+<p><strong>CONNECT</strong> and <strong>DISCONNECT</strong> buttons: allow the connection and disconnection to the selected QubeCL. (<strong>DISCONNECT</strong> also stops the program).</p>
 </li>
 <li>
 <p><strong>CURRENT LIMIT</strong> menu: by pressing this button, another window will be displayed, allowing the user to change the maximum limit for the current that the QubeCL can deliver to the laser.</p>
@@ -2688,7 +2660,8 @@ is done, it will be possible to select the desired QubeCL from the **INSTRUMENT 
 </li>
 </ul>
 <hr>
-<p>The <strong>Current driver panel</strong> is the middle one <strong>(Figure 11),</strong> there can be found:</p>
+<p><figure id="_figure-11"><img alt="The QubeCL_Control software current driver panel" id="current_panel" src="assets_QubeCL_Manual_v5/img-0973.png"><figcaption>Figure 11: The QubeCL_Control software current driver panel</figcaption></figure></p>
+<p>The <strong>Current driver panel</strong> is the middle one <a href="#current_panel">Figure 11</a> there can be found:</p>
 <ul>
 <li>
 <p><strong>Current setpoint:</strong> from there, the user can change the current that needs to be sourced by the QubeCL to the laser. Three diﬀerent controls allow the user to change this value:</p>
@@ -2722,9 +2695,6 @@ This button includes a green LED indicator. This LED is switched ON when the Qub
 <p><strong>Current plot:</strong> shows the temporal behaviors of the set current (orange trace) and the actual output current (purple trace). This plot won’t show any modulation signal that may be applied to the output current.</p>
 </li>
 </ul>
-<p><img alt="" src="assets_QubeCL_Manual_v5/img-0973.png"></p>
-<p><strong>Figure 11:</strong> The QubeCL_Control software current driver panel</p>
-<hr>
 <p>The <strong>Temperature control panel</strong> at the bottom <strong>(Figure 12),</strong> where the subsequent com- mands can be found:</p>
 <ul>
 <li>
@@ -2737,7 +2707,7 @@ This button includes a green LED indicator. This LED is switched ON when the Qub
 <p><strong>TStab</strong> button: turns on/oﬀ the temperature stabilization of the laser.</p>
 </li>
 <li>
-<p><strong>Loop sign ±</strong> button: allows the user to change the sign of the temperature stabi- lization loop, eﬀectively switching its behavior from heating to cooling and vice versa.</p>
+<p><strong>Loop sign <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mi mathvariant="normal">/</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">+/-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">+</span><span class="mord">/</span><span class="mord">−</span></span></span></span></strong> button: allows the user to change the sign of the temperature stabi- lization loop, eﬀectively switching its behavior from heating to cooling and vice versa.</p>
 </li>
 <li>
 <p><strong>Temperature PID parameters</strong> panel: the TEC module stabilizes the temperature of the laser by the mean of a PID correction loop. This window allows the user to change the values of the three functional parameters of the PID, both with sliders and textual inputs. Detailed instruction can be found below.</p>
@@ -2882,7 +2852,7 @@ When sourcing negative control voltages to the modulators, the modulating curren
 </div>
 <p>The maximum current value that the user can set on the QubeCL does not comprehend the modulating signal, being just referred to the sourced Bias Current. The QubeCL does not perform any safety check on the overall Output Current value resulting as the Bias Current with the superimposed modulation signals.</p>
 <hr>
-<p><figure id="_figure-9"><img alt="" src="assets_QubeCL_Manual_v5/img-0988.png"><figcaption>Figure 9: Appearance of the LH module equipped with the DDS sub-module</figcaption></figure></p>
+<p><figure id="_figure-12"><img alt="" src="assets_QubeCL_Manual_v5/img-0988.png"><figcaption>Figure 12: Appearance of the LH module equipped with the DDS sub-module</figcaption></figure></p>
 <h3 id="61-the-dds-sub-module">6.1 The DDS sub-module<a class="headerlink" href="#61-the-dds-sub-module" title="Permanent link">¶</a></h3>
 <p>The LH module may host a smaller sub-module, namely the <strong>DDS sub-module.</strong> DDS stands for Direct Digital Synthesis, being a digitally controlled electronic circuits capable of generating analog signals with the ability of controlling some of their parameters (being Amplitude, Frequency, Phase and Waveform).<br>
 This sub-module adds two DDS circuits to the LH module, enabling the QubeCL to generate its own modulating signals without needing an external signal generator connected to the Modulation inputs. Since the DDS sub-module is housed inside the LH module, it won’t modify the physical dimensions of the QubeCL driver.<br>
