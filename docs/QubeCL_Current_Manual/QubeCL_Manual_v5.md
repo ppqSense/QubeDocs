@@ -548,7 +548,6 @@ If this condition is detected, a blinking warning sig- nal appears on the GUI, n
 A blinking warning signal appears on the GUI, next to the Vcc monitor in the Readings panel.
 
 
-
 !!! note 
     The previously described errors will not be deasserted if the warning condition is not met anymore (for example, if the Supply Voltage raises again above 18.5 V). This behavior has been implemented to avoid the warning to go unnoticed in case the user were not monitoring the GUI or the QubeCL\_Control program were not running when the error condition happened. Once the cause of the error condition has been eliminated, the user can reset the errors by switching on the current generator.
 

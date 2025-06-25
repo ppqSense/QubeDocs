@@ -224,7 +224,7 @@ If you are completely new to git see the
 
 ![Accept suggested changes to pull request](tutorial_assets/pull_request_accept_suggestion.png)
 
-![Merge pull request into main (once all comments are resplved)](tutorial_assets/pull_request_merge.png)
+![Merge pull request into main (once all comments are resolved)](tutorial_assets/pull_request_merge.png)
   
 ---
 
@@ -245,26 +245,25 @@ Markdown is a simple text formatting language akin to HTML that has been widely 
 - Adding a Table:
 Building a table in markdown is similar to LaTeX. You must draw out the columns and rows which can be tedious.
 
-```text
-|   H1   |   H2   |   H3   |
-|--------|--------|--------|
-|      1 |      2 |      3 |
-|      4 |      5 |      6 |
-```
+    ```text
+    |   H1   |   H2   |   H3   |
+    |--------|--------|--------|
+    |      1 |      2 |      3 |
+    |      4 |      5 |      6 |
+    ```
+    
+    Becomes:
+    
+    Table: Example Table{#figure-of-choice}
+    
+    |   H1   |   H2   |   H3   |
+    |--------|--------|--------|
+    |      1 |      2 |      3 |
+    |      4 |      5 |      6 |
 
-Becomes:
-
-Table: Example Table{#figure-of-choice}
-
-|   H1   |   H2   |   H3   |
-|--------|--------|--------|
-|      1 |      2 |      3 |
-|      4 |      5 |      6 |
-
-
-Build a correctly-formatted table a bit quicker using a [table generator site](https://vikcch.github.io/markdown-table-generator/)
-
-Or use the [tables extension](#tables-extension) to import from CSV.
+    - Build a correctly-formatted table a bit quicker using a [table generator site](https://vikcch.github.io/markdown-table-generator/)
+    
+    - Or use the [tables extension](#tables-extension) to import from CSV.
 
 
 - Referencing an anchor:
@@ -416,29 +415,26 @@ Allows for row and column-spanning in markdown tables as well as advanced text a
 > You can activate colspan by putting only ~~ in a cell. This will merge the cell with the cell in the previous column.
 > 
 > You can activate rowspan by putting __ in a cell. This will merge the cell with the cell in the previous row. If the cell in previous row is empty it will continue to merge until it finds a non-empty cell.
-> 
-> Sample:
-> 
-> | Header 1 | Header 2 | Header 3 |
-> | ---------| -------- | -------- |
-> | Value 1  |    ~~    | Value 2  |
-> |          |    ~~    | Value 3  |
-> |_        _|    ~~    | Value 5  |
-> | Value 6  | Value 7  | Value 8  |
-> 
-> This should result in the following table:
-> 
-> +----------+----------+----------+
-> | Header 1 | Header 2 | Header 3 |
-> +----------+----------+----------+
-> | Value 1             | Value 2  |
-> |                     +----------+
-> |                     | Value 3  |
-> |                     +----------+
-> |                     | Value 5  |
-> +----------+----------+----------+
-> | Value 6  | Value 7  | Value 8  |
-> +----------+----------+----------+
+ Sample:
+
+```text
+| Header 1 | Header 2 | Header 3 |
+| ---------| -------- | -------- |
+| Value 1  |    ~~    | Value 2  |
+|          |    ~~    | Value 3  |
+|_        _|    ~~    | Value 5  |
+| Value 6  | Value 7  | Value 8  |
+```
+
+This should result in the following table:
+
+| Header 1 | Header 2 | Header 3 |
+| ---------| -------- | -------- |
+| Value 1  |    ~~    | Value 2  |
+|          |    ~~    | Value 3  |
+|_        _|    ~~    | Value 5  |
+| Value 6  | Value 7  | Value 8  |
+
 
 See [mdx-spanner](https://pypi.org/project/mdx-spanner/) for full documentation.
 
