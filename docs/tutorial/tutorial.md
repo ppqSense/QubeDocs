@@ -287,8 +287,8 @@ Building a table in markdown is similar to LaTeX. You must draw out the columns 
    `[](#figure-of-choice)`
 
    becomes....
-   
-  [](#figure-of-choice)
+
+  [](#pwr_specs)
 
 ---
 
