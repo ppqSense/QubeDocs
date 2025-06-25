@@ -138,6 +138,12 @@ th:last-of-type {
 	  &.fig30 {
 		width: 30%;
 	  }
+	  &.fig20 {
+		width: 20%;
+	  }	  
+	  &.fig10 {
+		width: 10%
+	  }
 	  &.fig60 {
 		width: 60%;
 	  }

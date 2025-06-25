@@ -123,4 +123,4 @@ plugins:
       cover_subtitle: Version 5 (2025)
       cover_logo: img/QubeCL_Logo.png
       output_path: downloads/QubeCL_Manual_Current.pdf
-      enabled_if_env: ENABLED_PDF_EXPORT #uncomment to disable PDF generation during development
+      # enabled_if_env: ENABLED_PDF_EXPORT #uncomment to disable PDF generation during development

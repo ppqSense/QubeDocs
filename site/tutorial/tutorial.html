@@ -591,6 +591,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mdx-spanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      mdx-spanner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#to-pdf" class="md-nav__link">
     <span class="md-ellipsis">
       To-pdf
@@ -976,6 +985,7 @@ f(x) = \int_{-\infty}^\infty
 \hat f(\xi)\,e^{2 \pi i \xi x}
 \,d\xi
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9579em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">πi</span><span class="mord mathnormal mtight" style="margin-right:0.04601em;">ξ</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span></span></span></p>
+<p>See full syntax guide <a href="https://katex.org/docs/supported.html">here</a></p>
 <h3 id="caption">Caption<a class="headerlink" href="#caption" title="Permanent link">¶</a></h3>
 <p>Create a Caption and a tag of a table or image like so:
 <code>&lt;Table/Figure&gt;: &lt;Description&gt; {#tag}</code> 
@@ -1023,6 +1033,52 @@ and leave a space between the caption line and the figure/table.</p>
 </p><div class="highlight"><pre><span></span><code>A schematic view of the front panel of the QubeCL can be seen in [](#front_panel).
 </code></pre></div>
 <p>A schematic view of the front panel of the QubeCL can be seen in <a href="#front_panel">Figure 15</a>.</p>
+<h3 id="mdx-spanner">mdx-spanner<a class="headerlink" href="#mdx-spanner" title="Permanent link">¶</a></h3>
+<p>Allows for row and column-spanning in markdown tables as well as advanced text alignment</p>
+<blockquote>
+<p>You can activate colspan by putting only ~~ in a cell. This will merge the cell with the cell in the previous column.</p>
+<p>You can activate rowspan by putting __ in a cell. This will merge the cell with the cell in the previous row. If the cell in previous row is empty it will continue to merge until it finds a non-empty cell.</p>
+<p>Sample:</p>
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+<th>Header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" rowspan="3" style="text-align:left;vertical-align:top;">Value 1</td>
+<td>Value 2</td>
+</tr>
+<tr>
+<td>Value 3</td>
+</tr>
+<tr>
+<td>Value 5</td>
+</tr>
+<tr>
+<td>Value 6</td>
+<td>Value 7</td>
+<td>Value 8</td>
+</tr>
+</tbody>
+</table>
+<p>This should result in the following table:</p>
+<p>+----------+----------+----------+
+| Header 1 | Header 2 | Header 3 |
++----------+----------+----------+
+| Value 1             | Value 2  |
+|                     +----------+
+|                     | Value 3  |
+|                     +----------+
+|                     | Value 5  |
++----------+----------+----------+
+| Value 6  | Value 7  | Value 8  |
++----------+----------+----------+</p>
+</blockquote>
+<p>See <a href="https://pypi.org/project/mdx-spanner/">mdx-spanner</a> for full documentation.</p>
 <h3 id="to-pdf">To-pdf<a class="headerlink" href="#to-pdf" title="Permanent link">¶</a></h3>
 <p>Whenever the site is rebuilt  (<code>mkdocs serve</code> or <code>mkdocs build</code>) it is saved in a pdf format to the downloads folder. This takes a few seconds. If you are testing locally and don't want to regenerate it each time, you can suppress this feature by uncommenting the following line in the <code>mkdocs.yml</code> (remember to comment out when done editing).</p>
 <div class="highlight"><pre><span></span><code>  - to-pdf: # enable to auto-generate PDF download(currently for whole site)  

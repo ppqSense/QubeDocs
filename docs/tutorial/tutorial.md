@@ -363,6 +363,8 @@ f(x) = \int_{-\infty}^\infty
 \,d\xi
 ```
 
+See full syntax guide [here](https://katex.org/docs/supported.html)
+
 ### Caption 
 
 Create a Caption and a tag of a table or image like so:
@@ -406,6 +408,39 @@ A schematic view of the front panel of the QubeCL can be seen in [](#front_panel
 ```
 
 A schematic view of the front panel of the QubeCL can be seen in [](#front_panel).
+
+### mdx-spanner
+
+Allows for row and column-spanning in markdown tables as well as advanced text alignment
+
+> You can activate colspan by putting only ~~ in a cell. This will merge the cell with the cell in the previous column.
+> 
+> You can activate rowspan by putting __ in a cell. This will merge the cell with the cell in the previous row. If the cell in previous row is empty it will continue to merge until it finds a non-empty cell.
+> 
+> Sample:
+> 
+> | Header 1 | Header 2 | Header 3 |
+> | ---------| -------- | -------- |
+> | Value 1  |    ~~    | Value 2  |
+> |          |    ~~    | Value 3  |
+> |_        _|    ~~    | Value 5  |
+> | Value 6  | Value 7  | Value 8  |
+> 
+> This should result in the following table:
+> 
+> +----------+----------+----------+
+> | Header 1 | Header 2 | Header 3 |
+> +----------+----------+----------+
+> | Value 1             | Value 2  |
+> |                     +----------+
+> |                     | Value 3  |
+> |                     +----------+
+> |                     | Value 5  |
+> +----------+----------+----------+
+> | Value 6  | Value 7  | Value 8  |
+> +----------+----------+----------+
+
+See [mdx-spanner](https://pypi.org/project/mdx-spanner/) for full documentation.
 
 ### To-pdf
 Whenever the site is rebuilt  (`mkdocs serve` or `mkdocs build`) it is saved in a pdf format to the downloads folder. This takes a few seconds. If you are testing locally and don't want to regenerate it each time, you can suppress this feature by uncommenting the following line in the `mkdocs.yml` (remember to comment out when done editing).

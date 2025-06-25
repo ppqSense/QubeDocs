@@ -13,7 +13,7 @@ ppqSense S.r.l. guarantees its QubeCL System to be free of material and workmans
 
 ### 2.1 Communication interfaces
 
-Table: Communication Interfaces{#com-ref}
+Table: Communication Interfaces{#table-com-interfaces}
 
 {{ read_csv('assets_QubeCL_Manual_v5/tables/communication_interfaces.csv') }}
 
@@ -26,7 +26,7 @@ Table: Communication Interfaces{#com-ref}
 
 ### 2.2 Absolute maximum ratings
 
-Table: Absolute maximum voltage and temperature ratings
+Table: Absolute maximum voltage and temperature ratings{#table-max-ratings}
 
 | **Parameter** | **Values** | **Unit** | **Notes** |  
 |---|---|---|---|  
@@ -44,7 +44,7 @@ Warm-up time 120 min, room temperature 25 &deg;C (unless otherwise noted)
 
 **Current Generator Specifications**
 
-Table: Current Generator Specifications
+Table: Current Generator Specifications{#table-current-generator-specs}
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -60,7 +60,7 @@ Table: Current Generator Specifications
 
 **Analog Current Modulators Specs**
 
-Table: Analog Current Modulators Specs
+Table: Analog Current Modulators Specs{#table-current-analog-mod-specs}
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -81,7 +81,7 @@ Table: Analog Current Modulators Specs
 
 **Mixed Current Generator Specs - Digital**
 
-Table: Mixed Current Generator Specs - Digital
+Table: Mixed Current Generator Specs - Digital{#table-current-digital-generator-specs}
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -103,7 +103,7 @@ Table: Mixed Current Generator Specs - Digital
 
 **Mixed Current Generator Specs - Analog**  
 
-Table: Mixed Current Generator Specs - Analog  
+Table: Mixed Current Generator Specs - Analog{#table-current-analog-generator-specs}
 
 | **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -123,7 +123,8 @@ Table: Mixed Current Generator Specs - Analog
 ---
 
 **Temperature Controller Specs**  
-Table: Temperature Controller Specs  
+
+Table: Temperature Controller Specs{#table-temp-specs} 
 
 | **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -133,9 +134,11 @@ Table: Temperature Controller Specs
 | Temp stability || 40 | 400 | µK | absolute stability in 12h |  
 | Temp. coeﬃcient || -90 | -100 | µK */* K ||  
 
+---
+
 **PLL Module Specs**
 
-Table: PLL Module Specs
+Table: PLL Module Specs{#table-pll-specs}
 
 | **Parameter** | **Min** | **Typ** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -145,9 +148,11 @@ Table: PLL Module Specs
 | Input stage gain | 0 || 30 | dB ||  
 | Lock bandwidth ||| 800 | kHz ||  
 
+---
+
 **Pound-Drever-Hall module Specs** 
 
-Table: Pound-Drever-Hall module Specs  
+Table: Pound-Drever-Hall module Specs{#table-pdh-specs}  
 
 | **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -161,7 +166,7 @@ Table: Pound-Drever-Hall module Specs
 
  **Lock-In Ampliﬁer module Specs**
 
-Table: Lock-In Ampliﬁer module Specs
+Table: Lock-In Ampliﬁer module Specs{#table-lia-specs}
 
 | **Parameter** | **Min** | **Typical** | **Max** | **Unit** | **Notes** |  
 |---|---|---|---|---|---|  
@@ -533,10 +538,11 @@ The QubeCL driver implement the following protection for the Current Generator:
 **Open-circuit protection:** this safety measure con- stantly checks if the electrical connection with the laser is still present, otherwise the Current Generator is immediately switched oﬀ and the QubeCL output is shorted.  
 If this condition is detected, a blinking warning sig- nal appears on the GUI, next to the Vlas indicator in the Readings box of the Current Generator panel.
 
-![](assets_QubeCL_Manual_v5/img-0981.png){class="inline end"}
-
 
 **Compliance Limit reached:** the same warning described above is raised if the QubeCL senses a voltage across the laser higher than the maximum allowed compliance voltage. Such Compliance Limit [CL] voltage depends on the nominal Source Voltage for the Current Generator and can be obtained as $`CL = (0.77 · Vcc) - 1`$.
+
+![](assets_QubeCL_Manual_v5/img-0981.png){class="inline end"}
+
 
 **Low Voltage Supply protection:** if the CM module supply voltage falls below 18.5 V, the QubeCL automatically switches oﬀ the current and shorts the output connector.  
 A blinking warning signal appears on the GUI, next to the Vcc monitor in the Readings panel.
@@ -549,17 +555,18 @@ A blinking warning signal appears on the GUI, next to the Vcc monitor in the Rea
 
 The QubeCL also monitors the temperature of the laser, implementing some safety features to prevent potentially dangerous conditions:
 
-![](assets_QubeCL_Manual_v5/img-0983.png){class="inline end"}
+![](assets_QubeCL_Manual_v5/img-0983.png){class="inline fig20 end"}
 
 **TEC module communication fault:** if some problem oc- curs to the communication with the TEC module (i.e. when the module is not properly powered) the Temp Read value becomes -273 °C, and a warning box appears next to it (see Figure at right). The warning disappears as soon as the com- munication with the TEC is re-established.
 
-![](assets_QubeCL_Manual_v5/img-0984.png){class="inline end"}
-
 
 **Temperature sensor fault:** in case the temperature sensor is not working properly (i.e. it is not connected to the TEC module), the Temp Read value becomes -67.737 °C and the warning square box appears next to the readed value.  
+
+![](assets_QubeCL_Manual_v5/img-0984.png){class="inline fig20 end"}
+
 In case one of the above problems occur when the Temper- ature Stabilization is active, a warning box appears also next to the Temp Read line. If the QubeCL is sourcing current to the laser when a Temperature Controller fault is detected, the current source is disabled to prevent damage to the laser.
 
-![](assets_QubeCL_Manual_v5/img-0985.png){class="inline end"}
+![](assets_QubeCL_Manual_v5/img-0985.png){class="inline fig20 end"}
 
 
 **Temperature stabilization problem:** if, for any reason, the Temperature Controller modules fails to stabilize the laser temperature (i.e. wrong PID sign, poor heat management), the QubeCL disables both Temperature Stabilization and Cur- rent output to the laser. A warning box appears next to the Temp Read line.  
@@ -569,7 +576,7 @@ The threshold above which a Temperature stabilization is raised can be changed b
 
 
 
-## 6 Advanced Operations - Modulators and DDS
+## 6 Advanced Operations (Modulators and DDS)
 
 Besides the basic functionality, QubeCL may perform a variety of advanced operations while driving a laser device. As well as the basic functions, the advanced ones are performed by dedicated modules.
 
@@ -618,7 +625,7 @@ When the QubeCL also includes a **PDH** or **LIA** module, the DDS sub-module is
 ### 6.1.1 Connectors
 
 The presence of the DDS sub-module adds some feature to the QubeCL and consequently some minor modiﬁcation to the LH module interconnections are present.  
-The three standard connectors previously described are still present, but the connector **C7** is added on the left side of the module, as it is shown in [](#lh_with_dds) **C7** is an output SMA connector. The DDS module is capable of generating a **5 V square- wave** synchronization signal which is sourced from the low impedance output on C7. The user may chose to synchronize this signal both to the waveform sourced by DDS1 or to the waveform sourced by DDS2.
+The three standard connectors previously described are still present, but the connector **C7** is added on the left side of the module, as it is shown in [](#lh_with_dds), **C7** is an output SMA connector. The DDS module is capable of generating a **5 V square- wave** synchronization signal which is sourced from the low impedance output on C7. The user may chose to synchronize this signal both to the waveform sourced by DDS1 or to the waveform sourced by DDS2.
 
 ### 6.1.2 Control Software interface
 
@@ -688,56 +695,31 @@ Since each laser can only be locked to a reference at a time, in this case anoth
 
 ### 7.1 Connectors
 
-![Appearance of the PLL module](assets_QubeCL_Manual_v5/img-0993.png){#pll_module}
 
-|      Connector |   Type |   Attributes |
-|----------------|--------|--------------|
-|      C8. RF in |  Input | Signal level |
-|             -- |     -- |    Bandwidth |
-|      C9. LO in |  Input | Signal level |
-|             -- |     -- |    Bandwidth |
-|       C10. mon | Output |     Requires |
-|             -- |     -- |   AC Coupled |
-| C11. Phase mon | Output |     Requires |
-|             -- |     -- |   DC Coupled |
-|             -- |     -- |        Range |
+![Appearance of the PLL module](assets_QubeCL_Manual_v5/img-0993.png){#pll-module}
 
-**C8. RF in**  
-Signal level :  
-**C10. DIVIDER** Requires 50 Ω load
+Table: PLL Module Connector Properties{#pll_connector_properties}
 
-> intput
+|      Connector |   Type |   Attributes                                             |
+|----------------|--------|----------------------------------------------------------|
+|      C8. RF in |  Input | Signal level: -30 dBm 0 dBm & Bandwidth: 10 MHz 300 MHz  |
+|      C9. LO in |  Input |                       _=_                                |
+|       C10. mon | Output |     Requires $`50\Omega`$                                | 
+|        _=_     |   _=_  |   AC Coupled                                             |
+| C11. Phase mon |Output  |     Requires High-Z load                                 |
+|                |        |   DC Coupled                                             |
+|      _=_       |  _=_   |        Range: -1 V / 1V                                  |
 
-- dBm 0 dBm **mon**  
-AC coupled. bandwidth : output  
-10 MHz 300 MHz
-
-**C9. LO in**  
-Signal level :  
-**C11. PHASE mon** Requires Hihg-Z load.
-
-> intput
-
-- dBm 0 dBm output  
-DC coupled. bandwidth : Range : 10 MHz 300 MHz
-- V / 1 V
 
 ### 7.2 Control Software Interface
 
 The QubeCL Control Software has a dedicated section for the control and monitor of the PLL Module, it can be accessed by clicking on the PLL tab in the lower portion of the GUI.
 
-  
+  ![Control Software Interface dedicated to the PLL Module](assets_QubeCL_Manual_v5/img-0995.png){#pll-panel}
 
 
----
+As can be seen in [](#pll-panel), the panel dedicated to the PLL module is divided into two main areas: on the rightmost part there are two panels named Phase Error Plot and Transfer Function which in turn show the actual error signal monitored by the PLL module and the transfer function implemented by the PI loop mounted on the module itself with the current parameters. The remaining part of the panel is dedicated to all the controls available for the user to control the behavior of the PLL Module.
 
-
-
-As can be seen in **ﬁgure 17,** the panel dedicated to the PLL module is divided into two main areas: on the rightmost part there are two panels named Phase Error Plot and Transfer Function which in turn show the actual error signal monitored by the PLL module and the transfer function implemented by the PI loop mounted on the module itself with the current parameters. The remaining part of the panel is dedicated to all the controls available for the user to control the behavior of the PLL Module.
-
-![](assets_QubeCL_Manual_v5/img-0995.png)
-
-**Figure 17:** Control Software Interface dedicated to the PLL Module
 
 The controls for the PLL module are subdivided into categories based on their functionality. The **Phase Detector Settings** panel gives the user access to the controls for the Phase Detector:
 
@@ -752,13 +734,6 @@ The controls for the PLL module are subdivided into categories based on their fu
 - **Sign:** sets the sign of the PI correction loop.
 
 The **Divider Monitor** panel gives the user the ability to chose what signal will be sourced to the Division Monitor Output connector (C10). When in **OFF** position, no signal will be available. The other two buttons allow to chose between the post-divisor **Local Oscillator** signal or the post-divisor **RF** signal, so that the user can visualize the actual frequency of the two signal once they’ve been divided.
-
-  
-
-
----
-
-
 
 The **Lock** panel allows the user to chose the functional mode of the correction PI loop of the PLL module. There are three possible options:
 
@@ -789,19 +764,9 @@ For a proper set-up and use of the PLL module, please follow the steps listed be
 
 - Connect the **DIVIDER MON** output connector ( C10 ) to an oscilloscope with a 50 Ω termination. By using the **Div Mon** control, switch the signals that have to be sourced on this port. The output signal must be a clean square wave with the same frequency of the selected input signal **(RF** or **LO).**  
 If the output frequency is not properly counted, a better ﬁltering is required for the input signal, in order to obtain an higher SN ratio for the counter to properly work.
-
-  
-
-
----
-
-
-
 - Set the values of **LO divider** and **RF divider** so that the two subdivided frequencies are as close as possible.  
-For example: if f  
-= 100 MHz and f  
-= 10 MHz, set LO div = 1 and RF div = 10. RF  
-LO
+- 
+For example: if $`f = 100 MHz`$ and $`f = 10 MHz`$, set $`LO div = 1`$ and $`RF div = 10`$.
 
 - Write the proper value for the laser Tuning Coeﬃcient in the **Laser Tuning** input form in the **Transfer Function Plot** tab. Then set the values for **CPG, CPG mult, Phase Prop** and **Phase Int** aiming to obtain a Transfer Function Plot that properly crosses the Unity Gain level to obtain stability.
 
@@ -813,63 +778,44 @@ LO
 
 - Adjust the **CPG, Phase Prop** and **Phase Int** settings in order to optimize the lock quality. More than one locking condition can be found, with diﬀerent bandwidths and gains.
 
-Once the lock has been successfully achieved, the **Slow Loop** functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check **chapter 10.**
-
-  
-
+Once the lock has been successfully achieved, the **Slow Loop** functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check [](#10-advanced-operations-slow-drift-compensation).
 
 ---
-
-
 
 ## 8 Advanced Operations - PDH module
 
 The PDH module gives to the QubeCL instrument the capability of easily perform a com- plex task such as the lock of the controlled laser frequency to an optical cavity.  
-The PDH module requires two input signals: the radio-frequency **(SIGNAL IN)** signal gen- erated by the frequency-modulated laser beam reﬂected back from the cavity and the Local Oscillator **(REF IN)** signal used for demodulating RF signal. The LO is usually generated by the same function generator used for the frequency modulation, after a careful tuning of the relative phase.  
-When the PDH is activated, a current proportional to the error signal is processed by a Proportional-Integrative ( PI ) stage and internally added to the bias current closing the frequency- stabilization loop.
+The PDH module requires two input signals: the radio-frequency **(SIGNAL IN)** signal generated by the frequency-modulated laser beam reﬂected back from the cavity and the Local Oscillator **(REF IN)** signal used for demodulating RF signal. The LO is usually generated by the same function generator used for the frequency modulation, after a careful tuning of the relative phase.  
+When the PDH is activated, a current proportional to the error signal is processed by a Proportional-Integrative ( PI ) stage and internally added to the bias current closing the frequency-stabilization loop.
 
 Since each laser can only be locked to a reference at a time, in this case an optical cavity, the PDH Module can not be used with other Locking Modules ( LIA , PLL ) on the same QubeCL system.
 
 ### 8.1 Connectors
 
-![](assets_QubeCL_Manual_v5/img-0910.png)
+![Appearance of the PDH module](assets_QubeCL_Manual_v5/img-0910.png){#pdh-module}
 
-**Figure 18:** Appearance of the PDH module
 
-**C12. Signal in**  
-Signal level :  
-**C14. MON OUT** Requires Hi-Z Ω load
 
-> input
+Table: PDH Module Connector Properties{#pdh_connector_properties}
 
-- dBm 20 dBm output  
-DC coupled. bandwidth : Range : 300 kHz 100 MHz
+|      Connector |   Type |   Attributes                                             |
+|----------------|--------|----------------------------------------------------------|
+| C12. Signal IN |  Input | Signal level: -30 dBm 20 dBm & Bandwidth: 300 kHz 100 MHz|
+| C13. REF IN    |  Input | Signal level: 7 dBm & Bandwidth: 300 kHz 100 MHz         |
+|  C14. MON OUT  | Output |     Requires High-Z $`\Omega`$ load                      | 
+|                |   _=_  |   DC Coupled                                             |
+|    _=_         | Input  |     Range: -1 V / 1V                                     |
+| C15. HOLD      |        |   Signal level: TTL                                      |
+|      _=_       |  _=_   |        Bandwidth: 10 MHz                                 |
 
-**C13. REF in** Signal level :
-
-- V / 1 V
-
-> C15. HOLD Signal level:
-
-input 7 dBm input TTL. bandwidth : Bandwidth : 300 kHz 100 MHz  
-10 MHz
 
 ### 8.2 Control Software Interface
 
+![Control Software Interface dedicated to the PDH Module](assets_QubeCL_Manual_v5/img-0911.png){#pdh-panel}
+
 The QubeCL Control Software has a dedicated interface for the control of the PDH module, which can be accessed by clicking on the PDH tab in the lower half of the GUI.  
-As it can be seen in **Figure 19,** the PDH control tab is subdivided into two main parts, as well as the PLL tab is. On the right side, two monitor plots can be selected in the respective tabs, so that the user can have a look on the transfer function of the PI loop of the module or at the level of the correction signal produced by the PI loop itself.  
-On the left side, the tab includes all the necessary controls to properly use the PDH Module.
-
-  
-
-
----
-
-
-
-![](assets_QubeCL_Manual_v5/img-0911.png)
-
-**Figure 19:** Control Software Interface dedicated to the PDH Module
+As it can be seen in [](#pdh-panel), the PDH control tab is subdivided into two main parts, as well as the PLL tab is. On the right side, two monitor plots can be selected in the respective tabs, so that the user can have a look on the transfer function of the PI loop of the module or at the level of the correction signal produced by the PI loop itself.  
+On the left side, the tab includes all the necessary controls to properly use the PDH Module. 
 
 On the top right corner of the PDH tab, there is the **PDH Lock** set of controls, which allows the user to perform various actions:
 
@@ -887,14 +833,7 @@ The **PDH Mon** panel contain a switch button that allows the user to chose whic
 
 Below the PDG Mon, there is a panel containing all the controls for the regulation of the **Input Oﬀset** for the Correction Loop of the PDH Module. The desired oﬀset can be directly typed into the dedicated form, otherwise the four up and down arrows can be used. Each arrow will add or remove an oﬀset value correspondent to the value written in the form below the couples of arrows.
 
-  
-
-
----
-
-
-
-The **PDH PID settings** panel allows the user to tune the parameters of the PI Correction Loop .
+The **PDH PID settings** panel allows the user to tune the parameters of the PI Correction Loop.
 
 - **PRE AMP** allows the user to set the gain of the pre-ampliﬁer of the loop. It accepts value between 2 an 11. This value is a pure gain, hence it has no unit of measurement.
 
@@ -904,7 +843,7 @@ The **PDH PID settings** panel allows the user to tune the parameters of the PI 
 
 - **PDH I** allows the user to set the cut oﬀ frequency of the integrative action of the correction loop.
 
-The **Slow Loop** control panel is identical to the one that is present in the PLL tab, users can refer to the dedicated **chapter 10.**
+The **Slow Loop** control panel is identical to the one that is present in the PLL tab, users can refer to the dedicated [](#10-advanced-operations---slow-drift-compensation).
 
 The **Transfer Function Plot** gives a visual representation of the transfer function of the correction loop. The plot automatically updates each time the user change one of the param- eters for the loop itself. For a correct visualization of the plot, it is necessary to ﬁll the **Laser Tuning** form with the actual parameter of the laser being driven by the QubeCL.
 
@@ -920,27 +859,15 @@ Connect this signal to the **SIGNAL in** ( C12 ) connector.
 - Use a function generator to generate a proper demodulation signal, with 7 dBm magni- tude and a frequency between 300 kHz and 100 MHz.  
 Connect this signal to the **REF in** ( C13 ) connector.
 
-- Activate the modulation signal to the laser, monitoring the ER signal youll be able to ﬁnd the characteristic PDH signal waveform. Adjust the modulation signal phase until you ﬁnd the value that minimizes the carrier contribution to the signal, leaving only the sidebands contributions. At that point, the right phase to obtain a good lock is that value ± 90°. Try one of those two values and LOCK the loop in P mode, if only the sidebands contributions are magniﬁed try the other phase value, otherwise this is the right one.
-
-  
-
-
----
-
-
+- Activate the modulation signal to the laser, monitoring the ER signal youll be able to ﬁnd the characteristic PDH signal waveform. Adjust the modulation signal phase until you ﬁnd the value that minimizes the carrier contribution to the signal, leaving only the sidebands contributions. At that point, the right phase to obtain a good lock is that value $`+/-`$ 90°. Try one of those two values and LOCK the loop in P mode, if only the sidebands contributions are magniﬁed try the other phase value, otherwise this is the right one.
 
 - While locked and in P mode, change the P1 and P2 values until you ﬁnd the combination that produces the best eﬀects on the signal transmitted by the cavity. Reduce the amplitude of the ramp signal used to scan the lasers frequency searching for the one that matches the cavity while adjusting its oﬀset to keep the lasers frequency close to the resonance.
 
 - Activate the PI mode and search for the best PI parameters combination, which guar- antees the best locking performance.
 
-Once the lock has been successfully achieved, the **Slow Loop** functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check **chapter 10.**
-
+Once the lock has been successfully achieved, the **Slow Loop** functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check [](#10-advanced-operations---slow-drift-compensation).
   
-
-
 ---
-
-
 
 ## 9 Advanced Operations - LIA module
 
@@ -953,32 +880,28 @@ Since each laser can only be locked to a reference at a time, in this case a mol
 
 ### 9.1 Connectors
 
-![](assets_QubeCL_Manual_v5/img-0915.png)
+![Appearance of the LIA module](assets_QubeCL_Manual_v5/img-0915.png){#lia-module}
 
-**Figure 20:** Appearance of the LIA module
 
-**C16. Signal Out** Requires Hi-Z load. **C18. Sine Out**  
-Requires Hi-Z load. output DC coupled. output DC coupled. Signal level :
+Table: LIA Module Connector Properties{#lia_connector_properties}
 
-- V 1 V **C17. Signal In** AC coupled.
-
-Signal level :
-
-- V 1 V **C19. Ramp Out**  
-Requires Hi-Z load. input Signal level: output DC coupled. < 1 Vpp.  
-Signal level :
-- V 1 V
+|       Connector |   Type |              Attributes |
+|-----------------|--------|-------------------------|
+| C16. Signal Out | Output |      Requires Hi-Z load |
+|              __ |     __ |              DC Coupled |
+|              __ |     __ | Signal Level:  -1 V 1 V |
+|  C17. SIgnal In |  Input |              AC Coupled |
+|              __ |     __ |  Signal Level: < 1 Vpp. |
+|   C18. Sine Out | Output |      Requires Hi-Z load |
+|              __ |     __ |              DC Coupled |
+|              __ |     __ |  Signal level: -1 V 1 V |
+|   C19. Ramp Out | Output |      Requires Hi-Z load |
+|              __ |     __ |              DC Coupled |
+|              __ |     __ |  Signal level: -1 V 1 V |
 
 ### 9.2 The DDS sub-module operation in pair with the LIA module
 
 The operation of the LIA modules require the modulating and demodulating signals to be synchronized one to the other. To achieve perfect synchronization, the use of a single timing
-
-  
-
-
----
-
-
 
 source is required. The DDS sub-module provides such timing source, generating both the modulating signal with the DDS1 and the demodulating signal which is internally fed to the LIA module
 
@@ -994,18 +917,10 @@ The reciprocal phase between the modulating and demodulating signal is another c
 
 If the LIA module is not necessary and the user wants to have full control on the DDS1 frequency, the LIA demodulating mode can be set to **OFF** (see the below chapter), to remove the frequency constraints for DDS1. The rephasing process too is not performed at startup if the LIA demodulating mode is set to **OFF.**
 
-  
-
-
----
-
 ### 9.3 Control Software Interface
 
 
-
-![](assets_QubeCL_Manual_v5/img-0918.png)
-
-**Figure 21:** Control Software Interface dedicated to the LIA Module
+![Control Software Interface dedicated to the LIA Module](assets_QubeCL_Manual_v5/img-0918.png){#lia-panel}
 
 The QubeCL Control Software section dedicated to the LIA module can be accessed by clicking on the LIA tab in the lower part of the GUI. Similarly to the PLL and PDH modules, also this control tab is subdivided into a monitor section and a control section.
 
@@ -1022,13 +937,6 @@ Next to this section, user can ﬁnd the **Save** button. By pressing it, the us
 The **ON** button to the left of the save button allows the user to switch oﬀ the LIA operations, deactivating the demodulator.
 
 The **Phase Ready** LED indicates if the rephasing process between the DDS and the de- modulating signal is completed.
-
-  
-
-
----
-
-
 
 The **LIA Loop Settings** box holds all the controls to tune the PI Correction Loop gains:
 
@@ -1056,13 +964,6 @@ For a proper set-up and operation of the LIA module, follow the steps listed bel
 
 - Connect the detector to an oscilloscope and use the DDS2 to scan the laser wavelength to ﬁnd the absorption line of the reference molecule with a low frequency triangular wave modulation. To easily achieve this condition, lock the external synchronization signal of the LH module to the DDS2 and use it as the trigger for the oscilloscope acquisition.
 
-  
-
-
----
-
-
-
 - Once the absorption line has been found and it is well centered in the scope screen, activate the DDS1 and set a proper modulating amplitude. The LIA module is capable of demodulating signal down to a few tens of mV, higher signals risk to saturate the internal ampliﬁer stages. Check the signal from the detector to verify that the amplitude of the modulation is in this accepted range. Connect the signal from the detector to the SIGNAL IN connector of the LIA module.
 
 - Connect the SIGNAL OUT connector to the oscilloscope in order to have a monitor signal to be used as a reference during the locking operation. The oscilloscope must have a high impedance input. Set the monitor selector to **ERR.** The ﬁrst derivative of the absorption line must appear on the scope, as a consequence of the demodulating action performed by the LIA.
@@ -1077,56 +978,49 @@ For a proper set-up and operation of the LIA module, follow the steps listed bel
 
 - Set the correction loop to **PI** mode and adjust the **Integ.** time constant to achieve a good locking.
 
-Once the lock has been successfully achieved, the **Slow Loop** functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check **chapter 10.**
+Once the lock has been successfully achieved, the **Slow Loop** functionality can be activated in order to compensate phase errors arising because of slow drifting environmental parameters. To do so, please check [](#10-advanced-operations---slow-drift-compensation).
 
 ### 9.5 LIA digital ﬁlter
 
 The LIA module is equipped with a mixed signal Lock-In Ampliﬁer which includes a set of built-in digital ﬁlters. The digital ﬁlters shows a frequency behavior which is dependent on the clock frequency used to drive the ﬁlter. In the LIA module, the clock signal used for the digital ﬁlter is generated by the DDS sub-module with a ﬁxed frequency of:
 
-*fCLK* = 2 20 = 1.048576MHz
-
+```math
+f_{CLK} = 2^{20} = 1.048576MHz
+```
 The clock signal passes through a series of frequency divider before reaching the programmable digital ﬁlter, thus obtaining a frequency of:
 
-*fSO* = 2 17 = 131.072kHz
-
+```math
+f_{SO} = 2^17 = 131.072kHz
+```
 The available ﬁlters, which can be selected by the mean of the dedicated drop-down menu, are the following ones:
 
-  
+- **BP0:** Band Pass ﬁlter, centered on $`f_{SO}`$/8 = 16.384 kHz 
 
+- **BP1:** Band Pass ﬁlter, centered on $`f_{SO}`$/4 = 32.768 kHz, Q = 8.4 
 
----
+- **BP2:** Band Pass ﬁlter, centered on $`f_{SO}`$/4 = 32.768 kHz, Q = 4.3 
 
+- **LP1:** Low Pass ﬁlter, -3 dB at $`f_{SO}`$/5 = 26.2144 kHz, 4th order 
 
+- **LP2:** Low Pass ﬁlter, -3 dB at $`f_{SO}`$/8 = 16.384 kHz, 4th order 
 
-- **BP0:** Band Pass ﬁlter, centered on f /8 = 16.384 kHz SO
-
-- **BP1:** Band Pass ﬁlter, centered on f /4 = 32.768 kHz, Q = 8.4 SO
-
-- **BP2:** Band Pass ﬁlter, centered on f /4 = 32.768 kHz, Q = 4.3 SO
-
-- **LP1:** Low Pass ﬁlter, -3 dB at f /5 = 26.2144 kHz, 4 th order SO
-
-- **LP2:** Low Pass ﬁlter, -3 dB at f /8 = 16.384 kHz, 4 th order SO
-
-- **Notch:** centered on f /4 = 32.768 kHz, 1 st order SO
+- **Notch:** centered on $`f_{SO}`$/4 = 32.768 kHz, 1st order 
 
 - **All Pass**
 
-  
-
 
 ---
 
 
-
-## 10 Advanced Operations - Slow drift compensation
+## 10 Advanced Operations (Slow drift compensation)
 
 All three of the locking modules previously described are built to com- pensate fast drifts in the laser wavelength in order to lock it to a speciﬁc reference, depending on the locking mechanism which is being deployed. Nevertheless, a variety of environmental factors (such as temperature varia- tions, mechanical vibrations and strains, optical feedbacks, etc.) may intro- duce slow drifts in the locking point. To maintain the lock to the reference, the PI correction loop of the locking modules is forced to follow those slow drifts in order to compensate them. If the control loop output drifts towards one of its saturation levels, the lock will be lost due to the inability of the PI loop to further correct the laser wavelength against the environmental disturbance.
 
-![](assets_QubeCL_Manual_v5/img-0923.png)
 
 To avoid this kind of slow drifting interference to break the lock, each  
 locking module may automatically compensate those slow drifts by directly acting on the bias current fed to the laser or on the temperature setpoint of the laser being controlled by the onboard TC module. This correction loop can be activated and controlled with the dedicated **Slow Loop** box which is present in each one of the locking module tabs of the QubeCL\_Control software.
+
+![](assets_QubeCL_Manual_v5/img-0923.png){class="inline fig20 end"}
 
 The Slow Loop Control box includes the followings commands:
 
@@ -1147,54 +1041,38 @@ Once the lock has been successfully achieved (with whichever of the locking modu
 
 - Enable the automatic correction by pressing the **Slow Loop button.**
 
-  
-
-
----
-
-
-
 - Check the **error monitor plot** to see if the Slow Loop is working properly: the error must be drifting toward 0, otherwise the **Sign** of the Slow Loop must be reversed.
 
 - Adjust the **SL cycle time** to make the compensation loop faster or slower, if needed.
 
-  
-
-
 ---
-
-
 
 ## 11 Advanced Operations - QubeCL advanced settings
 
-![](assets_QubeCL_Manual_v5/img-0956.png)
-
-**Figure 22:** The ﬁrst Advanced tab of the Control Software GUI
 
 The QubeCL\_control Software also has 2 tabs for advanced settings. The two tabs hold a series of controls that are less frequently useful or which give a direct control over some speciﬁc functionalities of the QubeCL. The two advanced tabs are available in the lower half of the Control Software GUI.
 
-### 11.1 Adv. 1 tab
+### 11.1 Advanced tab 1
 
-The ﬁrst advanced tab, visible in **ﬁgure 22,** is subdivided in ﬁve diﬀerent panels, each one dedicated to a particular set of commands and controls.
+![The ﬁrst Advanced tab of the Control Software GUI](assets_QubeCL_Manual_v5/img-0956.png){#adv-tab-1}
 
-The **Direct Communication** panel regroups all the commands that can be used to directly communicate with the QubeCL by textual commands instead of the interaction with the But- tons and Forms contained in the GUI.  
-The command that the user wants to send to the QubeCL must be typed into the **COM- MAND** form, a complete list of the available commands with their syntax can be found in chapter 13.
+
+The ﬁrst advanced tab, visible in [](#adv-tab-1), is subdivided in ﬁve diﬀerent panels, each one dedicated to a particular set of commands and controls.
+
+The **Direct Communication** panel regroups all the commands that can be used to directly communicate with the QubeCL by textual commands instead of the interaction with the But- tons and Forms contained in the GUI.
+
+The command that the user wants to send to the QubeCL must be typed into the **COMMAND** form, a complete list of the available commands with their syntax can be found in  [Chapter 13](#13-direct-communication).
 
 Once the command has been sent by pressing the **SEND COMMAND** button, the reply (if any) from the QubeCL can be read in the **READBACK** form.
 
 The **CM Advanced** panel regroups some information about the CM module(s) on board of the QubeCL, which are the one(s) deputed to the generation of the Current for the laser. Here, the temperature of the modules is shown in the CM Temp box, while DtLoop shows the update time of the GUI. The update can be forced by pressing the Update Panel button. The Power button allows the user to switch oﬀ the power supply for all the modules except the TC, which has a separate power line. Using this command to switch oﬀ some of the module while the QubeCL is operating is an advanced operation and may lead to unexpected behavior, **do not use it when the laser is connected to the QubeCL.**
 
-  
-
-
----
-
-
-
 The **TC Advanced** panel holds advanced commands for the TC module. Similarly to the CM Advanced panel, there is a Power button that allows the user to switch on and oﬀ the power to the TC module. As well as for the CM module, **this operation is dangerous and** **must be handled with care.** TEC Mode** switch allows the user to decide whether the TC module should act as a Tem- perature Controller for the laser (strongly recommended option) or as an Heater.  
+
 **TEC limit** is the maximum current that the TC module can source, in both directions, to the Peltier module mounted on the laser. User can change this value by the mean of the **CHANGE** button, which will open a dedicated window. Set the Maximum current accord- ingly to the one stated in the datasheet or test report of the laser that needs to be driven by the QubeCL.  
+
 The two **TSetMAX** and **TSetMIN** values are used to set the maximum and minimum tem- perature that can be selected as setpoint for the Temperature Stabilization Loop operated by the TC module. As well as for the TEC current limit, those values can be changed using the respective **CHANGE** buttons.  
-The **ErrSumLim** parameter is the one used as a safety measure to prevent the Temperature Controller to drift away from the setpoint or to fail to stabilize the temperature for any other reason. A detailed explanation of this parameter can be found in **chapter 5.3.3.**
+The **ErrSumLim** parameter is the one used as a safety measure to prevent the Temperature Controller to drift away from the setpoint or to fail to stabilize the temperature for any other reason. A detailed explanation of this parameter can be found in the Chapter 5 section on [Automatic Protections](#533-automatic-protections).
 
 The **System Modules** panel shows the composition of the QubeCL by highlighting the LED corresponding to each module present in the QubeCL. If there are more than one module of each kind (CMs, for example), the number of modules is also plotted in the corresponding LED.  
 The conﬁguration can be changed by clicking on the **CONFIG** button, however ppqSense strongly discourage the modiﬁcation of the QubeCL stack by the customers to avoid any damage and the warranty nulliﬁcation.
@@ -1202,28 +1080,23 @@ The conﬁguration can be changed by clicking on the **CONFIG** button, however 
 The **System Advanced** panel holds some rarely used commands. The Fan Control com- mand allows the user to chose the speed of the cooling fan, ppqSense strongly recommends to leave this selector on the **Auto** position.  
 The two buttons on the lower part of the panel can be used to activate the Wi-ﬁ or the LAN connection, if the QubeCL is provided with such options.  
 The two forms in the lower right part of the panel can be used to chose how often the data acquired from the Control Software have to be saved in the log ﬁle.  
-Lastly, the **ProgOn** button which allows to use the Control Software to update the ﬁrmware of the QubeCL. This operation is **dangerous** and must never be executed when the QubeCL is connected to a laser. Using this command may cause incompatibility of the QubeCL with the Control Software or with some of its modules, so it has to be executed only under assistance by ppqSense staﬀ.
+Lastly, the **ProgOn** button which allows to use the Control Software to update the ﬁrmware of the QubeCL. 
 
-### 11.2 Adv. 2 tab
+!!! danger "ProgOn Firmware update"
+
+    This operation is **dangerous** and must *never* be executed when the QubeCL is connected to a laser. Using this command may cause incompatibility of the QubeCL with the Control Software or with some of its modules, so it has to be executed only under assistance by ppqSense staﬀ.
+    
+
+### 11.2 Advanced tab 2
 
 This tab holds fewer controls, being available for future development. The tab holds two panels dedicated to some advanced featurer both of the DDS sub-module and the LIA module.
 
-  
-
-
----
-
-
-
-![](assets_QubeCL_Manual_v5/img-0958.png)
-
-**Figure 23:** The ﬁrst Advanced tab of the Control Software GUI
+![The second Advanced tab of the Control Software GUI](assets_QubeCL_Manual_v5/img-0958.png){#adv-tab-2}
 
 **The Clock & Sync.** panel holds a series of advanced controls for the DDS sub-module. The ﬁrst three buttons, **DDS,** allow the user to switch on and oﬀ the timing clocks generated by the DDS board. The ﬁrst clock is the one used to serve as a time reference for the DDS circuits. If this DDS is switched oﬀ, the onboard DDS won’t be able to source any signal. The **Int. Sync** buttons switches on and oﬀ the synchronization signal internal to the QubeCL, used by the driver to establish a shared time base between the DDS sub-module and the LIA or PDH modules. Switching oﬀ this signal will disrupt the synchronization between the DDS sub-module and the PDH/LIA modules, preventing any locking procedure to work as described in this manual.  
+
 The **Ext. Sync** button switches on and oﬀ the **SYNC OUT** signal available on the C7 connector of the LH module.
-
 The **Ext. Sync. Phase** allow the user to change the phase of the external synchronization signal available on the connector C7 of the LH module, if the DDS sub-module is included in the QubeCL stack.
-
 The **Lock-In Ampliﬁer** panel holds some advanced commands interacting with the LIA module.  
 The **MIXER** button switches on and oﬀ the demodulating action of the LIA module.  
 The **90°SHIFT** enables or disables a 90 degrees shift on the demodulating signal of the Lock- In Ampliﬁer.  
@@ -1231,15 +1104,11 @@ The **Clock Div.** selector enables the user to set a division factor for the de
 By changing the value of each one of those controls from the standard ones will aﬀect the ability of the QubeCL to perform locking with the LIA modules.
 
   
-
-
 ---
 
 ## 12 Interfacing with lasers
 
-
-
-The basic version of the QubeCL has two modules that provides the connections to the laser: the Laser Head (LH) Module, with an SMA connector to source current to the laser, and the Temperature Controller (TC) Module, with a multipolar connector, used to sense and stabilize the temperature of the laser.  
+The basic version of the QubeCL has two modules that provides the connections to the laser: the *Laser Head* (LH) Module, with an SMA connector to source current to the laser, and the *Temperature Controller* (TC) Module, with a multipolar connector, used to sense and stabilize the temperature of the laser.  
 The vast majority of laser do not have an electrical connection that directly matches the output connectors of the QubeCL, hence ppqSense has developed a variety of interconnection boards and housing modules in order to make it easier for the user to connect the laser to its driver without self-assembled solutions.
 
 ### 12.1 Laser Housing for QubeCL
@@ -1261,14 +1130,7 @@ Please, contact ppqSense to verify the compatibility of our HHL Housing with you
 The Interface Boards developed by ppqSense are useful to interface a laser with its QubeCL driver without including the laser in the driver itself. Interface Boards have two electrical connections that matches the outputs of the QubeCL driver, while also presenting a connector dedicated to match the pins of the laser.  
 The Interface Boards do not provide any mechanical anchorage for the laser and are only intended for its electrical connection with the QubeCL driver.
 
-  
-
-
----
-
 ### 12.2.1 HHL Interface Board
-
-
 
 The HHL interface boards is speciﬁcally designed to provide electrical interconnection with the QubeCL driver in a very small board (55 x 35 mm), while also providing some safety features for the laser.  
 Please, contact ppqSense staﬀ to verify the compatibility of the HHL Interface Board with your speciﬁc laser.
@@ -1279,65 +1141,55 @@ In order to connect the QubeCL with lasers embedded in the Cubic Mount from Nano
 
 ### 12.3 High Frequency modulation with Bias-Tee
 
-Some of the Interface Boards and Housing Modules may include an high-frequency modu- lation input to source the laser with modulating signals at higher frequency with respect to the ones allowed by the QubeCL modulators (see **chapter 6, table [4**](#table.caption.5) and **table 5,** and the QubeCL datasheet).  
+Some of the Interface Boards and Housing Modules may include an high-frequency modu- lation input to source the laser with modulating signals at higher frequency with respect to the ones allowed by the QubeCL modulators (see [Chapter 6](#6-advanced-operations-modulators-and-dds), [](#table-current-analog-mod-specs), [](#table-current-digital-generator-specs), and the QubeCL datasheet).  
+
+
 To allow such high-frequency modulation, the Interface Boards and Housing Modules use a **Bias-Tee.**
+
+Figure: Bias Tee simpliﬁed electronic diagram{#bias-tee class = "inline fig"}
+
+![Bias Tee simpliﬁed electronic diagram](assets_QubeCL_Manual_v5/img-0961.png)
+
 
 Bias-Tee is an electronic component used to inject high-frequency modulating signal over a DC bias signal. The component has three ports of which one is used to source a DC bias signal while the other injects the radio frequency signal, the third port is the output one, where the bias and the RF signal are superimposed. The Bias-Tee works to decouple the sources of the two input signals.
 
-![](assets_QubeCL_Manual_v5/img-0961.png)
 
-**Figure 24:** Bias Tee simpliﬁed electronic diagram
 
-As it is shown in **ﬁgure 24,** Bias Tee can be described as a LC circuit working as a ﬁlter to decouple DC bias and RF signals on their respective ports. Because of its circuit model, Bias Tees can only couple RF signal over a certain cut-oﬀ frequency.  
+As it is shown in [](#bias-tee), Bias Tee can be described as a LC circuit working as a ﬁlter to decouple DC bias and RF signals on their respective ports. Because of its circuit model, Bias Tees can only couple RF signal over a certain cut-oﬀ frequency.  
 The Bias-Tee used inside ppqSense devices has a 500 kHz cut-oﬀ frequency, hence it can’t be used to inject modulation signal below such frequency.
+
 
 ### 12.3.1 Bias-Tee usage for high freuqency laser modulation
 
-QubeCLs drivers are able to source modulating signals to the laser by themselves with a - 3 dB bandwidth of 2 MHz, without needing any external circuitry. The great advantage
-
-  
-
-
----
-
-
-
-of the modulating signals of the QubeCL is that they are generated as current signals by dedicated current-drivers. The fact that the QubeCLs houses current drivers for modulating signal generation makes the process of generating a modulating signal for the laser an easy and straightforward operation, since the amplitude and frequency of the signal can be easily deﬁned by the input signal to the QubeCL or with the DDS interface on the GUI. Bias-Tee steps in if higher frequencies modulating signals are necessary.
+QubeCLs drivers are able to source modulating signals to the laser by themselves with a - 3 dB bandwidth of 2 MHz, without needing any external circuitry. The great advantage of the modulating signals of the QubeCL is that they are generated as current signals by dedicated current-drivers. The fact that the QubeCLs houses current drivers for modulating signal generation makes the process of generating a modulating signal for the laser an easy and straightforward operation, since the amplitude and frequency of the signal can be easily deﬁned by the input signal to the QubeCL or with the DDS interface on the GUI. Bias-Tee steps in if higher frequencies modulating signals are necessary.
 
 All the Housing Modules and Interface Boards equipped with a Bias-Tee have a high- frequency modulation input to which the user has to connect the modulating signal. Bias-Tee has the advantage of withstanding higher frequencies, but the disadvantage of being designed to couple voltage-signal and not current-signal as the one that should be used to properly and easily drive a laser. Given that, when sourcing a signal to the RF port of the Bias-Tee boards, care must be taken in order to properly understand how the voltage applied to the port is converted into current on the laser.
 
-In those condition, the amplitude of the modulating current not only depends on the ampli- tude of the modulating signal but also on the operating point of the laser itself (which is set by the DC bias current) and on the dynamic resistance that the laser shows at such operating point. It is possible to calculate the amplitude of the modulating current using a circuit model for the Bias-Tee analogous to the one pictured in **ﬁgure 24.**  
+In those condition, the amplitude of the modulating current not only depends on the ampli- tude of the modulating signal but also on the operating point of the laser itself (which is set by the DC bias current) and on the dynamic resistance that the laser shows at such operating point. It is possible to calculate the amplitude of the modulating current using a circuit model for the Bias-Tee analogous to the one pictured in [](#bias-tee).
+
 The circuit model for the Bias Tee includes a capacitor to isolate the RF port from the DC bias sourced on the DC port, while the inductance on the DC port isolates it from the RF signal sourced on the RF input. The aim is to determine the amplitude of the Modulating current-signal that is sourced out of the Bias-Tee RF+DC port knowing the amplitude of the voltage-signal applied to the RF port of the device.
 
 For the purpose of calculating the RF signal amplitude, the inductance on the DC port can be considered as an open circuit and hence ignored. We obtain an R-C series circuit, in which C is the capacitance of the RF port of the Bias-Tee and R is the Dynamic Resistance of the laser at the speciﬁc working condition, which depends on the DC bias current.
 
 Concerning the Capacitor C, the current that ﬂows through it can be calculated as:
 
-*dv*  
-*i* = *C*  
-*dt*  
+```math
+i = C\frac{dv}{dt}
+``` 
+
 For a Square Wave signal, this formula can be used to ﬁnd out **IM,** which is the maximum current that can be injected through the capacitor, by using the subsequent values:
 
-- C is the capacitor of the Bias-Tee circuit, in case of the ppqSese Housing Modules and Interface Boards we have C = 1 *µ* F;
+- C is the capacitor of the Bias-Tee circuit, in case of the ppqSese Housing Modules and Interface Boards we have $` C = 1 μF `$;
 
 - The derivative of the voltage signal can be approximated with the **voltage peak-to- peak amplitude** of the signal divided by its **rise (or fall) time.**
 
-This calculation returns **IM,** the peak injected current for a laser Dynamic Resistance of 0 Ω . If the Dynamic Resistance is higher, it will reduce the amplitude of the modulating current. If
+This calculation returns **IM,** the peak injected current for a laser Dynamic Resistance of $`0\Omega`$ . If the Dynamic Resistance is higher, it will reduce the amplitude of the modulating current. If the Dynamic Resistance is much higher than the impedance of the Capacitor it is dominant and can limit the amplitude of the modulating current to a maximum value of:
 
-  
+```math 
+i_{mod}= \frac{V_{pp}}{R}
+```
 
-
----
-
-
-
-the Dynamic Resistance is much higher than the impedance of the Capacitor it is dominant and can limit the amplitude of the modulating current to a maximum value of:
-
-*Vpp*  
-*imod* =  
-*R*  
-Where V is the peak-to-peak amplitude of the modulating signal and R is the Dynamic pp  
-Resistance of the laser.
+Where $`V_{pp}`$ is the peak-to-peak amplitude of the modulating signal and R is the Dynamic Resistance of the laser.
 
 The two conditions described above are the extreme ones:
 
@@ -1347,55 +1199,46 @@ The two conditions described above are the extreme ones:
 
 Depending on the value of the resistance, the system can show one of these two limit behaviours or something in the middle between the two limit cases if none of the impedances dominates over the other one.
 
-For a practical approach to the use of the Bias-Tee, once the parameters of the modulating signal are set (peak-to-peak amplitude and rise/fall time), the current I  
-can be calculated in M  
-order to ﬁnd out its magnitude.  
-The modulating signal parameters can be consequently modiﬁed in order to lower the amplitude of I if it comes out to be too high. I is the overall maximum amplitude of the current M  
-M  
-that the bias tee can inject into the laser in any condition, since its limited by the Bias-Tee characteristics themselves.  
-Be careful: the fact that this is the maximum current that can be injected by the Bias-Tee does not mean that the laser can withstand it. This value is the limit for the Bias-Tee but may be higher than the maximum value allowed for the laser.  
+For a practical approach to the use of the Bias-Tee, once the parameters of the modulating signal are set (peak-to-peak amplitude and rise/fall time), the current $`I_{M}`$ can be calculated in order to ﬁnd out its magnitude.  
+The modulating signal parameters can be consequently modiﬁed in order to lower the amplitude of $`I_{M}`$ if it comes out to be too high. I is the overall maximum amplitude of the current that the bias tee can inject into the laser in any condition, since its limited by the Bias-Tee characteristics themselves.
+
+!!! warning "Be Careful"
+
+    The fact that this is the maximum current that can be injected by the Bias-Tee does not mean that the laser can withstand it. This value is the limit for the Bias-Tee but may be higher than the maximum value allowed for the laser.  
+  
+
 If possible, it could be helpful to obtain an estimate of the dynamic resistance of the laser, in order to have a better model for the circuit and not have to rely solely on the maximum current value obtained with the previous calculations.
 
 In any condition, starting with a low amplitude modulating signal, lower than 100 mVpp, can be helpful to avoid the risk of damaging the laser. From this starting point, the amplitude can be gradually increased trying to ﬁnd the best amplitude for the modulating signal, always being careful not to obtain a too high modulating current.  
+
 A series resistor can be added between the signal generator and the Bias-Tee RF input in order to clip the amplitude of the modulating signal, obtaining the same eﬀect that would be obtained with a high-resistance laser that has been described above.
 
-  
-
-
----
 
 ### 12.3.2 Interface Boards Wiring
 
 
-
 All the ppqSense Interface Boards present the three port conﬁguration of the Bias-Tee, if the Bias-Tee option is included, being the DC Bias Current input, the RF Modulation Input and the RF + DC Output which is embedded into the laser connector. Moreover, since the Boards acts as a complete interface to the laser, they also have a TEC connector to allow Temperature Stabilization.  
-In **ﬁgure [25**](#figure.caption.142) and **ﬁgure 26,** the position of the described connection into the two interface board is displayed.
 
-![](assets_QubeCL_Manual_v5/img-0965.png)
+In [](#nanoplus-board) and [](#hhl-board) the position of the described connection into the two interface board is displayed.
 
-**Figure 25:** Drawings of the NanoPlus Cubic Mount Interface Board
+![Drawings of the NanoPlus Cubic Mount Interface Board](assets_QubeCL_Manual_v5/img-0965.png){#nanoplus-board}
 
-![](assets_QubeCL_Manual_v5/img-0966.png)
 
-**Figure 26:** Drawings of the HHL Interface Board
-
-  
-
+![Drawings of the HHL Interface Board](assets_QubeCL_Manual_v5/img-0966.png){#hhl-board}
+ 
 
 ---
 
 ## 13 Direct Communication
 
 
-
 It is possible to communicate with the QubeCL without the QubeCL Control Software. This option can be useful if the user wants to integrate the QubeCL into a complex system which is managed by a control software. The integration can be done by allowing the third party control software to directly communicate with the Serial Port of the QubeCL using the appropriate commands.  
 Here we provide all the technical information to establish the Serial connection and a list of the available commands, along with their syntax and reply from the QubeCL.
 
-> CAUTION
+!!! warning "CAUTION"
 
-The QubeCL Control Software provided by ppqSense provides some safety features that are useful to prevent any usage of the QubeCL that may harm both the driver or the laser connected to it.  
-While using a third party control software, the user must be particularly cautious in order to avoid any possibly harmful condition for the QubeCL driver or the laser. Before using any third party control software, ppqSense strongly encourages the user to contact the ppqSense technical support to obaint counseling and advices from the techincal staﬀ.
-
+    The QubeCL Control Software provided by ppqSense provides some safety features that are useful to prevent any usage of the QubeCL that may harm both the driver or the laser connected to it. While using a third party control software, the user must be particularly cautious in order to avoid any possibly harmful condition for the QubeCL driver or the laser. Before using any third party control software, ppqSense strongly encourages the user to contact the ppqSense technical support to obaint counseling and advices from the techincal staﬀ.
+  
 ### 13.1 QubeCL Serial Port Speciﬁcations
 
 The QubeCL Control Software communicates with the QubeCL by the mean of a Serial Connection that can also be used by a third party software to interact with the driver. The baud rate of the QubeCL Serial Port is 115200 bps, which has to be set on the third party software in order for it to work with the driver.  
@@ -1407,277 +1250,193 @@ User can ﬁnd all the available commands listed in the subsequent tables. Those
 In order for the commands to work, they must be sent at the appropriate Baud Rate and each command must be terminated with the **\\n** character.  
 The strings that the QubeCL sends back as a reply, if any for the speciﬁc command sent, are terminated with the **\\r\\n** characters.
 
-  
 
+**Output Current and Modulations**
 
----
+Table: Available commands for QubeCL current generator{#cmds-current-generator}
 
-
-
-**Table 13:** Available commands for QubeCL current generator.
-
-> Cmd Value R/W Action
-
-**Output** Unit Format**
-
-| **Output Current and Modulations** |<|<|<|<|<|  
-|---|---|---|---|---|---|  
+|Cmd| Value| R/W| Action|Output Format| Unit|
+|---|---|---|---|---|---|
 | id: | ? | R | Returns the identiﬁcative code of the instrument | QubeCL- \#\#\#\# | N.A. |  
 | ilas: | ? | R | Returns the Output Current value readed from the QubeCL monitor. | \#\#\#\#.\#\# | mA |  
 | iset: | ? | R | Returns the Current setpoint. | \#\#\#\#.\#\# | mA |  
-|^| \#\#\#\#.\#\# | W | Sets the Current setpoint. | N.A. | mA |  
+|_=_| \#\#\#\#.\#\# | W | Sets the Current setpoint. | N.A. | mA |  
 | iout: | on | W | Switches the Current ON. | N.A. | N.A. |  
-|^| oﬀ | W | Switches the Current OFF. If the modulations were active, they’re also switched OFF. | N.A. | N.A. |  
+|_=_| oﬀ | W | Switches the Current OFF. If the modulations were active, they’re also switched OFF. | N.A. | N.A. |  
 | imax: | ? | R | Returns the Output Current Maxi- mum Limit set by the user. | \#\#\#\#.\#\# | mA |  
-|^| \#\#\#\#.\#\# | W | Sets the Output Current Maximum Limit. | \#\#\#\#.\#\# | mA |  
+|_=_| \#\#\#\#.\#\# | W | Sets the Output Current Maximum Limit. | \#\#\#\#.\#\# | mA |  
 | vlas: | ? | R | Returns the measured Voltage Drop across the laser | \#\#\#\#.\#\# | V |  
 | mod: | on | W | Enables  Switch.  active 10 seconds after. the **iout:on** command. the overall Modulation This command becomes the use of | N.A. | N.A. |  
-|^| oﬀ | W | Disables the overall Modulation Switch. If some of the modulations are active, they are switched oﬀ too. | N.A. | N.A. |  
+|_=_| oﬀ | W | Disables the overall Modulation Switch. If some of the modulations are active, they are switched oﬀ too. | N.A. | N.A. |  
 | mod1: | on | W | Enables the Modulation Channel 1. | N.A. | N.A. |  
-|^| oﬀ | W | Disables the Modulation Channel 1. | N.A. | N.A. |  
+|_=_| oﬀ | W | Disables the Modulation Channel 1. | N.A. | N.A. |  
 | mod2: | on | W | Enables the Modulation Channel 2. | N.A. | N.A. |  
-|^| oﬀ | W | Disables the Modulation Channel 2. | N.A. | N.A. |  
-
-
-  
-
+|_=_| oﬀ | W | Disables the Modulation Channel 2. | N.A. | N.A. |  
 
 ---
 
+**Laser Temperature Controller**
 
+Table: Available commands for QubeCL temperature controller{#cmds-temp-controller}
 
-**Table 14:** Available commands for QubeCL temperature controller.
-
-> Cmd Value R/W Action
-
-**Output** Unit Format**
-
-| **Laser Temperature Controller** |<|<|<|<|<|  
-|---|---|---|---|---|---|  
+|Cmd| Value| R/W| Action|Output Format| Unit|
+|---|---|---|---|---|---|
 | tlas | ? | R | Return the Temperature of the laser measured by the TC Module. | \#\#\#\#.\#\# | °C |  
 | tstab: | on | W | Switches the Temperature Stabiliza- tion on. | N.A. | N.A. |  
-|^| oﬀ | W | Switches the Temperature Stabiliza- tion oﬀ. | N.A. | N.A. |  
+|_=_| oﬀ | W | Switches the Temperature Stabiliza- tion oﬀ. | N.A. | N.A. |  
 | tset: | ? | R | Return the laser Temperature Set- point | \#\#\#\#.\#\# | °C |  
-|^| \#\#\#\#.\#\# | W | Sets the laser Temperature Setpoint | N.A. | °C |  
+|_=_| \#\#\#\#.\#\# | W | Sets the laser Temperature Setpoint | N.A. | °C |  
 | kp: | \#\#\#\#.\#\# | W | Sets the Proportional Gain Coeﬃcient for the digital PID that manages the laser Temperature Stabilization. | N.A. | A/K |  
 | ki: | \#\#\#\#.\#\# | W | Sets the Integral Gain Coeﬃcient for the digital PID that manages the laser Temperature Stabilization. | N.A. | A/Ks |  
 | kd: | \#\#\#\#.\#\# | W | Sets the Derivative Gain Coeﬃcient for the digital PID that manages the laser Temperature Stabilization. | N.A. | As/K |  
 | pid: | ? | R | Returns the Gain Values of the Digital PID that manages the laser Temper- ature Stabilization.  kp  ki  kd | \#\#\#\#.\#\#: \#\#\#\#.\#\#: \#\#\#\#.\#\# | A/K A/Ks As/K |  
 | tecsign: | ? | R | Returns the sign of the PID that man- ages the laser Temperature Stabiliza- tion. 0: reverse, 1: direct. | \# | bool |  
-|^| dir, rev | W | Sets the sign of the digital PID that manages the laser Temperature Sta- bilization. | N.A. | N.A. |  
+|_=_| dir, rev | W | Sets the sign of the digital PID that manages the laser Temperature Sta- bilization. | N.A. | N.A. |  
 | tlimax: | ? | R | Returns the Maximum Temperature Setpoint for the Stabilization PID. | \#\#\#\#.\#\# | °C |  
-|^| \#\#\#\#.\#\# | W | Sets the Maximum Temperature Set- point for the Stabilization PID. | N.A. | °C |  
+|_=_| \#\#\#\#.\#\# | W | Sets the Maximum Temperature Set- point for the Stabilization PID. | N.A. | °C |  
 | tlimin: | ? | R | Returns the Minimum Temperature Setpoint for the Stabilization PID. | \#\#\#\#.\#\# | °C |  
-|^| \#\#\#\#.\#\# | W | Sets the Minimum Temperature Set- point for the Stabilization PID. | N.A. | °C |  
-
-
-  
-
-
----
-
-
-
+|_=_| \#\#\#\#.\#\# | W | Sets the Minimum Temperature Set- point for the Stabilization PID. | N.A. | °C |  
 | teclim: | ? | R | Returns the Maximum Current Out- put for the TC Module. | \#\#\#\#.\#\# | A |  
 |---|---|---|---|---|---|  
-|^| \#\#\#\#.\#\# | W | Sets the Maximum Current Output for the TC Module. | N.A. | A |  
+|_=_| \#\#\#\#.\#\# | W | Sets the Maximum Current Output for the TC Module. | N.A. | A |  
 | teslim: | ? | R | Returns the threshold for the Active Temperature Error Control. | \#\#\#\#.\#\# | °C\*s |  
-|^| \#\#\#\# | W | Sets the threshold for the Active Tem- perature Error Control. | N.A. | °C\*s |  
-
-
-  
-
+|_=_| \#\#\#\# | W | Sets the threshold for the Active Tem- perature Error Control. | N.A. | °C\*s |  
 
 ---
 
+**DDS Module**
 
+Table: Available commands for the DDS submodule{#cmds-dds-module}
 
-**Table 15:** Available commands for the DDS submodule.
-
-<!-- ### DDS Module -->
-| **DDS Module** |<|<|<|<|<|
 | **Cmd** | **Value** | **R/W** | **Action** | **Output Format** | **Unit** |  
 |---|---|---|---|---|---|  
 | dds1: | ? | R | Returns the status of the DDS on modulation channel 1.  **1:** DDS is active.  **0:** DDS is inactive. | \# | Bool. |  
-|^| on | W | Activates the DDS on channel 1. | N.A. | N.A. |  
-|^| oﬀ | W | Switches oﬀ the DDS on channel 1. | N.A. | N.A. |  
+|   | on | W | Activates the DDS on channel 1. | N.A. | N.A. |  
+|_=_| oﬀ | W | Switches oﬀ the DDS on channel 1. | N.A. | N.A. |  
 | dds1w: | ? | R | Returns the waveform set for DDS on channel 1.  **1:** Sine wave.  **2:** Triangular wave. | \# | Int. |  
-|^| \# | W | Sets the waveform for the DDS on channel 1. Accepted values are:  **1:** Sine wave.  **2:** Triangular wave. | N.A. | Int. |  
+|_=_| \# | W | Sets the waveform for the DDS on channel 1. Accepted values are:  **1:** Sine wave.  **2:** Triangular wave. | N.A. | Int. |  
 | dds1f: | ? | R | Returns the frequency of the DDS on channel 1. | \#\#\#\#.\#\# | Hz |  
-|^| \#\#\#\#.\#\# | W | Sets the frequency for the DDS on channel 1. | N.A. | Hz |  
+|_=_| \#\#\#\#.\#\# | W | Sets the frequency for the DDS on channel 1. | N.A. | Hz |  
 | dds1a: | ? | R | Returns the amplitude of the DDS on channel 1. | \#\#\#\#.\#\# | mA |  
-|^| \#\#\#\#.\#\# | W | Sets the amplitude for the DDS on channel 1. | N.A. | mA |  
+|_=_| \#\#\#\#.\#\# | W | Sets the amplitude for the DDS on channel 1. | N.A. | mA |  
 | dds1p: | ? | R | Returns the phase of the DDS on channel 1. | \#\#\#\#.\#\# | Deg. |  
-|^| \#\#\#\#.\#\# | W | Sets the phase for the DDS on chan- nel 1. | N.A. | Deg. |  
+|_=_| \#\#\#\#.\#\# | W | Sets the phase for the DDS on chan- nel 1. | N.A. | Deg. |  
 | dds2: | ? | R | Returns the status of the DDS on modulation channel 2.  **1:** DDS is active.  **0:** DDS is inactive. | \# | Bool. |  
-|^| on | W | Activates the DDS on channel 2. | N.A. | N.A. |  
-|^| oﬀ | W | Switches oﬀ the DDS on channel 2. | N.A. | N.A. |  
+|   | on | W | Activates the DDS on channel 2. | N.A. | N.A. |  
+|_=_| oﬀ | W | Switches oﬀ the DDS on channel 2. | N.A. | N.A. |  
 | dds2w: | ? | R | Returns the waveform set for DDS on channel 2.  **1:** Sine wave.  **2:** Triangular wave. | \# | Int. |  
-|^| \# | W | Sets the waveform for the DDS on channel 2. Accepted values are:  **1:** Sine wave.  **2:** Triangular wave. | N.A. | Int. |  
-
-
-  
-
-
----
-
-
-
+|_=_| \# | W | Sets the waveform for the DDS on channel 2. Accepted values are:  **1:** Sine wave.  **2:** Triangular wave. | N.A. | Int. |  
 | dds2f: | ? | R | Returns the frequency of the DDS on channel 2. | \#\#\#\#.\#\# | Hz |  
-|---|---|---|---|---|---|  
-|^| \#\#\#\#.\#\# | W | Sets the frequency for the DDS on channel 2. | N.A. | Hz |  
+|_=_| \#\#\#\#.\#\# | W | Sets the frequency for the DDS on channel 2. | N.A. | Hz |  
 | dds2a: | ? | R | Returns the amplitude of the DDS on channel 2. | \#\#\#\#.\#\# | mA |  
-|^| \#\#\#\#.\#\# | W | Sets the amplitude for the DDS on channel 2. | N.A. | mA |  
+|_=_| \#\#\#\#.\#\# | W | Sets the amplitude for the DDS on channel 2. | N.A. | mA |  
 | dds2p: | ? | R | Returns the phase of the DDS on channel 2. | \#\#\#\#.\#\# | Deg. |  
-|^| \#\#\#\#.\#\# | W | Sets the phase for the DDS on chan- nel 2. | N.A. | Deg. |  
+|_=_| \#\#\#\#.\#\# | W | Sets the phase for the DDS on chan- nel 2. | N.A. | Deg. |  
 | syncf: | ? | R | Returns the frequency of the DDS channel to which the Sync. Out sig- nal is synchronized. | \#\#\#\#.\#\# | Hz |  
-|^| ch1 | W | Synchronizes the Sync. Out signal to the DDS1 | N.A. | N.A. |  
-|^| ch2 | W | Synchronizes the Sync. Out signal to the DDS2 | N.A. | N.A. |  
-
-
-  
-
+|   | ch1 | W | Synchronizes the Sync. Out signal to the DDS1 | N.A. | N.A. |  
+|_=_| ch2 | W | Synchronizes the Sync. Out signal to the DDS2 | N.A. | N.A. |  
 
 ---
 
+**PLL Locking Module**
 
-
-**Table 16:** Available commands for the PLL locking module. **PLL Locking Module**
+Table: Available commands for the PLL locking module{#cmds-pll-module}
 
 | **Cmd** | **Value** | **R/W** | **Action** | **Output Format** | **Unit** |  
 |---|---|---|---|---|---|  
 | mux: | \# | W | Allow the user to select which signal is present on the DIVIDER MON out- put. Allowed values are:  **0** DIVIDER MON switched oﬀ.  **2** DIVIDER MON set on RF.  **4** DIVIDER MON set on LO. | N.A. | Int. |  
 | sig: | \# | W | Set the sign of the PLL correction loop. Accepted values are:  **0:** negative correction loop.  **1:** positive correction loop. | N.A. | Int. |  
 | pll: | oﬀ | W | Switches oﬀ the PLL. | N.A. | N.A. |  
-|^| on | W | Switches on the PLL. | N.A. | N.A. |  
+|_=_| on | W | Switches on the PLL. | N.A. | N.A. |  
 | cp: | ? | R | Returns the value of cp, which is the gain of the PLL. Must be switched ON. | \#\# | HEX. |  
-|^| on | W | Switches ON the proportional gain of the PLL chip. | N.A. | N.A. |  
-|^| oﬀ | W | Switches OFF the proportional gain of the PLL chip. | N.A. | N.A. |  
-|^| \# | W | Set the proportional gain. The value can range from 1 to 8. | N.A. | Int. |  
+|   | on | W | Switches ON the proportional gain of the PLL chip. | N.A. | N.A. |  
+|   | oﬀ | W | Switches OFF the proportional gain of the PLL chip. | N.A. | N.A. |  
+|_=_| \# | W | Set the proportional gain. The value can range from 1 to 8. | N.A. | Int. |  
 | ndiv: | \#\#\#\# | W | Sets the divisor coeﬃcient for the RF frequency input. | N.A. | Int. |  
 | rdiv: | \#\#\#\# | W | Sets the divisor coeﬃcient for the LO frequency input. | N.A. | Int. |  
 | pby: | oﬀ | W | Sets the PLL correction loop in pro- portional only mode. | N.A. | N.A. |  
-|^| on | W | Sets proportional-integrative mode. the PLL correction loop in | N.A. | N.A. |  
+|_=_| on | W | Sets proportional-integrative mode. the PLL correction loop in | N.A. | N.A. |  
 | tp: | \# | W | Sets the Integrative time constant of the PLL correction loop. Accepted values range from 0 to 3. | N.A. | Int. |  
 | tz: | \# | W | Sets the Proportional gain of the PLL correction loop. Accepted val- ues range from 0 to 3. | N.A. | Int. |  
 | hg: | \# | W | Sets the proportional gain of the PLL chip. Accepted values ranges from 0 to 3. | N.A. | Int. |  
-
-
-  
-
-
----
-
-
-
 | lk: | oﬀ | W | Switches OFF the correction current injected by the PLL module into the Bias Current. | N.A. | N.A. |  
-|---|---|---|---|---|---|  
-|^| on | W | Activates the correction current in- jected by the PLL module into the Bias Current. Overall modulation must be enabled for it to work. | N.A. | N.A. |  
+|_=_| on | W | Activates the correction current in- jected by the PLL module into the Bias Current. Overall modulation must be enabled for it to work. | N.A. | N.A. |  
 | lm: | ? | R | Returns the value of the PLL correc- tion loop output voltage. | \#\#\#\#.\#\# | mV |  
 
-
-  
-
-
 ---
 
+**PDH Locking Module**
 
-
-**Table 17:** Available commands for the PDH locking module. **PDH Locking Module**
+Table: Available commands for the PDH locking module{#cmds-pdh-module}
 
 | **Cmd** | **Value** | **R/W** | **Action** | **Output Format** | **Unit** |  
 |---|---|---|---|---|---|  
 | pdhint: | oﬀ | W | Sets the PDH correction loop in pro- portional only mode. | N.A. | N.A. |  
-|^| on | W | Sets the PDH correction loop in proportional-integrative mode | N.A. | N.A. |  
+|_=_| on | W | Sets the PDH correction loop in proportional-integrative mode | N.A. | N.A. |  
 | pdhhold: | oﬀ | W | Deactivates the **HOLD** input of the PDH module. | N.A. | N.A. |  
-|^| on | W | Activates the **HOLD** inptut of the PDH module. | N.A. | N.A. |  
+|_=_| on | W | Activates the **HOLD** inptut of the PDH module. | N.A. | N.A. |  
 | pdhlock: | oﬀ | W | Deactivates the correction current in- jected into the Bias current by the PDH module. | N.A. | N.A. |  
-|^| on | W | Activates the correction current in- jected into the Bias current by the PDH module. Overall modulation en- able must be active for it to work. | N.A. | N.A. |  
+|_=_| on | W | Activates the correction current in- jected into the Bias current by the PDH module. Overall modulation en- able must be active for it to work. | N.A. | N.A. |  
 | pdhrint: | \# | W | Sets the ﬁrst proportional gain of the PDH correction loop. Accepted val- ues range from 0 to 3. | N.A. | Int. |  
 | pdhtz: | \# | W | Sets the second proportional gain of the PDH correction loop. Also aﬀect the Integrative time constant. Ac- cepted values range from 0 to 3. | N.A. | Int. |  
 | pdhtp: | \# | W | Sets the time constant of the PDH correction loop. Accepted values range from 0 to 3. | N.A. | Int. |  
 | pdhmon: | \# | W | Sets which signal is present on the Monitor Output of the PDH module. Accepted values are:  **0:** Error Signal.  **1:** Correction signal. | N.A. | Int. |  
-| pdhmonint:? || R | Returns the values of the Error and Correction signals converted by the on board ADCs. | \#\#\#\#.\#\#: \#\#\#\#.\#\# | mV |  
+| pdhmonint:| ? | R | Returns the values of the Error and Correction signals converted by the on board ADCs. | \#\#\#\#.\#\#: \#\#\#\#.\#\# | mV |  
 | pdhvoﬀ: | ? | R | Returns the input oﬀset of the PDH correction loop. | \#\#\#\#.\#\# | mV |  
-|^| \#\#\#\#.\#\# | W | Sets the input oﬀset of the PDH cor- rection loop. The value can range from 0 to 5000. Default is 2500. | N.A. | mV |  
-
-
-  
-
+|_=_| \#\#\#\#.\#\# | W | Sets the input oﬀset of the PDH cor- rection loop. The value can range from 0 to 5000. Default is 2500. | N.A. | mV |  
+| pdhdp: | ? | R | Returns the PDH correction loop pre- ampliﬁer gain. | \#\#\#\#.\#\# | mV |    
+|_=_| \#\#\#\#.\#\# | W | Sets the PDH coorection loop pre- ampliﬁer gain. Accepted values range from 0 to 63. | N.A. | mV |  
 
 ---
 
+**LIA Module**
 
-
-| pdhdp: | ? | R | Returns the PDH correction loop pre- ampliﬁer gain. | \#\#\#\#.\#\# | mV |  
-|---|---|---|---|---|---|  
-|^| \#\#\#\#.\#\# | W | Sets the PDH coorection loop pre- ampliﬁer gain. Accepted values range from 0 to 63. | N.A. | mV |  
-
-
-  
-
-
----
-
-
-
-**Table 18:** Available commands for the LIA locking module.
-
-### LIA Module
+Table: Available commands for the LIA locking module{#cmds-lia-module}
 
 | **Cmd** | **Value** | **R/W** | **Action** | **Output Format** | **Unit** |  
 |---|---|---|---|---|---|  
 | lkpi: | ? | R | Returns the mode of the correction loop:  **0** stands for **P** mode.  **1** stands for **PI** mode. | \# | Bool. |  
-|^| 0 | W | Sets the correction loop in P mode. | N.A. | Int. |  
-|^| 1 | W | Sets the correction loop in PI mode. | N.A. | Int. |  
+|   | 0 | W | Sets the correction loop in P mode. | N.A. | Int. |  
+|_=_| 1 | W | Sets the correction loop in PI mode. | N.A. | Int. |  
 | lkﬂt: | ? | R | Returns the status of the Low Pass Filter of the correction loop:  **0** stands for inactive.  **1** stands for active. | \# | Bool. |  
-|^| en | W | Activates Low Pass Filter | N.A. | N.A. |  
-|^| dis | W | Deactivates Low Pass Filter | N.A. | N.A. |  
+|   | en | W | Activates Low Pass Filter | N.A. | N.A. |  
+|_=_| dis | W | Deactivates Low Pass Filter | N.A. | N.A. |  
 | lkgain: | ? | R | Returns the VGA Gain. | \#\#\#\#.\#\# | dB |  
-|^| \#\#\#\#.\#\# | W | Sets the VGA Gain | N.A. | dB |  
+|_=_| \#\#\#\#.\#\# | W | Sets the VGA Gain | N.A. | dB |  
 | lktp: | ? | R | Returns the pole of the correction loop. | \# | Int. |  
-|^| \# | W | Sets the pole of the correction loop. Accepted value ranges from 0 to 3. | N.A. | Int. |  
+|_=_| \# | W | Sets the pole of the correction loop. Accepted value ranges from 0 to 3. | N.A. | Int. |  
 | lktz: | ? | R | Returns the proportional gain of the correction loop. | \# | Int. |  
-|^| \# | W | Sets the proportional gain of the cor- rection loop. Accepted values ranges from 0 to 3. | N.A. | Hz |  
+|_=_| \# | W | Sets the proportional gain of the cor- rection loop. Accepted values ranges from 0 to 3. | N.A. | Hz |  
 | lktpb: | ? | R | Returns the frequency setting for the Low Pass Filter of the correction loop. | \# | Int. |  
-|^| \# | W | Sets the frequency setting for the Low Pass Filter of the correction loop. Ac- cepted value ranges from 0 to 3. | N.A. | mA |  
+|_=_| \# | W | Sets the frequency setting for the Low Pass Filter of the correction loop. Ac- cepted value ranges from 0 to 3. | N.A. | mA |  
 | lklock: | on | W | Activates the LIA correction loop. | N.A. | N.A. |  
-|^| oﬀ | W | Deactivates the LIA correction loop. | N.A. | N.A. |  
+|_=_| oﬀ | W | Deactivates the LIA correction loop. | N.A. | N.A. |  
 | lkdemod: | ? | R | Returns the demodulation mode of the LIA.  **0** stands for **f** mod.  **1** stands for **2f** mode.  **2** stands for no deomdulation acrive. | \# | Int. |  
-|^| f | W | Sets the **f** demodulation mode | N.A. | N.A. |  
-|^| 2f | W | Sets the **2f** demodulation mode | N.A. | N.A. |  
-|^| free | W | Deactivates the demodulation | N.A. | N.A. |  
-
-
-  
-
+|   | f | W | Sets the **f** demodulation mode | N.A. | N.A. |  
+|   | 2f | W | Sets the **2f** demodulation mode | N.A. | N.A. |  
+|_=_| free | W | Deactivates the demodulation | N.A. | N.A. |  
+| lkmon: | ? | R | Returns the currently set for the out- put monitor of the LIA module:  **0** stands for correction monitor.  **1** stands for ERROR monitor. | \#\#\#\#.\#\# | Deg. |    
+|   | err | W | Sets the output monitor to show the ERROR signal. | N.A. | N.A. |  
+|_=_| lock | W | Sets the output monitor to show the correction signal. | N.A. | N.A. |  
+| lkIIR: | ? | R | Returns the digital ﬁlter currently in use:  **1** stands for **BP0.**  **2** stands for **BP1.**  **3** stands for **BP2.**  **4** stands for **LP1.**  **5** stands for **LP2.**  **6** stands for **Notch.** 7** stands for **All Pass.** | \# | Int. |  
+|   | BP0 | W | Sets the BP0 ﬁlter | N.A. | N.A. |  
+|   | BP1 | W | Sets the BP1 ﬁlter | N.A. | N.A. |  
+|   | BP2 | W | Sets the BP2 ﬁlter | N.A. | N.A. |  
+|   | LP0 | W | Sets the LP0LP0 ﬁlter | N.A. | N.A. |  
+|   | LP1 | W | Sets the LP1 ﬁlter | N.A. | N.A. |  
+|   | NOTCH | W | Sets the NOTCH ﬁlter | N.A. | N.A. |  
+|_=_| ALLPASS | W | Sets the ALLPASS ﬁlter | N.A. | N.A. |  
 
 ---
 
+ **QubeCL Instrument Status**
 
+Table: Available commands to check the instrument status{#cmds-instrument-status}
 
-| lkmon: | ? | R | Returns the currently set for the out- put monitor of the LIA module:  **0** stands for correction monitor.  **1** stands for ERROR monitor. | \#\#\#\#.\#\# | Deg. |  
+| **Cmd** | **Value** | **R/W** | **Action** | **Output Format** | **Unit** |  
 |---|---|---|---|---|---|  
-|^| err | W | Sets the output monitor to show the ERROR signal. | N.A. | N.A. |  
-|^| lock | W | Sets the output monitor to show the correction signal. | N.A. | N.A. |  
-| lkIIR: | ? | R | Returns the digital ﬁlter currently in use:  **1** stands for **BP0.**  **2** stands for **BP1.**  **3** stands for **BP2.**  **4** stands for **LP1.**  **5** stands for **LP2.**  **6** stands for **Notch.** 7** stands for **All Pass.** | \# | Int. |  
-|^| BP0 | W | Sets the BP0 ﬁlter | N.A. | N.A. |  
-|^| BP1 | W | Sets the BP1 ﬁlter | N.A. | N.A. |  
-|^| BP2 | W | Sets the BP2 ﬁlter | N.A. | N.A. |  
-|^| LP0 | W | Sets the LP0LP0 ﬁlter | N.A. | N.A. |  
-|^| LP1 | W | Sets the LP1 ﬁlter | N.A. | N.A. |  
-|^| NOTCH | W | Sets the NOTCH ﬁlter | N.A. | N.A. |  
-|^| ALLPASS | W | Sets the ALLPASS ﬁlter | N.A. | N.A. |  
-
-
-**Table 19:** Available commands to check the instrument status. **QubeCL Instrument Status**
-
-| vcc: | ? | R | Returns the Supply Voltage for the CM Module measured by the QubeCL. | \#\#\#\#.\#\# | V |  
-|---|---|---|---|---|---|  
+| vcc: | ? | R | Returns the Supply Voltage for the CM Module measured by the QubeCL. | \#\#\#\#.\#\# | V |    
 | tsense: | ? | R | Returns the internal Temperature of the QubeCL instrument. | \#\#\#\#.\#\# | °C |  
-
-
-
 
 
 ---
@@ -1688,18 +1447,17 @@ The ppqSense staﬀ can be reached for any problem or request concerning the Qub
 To address any malfunctions or request help while working with our QubeCL, please write an email to **qube.support@ppqsense.odoo.com,** our staﬀ will reply to the raised ticket as soon as possible.  
 To obtain quotations, support or updates concerning the purchase of our instruments, please write an email to **info@ppqsense.com.**
 
-All the available documentation concerning both the QubeCL and all our other products can be found on our website: **[www.ppqsense.com.](www.ppqsense.com.)**
+All the available documentation concerning both the QubeCL and all our other products can be found on our website: **[www.ppqsense.com](https://www.ppqsense.com/)**.
 
 **ppqSense s.r.l.**  
 Viale L. Ariosto 492/B 50019, Sesto Fiorentino (FI) Italy  
 +39 055 80 23 943
 
-
 ---
 
 ## Revision History
 
-Revision Date Author(s) Description
-
-1.0 2024.05.15 LM First redaction.
+|Revision | Date | Author(s) | Description |
+|---------|------|-----------|-------------|
+| 1.0     | 2024.05.15 | LM | First redaction |
 
