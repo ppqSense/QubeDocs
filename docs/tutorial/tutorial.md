@@ -144,6 +144,8 @@ First: install `weasyprint` on your system: (used for PDF generation)
   - `sudo apt install weasyprint` (Ubuntu)
   
   - [Executable download](https://github.com/Kozea/WeasyPrint/releases) (Windows)
+      - More elaborate setup: [guide here](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows)
+      - or disable `to-pdf` plugin in mkdocs.yml
 
   - [All other systems](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html)
 
@@ -165,9 +167,7 @@ Changes to content should be reflected automatically upon save if `mkdocs serve`
     `mkdocs build` must be re-run upon changes to styling or plugins.
 
 !!! warning "Always update python requirements upon package install"
-    Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory:
-
-   - `pip freeze > requirements.txt` (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).
+    Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory: `pip freeze > requirements.txt` (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).
 
 Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired `.md` file along with its assets folder and PDF. By saving it under a new name in the `/docs/downloads` folder, the PDF can be added to the download page as a dated version of the manual.
 
