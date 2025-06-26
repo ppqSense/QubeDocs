@@ -1,0 +1,249 @@
+/* Site-wide CSS */
+body {
+	background-image: url('img/cover.png');
+	background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 25%, rgb(255, 255, 255,1) 100%), url('img/cover.png');
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-justify: auto;
+	/* font-family: 'Courier New', Courier, monospace; */
+}
+
+/* Light mode */
+[data-md-color-scheme="default"] {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 25%, rgb(255, 255, 255) 100%), url('img/cover.png');
+background-size:contain;
+background-repeat: no-repeat;
+background-attachment: fixed;
+text-justify: auto;
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 25%, rgb(0, 0, 0) 100%), url('img/cover_dark.png');
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-justify: auto;
+}
+
+.md-grid {
+  max-width: 1440px; 
+}
+
+/* Figure/Table Mods */
+/* ********************************** */
+/* 
+.md-typeset table:not([class]) {
+  display: table;
+  border: 0.05rem solid var(--md-typeset-table-color);
+  border-radius: 6px;
+}
+/* Table Header Color */
+/* .md-typeset__table thead {
+  background-color: teal;
+  color: var(--base-table-header-font-color);
+} */
+/* Round the  Table Header Corners*/
+/* th:first-of-type {
+  border-left: 0.05rem solid var(--md-typeset-table-color);
+  border-radius: 6px 0 0 0;
+}
+th:last-of-type {
+  border-right: 0.05rem solid var(--md-typeset-table-color);
+  border-radius: 0 6px 0 0;
+} */
+
+/* th, td {
+    border: 1px solid var(--md-typeset-table-color);
+    border-spacing: 0;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+}
+
+.md-typeset__table {
+    line-height: 1.5;
+}
+
+.md-typeset__table table:not([class]) {
+    /* font-size: .74rem; */
+    /* border-right: none;
+}
+
+.md-typeset__table table:not([class]) td,
+.md-typeset__table table:not([class]) th {
+    padding: 9px;
+} */ 
+
+.md-typeset__table table:not([class]) caption {
+	font-size: .84rem;
+	font-style: italic;
+	opacity: 80%;
+	background-color: rgba(128, 0, 128, 0.1);
+
+}
+
+/* light mode alternating table bg colors */
+.md-typeset__table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+ .md-typeset__table thead {
+  background-color: rgba(128, 0, 128, 0.3);
+  color: var(--base-table-header-font-color);
+ }
+
+/* dark mode alternating table bg colors */
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
+    background-color: hsla(var(--md-hue),10%,10%,1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset__table thead {
+	background-color: rgba(104, 58, 182, 0.3);
+ 	color: var(--base-table-header-font-color);
+
+}
+
+[data-md-color-scheme="slate"] .md-typeset__table table:not([class]) caption {
+	font-size: .84rem;
+	font-style: italic;
+	opacity: 80%;
+	background-color: rgba(104, 58, 182, 0.1);
+
+}
+
+/* inline allows for text wrap around minimized image or figure */
+.md-typeset {
+    /* Modifier to float block elements */
+    .inline {
+      float: inline-start;
+      width: px2rem(434px);
+      margin-inline-end: px2rem(16px);
+      margin-top: 0;
+      margin-bottom: px2rem(16px);
+
+      /* Modifier to move to end (ltr: right, rtl: left)*/
+      &.end {
+        float: inline-end;
+        margin-inline: px2rem(16px) 0;
+      }
+
+	  &.fig {
+		width: 50%;
+	  }
+	  &.fig40 {
+		width: 40%;
+	  }
+	  &.fig30 {
+		width: 30%;
+	  }
+	  &.fig20 {
+		width: 20%;
+	  }	  
+	  &.fig10 {
+		width: 10%
+	  }
+	  &.fig60 {
+		width: 60%;
+	  }
+	  &.fig70 {
+		width: 70%;
+	  }
+    }
+}
+
+/* Right-aligned half-width images */
+.half-width-right {
+    float: right;
+    width: 50%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .half-width-right {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/* ********************************************** */
+/* Home page custom layout elements */
+ /* Image positioning without text wrapping */
+img[src*='#left'] {
+    float: left;
+}
+img[src*='#right'] {
+    float: right;
+}
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
+img[src*='#lowrightsmall'] {
+	position: absolute;
+    right: 40px;
+	bottom: 50px;
+	max-width: 50%;
+	min-width: 20%;
+}
+
+img[src*='#midrightsmall'] {
+	position: absolute;
+    right: 40px;
+	top: 40%;
+	max-width: 50%;
+	min-width: 20%;
+}
+
+img[src*='#midsmall'] {
+	position:absolute;
+	min-height: 40%;
+	max-height: 50%;
+	float: center;
+	/* margin-left: auto;*/
+	margin-left: 200px;
+	margin-right: auto;
+	top: 30%; 
+	/* width: fixed; */
+	max-width: 80%; 
+	min-width: 20%; 
+}
+
+/* hide on mobile */
+@media screen and (max-width: 720px){
+	.desktop-only {
+		display:none;
+	}
+}
+
+/* hide on desktop */
+@media screen and (min-width: 720px){
+	.mobile-only {
+		display:none;
+	}
+}
+
+#foot-info-right {
+	text-align: right;
+	position: absolute;
+    right: 20px;
+	bottom: 60px;
+	max-width: 50%;
+	min-width: 20%;
+}
+
+#foot-info-left {
+	text-align: left;
+	position: absolute;
+    left: 20px;
+	bottom: 60px;
+	max-width: 50%;
+	min-width: 20%;
+}
+
+.md-sidebar--secondary {
+	width: 300px; /* Adjust the width as needed */
+  }

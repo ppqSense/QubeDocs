@@ -1,0 +1,1200 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Reference for Site Editors - QubeCL Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/figures/mermaid.css">
+    
+      <link rel="stylesheet" href="../css/ppq.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reference-for-site-editors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="QubeCL Docs" class="md-header__button md-logo" aria-label="QubeCL Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QubeCL Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference for Site Editors
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../QubeCL_Current_Manual/QubeCL_Manual_v5.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Qube Manual V5
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../downloads.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Downloads
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="QubeCL Docs" class="md-nav__button md-logo" aria-label="QubeCL Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    QubeCL Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QubeCL_Current_Manual/QubeCL_Manual_v5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qube Manual V5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#site-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Site Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Content
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing Content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createedit-a-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create/Edit a page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating the website
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-site-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Site Editing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprehensive Site Editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-workflow-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Workflow (with git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-editing-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Editing (setup)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-editing-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Editing (setup)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-steps-for-local-online-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Steps for Local &amp; Online Editing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Steps for Local &amp; Online Editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pushing-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushing to Github
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guide-to-using-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guide to using Markdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guide to using Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-tasks-requiring-more-than-text-and-structure-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common tasks requiring more than text and structure syntax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-pluginsextensionstools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful plugins/extensions/tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful plugins/extensions/tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abmonition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abmonition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoref" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoref
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown_katex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown_katex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mdx-spanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      mdx-spanner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      To-pdf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-features-that-may-be-added-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional features that may be added later
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown-experimentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown Experimentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+<style type="text/css">
+    .katex img {
+      object-fit: fill;
+      padding: unset;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+</head><body><h1 id="reference-for-site-editors">Reference for Site Editors<a class="headerlink" href="#reference-for-site-editors" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>This site uses <a href="https://www.mkdocs.org/">MkDocs</a> (a static site generator optimized for project documentation). The fundamental content of the site is stored in <strong>Markdown</strong> text files (a human-readable file format with build-in styling syntax) that can be edited in any text editor. </p>
+<p>Additional styling and functionality comes from the chosen theme <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> and its <a href="https://squidfunk.github.io/mkdocs-material/plugins/">plugins</a>, CSS, and <a href="https://python-markdown.github.io/extensions/">Python extensions</a>. The entire site is hosted directly on <a href="https://docs.github.com/en/pages">github pages</a> and can be exported to a formatted PDF for offline viewing.</p>
+<h2 id="site-structure">Site Structure<a class="headerlink" href="#site-structure" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>.
+├── /docs
+│   ├── /QubeCL_Current_Manual
+    |   ├── QubeCL_Manual_v5.md
+│   │   ├── /assets_QubeCL_Manual_v5
+│   │   │   └── /tables
+│   |   |   └── imgs.png
+│   ├── index.md
+│   ├── QubeCL_Manual_v5.md   
+│   ├── downloads.md
+│   ├── /downloads
+│   ├── /img
+│   └── /javascripts
+├── /ppq_theme
+│   ├── /css
+│   │   └── /img
+|   |   └── ppq.css
+│   ├── overrides
+│   └── partials
+├── mkdocs.yml
+├── requirements.txt
+└── /site
+</code></pre></div>
+<ul>
+<li><code>/docs</code> contains all the site content (text and images)<ul>
+<li><code>/QubeCL_Current_Manual</code> contains all files relating to Qube Manual<ul>
+<li><code>QubeCL_Manual_v5.md</code> main markdown document of manual</li>
+<li><code>/assets_QubeCL_Manual_v5</code> contains all assets for Qube Manual v5<ul>
+<li><code>/tables</code> contains csv files that are converted to tables in markdown</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>/img</code> - images referenced in multiple site pages (ex. logo)</li>
+<li><code>/downloads</code> - files available for download from the site (ex. pdf of manual)</li>
+<li><code>downloads.md</code> - download list page</li>
+</ul>
+</li>
+<li><code>/ppq_theme</code> contains custom styling options for the site (color/font/etc)</li>
+<li><code>mkdocs.yml</code> configuration file (set site settings and enable/modify plugins)</li>
+<li><code>requirements.txt</code> list of dependencies to install for development purposes</li>
+<li><code>/site</code> - mkdocs generated site (do not modify directly)</li>
+<li><code>.github/ci.yml</code> (not shown) configuration file for auto-deploying github site</li>
+</ul>
+<hr>
+<h2 id="editing-content">Editing Content<a class="headerlink" href="#editing-content" title="Permanent link">¶</a></h2>
+<p>If you just want to edit or add content to the site, you do not need to install the entire development environment, you can simply modify the desired pages in a text editor or directly on the main github site for small changes (navigate to the page of interest and select the edit-pencil button).</p>
+<div class="admonition note">
+<p class="admonition-title">NOTE:</p>
+<p>A basic editor will not give you a complete preview of the final site, but is sufficient to add content and confirm basic formatting. </p>
+</div>
+<p><figure id="_figure-1"><img alt="Github direct edit, preview and commit" id="gitdirect" src="tutorial_assets/github_direct_edit.png"><figcaption>Figure 1: Github direct edit, preview and commit</figcaption></figure></p>
+<p><figure id="_figure-2"><img alt="Github direct preview" src="tutorial_assets/github_direct_preview.png"><figcaption>Figure 2: Github direct preview</figcaption></figure></p>
+<h3 id="createedit-a-page">Create/Edit a page<a class="headerlink" href="#createedit-a-page" title="Permanent link">¶</a></h3>
+<p>Each markdown (<code>.md</code>) file in the <code>/docs</code> directory represents a page on the website. </p>
+<p>If you create a new page (ex. <code>test.md</code>) and save it in the <code>/docs</code> folder, it will be accessable via the url <code>site.io/&lt;file_name&gt;.html</code> but it is <em>not</em> automatically added to the site navigation bar. To add it to the site nav, you first need to add it to the navigation structure in the <code>mkdocs.yml</code> file for it to be findable by users. Give the button a name and list the file path starting in docs: (<code>&lt;Button_Name&gt;: &lt;filepath/file_name&gt;</code>)
+</p><div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Qube Manual V5</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QubeCL_Current_Manual/QubeCL_Manual_v5.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Downloads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">downloads.md</span>
+</code></pre></div>
+<h3 id="updating-the-website">Updating the website<a class="headerlink" href="#updating-the-website" title="Permanent link">¶</a></h3>
+<p>If you are happy with your changes to the documentation and would like to update the site, all you have to do is <code>commit</code> and <code>push</code> your changes to the main github branch in order to automatically update the live version.</p>
+<p>If you have made changes directly to a single page at a time in github, all you have to do is save by selecting <code>commit changes</code> in the <a href="#gitdirect">Github browser</a>.</p>
+<p>If you are working locally or in a github code environment, you will have to follow a couple more steps to conform to git version control (See <a href="#pushing-to-github">pushing to github</a>)</p>
+<div class="admonition note">
+<p class="admonition-title">Saving incomplete work</p>
+<p>(if you are unsure of your changes, or if they are incomplete, please save them in an un-listed <code>.md</code> file or push to a new branch while working).  </p>
+</div>
+<p>If you want to see a complete preview of the site before update, or if you would like to edit the styling or make additions to the plugins used in the site, please follow the intructions in the <a href="#comprehensive-site-editing">Comprensive Site Editing</a> section, otherwise skip to the <a href="#guide-to-using-markdown">Markdown Guide</a> section to learn more about content editing.    </p>
+<h2 id="comprehensive-site-editing">Comprehensive Site Editing<a class="headerlink" href="#comprehensive-site-editing" title="Permanent link">¶</a></h2>
+<p>To edit the styling or functionality of the site (or to add multiple pages, images, or tables at once) it is best develop on a fully functional local or remote version (before updating the live site). </p>
+<h3 id="recommended-workflow-with-git">Recommended Workflow (with git)<a class="headerlink" href="#recommended-workflow-with-git" title="Permanent link">¶</a></h3>
+<p>This site is hosted on github, which is primarily a code-hosting and version-control tool. It allows for multiple people to collaborate on a project or document, but unlike a google docs or other live online editors, individuals make changes to local versions of the file(s) and those changes are periodically approved and merged into a main version of the file. This allows for controlled updating of a code base and detailed development tracking, while giving individuals the freedom to suggest changes or create new versions of the codebase at will. </p>
+<p>If you are unfamiliar with git workflows, in can be frustrating and confusing at first, but can ultimately make documenting work over time much easier. Here is a thorough <a href="https://www.atlassian.com/git/tutorials/what-is-git">git beginner tutorial</a> that may be a helpful reference.</p>
+<p><strong>Helpful Git Vocab/Concepts:</strong></p>
+<ol>
+<li><strong>Repository</strong> (The collection of all the files and folders constituting your project)</li>
+<li><strong>Branch</strong> (A version of the repository you can edit/work in)<ol>
+<li>The default branch is <code>main</code></li>
+<li>making a new branch <em>off</em> of <code>main</code> creates a new copy of the repository at that point.</li>
+</ol>
+</li>
+<li><strong>Remote/Local</strong> (You can <strong>fetch</strong> a github-hosted <strong>remote</strong> branch and work on it <strong>locally</strong>)<ol>
+<li>The local version of a remote branch is only visible on your machine or editor</li>
+<li>the remote version is visible to anyone who has access to the project</li>
+</ol>
+</li>
+<li><strong>Syncing</strong>: (<strong>pushing</strong> local changes to the remote branch, <strong>pulling</strong> remote changes down to local branch)<ol>
+<li>Any local changes you make to a branch need to be <strong>pushed</strong> to the remote version for other users to see your changes</li>
+<li>If another user edits the remote version of the branch you are working on locally, you can <strong>pull</strong> their changes into your own version.</li>
+<li>git will automatically try and <strong>merge</strong> different users changes. If you and another user modify the same part of the codebase (ex. If you and someone else try and modify the same paragraph at the same time) - git will ask you to manually select what version you would like to keep.</li>
+</ol>
+</li>
+<li><strong>Pull Requests</strong> (Requesting that your branch be merged into another branch -- usually <code>main</code>)<ol>
+<li>If you are making more than minor changes to the live website codebase, then you should make a <strong>branch</strong> off of <code>main</code> to work in (ex. <code>new-feature</code>).</li>
+<li>Once you are ready to update the main site with your changes, you submit a <strong>pull request</strong> to pull <code>new-feature</code> branch into the <code>main</code> branch.</li>
+<li>This will trigger a notification to the reviewer to look over your changes</li>
+<li>If they want to change something, or add comments, they can and you will be notified</li>
+<li>Once they approve your changes, you or they can <strong>merge</strong> your branch into <code>main</code> - this will trigger an update of the website.</li>
+</ol>
+</li>
+</ol>
+<p>See the <a href="#pushing-to-github">Pushing to Github</a> section for more details on how to actually perform these git operations.</p>
+<h3 id="online-editing-setup">Online Editing (setup)<a class="headerlink" href="#online-editing-setup" title="Permanent link">¶</a></h3>
+<p>You can use a live codespace in github instead of your local machine for development.</p>
+<p><figure id="_figure-3"><img alt="Github online code editor with built-in markdown preview" src="tutorial_assets/githubcode.png"><figcaption>Figure 3: Github online code editor with built-in markdown preview</figcaption></figure></p>
+<p>You can reach the live editor from your browser by changing the url of the project from <code>github.com/ppqSense/QubeDocs/</code> to <code>github.dev/ppqSense/QubeDocs/</code> and setting up a GitHub Codespace by opening up the terminal and selecting "Continue Working in GitHub Codespaces" and then a remote machine configuration. From here you can follow the rest of the instructions as you would locally (with the exception of needing to setup a python virtual environment).</p>
+<p><figure id="_figure-4"><img alt="Open Terminal in Codespaces" src="tutorial_assets/open_terminal.png"><figcaption>Figure 4: Open Terminal in Codespaces</figcaption></figure></p>
+<p><figure id="_figure-5"><img alt="Continue with Codespaces" src="tutorial_assets/continue_with_codespaces.png"><figcaption>Figure 5: Continue with Codespaces</figcaption></figure></p>
+<p><figure id="_figure-6"><img alt="Select Machine" src="tutorial_assets/select_machine.png"><figcaption>Figure 6: Select Machine</figcaption></figure></p>
+<p>This option will take about a 2 minutes to setup, if it is your first time accessing the codespace (runs automated environment setup and configuration on startup). When finished, you can check that it is working by running <code>mkdocs build</code> and then <code>mkdocs serve</code>.</p>
+<p>See the github <a href="https://docs.github.com/en/codespaces/quickstart">codespaces quickstart guide</a> for more information on how codespaces work.</p>
+<h3 id="local-editing-setup">Local Editing (setup)<a class="headerlink" href="#local-editing-setup" title="Permanent link">¶</a></h3>
+<p>If you don't already know how to use github or don't have it installed, follow the <a href="https://github.com/ppqSense/QubeDocs">readme</a> instructions to setup your local environment. </p>
+<p>First: install <code>weasyprint</code> on your system: (used for PDF generation)</p>
+<ul>
+<li>
+<p><code>sudo apt install weasyprint</code> (Ubuntu)</p>
+</li>
+<li>
+<p><a href="https://github.com/Kozea/WeasyPrint/releases">Executable download</a> (Windows)</p>
+<ul>
+<li>More elaborate setup: <a href="https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows">guide here</a></li>
+<li>or disable <code>to-pdf</code> plugin in mkdocs.yml</li>
+</ul>
+</li>
+<li>
+<p><a href="https://doc.courtbouillon.org/weasyprint/stable/first_steps.html">All other systems</a></p>
+</li>
+</ul>
+<p>Second: While in a local <code>Python3</code> virtual environment (see <a href="https://github.com/ppqSense/QubeDocs">readme</a>) or codespace environment:</p>
+<ul>
+<li>
+<p>Navigate to the main project directory and run:</p>
+</li>
+<li>
+<p><code>pip install -r requirements.txt</code> to install all dependencies (do once)</p>
+</li>
+<li>Run <code>mkdocs build</code> to build out site structure and styling</li>
+<li>Run <code>mkdocs serve</code> to serve a live test site <ul>
+<li>Navigate to provided URL to see site</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="important-steps-for-local-online-editing">Important Steps for Local &amp; Online Editing<a class="headerlink" href="#important-steps-for-local-online-editing" title="Permanent link">¶</a></h2>
+<p>Changes to content should be reflected automatically upon save if <code>mkdocs serve</code> is running.</p>
+<div class="admonition note">
+<p class="admonition-title">Site changes requiring rebuild</p>
+<p><code>mkdocs build</code> must be re-run upon changes to styling or plugins.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Always update python requirements upon package install</p>
+<p>Any changes to the python environment (addition of extensions, etc.) should be reflected in the requirements.txt file. This can be updated with the following command from the main directory: <code>pip freeze &gt; requirements.txt</code> (do before pushing changes - this is important to make sure that other editors can correctly setup their environment for testing).</p>
+</div>
+<p>Every time the site is updated, a downloadable PDF version of the entire site is generated and available for download from the download page (currently it is saved as QubeCL_Manual.pdf, but that can be changed). At any time, if you would like to save a version of the site and manual, you can simply save the desired <code>.md</code> file along with its assets folder and PDF. By saving it under a new name in the <code>/docs/downloads</code> folder, the PDF can be added to the download page as a dated version of the manual.</p>
+<div class="admonition note">
+<p class="admonition-title">Disabling PDF Generation</p>
+<p>PDF generation can take up to 30 seconds each time. Disable during testing by following instructions in <a href="#To-pdf">to-pdf plugin</a> section.</p>
+</div>
+<h3 id="pushing-to-github">Pushing to Github<a class="headerlink" href="#pushing-to-github" title="Permanent link">¶</a></h3>
+<p>If you are completely new to git see the
+<a href="https://github.com/git-guides"> Guide for beginners</a> or the more descriptive <a href="https://www.atlassian.com/git/tutorials/what-is-git">Atlassian Guide to git</a></p>
+<ul>
+<li><strong>Option A: From Github Codespace: (Easier)</strong></li>
+<li>Make your changes in the codespace</li>
+<li>Navigate to the <strong>source control</strong> tab via the git branch icon on the left</li>
+<li>write a <strong>commit</strong> message (describing of your changes).</li>
+<li>
+<p>Hit enter and follow instructions to push your change to the remote branch.
+  <figure id="_figure-7"><img alt="Git commit from Codespace" src="tutorial_assets/gitcommit.png"><figcaption>Figure 7: Git commit from Codespace</figcaption></figure></p>
+</li>
+<li>
+<p><strong>Option B: From your local machine: (Advanced)</strong></p>
+<ol>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Setup your computer's ssh-key</a> (see README for details)</li>
+<li>
+<p>Clone down the repository <code>git clone &lt;repo&gt;</code> (see README for details)</p>
+</li>
+<li>
+<p>Follow best-practices with pushing and pulling to Github (via cmd terminal)</p>
+<ol>
+<li><code>git fetch</code> / <code>git pull</code> - make sure your local version is up to date with remote</li>
+<li><code>git branch</code> - check what branch you are on</li>
+<li>If necessary, switch branch with <code>git switch -c &lt;new branch name&gt;</code> or <code>git checkout &lt;remote branch name&gt;</code></li>
+<li>Make your desired changes on desired branch (branch = <code>main</code> if wanting to immediately update site)</li>
+<li><code>git status</code> - see which files you've changed</li>
+<li><code>git add &lt;files&gt;</code> - add specific files or <code>git add .</code> add all changed files</li>
+<li><code>git commit -m "description of changes"</code> - change message</li>
+<li><code>git push</code> - push changes to Github</li>
+<li><code>git status</code> / <code>git log</code> - confirm changes were saved</li>
+</ol>
+</li>
+<li>If you pushed directly to <code>main</code>, your changes will automatically be reflected on the site. If you pushed to another branch, you can continue to edit and push to that branch until you are ready to update the site.<ul>
+<li>When ready to update the site, follow <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">Github instructions</a> to make a <strong>pull request</strong> and <strong>merge</strong> your branch into <code>main</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>### Pull Requests
+  Pull requests are a useful mechanism for introducing changes for review and having a dialog around those changes. Say for example you wanted to add a whole new Manual to the website - you probably would want to go through multiple interations and receive feedback before pushing your changes to the main site. </p>
+<p>Pull requests allow you to propose a change from one branch to another, with the ability for others to comment and recommend general or line-specific changes. Specific contributers can even be required to approve changes before the main branch can be updated.</p>
+<p>Here is a general guide on <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">how pull requests</a> work on github.</p>
+<p><strong>Example pull request flow:</strong></p>
+<p><figure id="_figure-8"><img alt="Create Pull Request from test branch to main" src="tutorial_assets/pull_request_create.png"><figcaption>Figure 8: Create Pull Request from test branch to main</figcaption></figure></p>
+<p><figure id="_figure-9"><img alt="Define Pull Request - set reviewers and editors" src="tutorial_assets/open_pull_request.png"><figcaption>Figure 9: Define Pull Request - set reviewers and editors</figcaption></figure></p>
+<p><figure id="_figure-10"><img alt="See changes in Pull Request - files and lines" src="tutorial_assets/pull_request_files_changed.png"><figcaption>Figure 10: See changes in Pull Request - files and lines</figcaption></figure></p>
+<p><figure id="_figure-11"><img alt="Add comments to pull request - inline and overall" src="tutorial_assets/pull_request_add_comments.png"><figcaption>Figure 11: Add comments to pull request - inline and overall</figcaption></figure></p>
+<p><figure id="_figure-12"><img alt="Finish and submit a review of a pull request" src="tutorial_assets/pull_request_finish_review_changes.png"><figcaption>Figure 12: Finish and submit a review of a pull request</figcaption></figure></p>
+<p><figure id="_figure-13"><img alt="Accept suggested changes to pull request" src="tutorial_assets/pull_request_accept_suggestion.png"><figcaption>Figure 13: Accept suggested changes to pull request</figcaption></figure></p>
+<p><figure id="_figure-14"><img alt="Merge pull request into main (once all comments are resolved)" src="tutorial_assets/pull_request_merge.png"><figcaption>Figure 14: Merge pull request into main (once all comments are resolved)</figcaption></figure></p>
+<hr>
+<h2 id="guide-to-using-markdown">Guide to using Markdown<a class="headerlink" href="#guide-to-using-markdown" title="Permanent link">¶</a></h2>
+<p>Markdown is a simple text formatting language akin to HTML that has been widely adopted in recent years, particularly for documentation (github READMEs for example are markdown by default). It is extensible via tools such as mkdocs, python-markdown-extensions and many others, while also being legible in a standard text editor.</p>
+<h3 id="useful-resources">Useful resources<a class="headerlink" href="#useful-resources" title="Permanent link">¶</a></h3>
+<ul>
+<li>Basic <a href="https://www.markdownguide.org/getting-started/">Getting Started Guide</a> to Markdown</li>
+<li>Getting started in <a href="https://www.mkdocs.org/user-guide/writing-your-docs/">mkdocs</a> flavor of markdown (additional built-in features)</li>
+</ul>
+<h3 id="common-tasks-requiring-more-than-text-and-structure-syntax">Common tasks requiring more than text and structure syntax<a class="headerlink" href="#common-tasks-requiring-more-than-text-and-structure-syntax" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Embedding an image:</p>
+<blockquote>
+<div class="highlight"><pre><span></span><code>[Description of Image](/path/to/image/from/docs.png){#image-tag}
+</code></pre></div>
+</blockquote>
+</li>
+<li>
+<p>Adding a Table:
+Building a table in markdown is similar to LaTeX. You must draw out the columns and rows which can be tedious.</p>
+<div class="highlight"><pre><span></span><code>|   H1   |   H2   |   H3   |
+|--------|--------|--------|
+|      1 |      2 |      3 |
+|      4 |      5 |      6 |
+</code></pre></div>
+<p>Becomes:</p>
+<p>&lt;table-caption identifier="Table"id=figure-of-choice}</p>
+<table>
+<thead>
+<tr>
+<th>H1</th>
+<th>H2</th>
+<th>H3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Build a correctly-formatted table a bit quicker using a <a href="https://vikcch.github.io/markdown-table-generator/">table generator site</a></p>
+</li>
+<li>
+<p>Or use the <a href="#tables-extension">tables extension</a> to import from CSV.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Referencing an anchor:
+  You can create an anchor point to a header, figure, table, or piece of text by adding {#anchor-name} to the end of it. and link to it by using <a href="#anchor-name">this</a> syntax:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>[this](#anchor-name)
+</code></pre></div>
+<p>This works even across pages if you include the page's file path from your current location before the hashtag.</p>
+<p><code>[this](../QubeCL_Current_Manual/QubeCL_Manual_v5.md#pwr_specs</code></p>
+<p>becomes....</p>
+<p><a href="../QubeCL_Current_Manual/QubeCL_Manual_v5.html#pwr_specs">this</a></p>
+<p>If you have a figure or a table that was created using the <a href="#caption-extension">caption</a> extension, you can leave the square brackets blank when referencing it and the correct table or figure number will be populated instead.</p>
+<p><code>[](#figure-of-choice)</code></p>
+<p>becomes....</p>
+<p><a href="#pwr_specs">Table 1</a></p>
+<hr>
+<h2 id="useful-pluginsextensionstools">Useful plugins/extensions/tools<a class="headerlink" href="#useful-pluginsextensionstools" title="Permanent link">¶</a></h2>
+<p>Additional functionality has been added to this site via various python extensions. You can access these features by using the correct syntax described below.</p>
+<p>To see a full list of built-in plugins and supported extensions visit: <a href="https://squidfunk.github.io/mkdocs-material/plugins/">mk-material plugins</a>, and <a href="https://python-markdown.github.io/extensions/">Python Markdown extensions</a> pages.</p>
+<h3 id="abmonition">Abmonition<a class="headerlink" href="#abmonition" title="Permanent link">¶</a></h3>
+<p>Allows the user to add colorful callouts/notes/drop-downs to the main text:</p>
+<blockquote>
+<div class="highlight"><pre><span></span><code>!!! note "Like This"
+    Put your message here
+</code></pre></div>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Like This</p>
+<p>Put your message here</p>
+</div>
+<p>See <a href="https://python-markdown.github.io/extensions/admonition/">Admonition Plugin</a> page for more examples.</p>
+<h3 id="autoref">Autoref<a class="headerlink" href="#autoref" title="Permanent link">¶</a></h3>
+<p>Allows you to reference headers by name without creating anchor tags ex. <code>[Link Description](#Autoref)</code>.</p>
+<p><a href="#Autoref">Link Description</a> should take you to this subsection.</p>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">¶</a></h3>
+<p>This plugin allows for the insertion of tables in a more programmatic way.</p>
+<p>You can add a csv file to the <code>/docs</code> folder and have it be auto-generated by the python <code>mkdocs-table-reader-plugin</code> (less formatting control but good for large datasets that might be modified regularly)</p>
+<p>To use enter in markdown: 
+</p><div class="highlight"><pre><span></span><code>\{{ read_csv('path_to_table.csv') }\&gt;
+
+    Example Table
+
+    &lt;table-caption-end&gt;
+</code></pre></div>
+<h3 id="markdown_katex">Markdown_katex<a class="headerlink" href="#markdown_katex" title="Permanent link">¶</a></h3>
+<p>Use latex-style math notation in your markdown like so:</p>
+<p>Inline KaTeX...</p>
+<div class="highlight"><pre><span></span><code>$`a^2+b^2=c^2`$.
+</code></pre></div>
+<p>...looks like this: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2+b^2=c^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
+<p>Multi-line KaTeX block...</p>
+<p></p><div class="highlight"><pre><span></span><code>  ```math
+  f(x) = \int_{-\infty}^\infty
+  \hat f(\xi)\,e^{2 \pi i \xi x}
+  ,d\xi
+  ```
+</code></pre></div>
+...looks like this:
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mover accent="true"><mi>f</mi><mo>^</mo></mover><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo><mtext> </mtext><msup><mi>e</mi><mrow><mn>2</mn><mi>π</mi><mi>i</mi><mi>ξ</mi><mi>x</mi></mrow></msup><mtext> </mtext><mi>d</mi><mi>ξ</mi></mrow><annotation encoding="application/x-tex">
+f(x) = \int_{-\infty}^\infty
+\hat f(\xi)\,e^{2 \pi i \xi x}
+\,d\xi
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9579em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">πi</span><span class="mord mathnormal mtight" style="margin-right:0.04601em;">ξ</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span></span></span></p>
+<p>See full syntax guide <a href="https://katex.org/docs/supported.html">here</a></p>
+<h3 id="caption">Caption<a class="headerlink" href="#caption" title="Permanent link">¶</a></h3>
+<p>Create a Caption and a tag of a table or image like so:
+<code>&lt;Table/Figure&gt;: &lt;Description&gt; {#tag}</code> 
+and leave a space between the caption line and the figure/table.</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><code>Tablè: Power source voltages speciﬁcations{#pwr_specs}
+
+|DC Input |minimum |typical | maximum |
+|---|---|---|---|
+| LAS | +20 V | +24 V | +30 V | 
+| TEC | +8 V | +12 V | +24 V |
+</code></pre></div>
+<p>becomes: </p>
+<table id="pwr_specs">
+<caption style="caption-side:bottom">Table 1: Power source voltages speciﬁcations</caption><thead>
+<tr>
+<th>DC Input</th>
+<th>minimum</th>
+<th>typical</th>
+<th>maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LAS</td>
+<td>+20 V</td>
+<td>+24 V</td>
+<td>+30 V</td>
+</tr>
+<tr>
+<td>TEC</td>
+<td>+8 V</td>
+<td>+12 V</td>
+<td>+24 V</td>
+</tr>
+</tbody>
+</table>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>![Figure Caption](assets_QubeCL_Manual_v5/img-0942.png){#front_panel}
+</code></pre></div>
+<p>becomes:
+<figure id="_figure-15"><img alt="Figure Caption" id="front_panel" src="../QubeCL_Current_Manual/assets_QubeCL_Manual_v5/img-0942.png"><figcaption>Figure 15: Figure Caption</figcaption></figure></p>
+<p>(Note that square brackets are blank - this allows for the figure or table number to be auto-generated when figure tag (<code>(#front_panel)</code>) is referenced.</p>
+<p>And reference it like so:
+</p><div class="highlight"><pre><span></span><code>A schematic view of the front panel of the QubeCL can be seen in [](#front_panel).
+</code></pre></div>
+<p>A schematic view of the front panel of the QubeCL can be seen in <a href="#front_panel">Figure 15</a>.</p>
+<h3 id="mdx-spanner">mdx-spanner<a class="headerlink" href="#mdx-spanner" title="Permanent link">¶</a></h3>
+<p>Allows for row and column-spanning in markdown tables as well as advanced text alignment</p>
+<blockquote>
+<p>You can activate colspan by putting only ~~ in a cell. This will merge the cell with the cell in the previous column.</p>
+<p>You can activate rowspan by putting __ in a cell. This will merge the cell with the cell in the previous row. If the cell in previous row is empty it will continue to merge until it finds a non-empty cell.
+ Sample:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>| Header 1 | Header 2 | Header 3 |
+| ---------| -------- | -------- |
+| Value 1  |    ~~    | Value 2  |
+|          |    ~~    | Value 3  |
+|_        _|    ~~    | Value 5  |
+| Value 6  | Value 7  | Value 8  |
+</code></pre></div>
+<p>This should result in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+<th>Header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" rowspan="3" style="text-align:left;vertical-align:top;">Value 1</td>
+<td>Value 2</td>
+</tr>
+<tr>
+<td>Value 3</td>
+</tr>
+<tr>
+<td>Value 5</td>
+</tr>
+<tr>
+<td>Value 6</td>
+<td>Value 7</td>
+<td>Value 8</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://pypi.org/project/mdx-spanner/">mdx-spanner</a> for full documentation.</p>
+<h3 id="to-pdf">To-pdf<a class="headerlink" href="#to-pdf" title="Permanent link">¶</a></h3>
+<p>Whenever the site is rebuilt  (<code>mkdocs serve</code> or <code>mkdocs build</code>) it is saved in a pdf format to the downloads folder. This takes a few seconds. If you are testing locally and don't want to regenerate it each time, you can suppress this feature by uncommenting the following line in the <code>mkdocs.yml</code> (remember to comment out when done editing).</p>
+<div class="highlight"><pre><span></span><code>  - to-pdf: # enable to auto-generate PDF download(currently for whole site)  
+      ...
+      enabled_if_env: ENABLED_PDF_EXPORT #uncomment this line to 
+</code></pre></div>
+<hr>
+<h3 id="additional-features-that-may-be-added-later">Additional features that may be added later<a class="headerlink" href="#additional-features-that-may-be-added-later" title="Permanent link">¶</a></h3>
+<ul>
+<li>automatic "table of figures" generation</li>
+<li>automated versioning</li>
+<li>multiple PDF file generation (generate static version of multiple seperate pages)</li>
+</ul>
+<h2 id="markdown-experimentation">Markdown Experimentation<a class="headerlink" href="#markdown-experimentation" title="Permanent link">¶</a></h2>
+<p><em>(Feel free to add/experiment here in this section)</em></p>
+<p></p><div class="highlight"><pre><span></span><code>---
+# Header 1
+## Header 2
+### Header 3
+*italics*
+**bold**
+&gt; quote
+---
+</code></pre></div>
+<strong>Becomes...</strong>
+<hr>
+<h1 id="header-1">Header 1<a class="headerlink" href="#header-1" title="Permanent link">¶</a></h1>
+<h2 id="header-2">Header 2<a class="headerlink" href="#header-2" title="Permanent link">¶</a></h2>
+<h3 id="header-3">Header 3<a class="headerlink" href="#header-3" title="Permanent link">¶</a></h3>
+<p><em>italics</em>
+<strong>bold</strong></p>
+<blockquote>
+<p>quote</p>
+</blockquote>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2014-2025 PPQSense S.R.L.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ppqsense-s.r.l." target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", {"tabs": true}], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
